@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4560491770561914285}
   - component: {fileID: 818103971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 5418833805347122966}
   - component: {fileID: 6729033430777463559}
   - component: {fileID: 925822063485751184}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479863344373809125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 8374097536362046435}
   - component: {fileID: 8373527386517270731}
   - component: {fileID: 1537636769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 8496389525371316545}
   - component: {fileID: 8394876471473416837}
   - component: {fileID: 9171936425764841621}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 8479950150811078283}
   - component: {fileID: 8373429952794380711}
   - component: {fileID: 8373982079066839113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 641961600289703878}
   - component: {fileID: 3177077449010857180}
   - component: {fileID: 8787347992579279498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FPS_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
