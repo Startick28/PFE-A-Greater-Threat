@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Photon.Pun;
 
 namespace CMF
 {
@@ -45,10 +46,21 @@ namespace CMF
 		
 		//Awake;
 		void Awake () {
-			
-			//If no target has been selected, choose this transform's parent as the target;
-			if(target == null)
-				target = this.transform.parent;
+
+			//If no target has been selected, choose this transform's parent as target;
+			if (target == null)
+			{
+				var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
+				foreach (var view in photonViews)
+				{
+					//Objects in the scene don't have an owner, its means view.owner will be null
+					if (view.IsMine)
+					{
+						target = view.gameObject.transform;
+					}
+				}
+
+			}
 
 			tr = transform;
 			currentPosition = transform.position;

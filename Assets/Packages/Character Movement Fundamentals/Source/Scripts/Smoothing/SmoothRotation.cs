@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Photon.Pun;
+using Photon.Realtime;
+using Photon.Pun.Demo.PunBasics;
 namespace CMF
 {
 	//This script smoothes the rotation of a gameobject;
@@ -30,8 +32,19 @@ namespace CMF
 		void Awake () {
 
 			//If no target has been selected, choose this transform's parent as target;
-			if(target == null)
-				target = this.transform.parent;
+			if (target == null)
+            {
+				var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
+				foreach (var view in photonViews)
+				{
+					//Objects in the scene don't have an owner, its means view.owner will be null
+					if (view.IsMine)
+					{
+						target = view.gameObject.transform;
+					}
+				}
+
+			}
 
 			tr = transform;
 			currentRotation = transform.rotation;

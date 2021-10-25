@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace CMF
 {
@@ -17,6 +18,7 @@ namespace CMF
 		public float upperVerticalLimit = 60f;
 		[Range(0f, 90f)]
 		public float lowerVerticalLimit = 60f;
+		[SerializeField] PhotonView view;
 
 		//Variables to store old rotation values for interpolation purposes;
 		float oldHorizontalInput = 0f;
@@ -44,27 +46,46 @@ namespace CMF
 		protected Camera cam;
 		protected CameraInput cameraInput;
 
+		[SerializeField]GameObject Player;
+
 		//Setup references.
 		void Awake () {
-			tr = transform;
-			cam = GetComponent<Camera>();
-			cameraInput = GetComponent<CameraInput>();
 
-			if(cameraInput == null)
-				Debug.LogWarning("No camera input script has been attached to this gameobject", this.gameObject);
+			var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
+			foreach (var view in photonViews)
+			{
+				//Objects in the scene don't have an owner, its means view.owner will be null
+				if (view.IsMine)
+				{
+					Player = view.gameObject;
+				}
+			}
 
-			//If no camera component has been attached to this gameobject, search the transform's children;
-			if(cam == null)
-				cam = GetComponentInChildren<Camera>();
+			view = Player.GetComponent<PhotonView>();
+            if (view.IsMine)
+			{
+				tr = transform;
+				cam = GetComponent<Camera>();
+				cameraInput = GetComponent<CameraInput>();
 
-			//Set angle variables to current rotation angles of this transform;
-			currentXAngle = tr.localRotation.eulerAngles.x;
-			currentYAngle = tr.localRotation.eulerAngles.y;
 
-			//Execute camera rotation code once to calculate facing and upwards direction;
-			RotateCamera(0f, 0f);
+				if (cameraInput == null)
+					Debug.LogWarning("No camera input script has been attached to this gameobject", this.gameObject);
 
-			Setup();
+				//If no camera component has been attached to this gameobject, search the transform's children;
+				if (cam == null)
+					cam = GetComponentInChildren<Camera>();
+
+				//Set angle variables to current rotation angles of this transform;
+				currentXAngle = tr.localRotation.eulerAngles.x;
+				currentYAngle = tr.localRotation.eulerAngles.y;
+
+				//Execute camera rotation code once to calculate facing and upwards direction;
+				RotateCamera(0f, 0f);
+
+				Setup();
+
+			}
 		}
 
 		//This function is called right after Awake(); It can be overridden by inheriting scripts;
@@ -75,7 +96,10 @@ namespace CMF
 
 		void Update()
 		{
-			HandleCameraRotation();
+            if (view.IsMine)
+			{
+				HandleCameraRotation();
+			}
 		}
 
 		//Get user input and handle camera rotation;
@@ -121,13 +145,17 @@ namespace CMF
 		//Update camera rotation based on x and y angles;
 		protected void UpdateRotation()
 		{
-			tr.localRotation = Quaternion.Euler(new Vector3(0, currentYAngle, 0));
+            if (view.IsMine)
+			{
+				tr.localRotation = Quaternion.Euler(new Vector3(0, currentYAngle, 0));
 
-			//Save 'facingDirection' and 'upwardsDirection' for later;
-			facingDirection = tr.forward;
-			upwardsDirection = tr.up;
+				//Save 'facingDirection' and 'upwardsDirection' for later;
+				facingDirection = tr.forward;
+				upwardsDirection = tr.up;
 
-			tr.localRotation = Quaternion.Euler(new Vector3(currentXAngle, currentYAngle, 0));
+				tr.localRotation = Quaternion.Euler(new Vector3(currentXAngle, currentYAngle, 0));
+
+			}
 		}
 
 		//Set the camera's field-of-view (FOV);

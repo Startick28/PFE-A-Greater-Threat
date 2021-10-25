@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CMF;
-
+using Photon.Pun;
+using Photon.Realtime;
+using Photon.Pun.Demo.PunBasics;
 
 public class FPSCharacterController : AdvancedWalkerController
 {
@@ -16,6 +18,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	BasicGun gun;
 
+	//PhotonView view;
 
 	bool previousCrouch;
 	bool previousRun;
@@ -37,97 +40,101 @@ public class FPSCharacterController : AdvancedWalkerController
 		previousCrouch = false;
 		previousRun = false;
 		Setup();
-
 		
+		//view = GetComponent<PhotonView>();
 
 	}
 
 	void Update()
 	{
-		HandleJumpKeyInput();
+       // if (view.IsMine)
+	//	{
+			HandleJumpKeyInput();
 
-		if(fcharacterInput.isFireKeyPressed())
-        {
-			if(!previousFire)
-            {
-				//fire();
-				gun.fire(cameraTransform.position,cameraController.GetAimingDirection());
-				previousFire = true;
-			}
-            else
-            {
-				
-            }
-			//Debug.Log("Pan");
-			
-        }
-        else
-        {
-			previousFire = false;
-        }
-
-
-		if (fcharacterInput.isRunKeyPressed())
-		{
-			if (!previousRun)
+			if (fcharacterInput.isFireKeyPressed())
 			{
-				movementSpeed *= 2;
-				previousRun = true;
-				
-				//movementSpeed
+				if (!previousFire)
+				{
+					//fire();
+					gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+					previousFire = true;
+				}
+				else
+				{
+
+				}
+				//Debug.Log("Pan");
+
 			}
-			//Debug.Log("is running");
-		}
-		else
-		{
-			if(previousRun)
-            {
-				movementSpeed /= 2;
-				previousRun = false;
+			else
+			{
+				previousFire = false;
 			}
 
-		}
 
-		//Debug.L
+			if (fcharacterInput.isRunKeyPressed())
+			{
+				if (!previousRun)
+				{
+					movementSpeed *= 2;
+					previousRun = true;
 
-
-		if (fcharacterInput.isCrouchKeyPressed())
-        {
-			//Debug.Log("iuze");
-			if(!previousCrouch)
-            {
-				mover.SetColliderHeight(1.0f);
-				cameraController.transform.Translate(0, -1, 0);
-				transform.Translate(0, -1, 0);
+					//movementSpeed
+				}
+				//Debug.Log("is running");
 			}
-			
-			previousCrouch = true;
-        }
-        else
-        {
-			if(previousCrouch)
-            {
-				mover.SetColliderHeight(2.0f);
-				cameraController.transform.Translate(0, 1, 0);
-				transform.Translate(0, 1, 0);
-				previousCrouch = false;
+			else
+			{
+				if (previousRun)
+				{
+					movementSpeed /= 2;
+					previousRun = false;
+				}
+
 			}
-			
-		}
 
-		if(fcharacterInput.isReloadKeyPressed())
-        {
-			gun.reload();
-        }
+			//Debug.L
 
-		if(fcharacterInput.isZoomKeyPressed())
-        {
-			fcameraController.zoom();
-        }
-		else
-        {
-			fcameraController.unZoom();
-        }
+
+			if (fcharacterInput.isCrouchKeyPressed())
+			{
+				//Debug.Log("iuze");
+				if (!previousCrouch)
+				{
+					mover.SetColliderHeight(1.0f);
+					cameraController.transform.Translate(0, -1, 0);
+					transform.Translate(0, -1, 0);
+				}
+
+				previousCrouch = true;
+			}
+			else
+			{
+				if (previousCrouch)
+				{
+					mover.SetColliderHeight(2.0f);
+					cameraController.transform.Translate(0, 1, 0);
+					transform.Translate(0, 1, 0);
+					previousCrouch = false;
+				}
+
+			}
+
+			if (fcharacterInput.isReloadKeyPressed())
+			{
+				gun.reload();
+			}
+
+			if (fcharacterInput.isZoomKeyPressed())
+			{
+				fcameraController.zoom();
+			}
+			else
+			{
+				fcameraController.unZoom();
+			}
+
+	//	}
 		
 	}
 
