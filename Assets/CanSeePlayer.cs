@@ -12,6 +12,7 @@ public class CanSeePlayer : ActionNode
     }
 
     protected override State OnUpdate() {
-        return State.Success;
+        if (context.sensorManager.CanSeePlayer()) return State.Success;
+        return State.Failure;
     }
 }

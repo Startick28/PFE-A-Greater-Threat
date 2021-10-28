@@ -34,6 +34,7 @@ namespace BehaviourTreeAI {
             context.boxCollider = gameObject.GetComponent<BoxCollider>();
             context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
+            context.sensorManager = gameObject.GetComponent<SensorManager>();
             
             // Add whatever else you need here...
 
