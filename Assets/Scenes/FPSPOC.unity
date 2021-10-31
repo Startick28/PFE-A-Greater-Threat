@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 980483344}
   - component: {fileID: 980483343}
   - component: {fileID: 980483346}
+  - component: {fileID: 980483347}
   m_Layer: 26
   m_Name: EnemyLayerTest
   m_TagString: Untagged
@@ -1181,6 +1182,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ff96b86a2bffb947bbe3c69f4e8a6c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &980483347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980483341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e092434b020c714eb7728cff651e60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1175035884 stripped

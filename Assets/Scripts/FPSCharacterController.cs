@@ -26,6 +26,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Awake()
 	{
+		Cursor.visible = false;
 		mover = GetComponent<Mover>();
 		fMover = GetComponent<FPS_Mover>();
 		tr = transform;
