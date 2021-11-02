@@ -48,18 +48,19 @@ namespace CMF
 		void Awake () {
 
 			//If no target has been selected, choose this transform's parent as target;
-			if (target == null)
+			var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
+			foreach (var view in photonViews)
 			{
-				var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
-				foreach (var view in photonViews)
+				//Objects in the scene don't have an owner, its means view.owner will be null
+				if (view.IsMine && !view.transform.name.StartsWith("Enemy"))
 				{
-					//Objects in the scene don't have an owner, its means view.owner will be null
-					if (view.IsMine)
-					{
-						target = view.gameObject.transform;
-					}
+					target = view.gameObject.transform;
+					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = true;
 				}
-
+				if (!view.IsMine && !view.transform.name.StartsWith("Enemy"))
+				{
+					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = false;
+				}
 			}
 
 			tr = transform;

@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 public class BasicGun : MonoBehaviour
 {
     int loadedBullets; // When this is equal to 0, player has to use bullets in inventory to reload
     // Start is called before the first frame update
 
     int maxLoadedBullets = 10;
+    PhotonView view;
     void Start()
     {
+        view = transform.parent.gameObject.GetComponent<PhotonView>();
         loadedBullets = maxLoadedBullets;
     }
 
@@ -38,7 +40,7 @@ public class BasicGun : MonoBehaviour
             EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
             if(enemy != null)
             {
-                enemy.takeDamage(10);
+                enemy.view.RPC("takeDamage", RpcTarget.All, 10.0f);
             }
             
 

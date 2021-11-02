@@ -54,7 +54,7 @@ namespace CMF
 		void Awake()
 		{
 			Setup();
-
+			view = GetComponent<PhotonView>();
 			//Initialize sensor;
 			sensor = new Sensor(this.tr, col);
 			RecalculateColliderDimensions();
@@ -80,7 +80,7 @@ namespace CMF
 		//Setup references to components;
 		void Setup()
 		{
-			view = GetComponent<PhotonView>();
+				view = GetComponent<PhotonView>();
 				tr = transform;
 				col = GetComponent<Collider>();
 
@@ -124,8 +124,6 @@ namespace CMF
 		//Recalculate collider height/width/thickness;
 		public void RecalculateColliderDimensions()
 		{
-            if (view.IsMine)
-			{
 				//Check if a collider is attached to this gameobject;
 				if (col == null)
 				{
@@ -178,7 +176,6 @@ namespace CMF
 				//Recalibrate sensor variables to fit new collider dimensions;
 				if (sensor != null)
 					RecalibrateSensor();
-			}
 		}
 
 		//Recalibrate sensor variables;
