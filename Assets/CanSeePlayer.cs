@@ -12,7 +12,11 @@ public class CanSeePlayer : ActionNode
     }
 
     protected override State OnUpdate() {
-        if (context.sensorManager.CanSeePlayer()) return State.Success;
+        if (context.sensorManager.CanSeePlayer())
+        {
+            blackboard.lastDetectedPlayer = context.sensorManager.GetSeenPlayer();
+            return State.Success;
+        } 
         return State.Failure;
     }
 }

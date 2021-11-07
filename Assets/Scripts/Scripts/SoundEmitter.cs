@@ -15,13 +15,15 @@ public class EmittedSound
     public SoundEmissionType type;
     public float emissionTime;
     public float duration; //Time during which the sound can be remembered
+    public SoundEmitter emitter;
 
-    public EmittedSound(Vector3 pos, SoundEmissionType typ, float time, float dur)
+    public EmittedSound(Vector3 pos, SoundEmissionType typ, float time, float dur, SoundEmitter emit)
     {
         position = pos;
         type = typ;
         emissionTime = time;
         duration = dur;
+        emitter = emit;
     }
 }
 
@@ -75,7 +77,7 @@ public class SoundEmitter : MonoBehaviour
         {
             if (CanHearSound(baseIntensity, listener.transform.position, position))
             {
-                listener.Notify(new EmittedSound(position, emissionType, Time.time, duration));
+                listener.Notify(new EmittedSound(position, emissionType, Time.time, duration, this));
             }
         }
     }

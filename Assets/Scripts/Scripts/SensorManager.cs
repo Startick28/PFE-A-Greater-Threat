@@ -39,6 +39,33 @@ public class SensorManager : MonoBehaviour
     }
 
     /*
+        Returns a player that has been seen by any sensor.
+    */
+    public GameObject GetSeenPlayer()
+    {
+        List<GameObject> seenEntities = GetSeenEntites();
+        foreach (GameObject entity in seenEntities)
+        {
+            if (entity.CompareTag("Player")) return entity;
+        }
+        return null;
+    }
+
+
+    /*
+        Returns a player that has been heard by any sensor.
+    */
+    public GameObject GetHeardPlayer()
+    {
+        List<EmittedSound> heardSounds = GetHeardEntites();
+        foreach (EmittedSound sound in heardSounds)
+        {
+            if (sound.type == SoundEmissionType.PlayerSound) return sound.emitter.gameObject;
+        }
+        return null;
+    }
+
+    /*
         Return the list of all gameObjects that can be seen by the different vision sensors
     */
     public List<GameObject> GetSeenEntites()
