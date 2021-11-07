@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace BehaviourTreeAI {
     public class BehaviourTreeRunner : MonoBehaviour {
@@ -20,9 +21,13 @@ namespace BehaviourTreeAI {
 
         // Update is called once per frame
         void Update() {
-            if (tree) {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                if (tree) {
                 tree.Update();
+                }
             }
+            
         }
 
         Context CreateBehaviourTreeContext() {
