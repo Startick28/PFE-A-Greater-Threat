@@ -142,7 +142,7 @@ MonoBehaviour:
   - {fileID: -5992917732090074051}
   - {fileID: 6894226119776900359}
   blackboard:
-    moveToPosition: {x: 5.95, y: 0, z: -0.58}
+    moveToPosition: {x: 4.20918, y: 0, z: 9.723114}
 --- !u!114 &1114421709728567984
 MonoBehaviour:
   m_ObjectHideFlags: 0
