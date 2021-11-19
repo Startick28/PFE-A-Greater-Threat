@@ -45,5 +45,10 @@ namespace BehaviourTreeAI {
                 }
             });
         }
+
+        public Context GetContext()
+        {
+            return context;
+        }
     }
 }
