@@ -9,7 +9,6 @@ namespace BehaviourTreeAI {
         public bool restartOnFailure = false;
 
         protected override void OnStart() {
-
         }
 
         protected override void OnStop() {

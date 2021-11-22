@@ -6,7 +6,9 @@ using BehaviourTreeAI;
 public class MoveToPosition : ActionNode
 {
     public float speed = 5;
+    public float angularSpeed = 720;
     public float stoppingDistance = 0.5f;
+    public bool updatePosition = true;
     public bool updateRotation = true;
     public float acceleration = 40.0f;
     public float tolerance = 1.0f;
@@ -14,7 +16,9 @@ public class MoveToPosition : ActionNode
     protected override void OnStart() {
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
+        context.agent.angularSpeed = angularSpeed;
         context.agent.destination = blackboard.moveToPosition;
+        context.agent.updatePosition = updatePosition;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
     }
