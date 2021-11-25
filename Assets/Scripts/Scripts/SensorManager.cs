@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +6,42 @@ public class SensorManager : MonoBehaviour
 {
     [SerializeField] private List<SensorToolkit.TriggerSensor> visionConeSensors;
     [SerializeField] private List<SensorToolkit.SoundSensor> soundSensors;
+    [SerializeField] private float timeToDetectPlayer = 1f;
+    [SerializeField] private float timeToForgetPlayer = 1f;
 
     private bool canSeePlayerLock = false; // If true, the player cannot be seen
     private bool canHearPlayerLock = false; // If true, the player cannot be heard
+    private float playerDetectionTimer = 0f;
+    private float playerForgetionTimer = 0f;
+    private float playerDetectionDecreaseFactor = 2f; // To not reset the instant the player is not seen 
+
+    private bool _playerDetected = false;
+    public bool PlayerDetected { get {return _playerDetected;} private set{} }
+    
+    void Update()
+    {
+        if (CanSeePlayer()) // Refactoring : Use events to update "canSeePlayer" instead of calling the function every frame
+        {
+            if (!_playerDetected)
+            {
+                if (playerDetectionTimer < timeToDetectPlayer) playerDetectionTimer += Time.deltaTime;
+                else _playerDetected = true;
+            }
+            playerForgetionTimer = 0f;
+        }
+        else
+        {
+            if (_playerDetected)
+            {
+                if (playerForgetionTimer < timeToForgetPlayer) playerForgetionTimer += Time.deltaTime;
+                else _playerDetected = false;
+            }
+            if (playerDetectionTimer > 0) playerDetectionTimer -= Time.deltaTime * playerDetectionDecreaseFactor;
+        } 
+    }
 
     /*
-        Returns true if the player has been seen by any sensor.
+        Returns true if a player has been seen by any sensor.
     */
     public bool CanSeePlayer()
     {
@@ -25,7 +55,7 @@ public class SensorManager : MonoBehaviour
     }
 
     /*
-        Returns true if the player has been heard by any sensor and the sound is still remembered.
+        Returns true if a player has been heard by any sensor and the sound is still remembered.
     */
     public bool HeardPlayer()
     {

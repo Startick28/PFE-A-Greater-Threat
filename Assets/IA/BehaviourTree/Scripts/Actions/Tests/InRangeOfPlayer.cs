@@ -5,6 +5,8 @@ using BehaviourTreeAI;
 
 public class InRangeOfPlayer : ActionNode
 {
+    public float range;
+
     protected override void OnStart() {
     }
 
@@ -12,6 +14,11 @@ public class InRangeOfPlayer : ActionNode
     }
 
     protected override State OnUpdate() {
-        return State.Success;
+        if (Vector3.Distance(blackboard.lastDetectedPlayer.transform.position, context.transform.position) <= range)
+        {
+            return State.Success;
+        }
+        
+        return State.Failure;
     }
 }
