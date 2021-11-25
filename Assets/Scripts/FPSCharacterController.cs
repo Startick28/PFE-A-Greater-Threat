@@ -167,7 +167,11 @@ public class FPSCharacterController : AdvancedWalkerController
 
 
 	
+	public Vector3 getAimingDirection()
+    {
+		return cameraController.GetAimingDirection();
 
+	}
 
 
 
