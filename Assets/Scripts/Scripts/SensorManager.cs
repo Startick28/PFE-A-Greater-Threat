@@ -6,6 +6,7 @@ public class SensorManager : MonoBehaviour
 {
     [SerializeField] private List<SensorToolkit.TriggerSensor> visionConeSensors;
     [SerializeField] private List<SensorToolkit.SoundSensor> soundSensors;
+    [SerializeField] private SensorToolkit.RangeSensor presenceSensor;
     [SerializeField] private float timeToDetectPlayer = 1f;
     [SerializeField] private float timeToForgetPlayer = 1f;
 
@@ -67,6 +68,23 @@ public class SensorManager : MonoBehaviour
         }
         return false;
     }
+
+    /*
+        Returns true if there is a player in range of the presence sensor and false otherwise
+    */
+    public bool IsPlayerPresent()
+    {
+        return (presenceSensor.DetectedObjects.Count > 0);
+    }
+
+    /*
+        Returns the nearest player in the range of the presence sensor
+    */
+    public GameObject GetNearestPresentPlayer()
+    {
+        return presenceSensor.GetNearest();
+    }
+
 
     /*
         Returns a player that has been seen by any sensor.
