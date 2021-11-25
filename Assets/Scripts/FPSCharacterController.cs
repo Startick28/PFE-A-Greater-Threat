@@ -16,6 +16,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	FPS_Mover fMover;
 	FPS_CharacterInput fcharacterInput;
 
+	public Interactable nearestInteractable;
+
 	BasicGun gun;
 
 	//PhotonView view;
@@ -23,6 +25,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousCrouch;
 	bool previousRun;
 	bool previousFire;
+	bool isInteracting;
 
 	void Awake()
 	{
@@ -35,6 +38,8 @@ public class FPSCharacterController : AdvancedWalkerController
 		ceilingDetector = GetComponent<CeilingDetector>();
 
 		gun = GetComponentInChildren<BasicGun>();
+
+		nearestInteractable = null;
 
 		if (characterInput == null)
 			Debug.LogWarning("No character input script has been attached to this gameobject", this.gameObject);
@@ -52,21 +57,41 @@ public class FPSCharacterController : AdvancedWalkerController
 	//	{
 			HandleJumpKeyInput();
 
+		if(fcharacterInput.isInteractKeyPressed() && nearestInteractable != null)
+		{
+			
+				if(nearestInteractable.canInteract)
+                {
+					switch(nearestInteractable.iType)
+                    {
+						case InteractionType.chest:
+							nearestInteractable.interact();
+							break;
+
+						default:
+
+							break;
+                    }
+                }
+			
+		}
+
 			if (fcharacterInput.isFireKeyPressed())
 			{
-				if (!previousFire)
-				{
-					//fire();
-					gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
-					previousFire = true;
-				}
-				else
-				{
-
-				}
-				//Debug.Log("Pan");
-
+			/*if (!previousFire)
+			{
+				//fire();
+				gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+				previousFire = true;
 			}
+			else
+			{
+
+			}*/
+			gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+			//Debug.Log("Pan");
+
+		}
 			else
 			{
 				previousFire = false;
@@ -123,6 +148,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 			if (fcharacterInput.isReloadKeyPressed())
 			{
+			
 				gun.reload();
 			}
 

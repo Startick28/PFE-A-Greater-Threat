@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77d43b4a5a063a4ca0ea62e7e779813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 2
 --- !u!1 &1808533682526885449
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   reloadKey: 114
   runKey: 304
   zoomKey: 324
+  interactKey: 101
 --- !u!114 &6224040936624951008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,6 +766,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 8479908016066650529}
   cameraController: {fileID: 8374097536362046435}
   fcameraController: {fileID: 1537636769}
+  nearestInteractable: {fileID: 0}
 --- !u!114 &5661628889720168415
 MonoBehaviour:
   m_ObjectHideFlags: 0

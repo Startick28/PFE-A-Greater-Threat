@@ -8,44 +8,68 @@ public class BasicGun : MonoBehaviour
     // Start is called before the first frame update
 
     int maxLoadedBullets = 10;
+    [SerializeField]
+    float fireRate;
+
+    
+    float fireTime;
+
+    float timeSinceFire;
     PhotonView view;
     void Start()
     {
         view = transform.parent.gameObject.GetComponent<PhotonView>();
+        
+        
         loadedBullets = maxLoadedBullets;
+        setFireTime();
+        //fireTime = 1;
+        timeSinceFire = fireTime + 1;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        timeSinceFire += Time.deltaTime;
+        //Debug.Log(timeSinceFire);
     }
 
     public void fire(Vector3 position,Vector3 direction)
     {
-        Debug.Log(loadedBullets);
-        if(loadedBullets == 0)
+        if(timeSinceFire>fireTime)
         {
-            Debug.Log("Tried to shoot with empty mag");
-            return;
-        }
-        //Debug.Log("Tried to shoot with basic gun");
-        int layerMask = 1 << 26;
-        RaycastHit hit;
-        Debug.DrawRay(position, direction * 1000, Color.red);
-        if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
-        {
-            Debug.DrawRay(position, direction * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
-            EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
-            if(enemy != null)
+            Debug.Log(loadedBullets);
+            if (loadedBullets == 0)
             {
-                enemy.view.RPC("takeDamage", RpcTarget.All, 10.0f);
+                Debug.Log("Tried to shoot with empty mag");
+                return;
             }
-            
+            //Debug.Log("Tried to shoot with basic gun");
+            int layerMask = 1 << 26;
+            RaycastHit hit;
+            Debug.DrawRay(position, direction * 1000, Color.red);
+            if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
+            {
+                Debug.DrawRay(position, direction * hit.distance, Color.yellow);
+                Debug.Log("Did Hit");
+                EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
+                if (enemy != null)
+                {
+                    enemy.view.RPC("takeDamage", RpcTarget.All, 10.0f);
+                }
 
+
+            }
+            loadedBullets--;
+            timeSinceFire = 0;
         }
-        loadedBullets--;
+        else
+        {
+
+            //Debug.Log("cannot fire right now");
+            
+        }
+       
     }
 
     public void reload()
@@ -57,4 +81,23 @@ public class BasicGun : MonoBehaviour
     {
         return loadedBullets;
     }
+
+    public void setFireTime()
+    {
+        if (fireRate > 0)
+        {
+            fireTime = 1 / fireRate;
+        }
+        else
+        {
+            fireTime = 1;
+        }
+    }
+
+    public void setFireRate(float newRate)
+    {
+        fireRate = newRate;
+        setFireTime();
+    }
+       
 }
