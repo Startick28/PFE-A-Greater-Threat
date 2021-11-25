@@ -40,6 +40,20 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - takeDamage
+  - InstantiateEnemy
+  - destroyEnemy
+  - move
+  - EnemyBiteAttackWithId
+  - EnemyClawsAttackWithId
+  - EnemyDieWithId
+  - EnemyDisengageJumpWithId
+  - EnemyDodgeWithId
+  - EnemyGetHit
+  - EnemyJumpBiteAttackWithId
+  - EnemyMoveToPositionWithId
+  - EnemyRoarWithId
+  - EnemySpitAttackWithId
+  - EnemyTakeDamageWithId
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
