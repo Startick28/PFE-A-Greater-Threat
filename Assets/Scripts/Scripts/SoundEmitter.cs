@@ -6,21 +6,24 @@ public enum SoundEmissionType
 {
     RandomSound,
     PlayerSound,
-    ProjectileSound
+    ProjectileSound,
+    GunSound
 }
 
 public class EmittedSound
 {
     public Vector3 position;
     public SoundEmissionType type;
+    public float intensity;
     public float emissionTime;
     public float duration; //Time during which the sound can be remembered
     public SoundEmitter emitter;
 
-    public EmittedSound(Vector3 pos, SoundEmissionType typ, float time, float dur, SoundEmitter emit)
+    public EmittedSound(Vector3 pos, SoundEmissionType typ, float intens, float time, float dur, SoundEmitter emit)
     {
         position = pos;
         type = typ;
+        intensity = intens;
         emissionTime = time;
         duration = dur;
         emitter = emit;
@@ -29,8 +32,6 @@ public class EmittedSound
 
 public class SoundEmitter : MonoBehaviour
 {
-    
-    
     [SerializeField] private SoundEmissionType emissionType = SoundEmissionType.RandomSound;
 
     /* 
@@ -77,7 +78,7 @@ public class SoundEmitter : MonoBehaviour
         {
             if (CanHearSound(baseIntensity, listener.transform.position, position))
             {
-                listener.Notify(new EmittedSound(position, emissionType, Time.time, duration, this));
+                listener.Notify(new EmittedSound(position, emissionType, baseIntensity, Time.time, duration, this));
             }
         }
     }

@@ -17,11 +17,13 @@ public class TestController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, new Vector3(Random.Range(-20, 0), 1, 30));
+            soundEmitter.Emit();
+            Debug.Log("EMIT");
+            //EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, new Vector3(Random.Range(-20, 0), 1, 30));
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            EnemiesManager.Instance.photonView.RPC("EnemyDieWithId", RpcTarget.All, id);
+            //EnemiesManager.Instance.photonView.RPC("EnemyDieWithId", RpcTarget.All, id);
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
