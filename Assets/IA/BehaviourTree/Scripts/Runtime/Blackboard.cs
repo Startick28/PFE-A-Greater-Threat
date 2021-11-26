@@ -12,6 +12,7 @@ namespace BehaviourTreeAI {
         private Context context;
         public Vector3 moveToPosition;
         public GameObject lastDetectedPlayer;
+        public GameObject nearestPresentPlayer;
 
         public void Update()
         {

@@ -21,6 +21,10 @@ public class SensorManager : MonoBehaviour
     
     void Update()
     {
+        /*
+            Updating playerDetectionTimer and playerForgetionTimer so that the entity takes a certain time
+            to detect and forget a player.
+        */
         if (CanSeePlayer()) // Refactoring : Use events to update "canSeePlayer" instead of calling the function every frame
         {
             if (!_playerDetected)
@@ -56,15 +60,18 @@ public class SensorManager : MonoBehaviour
     }
 
     /*
-        Returns true if a player has been heard by any sensor and the sound is still remembered.
+        Returns true if anything has been heard by any sensor and the sound is still remembered.
     */
-    public bool HeardPlayer()
+    public bool HeardSomething()
     {
-        if (canHearPlayerLock) return false;
         List<EmittedSound> heardSounds = GetHeardEntites();
         foreach (EmittedSound sound in heardSounds)
         {
-            if (sound.type == SoundEmissionType.PlayerSound) return true;
+            if (sound.type == SoundEmissionType.PlayerSound) 
+            {
+                if (!canHearPlayerLock) return true;
+            }
+            else return true;
         }
         return false;
     }
