@@ -723,7 +723,7 @@ MonoBehaviour:
   - {fileID: 1370883805793792840}
   - {fileID: -5359971805311378678}
   blackboard:
-    moveToPosition: {x: 24.15232, y: 0, z: -11.412478}
+    moveToPosition: {x: 158.90738, y: 0, z: 176.82791}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
 --- !u!114 &164124117158313367

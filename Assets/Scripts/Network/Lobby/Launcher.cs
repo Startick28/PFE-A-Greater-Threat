@@ -101,8 +101,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void StartGame()
     {
         Debug.Log(PhotonNetwork.IsMasterClient);
-        // Permet de charger la scene que l'on veut, le 1 représente l'index de la scene indiqué dans le build settings d'unity
-        PhotonNetwork.LoadLevel("Enemies without View");
+        // Permet de charger la scene que l'on veut, le 1 reprï¿½sente l'index de la scene indiquï¿½ dans le build settings d'unity
+        PhotonNetwork.LoadLevel("BaseScene");
     }
 
     public override void OnLeftRoom()

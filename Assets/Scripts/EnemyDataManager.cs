@@ -26,7 +26,7 @@ public class EnemyDataManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    void takeDamage(float damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
         if(health<= 0)
