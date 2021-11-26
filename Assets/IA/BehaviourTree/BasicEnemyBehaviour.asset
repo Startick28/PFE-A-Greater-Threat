@@ -648,7 +648,7 @@ MonoBehaviour:
   - {fileID: -5173459081983542895}
   - {fileID: -7888436039895726741}
   blackboard:
-    moveToPosition: {x: -5.921502, y: 0, z: 14.422875}
+    moveToPosition: {x: 24.436161, y: 0, z: 8.446947}
     lastDetectedPlayer: {fileID: 0}
 --- !u!114 &164124117158313367
 MonoBehaviour:
@@ -970,7 +970,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 19e42e5b7804b8b44bd2fd8c5e05d143
-  position: {x: -761.0188, y: 1443.0999}
+  position: {x: -761.00006, y: 1444.5209}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}

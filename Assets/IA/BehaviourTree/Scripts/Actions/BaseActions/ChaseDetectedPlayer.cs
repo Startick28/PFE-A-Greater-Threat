@@ -24,6 +24,7 @@ public class ChaseDetectedPlayer : ActionNode
     }
 
     protected override void OnStop() {
+        context.agent.ResetPath();
     }
 
     protected override State OnUpdate() {

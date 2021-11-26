@@ -9,7 +9,6 @@ public class EnemyScript : MonoBehaviour
     // Enemy's general variables 
     float maxHealth = 100;
     float currentHealth = 100;
-    Renderer renderer;
     [SerializeField] private int id;
     public int ID
     {
@@ -26,27 +25,18 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private Collider SpitAttackCollider;
 
     [SerializeField] NavMeshAgent agent;
-    // Start is called before the first frame update
+    
+    
     void Start()
     {
-        renderer = GetComponent<Renderer>();
-        agent = GetComponent<NavMeshAgent>();
-        if (renderer == null)
-        {
-            renderer = GetComponentInChildren<Renderer>();
-        }
-        renderer.material.color = Color.red;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        renderer.material.color = new Color(currentHealth / maxHealth, 0, 0);
-
     }
 
 
-    // Fonctions qui seront amenés à être appelées par des joueurs ou par le monstre lui-même
+    // Fonctions qui seront amenï¿½s ï¿½ ï¿½tre appelï¿½es par des joueurs ou par le monstre lui-mï¿½me
     public void Die()
     {
         Destroy(this.gameObject);
@@ -65,13 +55,13 @@ public class EnemyScript : MonoBehaviour
         //Code
     }
 
-    // Fonction qui seront appelées selon par l'abre de décision du monstre
+    // Fonction qui seront appelï¿½es selon par l'abre de dï¿½cision du monstre
     public void MoveToPosition(Vector3 position, float stoppingDistance, float runingSpeed, float walkingSpeed, bool updateRotation, float acceleration, bool isRuning)
     {
         agent.stoppingDistance = stoppingDistance;
         agent.speed = (isRuning ? runingSpeed : walkingSpeed);
         agent.updateRotation = updateRotation;
-        agent.acceleration = acceleration; // Différence waling/runing?
+        agent.acceleration = acceleration; // Diffï¿½rence waling/runing?
         agent.destination = position;
     }
 
