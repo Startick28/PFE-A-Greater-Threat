@@ -27,8 +27,12 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousFire;
 	bool isInteracting;
 
+	float soundEmissionTime = 2;
+	float timeSinceSoundEmission;
+
 	void Awake()
 	{
+		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
 		mover = GetComponent<Mover>();
 		fMover = GetComponent<FPS_Mover>();
@@ -55,6 +59,24 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
        // if (view.IsMine)
 	//	{
+
+		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+        {
+			if(timeSinceSoundEmission> soundEmissionTime)
+            {
+				emitSound();
+				timeSinceSoundEmission = 0;
+            }
+            else
+            {
+
+            }
+
+
+        }
+		timeSinceSoundEmission += Time.deltaTime;
+       
+
 			HandleJumpKeyInput();
 
 		if(fcharacterInput.isInteractKeyPressed() && nearestInteractable != null)
@@ -173,7 +195,21 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	}
 
-
+	public void emitSound()
+    {
+		if(fcharacterInput.isRunKeyPressed())
+        {
+			Debug.Log("Player emitted running sound");
+        }
+		else if(fcharacterInput.isCrouchKeyPressed())
+        {
+			Debug.Log("Player emitted crouching sound");
+		}
+        else
+        {
+			Debug.Log("Player emitted walking sound");
+		}
+    }
 
 	// Update is called once per frame
 
