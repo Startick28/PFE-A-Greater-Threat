@@ -11,6 +11,7 @@ namespace BehaviourTreeAI {
     public class Blackboard {
         private Context context;
         public Vector3 moveToPosition;
+        public Vector3 lastPlayerSeenPosition;
         public GameObject lastDetectedPlayer;
         public GameObject nearestPresentPlayer;
 

@@ -18,7 +18,6 @@ MonoBehaviour:
   position: {x: -308.53378, y: 1484.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -29,7 +28,7 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 6
+  tolerance: 6
 --- !u!114 &-8716267466282534891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,7 +47,6 @@ MonoBehaviour:
   position: {x: 778.93134, y: 341.0227}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -75,7 +73,6 @@ MonoBehaviour:
   position: {x: 899.46594, y: 1341.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: ClawAttack Sequence
@@ -103,7 +100,6 @@ MonoBehaviour:
   position: {x: 191.46608, y: 1781.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -127,7 +123,6 @@ MonoBehaviour:
   position: {x: 987.46606, y: 1496.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: ClawAttack
@@ -151,7 +146,6 @@ MonoBehaviour:
   position: {x: 172.80002, y: 512}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -181,7 +175,6 @@ MonoBehaviour:
   position: {x: -318.53387, y: 745.92035}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -207,7 +200,6 @@ MonoBehaviour:
   position: {x: -852.5338, y: 539.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -230,7 +222,6 @@ MonoBehaviour:
   position: {x: 371.46622, y: 1179.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -254,10 +245,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5e26bfec23354434fba43fce0b23ccc2
-  position: {x: -825, y: 1296}
+  position: {x: -797.5338, y: 1295.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -280,7 +270,6 @@ MonoBehaviour:
   position: {x: -13.349999, y: 513}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -303,7 +292,6 @@ MonoBehaviour:
   position: {x: -190.34999, y: 514.0001}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -326,7 +314,6 @@ MonoBehaviour:
   position: {x: 752.9313, y: 780.0227}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -351,7 +338,6 @@ MonoBehaviour:
   position: {x: 309.46597, y: 1619.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: DisengageJumpSequence
@@ -377,7 +363,6 @@ MonoBehaviour:
   position: {x: -976.5338, y: 1145.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Too close to jump?
@@ -398,10 +383,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1e4087c621877694bbbd8b18f31acaed
-  position: {x: -1016.8501, y: 1296.4003}
+  position: {x: -970.5338, y: 1293.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Chase player to jump on him
@@ -427,7 +411,6 @@ MonoBehaviour:
   position: {x: 575.93134, y: 778.02277}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -450,7 +433,6 @@ MonoBehaviour:
   position: {x: 27.466202, y: 1484.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: JumpBiteAttack
@@ -474,7 +456,6 @@ MonoBehaviour:
   position: {x: 541.4659, y: 1623.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -498,7 +479,6 @@ MonoBehaviour:
   position: {x: 88.564606, y: -120.63301}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -522,7 +502,6 @@ MonoBehaviour:
   position: {x: -465.5338, y: 326.92047}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 'Attack player if detected
@@ -551,7 +530,6 @@ MonoBehaviour:
   position: {x: -688.5338, y: 795.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -574,7 +552,6 @@ MonoBehaviour:
   position: {x: 787.9313, y: 639.0227}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -599,7 +576,6 @@ MonoBehaviour:
   position: {x: 89.70003, y: 7.8500085}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -625,7 +601,6 @@ MonoBehaviour:
   position: {x: 342.46616, y: 2023.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -648,7 +623,6 @@ MonoBehaviour:
   position: {x: 536.466, y: 2023.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -672,7 +646,6 @@ MonoBehaviour:
   position: {x: -475.53375, y: 1602.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -696,7 +669,6 @@ MonoBehaviour:
   position: {x: 730.4658, y: 1628.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -707,7 +679,7 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 3
+  tolerance: 3
 --- !u!114 &-1064434144549496265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +698,6 @@ MonoBehaviour:
   position: {x: 1168.4661, y: 1496.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -751,7 +722,6 @@ MonoBehaviour:
   position: {x: 370.4662, y: 1022.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 'Chose a valid attack move
@@ -771,7 +741,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: BasicEnemyBehaviour
+  m_Name: BasicEnemyBehaviour Safe
   m_EditorClassIdentifier: 
   rootNode: {fileID: -3870265847879121050}
   treeState: 0
@@ -830,10 +800,8 @@ MonoBehaviour:
   - {fileID: -6141599799120569497}
   - {fileID: -7130289081076305933}
   - {fileID: 995968357222693897}
-  - {fileID: 5533979408837365797}
   blackboard:
-    moveToPosition: {x: 5.1963787, y: 0, z: -7.1138}
-    lastPlayerSeenPosition: {x: -18.3, y: 1, z: -19.6}
+    moveToPosition: {x: 31.879025, y: 0, z: 5.5673656}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
 --- !u!114 &164124117158313367
@@ -854,7 +822,6 @@ MonoBehaviour:
   position: {x: -137.53383, y: 1484.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -877,7 +844,6 @@ MonoBehaviour:
   position: {x: -463.53375, y: 528.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -903,7 +869,6 @@ MonoBehaviour:
   position: {x: 349.80002, y: 513}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -928,7 +893,6 @@ MonoBehaviour:
   position: {x: 777.93134, y: 511.0227}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -958,7 +922,6 @@ MonoBehaviour:
   position: {x: 411.46597, y: 1775.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -984,7 +947,6 @@ MonoBehaviour:
   position: {x: 576.9313, y: 638.02264}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1010,7 +972,6 @@ MonoBehaviour:
   position: {x: 576.9313, y: 501.02277}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1033,10 +994,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f779591ece54736429b74fd1fa3d2a69
-  position: {x: -1144.85, y: 1437.4003}
+  position: {x: -1097.5338, y: 1432.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: In range to jump?
@@ -1060,7 +1020,6 @@ MonoBehaviour:
   position: {x: 805.4662, y: 1495.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1083,7 +1042,6 @@ MonoBehaviour:
   position: {x: 187.46606, y: 1484.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1108,7 +1066,6 @@ MonoBehaviour:
   position: {x: 90.752945, y: 331}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1136,7 +1093,6 @@ MonoBehaviour:
   position: {x: 90.74998, y: 151.69998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1163,7 +1119,6 @@ MonoBehaviour:
   position: {x: 429.46606, y: 1882.9204}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1189,7 +1144,6 @@ MonoBehaviour:
   position: {x: -738.5338, y: 1145.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Jump on player sequence
@@ -1217,7 +1171,6 @@ MonoBehaviour:
   position: {x: -689.5338, y: 675.92035}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1240,10 +1193,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f223aeed575fe264faafb40abc8fcefc
-  position: {x: -650, y: 1292}
+  position: {x: -622.5338, y: 1291.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1266,7 +1218,6 @@ MonoBehaviour:
   position: {x: 997.9312, y: 510.02267}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1288,10 +1239,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 19e42e5b7804b8b44bd2fd8c5e05d143
-  position: {x: -902.8501, y: 1436.4003}
+  position: {x: -855.5338, y: 1430.9205}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1302,7 +1252,7 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 10
+  tolerance: 10
 --- !u!114 &5501445638078669618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1271,6 @@ MonoBehaviour:
   position: {x: -137.53383, y: 1338.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: JumpBiteAttack Sequence
@@ -1332,32 +1281,6 @@ MonoBehaviour:
   - {fileID: 164124117158313367}
   - {fileID: -4082984015650959735}
   - {fileID: 2560515697152293227}
---- !u!114 &5533979408837365797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
-  m_Name: Repeat
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: d0f5061f66ba6fe4fa4c3deaccfe06e4
-  position: {x: -1210.534, y: 1241.0503}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastDetectedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-  description: Repeat untill in range
-  drawGizmos: 0
-  child: {fileID: 0}
-  restartOnSuccess: 1
-  restartOnFailure: 0
 --- !u!114 &6260856320332452458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,7 +1299,6 @@ MonoBehaviour:
   position: {x: -475.53375, y: 1486.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1400,7 +1322,6 @@ MonoBehaviour:
   position: {x: -865.5338, y: 984.92035}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Is it ok to jump?
@@ -1423,10 +1344,9 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 38a4dc71fc5d36b45bce9f63a7c19c92
-  position: {x: -471, y: 1292}
+  position: {x: -465.5338, y: 1291.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1450,7 +1370,6 @@ MonoBehaviour:
   position: {x: 637.46606, y: 1494.9203}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1476,7 +1395,6 @@ MonoBehaviour:
   position: {x: -649.5338, y: 541.92035}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
