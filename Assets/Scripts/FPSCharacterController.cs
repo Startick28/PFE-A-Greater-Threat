@@ -87,7 +87,9 @@ public class FPSCharacterController : AdvancedWalkerController
 					switch(nearestInteractable.iType)
                     {
 						case InteractionType.chest:
-							nearestInteractable.interact();
+							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+
+							//nearestInteractable.interact();
 							break;
 
 						default:
@@ -187,7 +189,11 @@ public class FPSCharacterController : AdvancedWalkerController
 		
 	}
 
-
+	[PunRPC]
+	public void InteractWithInteractable()
+    {
+		nearestInteractable.interact();
+	}
 	
 	public Vector3 getAimingDirection()
     {
