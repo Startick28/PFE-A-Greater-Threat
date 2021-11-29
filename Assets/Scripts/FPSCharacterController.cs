@@ -16,6 +16,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	FPS_Mover fMover;
 	FPS_CharacterInput fcharacterInput;
 
+	public Interactable nearestInteractable;
+
 	BasicGun gun;
 
 	//PhotonView view;
@@ -23,9 +25,14 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousCrouch;
 	bool previousRun;
 	bool previousFire;
+	bool isInteracting;
+
+	float soundEmissionTime = 2;
+	float timeSinceSoundEmission;
 
 	void Awake()
 	{
+		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
 		mover = GetComponent<Mover>();
 		fMover = GetComponent<FPS_Mover>();
@@ -35,6 +42,8 @@ public class FPSCharacterController : AdvancedWalkerController
 		ceilingDetector = GetComponent<CeilingDetector>();
 
 		gun = GetComponentInChildren<BasicGun>();
+
+		nearestInteractable = null;
 
 		if (characterInput == null)
 			Debug.LogWarning("No character input script has been attached to this gameobject", this.gameObject);
@@ -50,23 +59,63 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
        // if (view.IsMine)
 	//	{
+
+		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+        {
+			if(timeSinceSoundEmission> soundEmissionTime)
+            {
+				emitSound();
+				timeSinceSoundEmission = 0;
+            }
+            else
+            {
+
+            }
+
+
+        }
+		timeSinceSoundEmission += Time.deltaTime;
+       
+
 			HandleJumpKeyInput();
+
+		if(fcharacterInput.isInteractKeyPressed() && nearestInteractable != null)
+		{
+			
+				if(nearestInteractable.canInteract)
+                {
+					switch(nearestInteractable.iType)
+                    {
+						case InteractionType.chest:
+							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+
+							//nearestInteractable.interact();
+							break;
+
+						default:
+
+							break;
+                    }
+                }
+			
+		}
 
 			if (fcharacterInput.isFireKeyPressed())
 			{
-				if (!previousFire)
-				{
-					//fire();
-					gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
-					previousFire = true;
-				}
-				else
-				{
-
-				}
-				//Debug.Log("Pan");
-
+			/*if (!previousFire)
+			{
+				//fire();
+				gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+				previousFire = true;
 			}
+			else
+			{
+
+			}*/
+			gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+			//Debug.Log("Pan");
+
+		}
 			else
 			{
 				previousFire = false;
@@ -123,6 +172,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 			if (fcharacterInput.isReloadKeyPressed())
 			{
+			
 				gun.reload();
 			}
 
@@ -139,11 +189,33 @@ public class FPSCharacterController : AdvancedWalkerController
 		
 	}
 
-
+	[PunRPC]
+	public void InteractWithInteractable()
+    {
+		nearestInteractable.interact();
+	}
 	
+	public Vector3 getAimingDirection()
+    {
+		return cameraController.GetAimingDirection();
 
+	}
 
-
+	public void emitSound()
+    {
+		if(fcharacterInput.isRunKeyPressed())
+        {
+			Debug.Log("Player emitted running sound");
+        }
+		else if(fcharacterInput.isCrouchKeyPressed())
+        {
+			Debug.Log("Player emitted crouching sound");
+		}
+        else
+        {
+			Debug.Log("Player emitted walking sound");
+		}
+    }
 
 	// Update is called once per frame
 

@@ -154,7 +154,7 @@ namespace CMF
 				upwardsDirection = tr.up;
 
 				tr.localRotation = Quaternion.Euler(new Vector3(currentXAngle, currentYAngle, 0));
-
+				transform.parent.parent.GetChild(0).transform.localRotation = new Quaternion(0, tr.localRotation.y,0 , tr.localRotation.w);
 			}
 		}
 

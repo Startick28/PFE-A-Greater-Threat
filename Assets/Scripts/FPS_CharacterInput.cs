@@ -10,6 +10,7 @@ public class FPS_CharacterInput : CharacterKeyboardInput
     public KeyCode reloadKey = KeyCode.R;
     public KeyCode runKey = KeyCode.LeftShift;
     public KeyCode zoomKey = KeyCode.Mouse1;
+    public KeyCode interactKey = KeyCode.E;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +46,10 @@ public class FPS_CharacterInput : CharacterKeyboardInput
     public bool isZoomKeyPressed()
     {
         return Input.GetKey(zoomKey);
+    }
+
+    public bool isInteractKeyPressed()
+    {
+        return Input.GetKey(interactKey);
     }
 }
