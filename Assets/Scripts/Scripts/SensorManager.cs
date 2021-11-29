@@ -64,7 +64,7 @@ public class SensorManager : MonoBehaviour
     */
     public bool HeardSomething()
     {
-        List<EmittedSound> heardSounds = GetHeardEntites();
+        List<EmittedSound> heardSounds = GetHeardSounds();
         foreach (EmittedSound sound in heardSounds)
         {
             if (sound.type == SoundEmissionType.PlayerSound) 
@@ -75,6 +75,41 @@ public class SensorManager : MonoBehaviour
         }
         return false;
     }
+
+    /*
+        Returns the loudest sound heard by the entity (or most recent if sounds have the same intensity)
+    */
+    public EmittedSound GetLoudestHeardSound()
+    {
+        List<EmittedSound> heardSounds = GetHeardSounds();
+        EmittedSound loudest = heardSounds[0];
+        heardSounds.RemoveAt(0);
+        float intensityOfLoudest = loudest.intensity;
+        float emissionTime = loudest.emissionTime;
+        foreach (EmittedSound sound in heardSounds)
+        {
+            if (sound.intensity >= intensityOfLoudest)
+            {
+                if (sound.intensity == intensityOfLoudest)
+                {
+                    if (sound.emissionTime > loudest.emissionTime)
+                    {
+                        loudest = sound;
+                        intensityOfLoudest = loudest.intensity;
+                        emissionTime = loudest.emissionTime;
+                    }
+                }
+                else
+                {
+                    loudest = sound;
+                    intensityOfLoudest = loudest.intensity;
+                    emissionTime = loudest.emissionTime;
+                }
+            }
+        }
+        return loudest;
+    }
+
 
     /*
         Returns true if there is a player in range of the presence sensor and false otherwise
@@ -112,7 +147,7 @@ public class SensorManager : MonoBehaviour
     */
     public GameObject GetHeardPlayer()
     {
-        List<EmittedSound> heardSounds = GetHeardEntites();
+        List<EmittedSound> heardSounds = GetHeardSounds();
         foreach (EmittedSound sound in heardSounds)
         {
             if (sound.type == SoundEmissionType.PlayerSound) return sound.emitter.gameObject;
@@ -153,7 +188,7 @@ public class SensorManager : MonoBehaviour
     /*
         Return the list of all sounds that can be heard by the different vision sensors
     */
-    public List<EmittedSound> GetHeardEntites()
+    public List<EmittedSound> GetHeardSounds()
     {
         List<EmittedSound> heardSounds = new List<EmittedSound>();
 

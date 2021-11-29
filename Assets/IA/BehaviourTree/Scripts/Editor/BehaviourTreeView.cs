@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 using System;
 using System.Linq;
+using System.Reflection;
 
 namespace BehaviourTreeAI {
     public class BehaviourTreeView : GraphView {
@@ -26,6 +27,7 @@ namespace BehaviourTreeAI {
             new ScriptTemplate{ templateFile=BehaviourTreeSettings.GetOrCreateSettings().scriptTemplateActionNode, defaultFileName="NewActionNode.cs", subFolder="Scripts/Actions" },
             new ScriptTemplate{ templateFile=BehaviourTreeSettings.GetOrCreateSettings().scriptTemplateCompositeNode, defaultFileName="NewCompositeNode.cs", subFolder="Scripts/Composites" },
             new ScriptTemplate{ templateFile=BehaviourTreeSettings.GetOrCreateSettings().scriptTemplateDecoratorNode, defaultFileName="NewDecoratorNode.cs", subFolder="Scripts/Decorators" },
+            new ScriptTemplate{ templateFile=BehaviourTreeSettings.GetOrCreateSettings().scriptTemplateActionNode, defaultFileName="NewTestActionNode.cs", subFolder="Scripts/Actions/Tests" },
         };
 
         public BehaviourTreeView() {
@@ -128,6 +130,7 @@ namespace BehaviourTreeAI {
 
             // New script functions
             evt.menu.AppendAction($"Create Script.../New Action Node", (a) => CreateNewScript(scriptFileAssets[0]));
+            evt.menu.AppendAction($"Create Script.../New Action Test Node", (a) => CreateNewScript(scriptFileAssets[3]));
             evt.menu.AppendAction($"Create Script.../New Composite Node", (a) => CreateNewScript(scriptFileAssets[1]));
             evt.menu.AppendAction($"Create Script.../New Decorator Node", (a) => CreateNewScript(scriptFileAssets[2]));
             evt.menu.AppendSeparator();
@@ -154,6 +157,8 @@ namespace BehaviourTreeAI {
                     evt.menu.AppendAction($"[Decorator]/{type.Name}", (a) => CreateNode(type, nodePosition));
                 }
             }
+
+            evt.menu.AppendAction("Duplicate", (a) => DuplicateNode());
         }
 
         void SelectFolder(string path) {
@@ -181,16 +186,62 @@ namespace BehaviourTreeAI {
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, template.defaultFileName);
         }
 
-        void CreateNode(System.Type type, Vector2 position) {
+        void DuplicateNode()
+        {
+            List<NodeView> selectedNodes = new List<NodeView>();
+            foreach (ISelectable elem in selection)
+            {
+                if (elem is NodeView) selectedNodes.Add(elem as NodeView);
+            }
+            ClearSelection();
+
+            foreach (NodeView elem in selectedNodes)
+            {
+                System.Type type = elem.node.GetType();
+                Vector2 newPos = elem.node.position + new Vector2(50f,50f);
+                CreateNode(type, newPos);
+                
+                /* if (elem.node is ActionNode)
+                {
+                    ActionNode newNode = CreateNode(type, newPos) as ActionNode;
+                    foreach (FieldInfo field in newNode.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
+                    {
+                        Debug.Log(field);
+                        field.SetValue(newNode, field.GetValue(elem.node));
+                    }
+                }
+                else if (elem.node is CompositeNode)
+                {
+                    CompositeNode newNode = CreateNode(type, newPos) as CompositeNode;
+                    foreach (FieldInfo field in newNode.GetType().GetFields())
+                    {
+                        field.SetValue(newNode, field.GetValue(elem.node));
+                    }
+                }
+                else if (elem.node is DecoratorNode)
+                {
+                    DecoratorNode newNode = CreateNode(type, newPos) as DecoratorNode;
+                    foreach (FieldInfo field in newNode.GetType().GetFields())
+                    {
+                        field.SetValue(newNode, field.GetValue(elem.node));
+                    }
+                } */
+                
+            }
+        }
+
+        Node CreateNode(System.Type type, Vector2 position) {
             Node node = tree.CreateNode(type);
             node.position = position;
             CreateNodeView(node);
+            return node;
         }
 
         void CreateNodeView(Node node) {
             NodeView nodeView = new NodeView(node);
             nodeView.OnNodeSelected = OnNodeSelected;
             AddElement(nodeView);
+            AddToSelection(nodeView);
         }
 
         public void UpdateNodeStates() {

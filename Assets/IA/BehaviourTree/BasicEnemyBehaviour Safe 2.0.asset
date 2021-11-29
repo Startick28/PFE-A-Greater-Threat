@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: BasicEnemyBehaviour
+  m_Name: BasicEnemyBehaviour Safe 2.0
   m_EditorClassIdentifier: 
   rootNode: {fileID: -3870265847879121050}
   treeState: 0
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d0797dac125a9b34eac154341322f574
-  position: {x: -735.3224, y: 1814}
+  position: {x: -734.0001, y: 1814.3228}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
