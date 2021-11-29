@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9096691824811410374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 60c0a6d0d850f7849a2601e4b91dabcd
+  position: {x: -1148, y: 1677}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -2177805498193511251}
+  - {fileID: 7989708894610056594}
+  - {fileID: 5103909335829613659}
 --- !u!114 &-8928131120240169308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,6 +48,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -49,6 +80,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -76,6 +109,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: ClawAttack Sequence
@@ -104,6 +139,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -128,6 +165,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: ClawAttack
@@ -152,6 +191,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -182,6 +223,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -208,6 +251,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -231,6 +276,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -258,6 +305,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -281,6 +330,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -304,6 +355,33 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5961557010054266279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823b3aa877a3c704eb8ed11a22768c00, type: 3}
+  m_Name: CanSeePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1f673383f6970a84faefcd6916989dd5
+  position: {x: -825, y: 1673}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -327,6 +405,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -352,6 +432,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: DisengageJumpSequence
@@ -378,6 +460,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Too close to jump?
@@ -402,13 +486,15 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Chase player to jump on him
   drawGizmos: 0
   children:
   - {fileID: 2244195261528962948}
-  - {fileID: 4227820943912459579}
+  - {fileID: 5365797567609053012}
 --- !u!114 &-4248889273286759897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +514,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -451,6 +539,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: JumpBiteAttack
@@ -475,6 +565,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -499,6 +591,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -523,6 +617,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 'Attack player if detected
@@ -552,6 +648,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -575,6 +673,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -600,6 +700,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -626,10 +728,45 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
   drawGizmos: 0
+--- !u!114 &-2745370373989757613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2ea6667f6e5e242ba87a0d3a876ebc, type: 3}
+  m_Name: GoToEstimatedPlayerPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cfa11809e5176cd4fb2e757db5acef86
+  position: {x: -730.14996, y: 1948}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 0.5
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  range: 8
+  searchDistance: 3
 --- !u!114 &-2573638305866234337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,11 +786,67 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
   drawGizmos: 0
   duration: 0.5
+--- !u!114 &-2177805498193511251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b9710b6b2d556a149885140bd64d5b9f
+  position: {x: -1242.8352, y: 1806.4373}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 603838277290068275}
+  - {fileID: 1146249474003609960}
+--- !u!114 &-2024308988778542138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a3d643c5ba9443b98311707a8105e, type: 3}
+  m_Name: InRangeOfPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6d69f13c4003a074f9b4c15703759db0
+  position: {x: -985, y: 1673}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  range: 8
 --- !u!114 &-1675400339831189346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +866,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -697,6 +892,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -708,6 +905,31 @@ MonoBehaviour:
   updateRotation: 1
   acceleration: 40
   range: 3
+--- !u!114 &-1241435029917881125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817e17affe90aff40b9ce7697e1e1356, type: 3}
+  m_Name: HasPlayerDirectionEstimation
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 11a23523e7326ef4eb8391e506a56dff
+  position: {x: -956.7872, y: 1945.4374}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
 --- !u!114 &-1064434144549496265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +949,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -752,6 +976,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 'Chose a valid attack move
@@ -791,7 +1017,6 @@ MonoBehaviour:
   - {fileID: 3161866322643349212}
   - {fileID: -4608398738694230860}
   - {fileID: 2244195261528962948}
-  - {fileID: 4227820943912459579}
   - {fileID: 7127547411736682088}
   - {fileID: 3858560145952760634}
   - {fileID: -8716267466282534891}
@@ -830,10 +1055,23 @@ MonoBehaviour:
   - {fileID: -6141599799120569497}
   - {fileID: -7130289081076305933}
   - {fileID: 995968357222693897}
-  - {fileID: 5533979408837365797}
+  - {fileID: 5365797567609053012}
+  - {fileID: 1416903745506447481}
+  - {fileID: -9096691824811410374}
+  - {fileID: -2024308988778542138}
+  - {fileID: -2177805498193511251}
+  - {fileID: 7989708894610056594}
+  - {fileID: 5103909335829613659}
+  - {fileID: 603838277290068275}
+  - {fileID: 1146249474003609960}
+  - {fileID: -1241435029917881125}
+  - {fileID: -2745370373989757613}
+  - {fileID: -5961557010054266279}
   blackboard:
-    moveToPosition: {x: 5.1963787, y: 0, z: -7.1138}
-    lastPlayerSeenPosition: {x: -18.3, y: 1, z: -19.6}
+    moveToPosition: {x: -21.070244, y: 0, z: -46.760376}
+    lastPlayerSeenPosition: {x: 4.6, y: 1, z: -31.6}
+    lastPlayerSeenEstimatedDirection: {x: -0.89442676, y: 0, z: -0.44721445}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
 --- !u!114 &164124117158313367
@@ -855,6 +1093,33 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &603838277290068275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823b3aa877a3c704eb8ed11a22768c00, type: 3}
+  m_Name: CanSeePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f69e88a6d0b00d94bbda07aa8bfe4bf5
+  position: {x: -1333.7871, y: 1942.4374}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -878,6 +1143,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -904,6 +1171,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -929,6 +1198,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -940,6 +1211,38 @@ MonoBehaviour:
   updateRotation: 1
   acceleration: 40
   tolerance: 2
+--- !u!114 &1146249474003609960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d3bbbbd34611d45941c58dfbe2a090, type: 3}
+  m_Name: GoToLastSeenPlayerPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 217e62a7754059e4692a116a461b0099
+  position: {x: -1174.7872, y: 1944.4374}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  range: 8
 --- !u!114 &1267223752813314888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +1262,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -985,6 +1290,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -992,6 +1299,35 @@ MonoBehaviour:
   children:
   - {fileID: -4248889273286759897}
   - {fileID: -5359971805311378678}
+--- !u!114 &1416903745506447481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0bd22fc328596f54d9fe6f8a78747d6d
+  position: {x: -1017.5126, y: 1544.0975}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -9096691824811410374}
+  - {fileID: -2024308988778542138}
+  - {fileID: -5961557010054266279}
 --- !u!114 &1667733480985415694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1347,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1033,10 +1371,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f779591ece54736429b74fd1fa3d2a69
-  position: {x: -1144.85, y: 1437.4003}
+  position: {x: -1204.5126, y: 1425.0975}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: In range to jump?
@@ -1061,6 +1401,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1084,6 +1426,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1109,6 +1453,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1137,6 +1483,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1164,6 +1512,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1190,6 +1540,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Jump on player sequence
@@ -1218,6 +1570,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1244,6 +1598,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1267,13 +1623,15 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
   drawGizmos: 0
   minDuration: 2
   maxDuration: 5
---- !u!114 &4227820943912459579
+--- !u!114 &5103909335829613659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1282,27 +1640,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078bfdef07222344780e9c3398904428, type: 3}
-  m_Name: ChaseDetectedPlayer
+  m_Script: {fileID: 11500000, guid: cc45b83f1b008ab40afbc7b723e4276a, type: 3}
+  m_Name: RandomlyChasePlayer
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 19e42e5b7804b8b44bd2fd8c5e05d143
-  position: {x: -902.8501, y: 1436.4003}
+  guid: d0797dac125a9b34eac154341322f574
+  position: {x: -735.3224, y: 1814}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
   drawGizmos: 0
   speed: 10
   angularSpeed: 720
-  stoppingDistance: 1
+  stoppingDistance: 0.5
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 10
+  range: 8
+  axisRange: 70
+  minDistance: 3
+  maxDistance: 5
+--- !u!114 &5365797567609053012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bc2d425d883fb204eb52d2fd1c0475a9
+  position: {x: -1017.5126, y: 1425.0975}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: Go in range
+  drawGizmos: 0
+  child: {fileID: 1416903745506447481}
+  restartOnSuccess: 0
+  restartOnFailure: 1
 --- !u!114 &5501445638078669618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1713,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: JumpBiteAttack Sequence
@@ -1332,32 +1725,6 @@ MonoBehaviour:
   - {fileID: 164124117158313367}
   - {fileID: -4082984015650959735}
   - {fileID: 2560515697152293227}
---- !u!114 &5533979408837365797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
-  m_Name: Repeat
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: d0f5061f66ba6fe4fa4c3deaccfe06e4
-  position: {x: -1210.534, y: 1241.0503}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastDetectedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-  description: Repeat untill in range
-  drawGizmos: 0
-  child: {fileID: 0}
-  restartOnSuccess: 1
-  restartOnFailure: 0
 --- !u!114 &6260856320332452458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,6 +1744,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1401,6 +1770,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: Is it ok to jump?
@@ -1427,6 +1798,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1451,6 +1824,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
@@ -1458,6 +1833,34 @@ MonoBehaviour:
   children:
   - {fileID: -3948230859912100113}
   - {fileID: -1394701753078614037}
+--- !u!114 &7989708894610056594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 85938eb627d9b1e48bab3f4558e6fdd6
+  position: {x: -900.5628, y: 1809.5209}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -1241435029917881125}
+  - {fileID: -2745370373989757613}
 --- !u!114 &8545815833820094551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,6 +1880,8 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
   description: 
