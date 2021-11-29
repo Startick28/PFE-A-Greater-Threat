@@ -52,12 +52,12 @@ public class BasicGun : MonoBehaviour
             {
                 Debug.DrawRay(position, direction * hit.distance, Color.yellow);
                 Debug.Log("Did Hit");
-                EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
-                if (enemy != null)
+                /* EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
+                if(enemy != null)
                 {
                     enemy.view.RPC("takeDamage", RpcTarget.All, 10.0f);
-                }
-
+                } */
+                hit.collider.GetComponent<EnemyDataManager>().takeDamage(10.0f);
 
             }
             loadedBullets--;

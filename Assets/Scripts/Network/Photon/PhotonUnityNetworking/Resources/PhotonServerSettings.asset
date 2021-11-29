@@ -42,6 +42,18 @@ MonoBehaviour:
   - takeDamage
   - interact
   - InteractWithInteractable
+  - EnemyBiteAttackWithId
+  - EnemyClawsAttackWithId
+  - EnemyDieWithId
+  - EnemyDisengageJumpWithId
+  - EnemyDodgeWithId
+  - EnemyGetHit
+  - EnemyJumpBiteAttackWithId
+  - EnemyMoveToPositionWithId
+  - EnemyRoarWithId
+  - EnemySpitAttackWithId
+  - EnemyTakeDamageWithId
+  - InstantiateEnemy
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
