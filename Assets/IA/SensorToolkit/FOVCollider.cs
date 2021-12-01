@@ -179,5 +179,43 @@ namespace SensorToolkit
                 Gizmos.DrawSphere(transform.TransformPoint(p), 0.1f);
             }
         }
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Vector3 bottomright = pts[(Resolution + 2)*(Resolution + 2) + 3 - (Resolution + 1)];
+            Vector3 bottomleft = pts[3 + (Resolution + 2)*(Resolution + 2)];
+            Vector3 topright = pts[4];
+            Vector3 topleft = pts[3 + Resolution + 2];
+            foreach(Vector3 p in pts)
+            {
+                Gizmos.DrawSphere(transform.TransformPoint(p), 0.1f);
+            }
+            Gizmos.DrawLine(transform.TransformPoint(topleft),transform.position);
+            Gizmos.DrawLine(transform.TransformPoint(topright),transform.position);
+            Gizmos.DrawLine(transform.TransformPoint(bottomleft),transform.position);
+            Gizmos.DrawLine(transform.TransformPoint(bottomright),transform.position);
+
+            for (int y = 0; y < 2+Resolution; y++)
+            {
+                for (int x = 0; x < 2+Resolution; x++)
+                {
+                    int i = 4 + y * (2 + Resolution) + x;
+                    Vector3 point = pts[i];
+
+                }
+            }
+
+            for (int x = 0; x < 2+Resolution -1 ; x++)
+            {
+                Gizmos.DrawLine(transform.TransformPoint(pts[4+x]),transform.TransformPoint(pts[4+x+1]));
+                Gizmos.DrawLine(transform.TransformPoint(pts[4+x + (Resolution + 2)*(Resolution + 1)]),transform.TransformPoint(pts[4+x+(Resolution + 2)*(Resolution + 1)+1]));
+            }
+            for (int y = 0; y < 2+Resolution -1; y++)
+            {
+                Gizmos.DrawLine(transform.TransformPoint(pts[4 + y * (2 + Resolution)]),transform.TransformPoint(pts[4 + y * (2 + Resolution)+2+Resolution]));
+                Gizmos.DrawLine(transform.TransformPoint(pts[4 + y * (2 + Resolution) + 1+Resolution]),transform.TransformPoint(pts[4 + y * (2 + Resolution)+ 1+Resolution+2+Resolution]));
+            }
+
+        }
     }
 }

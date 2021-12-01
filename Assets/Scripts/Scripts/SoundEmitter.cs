@@ -94,7 +94,7 @@ public class SoundEmitter : MonoBehaviour
         return (baseIntensity >= distance);
     }
 
-    public void OnDrawGizmosSelected()
+    public void OnDrawGizmos()
         {
             Gizmos.color = new Color(51 / 255f, 255 / 255f, 255 / 255f);
             Gizmos.DrawWireSphere(transform.position, emissionIntensity);
