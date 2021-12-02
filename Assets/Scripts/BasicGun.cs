@@ -18,7 +18,7 @@ public class BasicGun : MonoBehaviour
     PhotonView view;
     void Start()
     {
-        view = transform.parent.gameObject.GetComponent<PhotonView>();
+        view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
         
         
         loadedBullets = maxLoadedBullets;

@@ -57,8 +57,8 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
-       // if (view.IsMine)
-	//	{
+        if (GetComponent<PhotonView>().IsMine)
+		{
 
 		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
@@ -185,7 +185,7 @@ public class FPSCharacterController : AdvancedWalkerController
 				fcameraController.unZoom();
 			}
 
-	//	}
+		}
 		
 	}
 

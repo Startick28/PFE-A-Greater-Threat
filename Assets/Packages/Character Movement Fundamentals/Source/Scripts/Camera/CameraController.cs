@@ -55,7 +55,7 @@ namespace CMF
 			foreach (var view in photonViews)
 			{
 				//Objects in the scene don't have an owner, its means view.owner will be null
-				if (view.IsMine)
+				if (view.IsMine && view.gameObject.name.Contains("Player"))
 				{
 					Player = view.gameObject;
 				}
@@ -154,7 +154,7 @@ namespace CMF
 				upwardsDirection = tr.up;
 
 				tr.localRotation = Quaternion.Euler(new Vector3(currentXAngle, currentYAngle, 0));
-				transform.parent.parent.GetChild(0).transform.localRotation = new Quaternion(0, tr.localRotation.y,0 , tr.localRotation.w);
+				Player.transform.GetChild(0).transform.localRotation = new Quaternion(0, tr.localRotation.y, 0, tr.localRotation.w);
 			}
 		}
 
