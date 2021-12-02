@@ -13,8 +13,8 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
     
     void Start()
     {
-        float newX = Random.Range(75f, 80f);
-        float newY = Random.Range(75f, 80f);
+        float newX = Random.Range(108f, 116.0f);
+        float newY = Random.Range(190.0f, 221f);
         spawnPosition = new Vector3(newX, terrain.SampleHeight(new Vector3(newX,0f,newY)), newY);
         PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition, Quaternion.identity);
         /* if (PhotonNetwork.IsMasterClient)
