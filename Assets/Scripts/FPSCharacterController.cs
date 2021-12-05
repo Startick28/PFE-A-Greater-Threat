@@ -59,7 +59,11 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
         if (GetComponent<PhotonView>().IsMine)
 		{
-
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+				UIManager ui = UnityEngine.Object.FindObjectsOfType<UIManager>()[0];
+				ui.LoseHealth();
+			}
 		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
 			if(timeSinceSoundEmission> soundEmissionTime)

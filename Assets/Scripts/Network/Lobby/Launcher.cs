@@ -39,6 +39,9 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        ExitGames.Client.Photon.Hashtable PlayerProperties = new ExitGames.Client.Photon.Hashtable();
+        PlayerProperties["HP"] = 90;
+        PhotonNetwork.SetPlayerCustomProperties(PlayerProperties);
         MenuManager.Instance.OpenMenu("mainMenu");
         PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
         Debug.Log(PhotonNetwork.NickName + " is Connected");
