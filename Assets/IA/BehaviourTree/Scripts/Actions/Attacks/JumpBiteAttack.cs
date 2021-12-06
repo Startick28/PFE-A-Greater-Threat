@@ -13,6 +13,11 @@ public class JumpBiteAttack : ActionNode
 
     protected override State OnUpdate() {
         context.animator.SetTrigger("JumpBiteTrigger");
+        context.monsterColliderInfos.JumpBiteAttackCollider.enabled = true;
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyJumpBiteAttackWithId(context.monsterID);
+        }
         return State.Success;
     }
 }

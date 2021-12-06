@@ -15,6 +15,12 @@ public class ClawAttack : ActionNode
         float angle = Vector3.SignedAngle( context.transform.forward, Vector3.ProjectOnPlane(blackboard.lastDetectedPlayer.transform.position - context.transform.position, context.transform.up), Vector3.up );
         context.animator.SetFloat("AttackAngle",angle);
         context.animator.SetTrigger("ClawAttackTrigger");
+        context.monsterColliderInfos.ClawsAttackLeftCollider.enabled = true;
+        context.monsterColliderInfos.ClawsAttackRightCollider.enabled = true;
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyClawsAttackWithId(context.monsterID, angle);
+        }
         return State.Success;
     }
 }

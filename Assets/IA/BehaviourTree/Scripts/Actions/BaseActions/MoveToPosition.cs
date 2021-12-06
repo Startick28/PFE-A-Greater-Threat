@@ -17,10 +17,21 @@ public class MoveToPosition : ActionNode
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
         context.agent.angularSpeed = angularSpeed;
-        context.agent.destination = blackboard.moveToPosition;
         context.agent.updatePosition = updatePosition;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
+
+        context.agent.destination = blackboard.moveToPosition;
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
+                                                        blackboard.moveToPosition,
+                                                        stoppingDistance,
+                                                        speed,
+                                                        angularSpeed,
+                                                        updateRotation,
+                                                        acceleration);
+        }
     }
 
     protected override void OnStop() {

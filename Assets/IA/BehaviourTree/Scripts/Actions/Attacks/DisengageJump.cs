@@ -22,6 +22,10 @@ public class DisengageJump : ActionNode
         context.animator.SetFloat("JumpLengthX", direction.x*Mathf.Cos(angle) - direction.z*Mathf.Sin(angle));
         context.animator.SetFloat("JumpLengthY", direction.z*Mathf.Cos(angle) + direction.x*Mathf.Sin(angle));
         context.animator.SetTrigger("JumpTrigger");
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyDisengageJumpWithId(context.monsterID, direction.x*Mathf.Cos(angle) - direction.z*Mathf.Sin(angle), direction.z*Mathf.Cos(angle) + direction.x*Mathf.Sin(angle));
+        }
         return State.Success;
     }
 }

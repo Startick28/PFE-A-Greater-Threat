@@ -39,6 +39,16 @@ public class GoToLastSeenPlayerPosition : ActionNode
         else if (context.agent.hasPath && context.agent.remainingDistance < range)  return State.Failure;
 
         context.agent.destination = blackboard.lastPlayerSeenPosition;
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
+                                                        blackboard.lastPlayerSeenPosition,
+                                                        stoppingDistance,
+                                                        speed,
+                                                        angularSpeed,
+                                                        updateRotation,
+                                                        acceleration);
+        }
 
         if (context.agent.hasPath && context.agent.remainingDistance < range) {
             return State.Success;

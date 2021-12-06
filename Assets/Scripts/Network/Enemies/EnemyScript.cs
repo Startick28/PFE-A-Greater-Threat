@@ -16,25 +16,21 @@ public class EnemyScript : MonoBehaviour
         set { id = value; }
     }
 
-    // Attack's collider
-    [SerializeField] private Collider BiteAttackCollider;
-    [SerializeField] private Collider ClawsAttackCollider;
-    [SerializeField] private Collider ClawsAttackRightCollider;
-    [SerializeField] private Collider ClawsAttackLeftCollider;
-    [SerializeField] private Collider JumpBiteAttackCollider;
-    [SerializeField] private Collider SpitAttackCollider;
+    // Attacks colliders
+    public Collider BiteAttackCollider;
+    public Collider ClawsAttackRightCollider;
+    public Collider ClawsAttackLeftCollider;
+    public Collider JumpBiteAttackCollider;
 
-    [SerializeField] NavMeshAgent agent;
-    
-    
+    NavMeshAgent agent;
+    Animator animator;
+
     void Start()
     {
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        animator = gameObject.GetComponent<Animator>();
     }
-
-    void Update()
-    {
-    }
-
+    
 
     // Fonctions qui seront amen�s � �tre appel�es par des joueurs ou par le monstre lui-m�me
     public void Die()
@@ -56,18 +52,14 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Fonction qui seront appel�es selon par l'abre de d�cision du monstre
-    public void MoveToPosition(Vector3 position, float stoppingDistance, float runingSpeed, float walkingSpeed, bool updateRotation, float acceleration, bool isRuning)
+    public void MoveToPosition(Vector3 position, float stoppingDistance, float speed, float angularSpeed, bool updateRotation, float acceleration)
     {
         agent.stoppingDistance = stoppingDistance;
-        agent.speed = (isRuning ? runingSpeed : walkingSpeed);
+        agent.speed = speed;
+        agent.angularSpeed = angularSpeed;
         agent.updateRotation = updateRotation;
-        agent.acceleration = acceleration; // Diff�rence waling/runing?
+        agent.acceleration = acceleration;
         agent.destination = position;
-    }
-
-    public void ChasePlayer()
-    {
-
     }
 
     public void BiteAttack()
@@ -75,14 +67,15 @@ public class EnemyScript : MonoBehaviour
         //Code
     }
 
-    public void ClawsAttack()
+    public void ClawsAttack(float attackAngle)
     {
-        //Code
+        animator.SetFloat("AttackAngle", attackAngle);
+        animator.SetTrigger("ClawAttackTrigger");
     }
 
     public void JumpBiteAttack()
     {
-        //Code
+        animator.SetTrigger("JumpBiteTrigger");
     }
 
     public void SpitAttack()
@@ -90,9 +83,11 @@ public class EnemyScript : MonoBehaviour
         //Code
     }
 
-    public void DisengageJump()
+    public void DisengageJump(float jumpLengthX, float jumpLengthY)
     {
-        //Code
+        animator.SetFloat("JumpLengthX", jumpLengthX);
+        animator.SetFloat("JumpLengthY", jumpLengthY);
+        animator.SetTrigger("JumpTrigger");
     }
 
     public void Dodge()

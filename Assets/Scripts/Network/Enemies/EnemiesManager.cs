@@ -14,23 +14,14 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
 
     private int lastId = 0;
     [SerializeField] private GameObject enemy;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // Instantiate an enemy with RPC.
     // How to call it : 
     // EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, position);
     [PunRPC]
-    void InstantiateEnemy(Vector3 position)
+    public void InstantiateEnemy(Vector3 position)
     {
         GameObject enemyInstantiate = Instantiate(enemy, position, Quaternion.identity);
         enemyInstantiate.transform.parent = gameObject.transform;
@@ -44,7 +35,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     // Pour appeler la fonction :
     // this.photonView.RPC("EnemyTakeDamageWithId", RpcTarget.All, id, damages);
     [PunRPC]
-    void EnemyTakeDamageWithId(int id, float damages)
+    public void EnemyTakeDamageWithId(int id, float damages)
     {
         foreach (Transform child in transform)
         {
@@ -52,12 +43,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.TakeDamage(damages);
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyDieWithId(int id)
+    public void EnemyDieWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -65,12 +57,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.Die();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyGetHit(int id)
+    public void EnemyGetHit(int id)
     {
         foreach (Transform child in transform)
         {
@@ -78,25 +71,27 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.GetHit();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyMoveToPositionWithId(int id, Vector3 position, float stoppingDistance, float runingSpeed, float walkingSpeed, bool updateRotation, float acceleration, bool isRuning)
+    public void EnemyMoveToPositionWithId(int id, Vector3 position, float stoppingDistance, float speed, float angularSpeed, bool updateRotation, float acceleration)
     {
         foreach (Transform child in transform)
         {
             EnemyScript enemy = child.GetComponent<EnemyScript>();
             if (enemy.ID == id)
             {
-                enemy.MoveToPosition(position, stoppingDistance, runingSpeed, walkingSpeed, updateRotation, acceleration, isRuning);
+                enemy.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyBiteAttackWithId(int id)
+    public void EnemyBiteAttackWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -104,25 +99,27 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.BiteAttack();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyClawsAttackWithId(int id)
+    public void EnemyClawsAttackWithId(int id, float attackAngle = 0f)
     {
         foreach (Transform child in transform)
         {
             EnemyScript enemy = child.GetComponent<EnemyScript>();
             if (enemy.ID == id)
             {
-                enemy.ClawsAttack();
+                enemy.ClawsAttack(attackAngle);
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyJumpBiteAttackWithId(int id)
+    public void EnemyJumpBiteAttackWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -130,12 +127,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.JumpBiteAttack();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemySpitAttackWithId(int id)
+    public void EnemySpitAttackWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -143,25 +141,27 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.SpitAttack();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyDisengageJumpWithId(int id)
+    public void EnemyDisengageJumpWithId(int id, float jumpLengthX = 0f, float jumpLengthY = 0f)
     {
         foreach (Transform child in transform)
         {
             EnemyScript enemy = child.GetComponent<EnemyScript>();
             if (enemy.ID == id)
             {
-                enemy.DisengageJump();
+                enemy.DisengageJump(jumpLengthX, jumpLengthY);
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyDodgeWithId(int id)
+    public void EnemyDodgeWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -169,12 +169,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.Dodge();
+                return;
             }
         }
     }
 
     [PunRPC]
-    void EnemyRoarWithId(int id)
+    public void EnemyRoarWithId(int id)
     {
         foreach (Transform child in transform)
         {
@@ -182,6 +183,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             if (enemy.ID == id)
             {
                 enemy.Roar();
+                return;
             }
         }
     }

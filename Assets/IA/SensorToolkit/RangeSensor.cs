@@ -179,12 +179,13 @@ namespace SensorToolkit
             Gizmos.color = GizmoColor;
             Gizmos.DrawWireSphere(transform.position, SensorRange);
         }
-
+        /*
         public void OnDrawGizmos()
         {
             if (!isActiveAndEnabled) return;
             Gizmos.color = GizmoColor;
             Gizmos.DrawWireSphere(transform.position, SensorRange);
         }
+        */
     }
 }
