@@ -20,6 +20,10 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	BasicGun gun;
 
+	[SerializeField]
+	float maxHealth = 100;
+	float health;
+
 	//PhotonView view;
 
 	bool previousCrouch;
@@ -41,6 +45,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		fcharacterInput = GetComponent<FPS_CharacterInput>();
 		ceilingDetector = GetComponent<CeilingDetector>();
 
+		health = maxHealth;
 		gun = GetComponentInChildren<BasicGun>();
 
 		nearestInteractable = null;
@@ -221,6 +226,19 @@ public class FPSCharacterController : AdvancedWalkerController
 		}
     }
 
+	public void takeDamage(float damage)
+    {
+		health -= damage;
+		if(health<=0)
+        {
+			die();
+        }
+    }
+
+	void die()
+    {
+		Debug.Log("Died");
+    }
 	// Update is called once per frame
 
 }
