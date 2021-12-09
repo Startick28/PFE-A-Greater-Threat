@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9195630590015219355}
   - component: {fileID: 4672324460278089109}
+  - component: {fileID: 3854461717055158015}
+  - component: {fileID: -6360713164820701881}
   m_Layer: 3
   m_Name: BasicGun
   m_TagString: Untagged
@@ -44,7 +46,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77d43b4a5a063a4ca0ea62e7e779813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
+  iType: 1
+  rarity: 0
   fireRate: 2
+--- !u!65 &3854461717055158015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148455832089343234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 11.255104, y: 3.9119468, z: 16.515026}
+  m_Center: {x: -0.73753333, y: 0.029168844, z: 3.9479675}
+--- !u!54 &-6360713164820701881
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148455832089343234}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &6471212631081735551
 GameObject:
   m_ObjectHideFlags: 0

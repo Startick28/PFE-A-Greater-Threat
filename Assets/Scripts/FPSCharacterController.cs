@@ -97,10 +97,14 @@ public class FPSCharacterController : AdvancedWalkerController
                     {
 						case InteractionType.chest:
 							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
-
+							Debug.Log("Je peux interargir avec le coffre");
 							//nearestInteractable.interact();
 							break;
-
+						case InteractionType.gun:
+							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+							Debug.Log("Je peux interargir avec le gun");
+							//nearestInteractable.interact();
+							break;
 						default:
 
 							break;

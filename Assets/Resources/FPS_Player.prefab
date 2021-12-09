@@ -612,6 +612,7 @@ MonoBehaviour:
   cameraController: {fileID: 8374097536362046435}
   fcameraController: {fileID: 1537636769}
   nearestInteractable: {fileID: 0}
+  maxHealth: 100
 --- !u!114 &5661628889720168415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8479863344373809125}
     m_Modifications:
+    - target: {fileID: 4672324460278089109, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5396041550232278036, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
       propertyPath: m_Enabled
       value: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Chest : Interactable
 {
+    [SerializeField] RarityType rarity;
+    [SerializeField] BasicGun prefabGun;
 
     [PunRPC]
     public override void interact()
@@ -21,9 +23,15 @@ public class Chest : Interactable
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }
+        BasicGun gun = Instantiate(prefabGun, transform.position + Vector3.up,Quaternion.identity);
+        //gun.Rarity = rarity;
+        gun.canInteract = true;
+        gun.GetComponent<BoxCollider>().enabled = true;
 
-        playerGun.setFireRate(4);
+        //playerGun.setFireRate(4);
         gunRenderer.material.color = Color.yellow;
+
+        //players[0].GetComponent<FPSCharacterController>().nearestInteractable = gun;
         finishInteraction();
         //throw new System.NotImplementedException();
     }
@@ -40,6 +48,7 @@ public class Chest : Interactable
         iType = InteractionType.chest;
         collider = GetComponent<BoxCollider>();
         canInteract = true;
+        
     }
 
     // Update is called once per frame

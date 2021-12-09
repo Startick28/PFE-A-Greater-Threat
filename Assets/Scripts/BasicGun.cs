@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class BasicGun : MonoBehaviour
+public class BasicGun : Interactable
 {
+
+    [SerializeField] RarityType rarity;
+    public RarityType Rarity
+    {
+        get { return rarity; }
+        set { rarity = value; }
+    }
+
     int loadedBullets; // When this is equal to 0, player has to use bullets in inventory to reload
     // Start is called before the first frame update
 
@@ -15,13 +23,22 @@ public class BasicGun : MonoBehaviour
     float fireTime;
 
     float timeSinceFire;
-    PhotonView view;
+    private PhotonView view;
+    public PhotonView View
+    {
+        set { view = value; }
+    }
+
     void Start()
     {
-        view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
-        
-        
+        if(transform.parent != null)
+        {
+            view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
+        }
+
         loadedBullets = maxLoadedBullets;
+        iType = InteractionType.gun;
+        collider = GetComponent<BoxCollider>();
         setFireTime();
         //fireTime = 1;
         timeSinceFire = fireTime + 1;
@@ -99,5 +116,37 @@ public class BasicGun : MonoBehaviour
         fireRate = newRate;
         setFireTime();
     }
-       
+
+    [PunRPC]
+    public override void interact()
+    {
+        Debug.Log("interacted with gun");
+        if (players.Count == 0)
+        {
+            Debug.Log("Error this function should not be able to be called if no players or entity are around");
+        }
+        //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
+        BasicGun playerGun = players[0].GetComponentInChildren<BasicGun>();
+        MeshRenderer gunRenderer = playerGun.GetComponentInChildren<MeshRenderer>();
+        if (playerGun == null || gunRenderer == null)
+        {
+            Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
+        }
+        Vector3 oldPos = transform.position;
+        // On met le nouveau gun sur le joueur
+        transform.position = playerGun.transform.position;
+        transform.parent = playerGun.transform.parent;
+        view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
+
+        // On enlève l'ancien gun du joueur
+        playerGun.transform.parent = null;
+        playerGun.transform.position = oldPos;
+
+        finishInteraction();
+    }
+
+    public override void finishInteraction()
+    {
+        canInteract = false;
+    }
 }
