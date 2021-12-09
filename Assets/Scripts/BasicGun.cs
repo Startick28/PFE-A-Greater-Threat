@@ -123,6 +123,7 @@ public class BasicGun : Interactable
         Debug.Log("interacted with gun");
         if (players.Count == 0)
         {
+            return;
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
         //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
@@ -132,21 +133,27 @@ public class BasicGun : Interactable
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }
-        Vector3 oldPos = transform.position;
-        // On met le nouveau gun sur le joueur
-        transform.position = playerGun.transform.position;
-        transform.parent = playerGun.transform.parent;
-        view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
 
-        // On enlève l'ancien gun du joueur
-        playerGun.transform.parent = null;
-        playerGun.transform.position = oldPos;
-
+        playerGun.GetComponentInParent<FPSCharacterController>().changeGun(this);
         finishInteraction();
     }
 
     public override void finishInteraction()
     {
         canInteract = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Gun Trigger");
+        FPSCharacterController playerController = other.gameObject.GetComponent<FPSCharacterController>();
+        Debug.Log("Name GameObject : " + other.gameObject.name);
+        Debug.Log("Can Interact : "+canInteract + " player : "+ playerController);
+        if (playerController != null && canInteract)
+        {
+            Debug.Log("gun is now NearestInteractabe");
+            playerController.nearestInteractable = this;
+            players.Add(playerController);
+        }
     }
 }

@@ -20,7 +20,7 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract void finishInteraction();
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         Debug.Log("entered the trigger");
         FPSCharacterController playerController = other.gameObject.GetComponent<FPSCharacterController>();

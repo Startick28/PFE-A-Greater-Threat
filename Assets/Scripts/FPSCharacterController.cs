@@ -245,4 +245,24 @@ public class FPSCharacterController : AdvancedWalkerController
     }
 	// Update is called once per frame
 
+	public void changeGun(BasicGun newGun)
+    {
+		BasicGun playerGun = GetComponentInChildren<BasicGun>();
+		Vector3 oldPos = newGun.transform.position;
+		// On met le nouveau gun sur le joueur
+		newGun.transform.position = playerGun.transform.position;
+		newGun.transform.parent = playerGun.transform.parent;
+		newGun.transform.rotation = playerGun.transform.rotation;
+		newGun.GetComponent<BoxCollider>().enabled = false;
+		// Player layer
+		newGun.gameObject.layer = 3;
+		newGun.View = transform.gameObject.GetComponent<PhotonView>();
+
+		// On enlève l'ancien gun du joueur
+		playerGun.transform.parent = null;
+		playerGun.transform.position = oldPos;
+		playerGun.canInteract = true;
+		playerGun.gameObject.layer = 0;
+		playerGun.GetComponent<BoxCollider>().enabled = true;
+	}
 }

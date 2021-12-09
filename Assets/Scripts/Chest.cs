@@ -23,15 +23,18 @@ public class Chest : Interactable
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }
+        //Remove chest's collider
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+
         BasicGun gun = Instantiate(prefabGun, transform.position + Vector3.up,Quaternion.identity);
-        //gun.Rarity = rarity;
+        gun.Rarity = rarity;
         gun.canInteract = true;
         gun.GetComponent<BoxCollider>().enabled = true;
-
-        //playerGun.setFireRate(4);
+        // Default layer
+        gun.gameObject.layer = 0;
         gunRenderer.material.color = Color.yellow;
 
-        //players[0].GetComponent<FPSCharacterController>().nearestInteractable = gun;
+        players[0].GetComponent<FPSCharacterController>().nearestInteractable = gun;
         finishInteraction();
         //throw new System.NotImplementedException();
     }
