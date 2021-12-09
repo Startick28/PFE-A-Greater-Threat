@@ -118,7 +118,7 @@ public class BasicGun : Interactable
     }
 
     [PunRPC]
-    public override void interact()
+    public override void interact(FPSCharacterController player)
     {
         Debug.Log("interacted with gun");
         if (players.Count == 0)
@@ -127,9 +127,8 @@ public class BasicGun : Interactable
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
         //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
-        BasicGun playerGun = players[0].GetComponentInChildren<BasicGun>();
-        MeshRenderer gunRenderer = playerGun.GetComponentInChildren<MeshRenderer>();
-        if (playerGun == null || gunRenderer == null)
+        BasicGun playerGun = player.GetComponentInChildren<BasicGun>();
+        if (playerGun == null)
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }

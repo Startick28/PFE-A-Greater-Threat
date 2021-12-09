@@ -205,7 +205,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	[PunRPC]
 	public void InteractWithInteractable()
     {
-		nearestInteractable.interact();
+		nearestInteractable.interact(this);
 	}
 	
 	public Vector3 getAimingDirection()

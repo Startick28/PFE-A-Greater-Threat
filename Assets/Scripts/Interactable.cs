@@ -16,7 +16,7 @@ public abstract class Interactable : MonoBehaviour
     public InteractionType iType;
     protected List<FPSCharacterController> players = new List<FPSCharacterController>();
 
-    public abstract void interact();
+    public abstract void interact(FPSCharacterController player);
 
     public abstract void finishInteraction();
 
