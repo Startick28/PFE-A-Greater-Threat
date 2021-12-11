@@ -21,6 +21,9 @@ public class UIManager : MonoBehaviourPunCallbacks
     [SerializeField]
     CanvasGroup bloodScreen;
 
+    [SerializeField]
+    TextMeshProUGUI playerBullets;
+
     float HP;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,8 @@ public class UIManager : MonoBehaviourPunCallbacks
             {
                 player = view;
                 playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+                playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/" 
+                    + view.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
             }
         }
     }
@@ -60,6 +65,8 @@ public class UIManager : MonoBehaviourPunCallbacks
                     bloodScreen.alpha = 0.5f - (HP / 100)/2.0f;
                     playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
                     player = view;
+                    playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/"
+                        + view.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
                 }
             }
         }
@@ -68,6 +75,8 @@ public class UIManager : MonoBehaviourPunCallbacks
             playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
             bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
+            playerBullets.text = player.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/"
+                + player.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
         }
         int i = 0;
         foreach (var currentPlayer in PhotonNetwork.PlayerList)

@@ -612,6 +612,7 @@ MonoBehaviour:
   cameraController: {fileID: 8374097536362046435}
   fcameraController: {fileID: 1537636769}
   nearestInteractable: {fileID: 0}
+  maxHealth: 100
 --- !u!114 &5661628889720168415
 MonoBehaviour:
   m_ObjectHideFlags: 0

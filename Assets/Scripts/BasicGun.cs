@@ -77,6 +77,12 @@ public class BasicGun : MonoBehaviour
         loadedBullets = maxLoadedBullets;
     }
 
+
+    public int getMaxLoadedBullets()
+    {
+        return maxLoadedBullets;
+    }
+
     public int getLoadedBullets()
     {
         return loadedBullets;
