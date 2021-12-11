@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviourPunCallbacks
                 //Objects in the scene don't have an owner, its means view.owner will be null
                 if (view.IsMine && view.gameObject.name.Contains("Player"))
                 {
-                    bloodScreen.alpha = 1 - (HP / 100);
+                    bloodScreen.alpha = 0.5f - (HP / 100)/2.0f;
                     playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
                     player = view;
                 }
@@ -66,7 +66,7 @@ public class UIManager : MonoBehaviourPunCallbacks
         else
         {
             playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
-            bloodScreen.alpha = 1 - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f);
+            bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
         }
         int i = 0;
