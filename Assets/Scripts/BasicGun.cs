@@ -7,31 +7,76 @@ public class BasicGun : MonoBehaviour
     int loadedBullets; // When this is equal to 0, player has to use bullets in inventory to reload
     // Start is called before the first frame update
 
-    int maxLoadedBullets = 10;
+    int magSize = 10;
     [SerializeField]
     float fireRate;
+    [SerializeField]
+    float noise;
+    [SerializeField]
+    float recoil;
+    [SerializeField]
+    float fullReloadTime;
+    [SerializeField]
+    float fastReloadTime;
 
+    public bool canReload
+    {
+        get { return !(loadedBullets == magSize); }
+    }
+
+    public int LoadedBullets
+    {
+        get { return loadedBullets; }
+    }
+
+    public float Recoil
+    {
+        get { return recoil; }
+        
+    }
+
+    public int MagSize
+    {
+        get { return magSize; }
+    }
+
+    public float FullReloadTime
+    {
+        get { return fullReloadTime; }
+    }
+    public float FastReloadTime
+    {
+        get { return fastReloadTime; }
+    }
     
     float fireTime;
 
     float timeSinceFire;
     PhotonView view;
+    
+    FPSCharacterController playerController;
     void Start()
     {
         view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
         
         
-        loadedBullets = maxLoadedBullets;
+        loadedBullets = magSize;
         setFireTime();
         //fireTime = 1;
         timeSinceFire = fireTime + 1;
+        playerController = GetComponentInParent<FPSCharacterController>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        timeSinceFire += Time.deltaTime;
+       
         //Debug.Log(timeSinceFire);
+    }
+
+    private void Update()
+    {
+        timeSinceFire += Time.deltaTime;
     }
 
     public void fire(Vector3 position,Vector3 direction)
@@ -44,6 +89,7 @@ public class BasicGun : MonoBehaviour
                 Debug.Log("Tried to shoot with empty mag");
                 return;
             }
+            playerController.addRecoilToCamera(-recoil, Random.RandomRange(-2.0f,2.0f));
             //Debug.Log("Tried to shoot with basic gun");
             int layerMask = 1 << 26;
             RaycastHit hit;
@@ -72,9 +118,9 @@ public class BasicGun : MonoBehaviour
        
     }
 
-    public void reload()
+    public void reload(int bullets)
     {
-        loadedBullets = maxLoadedBullets;
+        loadedBullets += bullets;
     }
 
     public int getLoadedBullets()
@@ -99,5 +145,12 @@ public class BasicGun : MonoBehaviour
         fireRate = newRate;
         setFireTime();
     }
+
+    public float getNoise()
+    {
+        return noise;
+    }
+
+   
        
 }

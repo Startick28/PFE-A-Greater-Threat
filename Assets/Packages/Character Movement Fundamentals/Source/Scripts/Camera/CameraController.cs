@@ -10,8 +10,8 @@ namespace CMF
 	public class CameraController : MonoBehaviour {
 
 		//Current rotation values (in degrees);
-		float currentXAngle = 0f;
-		float currentYAngle = 0f;
+		protected float currentXAngle = 0f;
+		protected float currentYAngle = 0f;
 
 		//Upper and lower limits (in degrees) for vertical rotation (along the local x-axis of the gameobject);
 		[Range(0f, 90f)]
@@ -21,8 +21,8 @@ namespace CMF
 		[SerializeField] PhotonView view;
 
 		//Variables to store old rotation values for interpolation purposes;
-		float oldHorizontalInput = 0f;
-		float oldVerticalInput = 0f;
+		protected float oldHorizontalInput = 0f;
+		protected float oldVerticalInput = 0f;
 
 		//Camera turning speed; 
 		public float cameraSpeed = 250f;
@@ -265,6 +265,7 @@ namespace CMF
 		{
 			return upwardsDirection;
 		}
+		
 		
 		
 	}

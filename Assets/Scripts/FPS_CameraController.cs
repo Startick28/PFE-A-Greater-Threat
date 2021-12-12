@@ -18,6 +18,18 @@ public class FPS_CameraController : CameraController
         cam.fieldOfView = defaultFOV;
     }
 
+    public void addRecoil(float verticalAngle, float horizontalAngle)
+    {
+        //Add input to camera angles;
+        currentXAngle += verticalAngle;
+        currentYAngle += horizontalAngle;
+
+        //Clamp vertical rotation;
+        currentXAngle = Mathf.Clamp(currentXAngle, -upperVerticalLimit, lowerVerticalLimit);
+
+        UpdateRotation();
+    }
+
 
 
 
