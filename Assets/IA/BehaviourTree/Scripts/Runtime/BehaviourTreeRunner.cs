@@ -21,7 +21,7 @@ namespace BehaviourTreeAI {
 
         // Update is called once per frame
         void Update() {
-            if (tree && PhotonNetwork.isMasterClient) {
+            if (tree && EnemiesManager.Instance.photonView.IsMine) {
                 Debug.Log("I'm the master");
             tree.Update();
             }
