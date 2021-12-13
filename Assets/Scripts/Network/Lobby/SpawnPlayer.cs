@@ -22,6 +22,10 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
             PhotonNetwork.Instantiate(enemy.name, new Vector3(-30, -0.6799681f, -19.24005f), Quaternion.identity);
             PhotonNetwork.Instantiate(enemy.name, new Vector3(-32, -0.6799681f, -19.24005f), Quaternion.identity);
         } */
-        
+        if (StaticClass.CrossSceneMaster)
+        {
+            PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
+            Debug.Log("I'm the master ! ");
+        }
     }
 }
