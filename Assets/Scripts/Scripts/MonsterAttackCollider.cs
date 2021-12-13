@@ -33,7 +33,7 @@ public class MonsterAttackCollider : MonoBehaviour
     {
         if (hit.CompareTag("Player"))
         {
-            hit.gameObject.GetComponent<TestController>().GetHit(attackDamages);
+            hit.gameObject.GetComponent<FPSCharacterController>().takeDamage(attackDamages);
             col.enabled = false;
         }
     }

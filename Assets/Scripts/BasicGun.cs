@@ -89,22 +89,19 @@ public class BasicGun : MonoBehaviour
                 Debug.Log("Tried to shoot with empty mag");
                 return;
             }
-            playerController.addRecoilToCamera(-recoil, Random.RandomRange(-2.0f,2.0f));
+            playerController.addRecoilToCamera(-recoil, Random.Range(-2.0f,2.0f));
             //Debug.Log("Tried to shoot with basic gun");
-            int layerMask = 1 << 26;
+            int layerMask = 1 << 11;
             RaycastHit hit;
             Debug.DrawRay(position, direction * 1000, Color.red);
             if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
             {
                 Debug.DrawRay(position, direction * hit.distance, Color.yellow);
                 Debug.Log("Did Hit");
-                /* EnemyTestScript enemy = hit.collider.GetComponent<EnemyTestScript>();
-                if(enemy != null)
+                if (EnemiesManager.Instance)
                 {
-                    enemy.view.RPC("takeDamage", RpcTarget.All, 10.0f);
-                } */
-                hit.collider.GetComponent<EnemyDataManager>().takeDamage(10.0f);
-
+                    EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID, 10.0f);
+                }
             }
             loadedBullets--;
             timeSinceFire = 0;

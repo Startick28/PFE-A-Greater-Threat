@@ -15,6 +15,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	FPS_Mover fMover;
 	FPS_CharacterInput fcharacterInput;
+	SoundEmitter soundEmitter;
 
 	public Interactable nearestInteractable;
 
@@ -59,6 +60,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		characterInput = GetComponent<CharacterInput>();
 		fcharacterInput = GetComponent<FPS_CharacterInput>();
 		ceilingDetector = GetComponent<CeilingDetector>();
+		soundEmitter = GetComponent<SoundEmitter>();
 
 		health = maxHealth;
 		gun = GetComponentInChildren<BasicGun>();
@@ -290,15 +292,18 @@ public class FPSCharacterController : AdvancedWalkerController
     {
 		if(fcharacterInput.isRunKeyPressed())
         {
-			Debug.Log("Player emitted running sound");
+			//Debug.Log("Player emitted running sound");
+			soundEmitter.Emit(30f, 10f, SoundEmissionType.PlayerSound);
         }
 		else if(fcharacterInput.isCrouchKeyPressed())
         {
-			Debug.Log("Player emitted crouching sound");
+			//Debug.Log("Player emitted crouching sound");
+			soundEmitter.Emit(5f, 10f, SoundEmissionType.PlayerSound);
 		}
         else
         {
-			Debug.Log("Player emitted walking sound");
+			//Debug.Log("Player emitted walking sound");
+			soundEmitter.Emit(15f, 10f, SoundEmissionType.PlayerSound);
 		}
     }
 
@@ -356,7 +361,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 	public void onReloadComplete()
 	{
-		// A complèter quand on aura plusieurs types d'armes
+		// A complï¿½ter quand on aura plusieurs types d'armes
 		int difference = gun.MagSize - gun.LoadedBullets;
 		int fastDifference = pistolBullets - gun.MagSize;
 		int fullDifference = pistolBullets - difference;

@@ -4333,6 +4333,7 @@ GameObject:
   - component: {fileID: 3177077449010857180}
   - component: {fileID: 8787347992579279498}
   - component: {fileID: 1043111731510450747}
+  - component: {fileID: 4104020838665050556}
   m_Layer: 3
   m_Name: FPS_Player
   m_TagString: Player
@@ -4450,6 +4451,8 @@ MonoBehaviour:
   fcameraController: {fileID: 1537636769}
   nearestInteractable: {fileID: 0}
   maxHealth: 100
+  timeToFullReload: 0.75
+  pistolBullets: 100
   modelAnimator: {fileID: 0}
   weaponAnimator: {fileID: 0}
 --- !u!114 &5661628889720168415
@@ -4542,6 +4545,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &4104020838665050556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477986025960081341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712f1743e884cc84084cbc813e0997c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emissionType: 0
+  emissionIntensity: 20
+  emissionDuration: 10
 --- !u!1 &8508181723206051790
 GameObject:
   m_ObjectHideFlags: 0

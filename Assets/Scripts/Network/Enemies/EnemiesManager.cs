@@ -55,16 +55,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyDieWithId(int id)
     {
-        if (!photonView.IsMine)
+        foreach (Transform child in transform)
         {
-            foreach (Transform child in transform)
+            EnemyScript enemy = child.GetComponent<EnemyScript>();
+            if (enemy.ID == id)
             {
-                EnemyScript enemy = child.GetComponent<EnemyScript>();
-                if (enemy.ID == id)
-                {
-                    enemy.Die();
-                    return;
-                }
+                enemy.Die();
+                return;
             }
         }
     }
@@ -100,10 +97,6 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
                     return;
                 }
             }
-        }
-        else
-        {
-            Debug.Log("MOVE BRO");
         }
     }
 
