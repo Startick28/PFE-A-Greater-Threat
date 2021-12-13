@@ -1401,7 +1401,7 @@ MonoBehaviour:
   - {fileID: 1802648160991246969}
   - {fileID: 75460443379023550}
   blackboard:
-    moveToPosition: {x: -6.3277445, y: 0, z: -13.031023}
+    moveToPosition: {x: 2.8275404, y: 0, z: -14.2269745}
     lastPlayerSeenPosition: {x: 7.3, y: 1, z: 8.7}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
