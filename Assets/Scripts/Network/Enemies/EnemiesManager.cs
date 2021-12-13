@@ -9,6 +9,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        if (Instance != null && Instance != this) Destroy(gameObject);
         Instance = this;
     }
 
@@ -37,13 +38,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyTakeDamageWithId(int id, float damages)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.TakeDamage(damages);
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.TakeDamage(damages);
+                    return;
+                }
             }
         }
     }
@@ -51,13 +55,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyDieWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.Die();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.Die();
+                    return;
+                }
             }
         }
     }
@@ -65,13 +72,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyGetHit(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.GetHit();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.GetHit();
+                    return;
+                }
             }
         }
     }
@@ -79,27 +89,37 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyMoveToPositionWithId(int id, Vector3 position, float stoppingDistance, float speed, float angularSpeed, bool updateRotation, float acceleration)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
+                    return;
+                }
             }
+        }
+        else
+        {
+            Debug.Log("MOVE BRO");
         }
     }
 
     [PunRPC]
     public void EnemyBiteAttackWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.BiteAttack();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.BiteAttack();
+                    return;
+                }
             }
         }
     }
@@ -107,13 +127,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyClawsAttackWithId(int id, float attackAngle = 0f)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.ClawsAttack(attackAngle);
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.ClawsAttack(attackAngle);
+                    return;
+                }
             }
         }
     }
@@ -121,13 +144,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyJumpBiteAttackWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.JumpBiteAttack();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.JumpBiteAttack();
+                    return;
+                }
             }
         }
     }
@@ -135,13 +161,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemySpitAttackWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.SpitAttack();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.SpitAttack();
+                    return;
+                }
             }
         }
     }
@@ -149,13 +178,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyDisengageJumpWithId(int id, float jumpLengthX = 0f, float jumpLengthY = 0f)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.DisengageJump(jumpLengthX, jumpLengthY);
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.DisengageJump(jumpLengthX, jumpLengthY);
+                    return;
+                }
             }
         }
     }
@@ -163,13 +195,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyDodgeWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.Dodge();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.Dodge();
+                    return;
+                }
             }
         }
     }
@@ -177,13 +212,16 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyRoarWithId(int id)
     {
-        foreach (Transform child in transform)
+        if (!photonView.IsMine)
         {
-            EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            foreach (Transform child in transform)
             {
-                enemy.Roar();
-                return;
+                EnemyScript enemy = child.GetComponent<EnemyScript>();
+                if (enemy.ID == id)
+                {
+                    enemy.Roar();
+                    return;
+                }
             }
         }
     }

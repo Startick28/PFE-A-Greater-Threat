@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
 
-    void Start()
+    void Awake()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();

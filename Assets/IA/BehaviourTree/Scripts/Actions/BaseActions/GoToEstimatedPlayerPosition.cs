@@ -25,13 +25,15 @@ public class GoToEstimatedPlayerPosition : ActionNode
         context.agent.destination = blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection;
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
-                                                        blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection,
-                                                        stoppingDistance,
-                                                        speed,
-                                                        angularSpeed,
-                                                        updateRotation,
-                                                        acceleration);
+            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection,
+                                                    stoppingDistance,
+                                                    speed,
+                                                    angularSpeed,
+                                                    updateRotation,
+                                                    acceleration);
         }
 
         blackboard.hasEstimationOfPlayerDirection = false;

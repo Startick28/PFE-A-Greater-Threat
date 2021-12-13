@@ -19,7 +19,10 @@ public class ClawAttack : ActionNode
         context.monsterColliderInfos.ClawsAttackRightCollider.enabled = true;
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyClawsAttackWithId(context.monsterID, angle);
+            EnemiesManager.Instance.photonView.RPC("EnemyClawsAttackWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID, 
+                                                    angle);
         }
         return State.Success;
     }
