@@ -41,13 +41,15 @@ public class GoToLastSeenPlayerPosition : ActionNode
         context.agent.destination = blackboard.lastPlayerSeenPosition;
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
-                                                        blackboard.lastPlayerSeenPosition,
-                                                        stoppingDistance,
-                                                        speed,
-                                                        angularSpeed,
-                                                        updateRotation,
-                                                        acceleration);
+            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    blackboard.lastPlayerSeenPosition,
+                                                    stoppingDistance,
+                                                    speed,
+                                                    angularSpeed,
+                                                    updateRotation,
+                                                    acceleration);
         }
 
         if (context.agent.hasPath && context.agent.remainingDistance < range) {

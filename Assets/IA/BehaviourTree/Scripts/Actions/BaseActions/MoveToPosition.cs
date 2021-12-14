@@ -24,13 +24,15 @@ public class MoveToPosition : ActionNode
         context.agent.destination = blackboard.moveToPosition;
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
-                                                        blackboard.moveToPosition,
-                                                        stoppingDistance,
-                                                        speed,
-                                                        angularSpeed,
-                                                        updateRotation,
-                                                        acceleration);
+            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    blackboard.moveToPosition,
+                                                    stoppingDistance,
+                                                    speed,
+                                                    angularSpeed,
+                                                    updateRotation,
+                                                    acceleration);
         }
     }
 

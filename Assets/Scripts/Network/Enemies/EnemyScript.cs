@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
 
-    void Start()
+    void Awake()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
@@ -40,9 +40,10 @@ public class EnemyScript : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (currentHealth > 0)
+        currentHealth -= damage;
+        if (currentHealth <= 0) 
         {
-            currentHealth -= damage;
+            if (EnemiesManager.Instance) EnemiesManager.Instance.photonView.RPC("EnemyDieWithId", Photon.Pun.RpcTarget.All, ID);
         }
     }
 

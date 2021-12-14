@@ -28,13 +28,15 @@ public class RandomlyChasePlayer : ActionNode
         context.agent.destination = context.transform.position + Quaternion.AngleAxis(Random.Range(-axisRange,axisRange), context.transform.up) * context.transform.forward * Random.Range(minDistance,maxDistance);
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
-                                                        context.agent.destination,
-                                                        stoppingDistance,
-                                                        speed,
-                                                        angularSpeed,
-                                                        updateRotation,
-                                                        acceleration);
+            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    context.agent.destination,
+                                                    stoppingDistance,
+                                                    speed,
+                                                    angularSpeed,
+                                                    updateRotation,
+                                                    acceleration);
         }
     }
 

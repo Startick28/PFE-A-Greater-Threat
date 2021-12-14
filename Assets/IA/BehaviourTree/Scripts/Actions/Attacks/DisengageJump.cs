@@ -24,7 +24,11 @@ public class DisengageJump : ActionNode
         context.animator.SetTrigger("JumpTrigger");
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.EnemyDisengageJumpWithId(context.monsterID, direction.x*Mathf.Cos(angle) - direction.z*Mathf.Sin(angle), direction.z*Mathf.Cos(angle) + direction.x*Mathf.Sin(angle));
+            EnemiesManager.Instance.photonView.RPC("EnemyDisengageJumpWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    direction.x*Mathf.Cos(angle) - direction.z*Mathf.Sin(angle), 
+                                                    direction.z*Mathf.Cos(angle) + direction.x*Mathf.Sin(angle));
         }
         return State.Success;
     }
