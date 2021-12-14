@@ -38,4 +38,9 @@ public class TestController : MonoBehaviour
             id++;
         }
     }
+
+    public void GetHit(float damages)
+    {
+        //Debug.Log("Player took " + damages + " damages !! LETSGO");
+    }
 }

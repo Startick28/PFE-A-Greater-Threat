@@ -21,6 +21,8 @@ namespace BehaviourTreeAI {
         public CharacterController characterController;
         public SensorManager sensorManager;
         // Add other game specific systems here
+        public int monsterID;
+        public EnemyScript monsterColliderInfos;
 
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
@@ -35,8 +37,9 @@ namespace BehaviourTreeAI {
             context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.sensorManager = gameObject.GetComponent<SensorManager>();
-            
             // Add whatever else you need here...
+            context.monsterID = gameObject.GetComponent<EnemyScript>().ID;
+            context.monsterColliderInfos = gameObject.GetComponent<EnemyScript>();
 
             return context;
         }

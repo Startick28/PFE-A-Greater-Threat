@@ -179,6 +179,7 @@ namespace SensorToolkit
                 Gizmos.DrawSphere(transform.TransformPoint(p), 0.1f);
             }
         }
+        /*
         void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
@@ -217,5 +218,6 @@ namespace SensorToolkit
             }
 
         }
+        */
     }
 }

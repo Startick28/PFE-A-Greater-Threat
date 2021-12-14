@@ -26,6 +26,16 @@ public class RandomlyChasePlayer : ActionNode
         context.agent.acceleration = acceleration;
 
         context.agent.destination = context.transform.position + Quaternion.AngleAxis(Random.Range(-axisRange,axisRange), context.transform.up) * context.transform.forward * Random.Range(minDistance,maxDistance);
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.EnemyMoveToPositionWithId(context.monsterID,
+                                                        context.agent.destination,
+                                                        stoppingDistance,
+                                                        speed,
+                                                        angularSpeed,
+                                                        updateRotation,
+                                                        acceleration);
+        }
     }
 
     protected override void OnStop() {
