@@ -123,7 +123,7 @@ public class BasicGun : MonoBehaviour
 
     public int getMaxLoadedBullets()
     {
-        return maxLoadedBullets;
+        return magSize;
     }
 
     public int getLoadedBullets()

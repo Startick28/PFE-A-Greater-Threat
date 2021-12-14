@@ -91,11 +91,6 @@ public class FPSCharacterController : AdvancedWalkerController
 		
         if (GetComponent<PhotonView>().IsMine)
 		{
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-				UIManager ui = UnityEngine.Object.FindObjectsOfType<UIManager>()[0];
-				ui.LoseHealth();
-			}
 		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
 			if(timeSinceSoundEmission> soundEmissionTime)
@@ -157,8 +152,7 @@ public class FPSCharacterController : AdvancedWalkerController
 				
 				weaponAnimator.SetTrigger("fire");
 				weaponAnimator.SetBool("isFiring", true);
-				//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
-
+				gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
 
 			}
 			else
@@ -310,7 +304,9 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void takeDamage(float damage)
     {
 		health -= damage;
-		if(health<=0)
+		PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
+		PhotonNetwork.SetPlayerCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
+		if (health<=0)
         {
 			die();
         }

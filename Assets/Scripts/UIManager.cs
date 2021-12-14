@@ -24,11 +24,9 @@ public class UIManager : MonoBehaviourPunCallbacks
     [SerializeField]
     TextMeshProUGUI playerBullets;
 
-    float HP;
     // Start is called before the first frame update
     void Start()
     {
-        HP = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString());
         var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
         foreach (var view in photonViews)
         {
@@ -43,13 +41,6 @@ public class UIManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void LoseHealth()
-    {
-        HP -= 10.0f;
-        PhotonNetwork.LocalPlayer.CustomProperties["HP"] = HP;
-        PhotonNetwork.SetPlayerCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -62,11 +53,10 @@ public class UIManager : MonoBehaviourPunCallbacks
                 //Objects in the scene don't have an owner, its means view.owner will be null
                 if (view.IsMine && view.gameObject.name.Contains("Player"))
                 {
-                    bloodScreen.alpha = 0.5f - (HP / 100)/2.0f;
                     playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+                    bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100) / 2.0f;
                     player = view;
-                    playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/"
-                        + view.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
+                    playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().LoadedBullets.ToString();
                 }
             }
         }
