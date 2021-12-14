@@ -152,7 +152,8 @@ public class FPSCharacterController : AdvancedWalkerController
 				
 				weaponAnimator.SetTrigger("fire");
 				weaponAnimator.SetBool("isFiring", true);
-				gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+				//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+
 
 			}
 			else
