@@ -32,7 +32,11 @@ public class LightCurves : MonoBehaviour
         }
         if (time >= GraphTimeMultiplier) {
             if (IsLoop) startTime = Time.time;
-            else canUpdate = false;
+            else
+            {
+                canUpdate = false;
+                transform.parent.gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -14,6 +14,9 @@ public class FPS_ArmsMonitor : MonoBehaviour
     [SerializeField]
     Animator animator;
 
+    [SerializeField]
+    GameObject shotVFX;
+
     public void Start()
     {
 
@@ -35,6 +38,8 @@ public class FPS_ArmsMonitor : MonoBehaviour
     public void onFire()
     {
         parentController.onFire();
+        shotVFX.SetActive(true);
+
     }
 
     public void onReloadComplete()
@@ -50,6 +55,7 @@ public class FPS_ArmsMonitor : MonoBehaviour
     public void onSpeedUpReload()
     {
         parentController.onSpeedUpReload();
+
     }
 
 }
