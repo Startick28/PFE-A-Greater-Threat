@@ -48,6 +48,11 @@ public class BasicGun : MonoBehaviour
     {
         get { return fastReloadTime; }
     }
+
+    public bool isReadyToFire
+    {
+        get { return timeSinceFire > fireTime; }
+    }
     
     float fireTime;
 
@@ -77,18 +82,19 @@ public class BasicGun : MonoBehaviour
     private void Update()
     {
         timeSinceFire += Time.deltaTime;
+       
     }
 
-    public void fire(Vector3 position,Vector3 direction)
+    public bool fire(Vector3 position,Vector3 direction)
     {
-        if(timeSinceFire>fireTime)
-        {
+        
             Debug.Log(loadedBullets);
             if (loadedBullets == 0)
             {
                 Debug.Log("Tried to shoot with empty mag");
-                return;
+                return false;
             }
+            
             playerController.addRecoilToCamera(-recoil, Random.RandomRange(-2.0f,2.0f));
             //Debug.Log("Tried to shoot with basic gun");
             int layerMask = 1 << 26;
@@ -108,13 +114,9 @@ public class BasicGun : MonoBehaviour
             }
             loadedBullets--;
             timeSinceFire = 0;
-        }
-        else
-        {
-
-            //Debug.Log("cannot fire right now");
-            
-        }
+        return true;
+        
+       
        
     }
 

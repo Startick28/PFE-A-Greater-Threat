@@ -152,8 +152,15 @@ public class FPSCharacterController : AdvancedWalkerController
 
 			if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
 			{
+				if(gun.isReadyToFire)
+                {
+					if(gun.fire(cameraTransform.position, cameraController.GetAimingDirection()))
+                    {
+						weaponAnimator.SetTrigger("fire");
+					}
+					
+				}
 				
-				weaponAnimator.SetTrigger("fire");
 				weaponAnimator.SetBool("isFiring", true);
 				//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
 
@@ -171,7 +178,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			{
 				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >=timeToFullReload && gun.canReload)
                 {
-					weaponAnimator.SetFloat("reloadSpeed", 1);
+					weaponAnimator.SetFloat("reloadSpeed",1);
 					weaponAnimator.SetTrigger("reload");
 					isFullReloading = true;
 					timeSincePressedReloadKey = 0;
@@ -192,7 +199,7 @@ public class FPSCharacterController : AdvancedWalkerController
             {
 				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && gun.canReload)
                 {
-					weaponAnimator.SetFloat("reloadSpeed", 2);
+					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
 					isFastReloading = true;
 					//weaponAnimator.get
@@ -347,7 +354,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	public void onFire()
     {
-		gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+		
 		weaponAnimator.ResetTrigger("fire");
 		weaponAnimator.ResetTrigger("reload");
 		
@@ -397,4 +404,32 @@ public class FPSCharacterController : AdvancedWalkerController
 		isFastReloading = false;
 
 	}
+
+	public void onSlowDownReload()
+	{
+		if(isFastReloading)
+        {
+			weaponAnimator.SetFloat("reloadSpeed", 0.02f);
+
+		}
+		else if(isFullReloading)
+        {
+			weaponAnimator.SetFloat("reloadSpeed", 0.01f);
+		}
+		
+    }
+
+	public void onSpeedUpReload()
+	{
+		if (isFastReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed",1);
+
+		}
+		else if (isFullReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed", 1);
+		}
+	}
+
 }
