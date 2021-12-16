@@ -9,7 +9,7 @@ public class FPS_ArmsMonitor : MonoBehaviour
     [SerializeField]
     FPSCharacterController parentController;
 
-   
+
 
     [SerializeField]
     Animator animator;
@@ -41,6 +41,17 @@ public class FPS_ArmsMonitor : MonoBehaviour
     {
         parentController.onReloadComplete();
     }
+
+    public void onSlowDownReload()
+    {
+        parentController.onSlowDownReload();
+    }
+
+    public void onSpeedUpReload()
+    {
+        parentController.onSpeedUpReload();
+    }
+
 }
 
-    
+

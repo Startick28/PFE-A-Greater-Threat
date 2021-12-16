@@ -149,8 +149,16 @@ public class FPSCharacterController : AdvancedWalkerController
 
 			if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
 			{
-				
-				weaponAnimator.SetTrigger("fire");
+
+				if (gun.isReadyToFire)
+				{
+					if (gun.fire(cameraTransform.position, cameraController.GetAimingDirection()))
+					{
+						weaponAnimator.SetTrigger("fire");
+					}
+
+				}
+
 				weaponAnimator.SetBool("isFiring", true);
 				//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
 
@@ -189,7 +197,7 @@ public class FPSCharacterController : AdvancedWalkerController
             {
 				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && gun.canReload)
                 {
-					weaponAnimator.SetFloat("reloadSpeed", 2);
+					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
 					isFastReloading = true;
 					//weaponAnimator.get
@@ -326,7 +334,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 
 	public void onEquip()
-    {
+	{
 		//Debug.Log("equipped");
 		currentWeaponEquipped = true;
 		weaponAnimator.ResetTrigger("equip");
@@ -348,55 +356,82 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 
 	public void onFire()
-    {
-		gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+	{
+
 		weaponAnimator.ResetTrigger("fire");
 		weaponAnimator.ResetTrigger("reload");
-		
+
 		isFullReloading = false;
 		isFastReloading = false;
 	}
 	public void onReloadComplete()
 	{
-		// A compl�ter quand on aura plusieurs types d'armes
+		// A complèter quand on aura plusieurs types d'armes
 		int difference = gun.MagSize - gun.LoadedBullets;
 		int fastDifference = pistolBullets - gun.MagSize;
 		int fullDifference = pistolBullets - difference;
 		Debug.Log(fastDifference);
 		Debug.Log(fullDifference);
 		if (isFastReloading)
-        {
-			if(fastDifference >= 0)
-            {
+		{
+			if (fastDifference >= 0)
+			{
 				gun.reload(difference);
 				pistolBullets -= gun.MagSize;
-            }
-            else
-            {
-				gun.reload(pistolBullets);
-				pistolBullets = 0;
-            }
-
-			//gun.reload()
-        }
-		else if(isFullReloading)
-        {
-			if(fullDifference>=0)
-            {
-				gun.reload(difference);
-				pistolBullets -= difference;
-            }
-            else
-            {
+			}
+			else
+			{
 				gun.reload(pistolBullets);
 				pistolBullets = 0;
 			}
-        }
+
+			//gun.reload()
+		}
+		else if (isFullReloading)
+		{
+			if (fullDifference >= 0)
+			{
+				gun.reload(difference);
+				pistolBullets -= difference;
+			}
+			else
+			{
+				gun.reload(pistolBullets);
+				pistolBullets = 0;
+			}
+		}
 		//	Debug.Log(pistolBullets);
 		//gun.reload();
 		weaponAnimator.ResetTrigger("reload");
 		isFullReloading = false;
 		isFastReloading = false;
 
+	}
+
+	public void onSlowDownReload()
+	{
+		if (isFastReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed", 0.02f);
+
+		}
+		else if (isFullReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed", 0.01f);
+		}
+
+	}
+
+	public void onSpeedUpReload()
+	{
+		if (isFastReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed", 1);
+
+		}
+		else if (isFullReloading)
+		{
+			weaponAnimator.SetFloat("reloadSpeed", 1);
+		}
 	}
 }

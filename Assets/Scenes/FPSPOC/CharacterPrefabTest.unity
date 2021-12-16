@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &250032168 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 325506261201525440, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
-  m_PrefabInstance: {fileID: 1096303467}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397175019
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,10 +336,14 @@ PrefabInstance:
     - target: {fileID: 6224040936624951008, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: weaponAnimator
       value: 
-      objectReference: {fileID: 250032168}
+      objectReference: {fileID: 1825287243}
     - target: {fileID: 6949454562171340897, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352435829174214342, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8477986025960081341, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_Name
@@ -460,6 +459,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1825287243 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8208562412886482331, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+  m_PrefabInstance: {fileID: 1096303467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1863163950
 GameObject:
   m_ObjectHideFlags: 0
