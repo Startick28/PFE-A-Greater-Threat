@@ -6,8 +6,8 @@ public class BasicGun : MonoBehaviour
 {
     int loadedBullets; // When this is equal to 0, player has to use bullets in inventory to reload
     // Start is called before the first frame update
-
-    int magSize = 10;
+    [SerializeField]
+    int magSize;
     [SerializeField]
     float fireRate;
     [SerializeField]
@@ -151,6 +151,7 @@ public class BasicGun : MonoBehaviour
     {
         return noise;
     }
+
 
    
        

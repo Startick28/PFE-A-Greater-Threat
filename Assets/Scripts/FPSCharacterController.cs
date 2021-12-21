@@ -22,6 +22,11 @@ public class FPSCharacterController : AdvancedWalkerController
 	BasicGun gun;
 
 	[SerializeField]
+	Avatar gunHandsAvatar;
+	[SerializeField]
+	Avatar machineGunHandsAvatar;
+
+	[SerializeField]
 	float maxHealth = 100;
 	float health;
 
@@ -77,7 +82,8 @@ public class FPSCharacterController : AdvancedWalkerController
 		isFullReloading = false;
 		timeSincePressedReloadKey = 0;
 		//weaponAnimator.gameObject.SetActive(false);
-		Debug.Log(pistolBullets);	
+		Debug.Log(pistolBullets);
+		//weaponAnimator.avatar = gunHandsAvatar;
 		Setup();
 		
 		//view = GetComponent<PhotonView>();
