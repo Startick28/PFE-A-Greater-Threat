@@ -212,7 +212,7 @@ public class FPSCharacterController : AdvancedWalkerController
 				else if(previousReload && isFullReloading)
                 {
 					//weaponAnimator.SetFloat("reloadSpeed", 2);
-					weaponAnimator.SetTrigger("aim");
+					weaponAnimator.SetTrigger("idle");
 					isFullReloading = false;
 				}
 
