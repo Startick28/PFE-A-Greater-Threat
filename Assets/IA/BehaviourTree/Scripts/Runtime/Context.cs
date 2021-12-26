@@ -38,8 +38,9 @@ namespace BehaviourTreeAI {
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.sensorManager = gameObject.GetComponent<SensorManager>();
             // Add whatever else you need here...
-            context.monsterID = gameObject.GetComponent<EnemyScript>().ID;
             context.monsterColliderInfos = gameObject.GetComponent<EnemyScript>();
+            if (context.monsterColliderInfos != null) context.monsterID = context.monsterColliderInfos.ID;
+            
 
             return context;
         }

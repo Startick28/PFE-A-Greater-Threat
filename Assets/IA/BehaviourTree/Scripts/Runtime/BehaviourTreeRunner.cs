@@ -21,8 +21,12 @@ namespace BehaviourTreeAI {
 
         // Update is called once per frame
         void Update() {
-            if (tree && EnemiesManager.Instance.photonView.IsMine) {
-            tree.Update();
+            if (tree) {
+                if (EnemiesManager.Instance != null) 
+                {
+                    if (EnemiesManager.Instance.photonView.IsMine) tree.Update();
+                }
+                else tree.Update();
             }
             
         }
