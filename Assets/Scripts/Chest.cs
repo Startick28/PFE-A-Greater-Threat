@@ -5,25 +5,37 @@ using UnityEngine;
 
 public class Chest : Interactable
 {
+    [SerializeField] RarityType rarity;
+    [SerializeField] BasicGun prefabGun;
 
     [PunRPC]
-    public override void interact()
+    public override void interact(FPSCharacterController player)
     {
         Debug.Log("interacted with chest");
+
         if(players.Count == 0)
         {
+            return;
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
         //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
-        BasicGun playerGun = players[0].GetComponentInChildren<BasicGun>();
-        MeshRenderer gunRenderer = playerGun.GetComponentInChildren<MeshRenderer>();
-        if(playerGun == null ||  gunRenderer == null)
+        BasicGun playerGun = player.GetComponentInChildren<BasicGun>();
+        if(playerGun == null)
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }
+        //Remove chest's collider
+        gameObject.GetComponent<BoxCollider>().enabled = false;
 
-        playerGun.setFireRate(4);
-        gunRenderer.material.color = Color.yellow;
+        BasicGun gun = Instantiate(prefabGun, transform.position + Vector3.up,Quaternion.identity);
+        gun.Rarity = rarity;
+        gun.canInteract = true;
+        gun.GetComponent<BoxCollider>().enabled = true;
+        // Default layer
+        gun.gameObject.layer = 0;
+        gun.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+
+        player.GetComponent<FPSCharacterController>().nearestInteractable = gun;
         finishInteraction();
         //throw new System.NotImplementedException();
     }
@@ -40,6 +52,7 @@ public class Chest : Interactable
         iType = InteractionType.chest;
         collider = GetComponent<BoxCollider>();
         canInteract = true;
+        
     }
 
     // Update is called once per frame

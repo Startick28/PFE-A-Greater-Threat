@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum InteractionType { chest}
+public enum InteractionType { chest, gun }
+
+public enum RarityType { blanche, bleu, dore }
 
 public abstract class Interactable : MonoBehaviour
 {
@@ -14,22 +16,20 @@ public abstract class Interactable : MonoBehaviour
     public InteractionType iType;
     protected List<FPSCharacterController> players = new List<FPSCharacterController>();
 
-    public abstract void interact();
+    public abstract void interact(FPSCharacterController player);
 
     public abstract void finishInteraction();
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //Debug.Log("entered the trigger");
         FPSCharacterController playerController = other.gameObject.GetComponent<FPSCharacterController>();
+        
         if (playerController != null && canInteract)
         {
-            
                Debug.Log("chest is now NearestInteractabe");
                playerController.nearestInteractable = this;
                players.Add(playerController);
-            
-            
         }
     }
 

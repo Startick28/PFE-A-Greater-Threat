@@ -125,10 +125,14 @@ public class FPSCharacterController : AdvancedWalkerController
                     {
 						case InteractionType.chest:
 							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
-
+							Debug.Log("Je peux interargir avec le coffre");
 							//nearestInteractable.interact();
 							break;
-
+						case InteractionType.gun:
+							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+							Debug.Log("Je peux interargir avec le gun");
+							//nearestInteractable.interact();
+							break;
 						default:
 
 							break;
@@ -288,7 +292,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	[PunRPC]
 	public void InteractWithInteractable()
     {
-		nearestInteractable.interact();
+		nearestInteractable.interact(this);
 	}
 	
 	public Vector3 getAimingDirection()
@@ -439,5 +443,25 @@ public class FPSCharacterController : AdvancedWalkerController
 		{
 			weaponAnimator.SetFloat("reloadSpeed", 1);
 		}
+	}
+	public void changeGun(BasicGun newGun)
+    {
+		BasicGun playerGun = GetComponentInChildren<BasicGun>();
+		Vector3 oldPos = newGun.transform.position;
+		// On met le nouveau gun sur le joueur
+		newGun.transform.position = playerGun.transform.position;
+		newGun.transform.parent = playerGun.transform.parent;
+		newGun.transform.rotation = playerGun.transform.rotation;
+		newGun.GetComponent<BoxCollider>().enabled = false;
+		// Player layer
+		newGun.gameObject.layer = 3;
+		newGun.View = transform.gameObject.GetComponent<PhotonView>();
+
+		// On enl�ve l'ancien gun du joueur
+		playerGun.transform.parent = null;
+		playerGun.transform.position = oldPos;
+		playerGun.canInteract = true;
+		playerGun.gameObject.layer = 0;
+		playerGun.GetComponent<BoxCollider>().enabled = true;
 	}
 }

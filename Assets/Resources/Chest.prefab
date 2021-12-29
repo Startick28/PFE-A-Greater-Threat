@@ -127,3 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 0
   iType: 0
+  rarity: 0
+  prefabGun: {fileID: 4672324460278089109, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}

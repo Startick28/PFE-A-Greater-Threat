@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2329667295930246198}
   - component: {fileID: 8223474799166535501}
+  - component: {fileID: 2145584730213170468}
   m_Layer: 3
   m_Name: MachineGun
   m_TagString: Untagged
@@ -140,9 +141,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77d43b4a5a063a4ca0ea62e7e779813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
+  iType: 0
+  rarity: 0
   magSize: 30
   fireRate: 5
   noise: 0
   recoil: 0
   fullReloadTime: 0
   fastReloadTime: 0
+--- !u!65 &2145584730213170468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764030142301075375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0.5, z: 0.5}

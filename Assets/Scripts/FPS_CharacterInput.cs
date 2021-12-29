@@ -51,6 +51,6 @@ public class FPS_CharacterInput : CharacterKeyboardInput
 
     public bool isInteractKeyPressed()
     {
-        return Input.GetKey(interactKey);
+        return Input.GetKeyDown(interactKey);
     }
 }
