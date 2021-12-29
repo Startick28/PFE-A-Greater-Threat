@@ -18,8 +18,14 @@ namespace BehaviourTreeAI {
         public GameObject nearestPresentPlayer;
 
 
+        // Greater Threat Specifics //
+
+        public float pausingAfterAttack;
+
+
         public void Update()
         {  
+            pausingAfterAttack -= Time.deltaTime;
         }
 
         public void SetContext(Context c)

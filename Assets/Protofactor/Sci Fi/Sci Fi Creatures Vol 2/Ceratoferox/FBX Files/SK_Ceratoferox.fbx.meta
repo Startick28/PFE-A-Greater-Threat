@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c6263e24721ddb34c91a8904b38475ce
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
@@ -33,7 +33,226 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/Ceratoferox_
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe0
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe0/Ceratoferox_ L Toe01
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe1/Ceratoferox_ L Toe11
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ L Thigh/Ceratoferox_
+          L Calf/Ceratoferox_ L Foot/Ceratoferox_ L Toe2/Ceratoferox_ L Toe21
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe0
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe0/Ceratoferox_ R Toe01
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe1/Ceratoferox_ R Toe11
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ R Thigh/Ceratoferox_
+          R Calf/Ceratoferox_ R Foot/Ceratoferox_ R Toe2/Ceratoferox_ R Toe21
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger0
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger0/Ceratoferox_ L Finger01
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger1/Ceratoferox_ L Finger11
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ L Clavicle/Ceratoferox_ L UpperArm/Ceratoferox_
+          L Forearm/Ceratoferox_ L Hand/Ceratoferox_ L Finger2/Ceratoferox_ L Finger21
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_
+          Ponytail1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_
+          Ponytail1/Ceratoferox_Tongue_1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_
+          Ponytail1/Ceratoferox_Tongue_1/Ceratoferox_Tongue_2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_
+          Ponytail1/Ceratoferox_Tongue_1/Ceratoferox_Tongue_2/Ceratoferox_Tongue_3
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_CheekLeft
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ Neck/Ceratoferox_ Head/Ceratoferox_CheekRight
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger0
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger0/Ceratoferox_ R Finger01
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger1/Ceratoferox_ R Finger11
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_ Spine/Ceratoferox_
+          Spine1/Ceratoferox_ Spine2/Ceratoferox_ R Clavicle/Ceratoferox_ R UpperArm/Ceratoferox_
+          R Forearm/Ceratoferox_ R Hand/Ceratoferox_ R Finger2/Ceratoferox_ R Finger21
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailLeft_1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailLeft_1/Ceratoferox_TailLeft_2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailLeft_1/Ceratoferox_TailLeft_2/Ceratoferox_TailLeft_3
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailLeft_1/Ceratoferox_TailLeft_2/Ceratoferox_TailLeft_3/Ceratoferox_TailLeft_4
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailRight_1
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailRight_1/Ceratoferox_TailRight_2
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailRight_1/Ceratoferox_TailRight_2/Ceratoferox_TailRight_3
+        weight: 1
+      - path: root/Ceratoferox_/Ceratoferox_ Pelvis/Ceratoferox_TailRight_1/Ceratoferox_TailRight_2/Ceratoferox_TailRight_3/Ceratoferox_TailRight_4
+        weight: 1
+      - path: SK_Ceratoferox
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -52,6 +271,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -61,6 +281,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -94,6 +317,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

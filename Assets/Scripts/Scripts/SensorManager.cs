@@ -18,6 +18,7 @@ public class SensorManager : MonoBehaviour
 
     private bool _playerDetected = false;
     public bool PlayerDetected { get {return _playerDetected;} private set{} }
+
     
     void Update()
     {
