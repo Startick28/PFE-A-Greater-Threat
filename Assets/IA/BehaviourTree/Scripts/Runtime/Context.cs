@@ -23,9 +23,10 @@ namespace BehaviourTreeAI {
         // Add other game specific systems here
         public int monsterID;
         public EnemyScript monsterColliderInfos;
-
+        
         //GT Specifics
         public GoalManager goalManager;
+        public GT_EnemyScript greaterThreatColliders;
 
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
@@ -45,6 +46,7 @@ namespace BehaviourTreeAI {
             if (context.monsterColliderInfos != null) context.monsterID = context.monsterColliderInfos.ID;
             //GT Specifics 
             context.goalManager = gameObject.GetComponent<GoalManager>();
+            context.greaterThreatColliders = gameObject.GetComponent<GT_EnemyScript>();
 
             return context;
         }

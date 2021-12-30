@@ -16,7 +16,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     private int lastId = 0;
     [SerializeField] private GameObject enemy;
     
-
+    [SerializeField] private GT_EnemyScript greaterThreat;
 
     // Instantiate an enemy with RPC.
     // How to call it : 
@@ -219,5 +219,39 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void GT_ComboHitAttack()
+    {
+        if (!photonView.IsMine)
+        {
+            greaterThreat.ComboHitAttack();
+        }
+    }
 
+    [PunRPC]
+    public void GT_RightClawHeavyAttack()
+    {
+        if (!photonView.IsMine)
+        {
+            greaterThreat.RightClawHeavyAttack();
+        }
+    }
+
+    [PunRPC]
+    public void GT_LeftClawHeavyAttack()
+    {
+        if (!photonView.IsMine)
+        {
+            greaterThreat.LeftClawHeavyAttack();
+        }
+    }
+
+    [PunRPC]
+    public void GT_JumpAttack()
+    {
+        if (!photonView.IsMine)
+        {
+            greaterThreat.JumpAttack();
+        }
+    }
 }

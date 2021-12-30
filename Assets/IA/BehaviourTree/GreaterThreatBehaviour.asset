@@ -29,33 +29,6 @@ MonoBehaviour:
   children:
   - {fileID: -5296660222648442414}
   - {fileID: 9138081652536446768}
---- !u!114 &-8958272627896577504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200f30dd700e74a41ad497f8c4487480, type: 3}
-  m_Name: SetAnimatorTrigger
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: ac127bb46b385b5468f91d6d700a7e7e
-  position: {x: 886, y: 1664}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: 0
-  description: 
-  drawGizmos: 0
-  trigger: JumpClawsAttack
 --- !u!114 &-8595449604788698150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +293,7 @@ MonoBehaviour:
     pausingAfterAttack: 0
   description: 
   drawGizmos: 0
-  range: 10
+  range: 15
 --- !u!114 &-7597510780672040562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +309,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 71942bb0af2788e4da1e91f0c851de0b
-  position: {x: -845, y: 1910}
+  position: {x: -846.15, y: 1910.0002}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -522,7 +495,7 @@ MonoBehaviour:
     pausingAfterAttack: 0
   description: 
   drawGizmos: 0
-  range: 5
+  range: 10
 --- !u!114 &-6452398972982844007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +829,32 @@ MonoBehaviour:
   children:
   - {fileID: 4843716871722489093}
   - {fileID: 1983782470282185318}
+--- !u!114 &-1374953742359473281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b042c930a5b164dbeb891468d5fa25, type: 3}
+  m_Name: GT_ComboHitAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dc2d24486fbac7840864070eaf2e18f5
+  position: {x: 28, y: 1705}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    pausingAfterAttack: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &-1217647759498692603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,10 +1105,6 @@ MonoBehaviour:
   - {fileID: -7111838522035962484}
   - {fileID: 4719247189364445980}
   - {fileID: 6971620932883813486}
-  - {fileID: 6324208452986734779}
-  - {fileID: 603280750287933352}
-  - {fileID: 207248364530277766}
-  - {fileID: -8958272627896577504}
   - {fileID: 5414698468665672791}
   - {fileID: -2055661947339847082}
   - {fileID: 6009500882717452347}
@@ -1131,14 +1126,18 @@ MonoBehaviour:
   - {fileID: 7439581938110709085}
   - {fileID: -8241399955195457604}
   - {fileID: 2354367381223553821}
+  - {fileID: 1160804572291727643}
+  - {fileID: 834945471567258316}
+  - {fileID: -1374953742359473281}
+  - {fileID: 5432735481351693020}
   blackboard:
-    moveToPosition: {x: -395.59143, y: 0, z: 252.34117}
-    lastPlayerSeenPosition: {x: 227.4, y: 10, z: -450.7}
-    lastPlayerSeenEstimatedDirection: {x: -0.29409453, y: 0, z: 0.95577633}
+    moveToPosition: {x: 253.5186, y: 0, z: -552.0788}
+    lastPlayerSeenPosition: {x: 78.40765, y: 9.930792, z: 242.59404}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0.030955432, z: 0.9995207}
     hasEstimationOfPlayerDirection: 1
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: -1685.0303
+    pausingAfterAttack: -229.2916
 --- !u!114 &63630210322256940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,10 +1192,10 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 4590905165121997355}
-  - {fileID: 603280750287933352}
+  - {fileID: 834945471567258316}
   - {fileID: -5179584905433687340}
   - {fileID: -1217647759498692603}
---- !u!114 &207248364530277766
+--- !u!114 &834945471567258316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1205,13 +1204,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200f30dd700e74a41ad497f8c4487480, type: 3}
-  m_Name: SetAnimatorTrigger
+  m_Script: {fileID: 11500000, guid: bc09b91ebfd63ea41a36e5092f7a7468, type: 3}
+  m_Name: GT_HeavyClawAttack
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 7d4e191a9ce7e2546bb76d5ebe924304
-  position: {x: 28, y: 1695}
+  guid: 42a9bd1103a1b5a49b31536bdfc97c04
+  position: {x: -298.5, y: 1994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1222,8 +1221,8 @@ MonoBehaviour:
     pausingAfterAttack: 0
   description: 
   drawGizmos: 0
-  trigger: ClawsAttackCombo
---- !u!114 &603280750287933352
+  rightClawAttack: 1
+--- !u!114 &1160804572291727643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1232,13 +1231,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200f30dd700e74a41ad497f8c4487480, type: 3}
-  m_Name: SetAnimatorTrigger
+  m_Script: {fileID: 11500000, guid: bc09b91ebfd63ea41a36e5092f7a7468, type: 3}
+  m_Name: GT_HeavyClawAttack
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: f131387f9691e3145b5d453be10e3621
-  position: {x: -279, y: 1994}
+  guid: ce5f1409f71e02d47b273c5f36edbc04
+  position: {x: -775.5, y: 1994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1249,7 +1248,7 @@ MonoBehaviour:
     pausingAfterAttack: 0
   description: 
   drawGizmos: 0
-  trigger: ClawsAttackRight
+  rightClawAttack: 0
 --- !u!114 &1208999969187286802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,7 +1901,7 @@ MonoBehaviour:
   - {fileID: -7682556771942119133}
   - {fileID: 8323879013317286512}
   - {fileID: 8004050053995759062}
-  - {fileID: -8958272627896577504}
+  - {fileID: 5432735481351693020}
   - {fileID: 5370009609070413870}
   - {fileID: -7069077281042406785}
 --- !u!114 &5370009609070413870
@@ -1959,6 +1958,32 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   range: 4
+--- !u!114 &5432735481351693020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa01c228bf814cab9529447e5640f, type: 3}
+  m_Name: GT_JumpAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 12e5631214a2f874ba5799d242d15db2
+  position: {x: 886, y: 1673}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    pausingAfterAttack: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &5601860498866792199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2102,33 +2127,6 @@ MonoBehaviour:
   children:
   - {fileID: -7372835725006751285}
   - {fileID: -1198062197944553842}
---- !u!114 &6324208452986734779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200f30dd700e74a41ad497f8c4487480, type: 3}
-  m_Name: SetAnimatorTrigger
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 16d4dc8ee77db174ab1495618686fe4e
-  position: {x: -797, y: 1994}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: 0
-  description: 
-  drawGizmos: 0
-  trigger: ClawsAttackLeft
 --- !u!114 &6432348980834578412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,7 +2181,7 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: -7597510780672040562}
-  - {fileID: 6324208452986734779}
+  - {fileID: 1160804572291727643}
   - {fileID: 3070920080496149640}
   - {fileID: 1898181375916832203}
 --- !u!114 &6785991203684763265
@@ -2558,6 +2556,6 @@ MonoBehaviour:
   children:
   - {fileID: 5414698468665672791}
   - {fileID: -7111838522035962484}
-  - {fileID: 207248364530277766}
+  - {fileID: -1374953742359473281}
   - {fileID: 4719247189364445980}
   - {fileID: 6971620932883813486}

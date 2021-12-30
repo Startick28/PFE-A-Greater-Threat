@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 6054943337749410367, guid: 3339f5f529507f048b40e607144e07f8, type: 3}
+  greaterThreat: {fileID: 0}
 --- !u!1001 &5017648037022203638
 PrefabInstance:
   m_ObjectHideFlags: 0

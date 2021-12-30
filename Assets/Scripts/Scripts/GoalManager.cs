@@ -51,12 +51,7 @@ public class GoalManager : MonoBehaviour
     {
         players = new List<Transform>();
         lastVisitedOrder = new List<int>();
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
-        {
-            players.Add(obj.transform);
-            lastVisitedOrder.Add(3);
-        }
-
+        InitPlayers();
         updateTimer = updateFrequency;
     }
 
@@ -118,6 +113,10 @@ public class GoalManager : MonoBehaviour
     // other players that are about as close as him.
     public void ChoseNewGoal()
     {
+        if (players.Count == 0f)
+        {
+            InitPlayers();
+        }
         float totalPriority = 0f;
         foreach (Goal goal in goals)
         {
@@ -186,4 +185,12 @@ public class GoalManager : MonoBehaviour
         return false;
     }
 
+    private void InitPlayers()
+    {
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            players.Add(obj.transform);
+            lastVisitedOrder.Add(3);
+        }
+    }
 }
