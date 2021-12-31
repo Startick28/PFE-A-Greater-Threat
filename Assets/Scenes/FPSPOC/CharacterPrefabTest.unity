@@ -364,7 +364,7 @@ PrefabInstance:
     - target: {fileID: 6224040936624951008, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: modelAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1995232326}
     - target: {fileID: 6224040936624951008, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: pistolBullets
       value: 100
@@ -415,6 +415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+--- !u!4 &1207904706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8479863344373809125, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+  m_PrefabInstance: {fileID: 1096303467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317774786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6007349257878316395, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
@@ -609,6 +614,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1995232325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1207904706}
+    m_Modifications:
+    - target: {fileID: 100146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_Name
+      value: SK_EliteTrooper
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400146, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c20439891dc1c7040b232a7ab8fa709b, type: 2}
+    - target: {fileID: 9500000, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+--- !u!95 &1995232326 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 073374ff34a2c3d458f66bdef5aad330, type: 3}
+  m_PrefabInstance: {fileID: 1995232325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2090517348 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2830234372489199898, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}

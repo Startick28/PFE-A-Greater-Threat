@@ -55,6 +55,10 @@ public class FPSCharacterController : AdvancedWalkerController
 	Animator weaponAnimator;
 
 	bool currentWeaponEquipped;
+
+	bool currentlyWalking = false;
+	bool previouslyWalking = false;
+	bool previousJump;
 	void Awake()
 	{
 		timeSinceSoundEmission = soundEmissionTime + 1;
@@ -80,10 +84,12 @@ public class FPSCharacterController : AdvancedWalkerController
 		previousReload = false;
 		isFastReloading = false;
 		isFullReloading = false;
+		previousJump = false;
 		timeSincePressedReloadKey = 0;
 		//weaponAnimator.gameObject.SetActive(false);
 		Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
+		modelAnimator.SetTrigger("idle");
 		Setup();
 		
 		//view = GetComponent<PhotonView>();
@@ -92,7 +98,31 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
-		
+		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+        {
+			currentlyWalking = true;
+		}
+        else
+        {
+			currentlyWalking = false;
+			
+        }
+
+		if(currentlyWalking)
+        {
+			if(!previouslyWalking)
+            {
+				modelAnimator.SetBool("walking",true);
+            }
+        }
+        else
+        {
+			if(previouslyWalking)
+            {
+				modelAnimator.SetBool("walking",false);
+            }
+        }
+
 		
 		
         if (GetComponent<PhotonView>().IsMine)
@@ -146,15 +176,32 @@ public class FPSCharacterController : AdvancedWalkerController
 				{
 					//currentWeaponEquipped = false;
 					weaponAnimator.SetTrigger("unequip");
+					modelAnimator.SetInteger("weaponIndex", 1);
+					modelAnimator.SetTrigger("idle");
 				}
 				else
 				{
 					//weaponAnimator.gameObject.SetActive(true);
 					weaponAnimator.SetTrigger("equip");
+					modelAnimator.SetInteger("weaponIndex", 0);
+					
+
 
 					//currentWeaponEquipped = true;
 				}
 
+			}
+            else
+            {
+				if(!currentWeaponEquipped)
+                {
+					modelAnimator.SetTrigger("idle");
+				}
+                else
+                {
+					modelAnimator.ResetTrigger("idle");
+				}
+				
 			}
 
 			if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
@@ -239,7 +286,7 @@ public class FPSCharacterController : AdvancedWalkerController
 				{
 					movementSpeed *= 2;
 					previousRun = true;
-					
+					modelAnimator.SetBool("running",true);
 
 					//movementSpeed
 				}
@@ -251,7 +298,8 @@ public class FPSCharacterController : AdvancedWalkerController
 				{
 					movementSpeed /= 2;
 					previousRun = false;
-					
+					modelAnimator.SetBool("running", false);
+
 				}
 
 			}
@@ -267,6 +315,8 @@ public class FPSCharacterController : AdvancedWalkerController
 					mover.SetColliderHeight(1.0f);
 					cameraController.transform.Translate(0, -1, 0);
 					transform.Translate(0, -1, 0);
+					modelAnimator.SetBool("crouching", true);
+					modelAnimator.SetTrigger("crouch");
 				}
 
 				previousCrouch = true;
@@ -279,6 +329,8 @@ public class FPSCharacterController : AdvancedWalkerController
 					cameraController.transform.Translate(0, 1, 0);
 					transform.Translate(0, 1, 0);
 					previousCrouch = false;
+					modelAnimator.SetBool("crouching", false);
+					modelAnimator.ResetTrigger("crouch");
 				}
 
 			}
@@ -286,7 +338,25 @@ public class FPSCharacterController : AdvancedWalkerController
 			
 
 		}
-		
+
+		if(fcharacterInput.IsJumpKeyPressed())
+        {
+			if(!previousJump)
+            {
+				modelAnimator.SetTrigger("jump");
+				previousJump = true;
+			}
+        }
+		else
+        {
+			if (previousJump)
+			{
+				modelAnimator.ResetTrigger("jump");
+				previousJump = false;
+			}
+		}
+		previouslyWalking = currentlyWalking;
+
 	}
 
 	[PunRPC]
