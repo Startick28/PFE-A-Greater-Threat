@@ -350,7 +350,7 @@ MonoBehaviour:
   children:
   - {fileID: 5753156623350387373}
   - {fileID: -548062325008989053}
-  - {fileID: 8697491907791683010}
+  - {fileID: 1669768136079194684}
   - {fileID: 8656265888125767779}
 --- !u!114 &-7312337774165616727
 MonoBehaviour:
@@ -927,7 +927,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3c09381be8105294f9787c4f780cdd71
-  position: {x: 1691.0001, y: 640}
+  position: {x: 1689.6775, y: 640}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -961,7 +961,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: efed2dbb473d75044ac5aa1b3afdadda
-  position: {x: 536.7734, y: 1141}
+  position: {x: 523, y: 1141}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1054,7 +1054,6 @@ MonoBehaviour:
   - {fileID: -548062325008989053}
   - {fileID: -7372835725006751285}
   - {fileID: 8656265888125767779}
-  - {fileID: 8697491907791683010}
   - {fileID: -273426340446021357}
   - {fileID: 1256936478660159038}
   - {fileID: -4325651866685961000}
@@ -1130,14 +1129,15 @@ MonoBehaviour:
   - {fileID: 834945471567258316}
   - {fileID: -1374953742359473281}
   - {fileID: 5432735481351693020}
+  - {fileID: 1669768136079194684}
   blackboard:
-    moveToPosition: {x: 253.5186, y: 0, z: -552.0788}
-    lastPlayerSeenPosition: {x: 78.40765, y: 9.930792, z: 242.59404}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0.030955432, z: 0.9995207}
+    moveToPosition: {x: -43.177372, y: 0, z: -27.817537}
+    lastPlayerSeenPosition: {x: 17.26, y: 1, z: -3.65}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 1
     lastDetectedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: -229.2916
+    pausingAfterAttack: 0.022267438
 --- !u!114 &63630210322256940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1330,40 @@ MonoBehaviour:
     pausingAfterAttack: 0
   description: 
   drawGizmos: 0
+--- !u!114 &1669768136079194684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f4606a51b60214386a8b6b78dc5f02, type: 3}
+  m_Name: GT_InterceptLoudestSound
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 262a8e4bd5f0ccc4993fbcb312532dc1
+  position: {x: 707, y: 1141}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    lastDetectedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    pausingAfterAttack: 0
+  description: 
+  drawGizmos: 0
+  MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
+  speed: 12
+  angularSpeed: 720
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 2
 --- !u!114 &1898181375916832203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,7 +1858,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6de7b66fa1d3e1d4e887504c9815c011
-  position: {x: 1370, y: 1127.994}
+  position: {x: 1370, y: 1126}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2431,39 +2465,6 @@ MonoBehaviour:
   drawGizmos: 0
   minDuration: 2
   maxDuration: 5
---- !u!114 &8697491907791683010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
-  m_Name: MoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 39fc893a71e810a41b7d0beb1429cd8c
-  position: {x: 746.7734, y: 1141}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: 0
-  description: 
-  drawGizmos: 0
-  speed: 10
-  angularSpeed: 720
-  stoppingDistance: 0.5
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 30
-  tolerance: 1
 --- !u!114 &9029096200644294777
 MonoBehaviour:
   m_ObjectHideFlags: 0

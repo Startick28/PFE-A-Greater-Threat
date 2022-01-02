@@ -13,9 +13,9 @@ public class LoudestSoundPosition : ActionNode
     }
 
     protected override State OnUpdate() {
-        EmittedSound sound = context.sensorManager.GetLoudestHeardSound();
-        blackboard.moveToPosition.x = sound.position.x;
-        blackboard.moveToPosition.z = sound.position.z;
+        blackboard.loudestSoundHeard = context.sensorManager.GetLoudestHeardSound();
+        blackboard.moveToPosition.x = blackboard.loudestSoundHeard.position.x;
+        blackboard.moveToPosition.z = blackboard.loudestSoundHeard.position.z;
         return State.Success;
     }
 }

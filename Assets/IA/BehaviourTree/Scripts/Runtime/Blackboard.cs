@@ -16,7 +16,7 @@ namespace BehaviourTreeAI {
         public bool hasEstimationOfPlayerDirection = false;
         public GameObject lastDetectedPlayer;
         public GameObject nearestPresentPlayer;
-
+        public EmittedSound loudestSoundHeard;
 
         // Greater Threat Specifics //
 

@@ -13,8 +13,6 @@ public class GT_GoToCurrentGoal : ActionNode
     public bool updateRotation = true;
     public float acceleration = 40.0f;
     public float tolerance = 20f;
-    Vector3 oldPlayerPosition = Vector3.zero;
-    Vector3 newPlayerPosition = Vector3.zero;
 
     protected override void OnStart() {
         context.agent.stoppingDistance = stoppingDistance;
