@@ -59,6 +59,9 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool currentlyWalking = false;
 	bool previouslyWalking = false;
 	bool previousJump;
+
+
+	int currentWeaponIndex = 0;
 	void Awake()
 	{
 		timeSinceSoundEmission = soundEmissionTime + 1;
@@ -98,7 +101,18 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
-		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+		float scroll = fcharacterInput.getCurrentMouseScroll();
+		if(currentWeaponEquipped)
+        {
+			currentWeaponIndex += (int)fcharacterInput.getCurrentMouseScroll();
+			
+		}
+        else
+        {
+			
+        }
+		
+		if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
 			currentlyWalking = true;
 		}
@@ -176,14 +190,17 @@ public class FPSCharacterController : AdvancedWalkerController
 				{
 					//currentWeaponEquipped = false;
 					weaponAnimator.SetTrigger("unequip");
-					modelAnimator.SetInteger("weaponIndex", 1);
+					modelAnimator.SetInteger("weaponIndex", 0);
+					modelAnimator.SetTrigger("unequip");
 					modelAnimator.SetTrigger("idle");
 				}
 				else
 				{
 					//weaponAnimator.gameObject.SetActive(true);
 					weaponAnimator.SetTrigger("equip");
-					modelAnimator.SetInteger("weaponIndex", 0);
+					modelAnimator.SetInteger("weaponIndex", 1);
+					modelAnimator.SetTrigger("idle");
+					modelAnimator.SetTrigger("equip");
 					
 
 
@@ -195,11 +212,11 @@ public class FPSCharacterController : AdvancedWalkerController
             {
 				if(!currentWeaponEquipped)
                 {
-					modelAnimator.SetTrigger("idle");
+					//modelAnimator.SetTrigger("idle");
 				}
                 else
                 {
-					modelAnimator.ResetTrigger("idle");
+					//modelAnimator.ResetTrigger("idle");
 				}
 				
 			}
@@ -212,6 +229,7 @@ public class FPSCharacterController : AdvancedWalkerController
 					if (gun.fire(cameraTransform.position, cameraController.GetAimingDirection()))
 					{
 						weaponAnimator.SetTrigger("fire");
+						modelAnimator.SetTrigger("fire");
 					}
 
 				}
@@ -235,6 +253,9 @@ public class FPSCharacterController : AdvancedWalkerController
                 {
 					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
+
+					modelAnimator.SetTrigger("reload");
+
 					isFullReloading = true;
 					timeSincePressedReloadKey = 0;
 					
@@ -256,6 +277,9 @@ public class FPSCharacterController : AdvancedWalkerController
                 {
 					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
+
+					modelAnimator.SetTrigger("reload");
+
 					isFastReloading = true;
 					//weaponAnimator.get
 					timeSincePressedReloadKey = 0;
@@ -330,7 +354,7 @@ public class FPSCharacterController : AdvancedWalkerController
 					transform.Translate(0, 1, 0);
 					previousCrouch = false;
 					modelAnimator.SetBool("crouching", false);
-					modelAnimator.ResetTrigger("crouch");
+					//modelAnimator.ResetTrigger("crouch");
 				}
 
 			}
@@ -351,7 +375,7 @@ public class FPSCharacterController : AdvancedWalkerController
         {
 			if (previousJump)
 			{
-				modelAnimator.ResetTrigger("jump");
+				//modelAnimator.ResetTrigger("jump");
 				previousJump = false;
 			}
 		}
@@ -417,8 +441,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
 		//Debug.Log("equipped");
 		currentWeaponEquipped = true;
-		weaponAnimator.ResetTrigger("equip");
-		weaponAnimator.ResetTrigger("reload");
+		//weaponAnimator.ResetTrigger("equip");
+		//weaponAnimator.ResetTrigger("reload");
 		isFullReloading = false;
 		isFastReloading = false;
 	}
@@ -428,8 +452,8 @@ public class FPSCharacterController : AdvancedWalkerController
 		//Debug.Log("");
 		//Debug.Log("Unequipped");
 		currentWeaponEquipped = false;
-		weaponAnimator.ResetTrigger("unequip");
-		weaponAnimator.ResetTrigger("reload");
+		//weaponAnimator.ResetTrigger("unequip");
+		//weaponAnimator.ResetTrigger("reload");
 		isFullReloading = false;
 		isFastReloading = false;
 		//weaponAnimator.gameObject.SetActive(false);
@@ -438,8 +462,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void onFire()
 	{
 
-		weaponAnimator.ResetTrigger("fire");
-		weaponAnimator.ResetTrigger("reload");
+		//weaponAnimator.ResetTrigger("fire");
+		//weaponAnimator.ResetTrigger("reload");
 
 		isFullReloading = false;
 		isFastReloading = false;
@@ -482,7 +506,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		}
 		//	Debug.Log(pistolBullets);
 		//gun.reload();
-		weaponAnimator.ResetTrigger("reload");
+		//weaponAnimator.ResetTrigger("reload");
 		isFullReloading = false;
 		isFastReloading = false;
 

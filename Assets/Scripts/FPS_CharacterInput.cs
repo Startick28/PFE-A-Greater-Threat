@@ -53,4 +53,9 @@ public class FPS_CharacterInput : CharacterKeyboardInput
     {
         return Input.GetKeyDown(interactKey);
     }
+
+    public float getCurrentMouseScroll()
+    {
+        return Input.mouseScrollDelta.y;
+    }
 }
