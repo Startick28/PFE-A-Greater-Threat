@@ -198,7 +198,7 @@ public class FPSCharacterController : AdvancedWalkerController
 				{
 					//weaponAnimator.gameObject.SetActive(true);
 					weaponAnimator.SetTrigger("equip");
-					modelAnimator.SetInteger("weaponIndex", 1);
+					modelAnimator.SetInteger("weaponIndex", 2);
 					modelAnimator.SetTrigger("idle");
 					modelAnimator.SetTrigger("equip");
 					
