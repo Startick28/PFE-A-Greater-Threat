@@ -200,6 +200,10 @@ public class BasicGun : Interactable
             playerController.nearestInteractable = this;
             players.Add(playerController);
         }
+        else
+        {
+            return;
+        }
     }
 
     public float getNoise()

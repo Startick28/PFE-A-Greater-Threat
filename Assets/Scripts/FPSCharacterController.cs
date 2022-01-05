@@ -89,6 +89,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		isFullReloading = false;
 		previousJump = false;
 		timeSincePressedReloadKey = 0;
+		modelAnimator.SetLayerWeight(1, 0);
 		//weaponAnimator.gameObject.SetActive(false);
 		Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
@@ -102,15 +103,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	void Update()
 	{
 		float scroll = fcharacterInput.getCurrentMouseScroll();
-		if(currentWeaponEquipped)
-        {
-			currentWeaponIndex += (int)fcharacterInput.getCurrentMouseScroll();
-			
-		}
-        else
-        {
-			
-        }
+		
 		
 		if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
@@ -192,6 +185,7 @@ public class FPSCharacterController : AdvancedWalkerController
 					weaponAnimator.SetTrigger("unequip");
 					modelAnimator.SetInteger("weaponIndex", 0);
 					modelAnimator.SetTrigger("unequip");
+					modelAnimator.SetLayerWeight(1, 0);
 					modelAnimator.SetTrigger("idle");
 				}
 				else
@@ -200,6 +194,7 @@ public class FPSCharacterController : AdvancedWalkerController
 					weaponAnimator.SetTrigger("equip");
 					modelAnimator.SetInteger("weaponIndex", 2);
 					modelAnimator.SetTrigger("idle");
+					modelAnimator.SetLayerWeight(1, 1);
 					modelAnimator.SetTrigger("equip");
 					
 
