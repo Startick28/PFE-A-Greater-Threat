@@ -1773,8 +1773,9 @@ MonoBehaviour:
   animator: {fileID: 6996903033910803417}
   idleGunModel: {fileID: 4439738909189814171}
   drawGunModel: {fileID: 5763018930220379342}
-  idleMachineGunModel: {fileID: 0}
-  drawnMachineGunModel: {fileID: 0}
+  weaponModels: []
+  modelAnimator: {fileID: 0}
+  cameraTransform: {fileID: 0}
 --- !u!1 &6996903033918081421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,7 +3470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148455832089343234, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9195630590015219355, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
       propertyPath: m_RootOrder

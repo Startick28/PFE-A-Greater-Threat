@@ -53,6 +53,7 @@ public class Chest : Interactable
         gun.Rarity = rarity;
         gun.canInteract = true;
         gun.GetComponent<BoxCollider>().enabled = true;
+        gun.GetComponentInChildren<MeshRenderer>().enabled = true;
         // Default layer
         gun.gameObject.layer = 0;
         gun.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;

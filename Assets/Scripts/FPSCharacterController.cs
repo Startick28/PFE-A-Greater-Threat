@@ -603,6 +603,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		newGun.transform.position = playerGun.transform.position;
 		newGun.transform.parent = playerGun.transform.parent;
 		newGun.transform.rotation = playerGun.transform.rotation;
+		newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
 		newGun.GetComponent<BoxCollider>().enabled = false;
 		// Player layer
 		newGun.gameObject.layer = 3;
@@ -611,6 +612,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		// On enl�ve l'ancien gun du joueur
 		playerGun.transform.parent = null;
 		playerGun.transform.position = oldPos;
+		playerGun.GetComponentInChildren<MeshRenderer>().enabled = true;
 		playerGun.canInteract = true;
 		playerGun.gameObject.layer = 0;
 		playerGun.GetComponent<BoxCollider>().enabled = true;

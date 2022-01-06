@@ -177,6 +177,7 @@ public class BasicGun : Interactable
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
         //Pour l'instant on augmente les stats du premier joueur � s'�tre approch� du coffre
+        // Modifier la ligne en dessous par la méthode qui retourne le basic gun utilisé par le joueur
         BasicGun playerGun = player.GetComponentInChildren<BasicGun>();
         if (playerGun == null)
         {
