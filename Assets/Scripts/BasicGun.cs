@@ -27,6 +27,10 @@ public class BasicGun : Interactable
     [SerializeField]
     float fastReloadTime;
 
+    [SerializeField]
+    public int type; //Gun = 1, machineGun = 2,
+
+
     public bool canReload
     {
         get { return !(loadedBullets == magSize); }

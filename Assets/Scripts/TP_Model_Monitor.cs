@@ -21,10 +21,17 @@ public class TP_Model_Monitor : MonoBehaviour
     [SerializeField]
     GameObject drawGunModel;
 
+
+
     [SerializeField]
-    GameObject idleMachineGunModel;
+    GameObject[] weaponModels;
+
     [SerializeField]
-    GameObject drawnMachineGunModel;
+    Animator modelAnimator;
+
+    [SerializeField]
+    Transform cameraTransform; //This is the player camera that the player has to follow
+
 
 
     // Start is called before the first frame update
@@ -37,34 +44,34 @@ public class TP_Model_Monitor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //transform.rotation = new Quaternion(0.0f,0.0f,0.0f,1.0f);
+    }
+
+
+    public void onWeaponInHand(int index)
+    {
         
+        weaponModels[index * 2].SetActive(false);
+        weaponModels[index * 2 + 1].SetActive(true);
     }
 
-    public void onGunInHand()
+    public void onWeaponPutBack(int index)
     {
-        //Debug.Log("gunInHand");
-        idleGunModel.SetActive(false);
-        drawGunModel.SetActive(true);
+        weaponModels[index * 2+1].SetActive(false);
+        weaponModels[index * 2].SetActive(true);
     }
 
-    public void onGunPutBack()
+    
+
+
+    public void onEquip(int weaponIndex)
     {
-        //Debug.Log("gunPutBack");
-        drawGunModel.SetActive(false);
-        idleGunModel.SetActive(true);
+
     }
 
-    public void onMachineGunInHand()
-    {
-        //Debug.Log("gunInHand");
-        idleMachineGunModel.SetActive(false);
-        drawnMachineGunModel.SetActive(true);
-    }
 
-    public void onMachineGunPutBack()
+    public void onUnequip(int weaponIndex)
     {
-        //Debug.Log("gunPutBack");
-        drawnMachineGunModel.SetActive(false);
-        idleMachineGunModel.SetActive(true);
+        modelAnimator.SetLayerWeight(1, 0);
     }
 }

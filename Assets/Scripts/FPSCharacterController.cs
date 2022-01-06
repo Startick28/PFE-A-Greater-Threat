@@ -61,7 +61,9 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousJump;
 
 
-	int currentWeaponIndex = 0;
+	List<BasicGun> weapons;
+
+	int currentWeaponIndex;
 	void Awake()
 	{
 		timeSinceSoundEmission = soundEmissionTime + 1;
@@ -185,8 +187,8 @@ public class FPSCharacterController : AdvancedWalkerController
 					weaponAnimator.SetTrigger("unequip");
 					modelAnimator.SetInteger("weaponIndex", 0);
 					modelAnimator.SetTrigger("unequip");
-					modelAnimator.SetLayerWeight(1, 0);
-					modelAnimator.SetTrigger("idle");
+					
+					//modelAnimator.SetTrigger("idle");
 				}
 				else
 				{
@@ -426,6 +428,59 @@ public class FPSCharacterController : AdvancedWalkerController
     }
 	// Update is called once per frame
 
+
+	public void addWeapon(BasicGun weapon)
+    {
+		int listSize = weapons.Count;
+		if(listSize == 0)
+        {
+			weapons.Add(weapon);
+        }
+		else
+        {
+			bool sortingLoop = false;
+			int i = 0;
+			do
+			{
+				if(weapon.type<weapons[i].type)
+                {
+					weapons.Insert(i, weapon);
+					sortingLoop = true;
+                }
+				else if(i == listSize-1)
+                {
+					sortingLoop = true;
+                }	
+				else
+                {
+					i++;
+                }
+			} while (!sortingLoop);
+
+			if(listSize == weapons.Count)
+            {
+				weapons.Add(weapon);
+            }
+
+		}
+    }
+
+	public void switchWeapon(bool goingUp)
+    {
+		if(goingUp)
+        {
+			currentWeaponIndex++;
+			if(currentWeaponIndex == weapons.Count)
+            {
+
+            }
+        }
+		else
+        {
+
+        }
+    }
+	
 
 	public void addRecoilToCamera(float verticalAngle,float horizontalAngle)
     {
