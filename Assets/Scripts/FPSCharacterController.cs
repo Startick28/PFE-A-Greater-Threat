@@ -163,7 +163,8 @@ public class FPSCharacterController : AdvancedWalkerController
 					switch(nearestInteractable.iType)
                     {
 						case InteractionType.chest:
-							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+							// Cette ligne permet d'executer la fonction
+							GetComponent<PhotonView>().RPC("InteractWithChest", RpcTarget.All, nearestInteractable.GetComponent<Chest>().Id);
 							Debug.Log("Je peux interargir avec le coffre");
 							//nearestInteractable.interact();
 							break;
@@ -385,7 +386,13 @@ public class FPSCharacterController : AdvancedWalkerController
     {
 		nearestInteractable.interact(this);
 	}
-	
+
+	[PunRPC]
+	public void InteractWithChest(int id)
+	{
+		ChestManager.Instance.OpenChest(id, this);
+	}
+
 	public Vector3 getAimingDirection()
     {
 		return cameraController.GetAimingDirection();
