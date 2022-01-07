@@ -106,6 +106,13 @@ public class FPSCharacterController : AdvancedWalkerController
 							Debug.Log("Je peux interargir avec le gun");
 							//nearestInteractable.interact();
 							break;
+						case InteractionType.button:
+							// Cette ligne permet d'executer la fonction
+							// TODO : InteractWithChest a changer
+							GetComponent<PhotonView>().RPC("InteractWithButton", RpcTarget.All, nearestInteractable.GetComponent<ButtonForceField>().Id);
+							Debug.Log("Je peux interargir avec le coffre");
+							//nearestInteractable.interact();
+							break;
 						default:
 
 							break;
@@ -213,6 +220,12 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void InteractWithChest(int id)
 	{
 		ChestManager.Instance.OpenChest(id, this);
+	}
+
+	[PunRPC]
+	public void InteractWithButton(int id)
+	{
+		ChestManager.Instance.OpenButton(id, this);
 	}
 
 	public Vector3 getAimingDirection()
