@@ -61,7 +61,15 @@ public class TP_Model_Monitor : MonoBehaviour
         weaponModels[index * 2].SetActive(true);
     }
 
-    
+    public void switchToWeaponType(int type)
+    {
+        for (int i = 0; i < weaponModels.Length / 2;i++)
+        {
+            weaponModels[i * 2 + 1].SetActive(false);
+        }
+
+        //On fait le switch
+    }
 
 
     public void onEquip(int weaponIndex)

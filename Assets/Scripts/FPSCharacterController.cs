@@ -19,7 +19,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	public Interactable nearestInteractable;
 
-	BasicGun gun;
+	//BasicGun gun;
 
 	[SerializeField]
 	Avatar gunHandsAvatar;
@@ -51,8 +51,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	[SerializeField]
 	Animator modelAnimator;
 
-	[SerializeField]
-	Animator weaponAnimator;
+	
+	Animator weaponAnimator = null;
 
 	bool currentWeaponEquipped;
 
@@ -61,7 +61,12 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousJump;
 
 
-	List<BasicGun> weapons;
+	List<BasicGun> weapons = new List<BasicGun>();
+	[SerializeField]
+	TP_Model_Monitor tpMonitor;
+
+	[SerializeField]
+	GameObject[] fpsModels;
 
 	int currentWeaponIndex;
 	void Awake()
@@ -77,10 +82,13 @@ public class FPSCharacterController : AdvancedWalkerController
 		soundEmitter = GetComponent<SoundEmitter>();
 
 		health = maxHealth;
-		gun = GetComponentInChildren<BasicGun>();
+		//gun = GetComponentInChildren<BasicGun>();
+		
+		//weapons.Add(GetComponentInChildren<BasicGun>());
+		//weapons.Add(GetComponentsInChildren<BasicGun>()[1]);
 
 		nearestInteractable = null;
-
+		currentWeaponIndex = 0;
 		if (characterInput == null)
 			Debug.LogWarning("No character input script has been attached to this gameobject", this.gameObject);
 		previousCrouch = false;
@@ -92,9 +100,27 @@ public class FPSCharacterController : AdvancedWalkerController
 		previousJump = false;
 		timeSincePressedReloadKey = 0;
 		modelAnimator.SetLayerWeight(1, 0);
+
+		if(weapons.Count != 0)
+        {
+		
+			weaponAnimator = fpsModels[0].GetComponent<Animator>();
+			SetChildrenActive(weaponAnimator.gameObject, true);
+
+			SetChildrenActive(fpsModels[1], false);
+		}
+		else
+        {
+			SetChildrenActive(fpsModels[0], false);
+
+			SetChildrenActive(fpsModels[1], false);
+		}
+		
+
 		//weaponAnimator.gameObject.SetActive(false);
 		Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
+
 		modelAnimator.SetTrigger("idle");
 		Setup();
 		
@@ -105,7 +131,10 @@ public class FPSCharacterController : AdvancedWalkerController
 	void Update()
 	{
 		float scroll = fcharacterInput.getCurrentMouseScroll();
-		
+		if(scroll != 0)
+        {
+			switchWeapon(scroll);
+        }
 		
 		if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
         {
@@ -194,11 +223,16 @@ public class FPSCharacterController : AdvancedWalkerController
 				else
 				{
 					//weaponAnimator.gameObject.SetActive(true);
-					weaponAnimator.SetTrigger("equip");
-					modelAnimator.SetInteger("weaponIndex", 2);
-					modelAnimator.SetTrigger("idle");
-					modelAnimator.SetLayerWeight(1, 1);
-					modelAnimator.SetTrigger("equip");
+					if(weapons.Count != 0)
+                    {
+						SetChildrenActive(weaponAnimator.gameObject, true);
+						weaponAnimator.SetTrigger("equip");
+						modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+						modelAnimator.SetTrigger("idle");
+						modelAnimator.SetLayerWeight(1, 1);
+						modelAnimator.SetTrigger("equip");
+					}
+					
 					
 
 
@@ -222,9 +256,9 @@ public class FPSCharacterController : AdvancedWalkerController
 			if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
 			{
 
-				if (gun.isReadyToFire)
+				if (weapons[currentWeaponIndex].isReadyToFire)
 				{
-					if (gun.fire(cameraTransform.position, cameraController.GetAimingDirection()))
+					if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
 					{
 						weaponAnimator.SetTrigger("fire");
 						modelAnimator.SetTrigger("fire");
@@ -247,7 +281,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			}
 			if (fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped )
 			{
-				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >=timeToFullReload && gun.canReload)
+				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >=timeToFullReload && weapons[currentWeaponIndex].canReload)
                 {
 					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
@@ -271,7 +305,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			}
 			else if(!fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped )
             {
-				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && gun.canReload)
+				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
                 {
 					weaponAnimator.SetFloat("reloadSpeed", 1);
 					weaponAnimator.SetTrigger("reload");
@@ -472,20 +506,45 @@ public class FPSCharacterController : AdvancedWalkerController
 		}
     }
 
-	public void switchWeapon(bool goingUp)
+	public void switchWeapon(float delta)
     {
-		if(goingUp)
+		int formerIndex = currentWeaponIndex;
+		if(delta > 0)
         {
 			currentWeaponIndex++;
 			if(currentWeaponIndex == weapons.Count)
             {
-
+				currentWeaponIndex = 0;
             }
         }
 		else
         {
-
+			currentWeaponIndex--;
+			if(currentWeaponIndex<0)
+            {
+				currentWeaponIndex = weapons.Count - 1;
+            }
         }
+		//weaponAnimator.gameObject.SetActive(false);
+		SetChildrenActive(weaponAnimator.gameObject, false);
+		weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+		//weaponAnimator.gameObject.SetActive(true);
+		
+
+		// On s'assure qu'on utilise le bon model d'arme
+		if (currentWeaponEquipped)
+        {
+			SetChildrenActive(weaponAnimator.gameObject, true);
+			weaponAnimator.SetTrigger("equip");
+			tpMonitor.onWeaponPutBack(weapons[formerIndex].type-1);
+			modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+			modelAnimator.SetTrigger("idle");
+			modelAnimator.SetTrigger("equip");
+		}
+		
+		
+
+
     }
 	
 
@@ -513,6 +572,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		//weaponAnimator.ResetTrigger("reload");
 		isFullReloading = false;
 		isFastReloading = false;
+		SetChildrenActive(weaponAnimator.gameObject, false);
 		//weaponAnimator.gameObject.SetActive(false);
 	}
 
@@ -528,8 +588,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void onReloadComplete()
 	{
 		// A complèter quand on aura plusieurs types d'armes
-		int difference = gun.MagSize - gun.LoadedBullets;
-		int fastDifference = pistolBullets - gun.MagSize;
+		int difference = weapons[currentWeaponIndex].MagSize - weapons[currentWeaponIndex].LoadedBullets;
+		int fastDifference = pistolBullets - weapons[currentWeaponIndex].MagSize;
 		int fullDifference = pistolBullets - difference;
 		Debug.Log(fastDifference);
 		Debug.Log(fullDifference);
@@ -537,12 +597,12 @@ public class FPSCharacterController : AdvancedWalkerController
 		{
 			if (fastDifference >= 0)
 			{
-				gun.reload(difference);
-				pistolBullets -= gun.MagSize;
+				weapons[currentWeaponIndex].reload(difference);
+				pistolBullets -= weapons[currentWeaponIndex].MagSize;
 			}
 			else
 			{
-				gun.reload(pistolBullets);
+				weapons[currentWeaponIndex].reload(pistolBullets);
 				pistolBullets = 0;
 			}
 
@@ -552,12 +612,12 @@ public class FPSCharacterController : AdvancedWalkerController
 		{
 			if (fullDifference >= 0)
 			{
-				gun.reload(difference);
+				weapons[currentWeaponIndex].reload(difference);
 				pistolBullets -= difference;
 			}
 			else
 			{
-				gun.reload(pistolBullets);
+				weapons[currentWeaponIndex].reload(pistolBullets);
 				pistolBullets = 0;
 			}
 		}
@@ -617,4 +677,18 @@ public class FPSCharacterController : AdvancedWalkerController
 		playerGun.gameObject.layer = 0;
 		playerGun.GetComponent<BoxCollider>().enabled = true;
 	}
+
+
+	public void SetChildrenActive(GameObject target,bool active)
+	{
+		foreach (Transform child in target.transform)
+		{
+			child.gameObject.SetActiveRecursively(active);
+		}
+	}
+
+	public GameObject giveCurrentWeapon()
+    {
+		return weapons[currentWeaponIndex].gameObject;
+    }
 }

@@ -2707,8 +2707,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5418833805347122966}
-  - {fileID: 5434549480886018443}
   - {fileID: 4560491770561914285}
+  - {fileID: 5434549480886018443}
   - {fileID: 6996903033918313899}
   m_Father: {fileID: 940744032629506262}
   m_RootOrder: 0
@@ -3130,7 +3130,10 @@ MonoBehaviour:
   timeToFullReload: 0.75
   pistolBullets: 100
   modelAnimator: {fileID: 6996903033910803417}
-  weaponAnimator: {fileID: 2830234372489199898}
+  tpMonitor: {fileID: 4364785591676804766}
+  fpsModels:
+  - {fileID: 8123386634871646941}
+  - {fileID: 2744832101753060080}
 --- !u!114 &5661628889720168415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3474,7 +3477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195630590015219355, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9195630590015219355, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3756,7 +3759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329667295930246198, guid: 7db899b1348c7724c95729d0dc0ddadd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2329667295930246198, guid: 7db899b1348c7724c95729d0dc0ddadd, type: 3}
       propertyPath: m_LocalPosition.x

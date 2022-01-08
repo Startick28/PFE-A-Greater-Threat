@@ -385,7 +385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1550604241572263476, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810560467790754544, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2739645297354848788, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -445,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 1967512782}
     - target: {fileID: 4364785591676804766, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: weaponModels.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4364785591676804766, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: weaponModels.Array.data[0]
@@ -463,6 +467,14 @@ PrefabInstance:
       propertyPath: weaponModels.Array.data[3]
       value: 
       objectReference: {fileID: 1967512782}
+    - target: {fileID: 4439738909189814171, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763018930220379342, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6949454562171340897, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
@@ -561,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8123386634871646941, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8208562412886482331, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
       propertyPath: m_Avatar
