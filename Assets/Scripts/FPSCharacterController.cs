@@ -69,6 +69,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	GameObject[] fpsModels;
 
 	int currentWeaponIndex;
+
+	int[] ammunitions = new int[2];
 	void Awake()
 	{
 		timeSinceSoundEmission = soundEmissionTime + 1;
@@ -213,6 +215,12 @@ public class FPSCharacterController : AdvancedWalkerController
 							Debug.Log("Je peux interargir avec le gun");
 							//nearestInteractable.interact();
 							break;
+						case InteractionType.ammunition:
+							Debug.Log("Je peux interargir avec les munitions");
+							//GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+							nearestInteractable.interact(this);
+							break;
+
 						default:
 
 							break;
@@ -621,9 +629,13 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void onReloadComplete()
 	{
 		// A complèter quand on aura plusieurs types d'armes
+
+
+		int typeIndex = weapons[currentWeaponIndex].type - 1;
+
 		int difference = weapons[currentWeaponIndex].MagSize - weapons[currentWeaponIndex].LoadedBullets;
-		int fastDifference = pistolBullets - weapons[currentWeaponIndex].MagSize;
-		int fullDifference = pistolBullets - difference;
+		int fastDifference = ammunitions[typeIndex] - weapons[currentWeaponIndex].MagSize;
+		int fullDifference = ammunitions[typeIndex] - difference;
 		Debug.Log(fastDifference);
 		Debug.Log(fullDifference);
 		if (isFastReloading)
@@ -631,12 +643,12 @@ public class FPSCharacterController : AdvancedWalkerController
 			if (fastDifference >= 0)
 			{
 				weapons[currentWeaponIndex].reload(difference);
-				pistolBullets -= weapons[currentWeaponIndex].MagSize;
+				ammunitions[typeIndex] -= weapons[currentWeaponIndex].MagSize;
 			}
 			else
 			{
-				weapons[currentWeaponIndex].reload(pistolBullets);
-				pistolBullets = 0;
+				weapons[currentWeaponIndex].reload(ammunitions[typeIndex]);
+				ammunitions[typeIndex] = 0;
 			}
 
 			//gun.reload()
@@ -646,12 +658,12 @@ public class FPSCharacterController : AdvancedWalkerController
 			if (fullDifference >= 0)
 			{
 				weapons[currentWeaponIndex].reload(difference);
-				pistolBullets -= difference;
+				ammunitions[typeIndex] -= difference;
 			}
 			else
 			{
-				weapons[currentWeaponIndex].reload(pistolBullets);
-				pistolBullets = 0;
+				weapons[currentWeaponIndex].reload(ammunitions[typeIndex]);
+				ammunitions[typeIndex] = 0;
 			}
 		}
 		//	Debug.Log(pistolBullets);
@@ -783,4 +795,10 @@ public class FPSCharacterController : AdvancedWalkerController
 		
 
 	}
+
+	public void collectAmmunition(int quantity,int type)
+    {
+		ammunitions[type - 1] += quantity;
+		Debug.Log("CollectedAmmunition");
+    }
 }
