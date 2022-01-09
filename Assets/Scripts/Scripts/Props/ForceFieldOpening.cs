@@ -9,21 +9,23 @@ public class ForceFieldOpening : MonoBehaviour
 {
 
     [SerializeField] private List<ButtonForceField> buttons;
-    [SerializeField] private Shader ForceFieldA;
-    [SerializeField] private Shader ForceFieldB;
+    [SerializeField] private Material openMaterial;
+    [SerializeField] private Material closeMaterial;
     [SerializeField] private Collider collider;
 
-    [SerializeField] private Texture deactivatedTexture;
-    [SerializeField] private Texture activatedTexture;
+    [SerializeField] private GameObject forceFieldA;
+    [SerializeField] private GameObject forceFieldB;
 
     //Record initial positions
 
+    private MeshRenderer materialForceFieldA;
+    private Material materialForceFieldB;
 
     bool canBeOpened()
     {
         foreach(ButtonForceField button in buttons)
         {
-            if (button.IsOpened)
+            if (!button.IsOpened)
                 return false;
         }
         return true;
@@ -31,22 +33,18 @@ public class ForceFieldOpening : MonoBehaviour
 
     void deactivateForceField()
     {
-       /* ForceFieldA.SetTexture("_BaseMap", deactivatedTexture);
-        ForceFieldA.SetTexture("_BaseMap", deactivatedTexture);
-        ForceFieldA.SetTexture("_EmissionMap", deactivatedTexture);
-        ForceFieldB.SetTexture("_EmissionMap", deactivatedTexture);*/
+        forceFieldA.GetComponent<MeshRenderer>().material = openMaterial;
+        forceFieldB.GetComponent<MeshRenderer>().material = openMaterial;
         collider.enabled = false;
     }
 
     void activateForceField()
     {
-       /* ForceFieldA.SetTexture("_BaseMap", activatedTexture);
-        ForceFieldB.SetTexture("_BaseMap", activatedTexture);
-        ForceFieldA.SetTexture("_EmissionMap", activatedTexture);
-        ForceFieldB.SetTexture("_EmissionMap", activatedTexture);*/
+        forceFieldA.GetComponent<MeshRenderer>().material = closeMaterial;
+        forceFieldB.GetComponent<MeshRenderer>().material = closeMaterial;
         collider.enabled = true;
     }
-
+    
     //Open or close doors
     void Update()
     {
