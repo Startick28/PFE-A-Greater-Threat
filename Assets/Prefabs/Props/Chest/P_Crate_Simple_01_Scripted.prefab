@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3450758141075524385}
-  - component: {fileID: 8793249824801074352}
-  - component: {fileID: 445950240373874266}
   m_Layer: 0
   m_Name: P_Crate_Simple_01_Scripted
   m_TagString: Untagged
@@ -33,41 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8793249824801074352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452215665628489995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fddff9e04bda9814290f7b24c88da8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canInteract: 0
-  iType: 0
-  crateTop: {fileID: 3452591872926790883}
-  id: 0
-  rarity: 0
-  prefabGun: {fileID: 4672324460278089109, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
-  isOpened: 0
-  rotationZ: 90
-  timeToOpen: 3
-  gunDeplacementY: 0.5
---- !u!65 &445950240373874266
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452215665628489995}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &3452591872926790883
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,13 +43,14 @@ GameObject:
   - component: {fileID: 3430037636708584351}
   - component: {fileID: 3440291477025243743}
   - component: {fileID: 3387838040326177875}
+  - component: {fileID: 3452591872926790909}
   - component: {fileID: 3452591872926790882}
   m_Layer: 0
   m_Name: Crate_Top_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3450644933792476939
 Transform:
@@ -124,8 +88,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -138,7 +100,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -151,7 +112,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &3387838040326177875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,6 +125,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0302955, y: 0.41186208, z: 2.0921962}
   m_Center: {x: 0.5151476, y: 0.15310389, z: 0.000002026558}
+--- !u!114 &3452591872926790909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452591872926790883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff15144cf8c9dd4e879a4e4d657fb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crateTop: {fileID: 3452591872926790883}
+  crateSound: {fileID: 8300000, guid: 45e99b21f16484749b99d567b3d68627, type: 3}
+  crateMoveAngle: 90
+  crateMoveTime: 0.7
+  crateAnimARunning: 0
+  crateAnimSwitch: 0
 --- !u!82 &3452591872926790882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -317,8 +295,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -331,7 +307,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -344,7 +319,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &3388234296905356295
 BoxCollider:
   m_ObjectHideFlags: 0

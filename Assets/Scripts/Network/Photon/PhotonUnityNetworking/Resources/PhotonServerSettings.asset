@@ -56,6 +56,7 @@ MonoBehaviour:
   - InstantiateEnemy
   - OpenChest
   - InteractWithChest
+  - InteractWithButton
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
