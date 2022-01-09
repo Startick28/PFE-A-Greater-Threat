@@ -56,7 +56,15 @@ public class UIManager : MonoBehaviourPunCallbacks
                     playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
                     bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100) / 2.0f;
                     player = view;
-                    playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().LoadedBullets.ToString();
+                    GameObject playerGun = view.GetComponent<FPSCharacterController>().getCurrentWeapon();
+                    if (playerGun != null)
+                    {
+                        playerBullets.text = playerGun.GetComponent<BasicGun>().LoadedBullets.ToString();
+                    }
+                    else
+                    {
+                        playerBullets.text = "0";
+                    }
                 }
             }
         }
@@ -65,8 +73,17 @@ public class UIManager : MonoBehaviourPunCallbacks
             playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
             bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
-            playerBullets.text = player.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/"
-                + player.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
+            GameObject playerGun = player.GetComponent<FPSCharacterController>().getCurrentWeapon();
+            if(playerGun != null)
+            {
+                playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
+                + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
+            }
+            else
+            {
+                playerBullets.text = "0/0";
+            }
+            
         }
         int i = 0;
         foreach (var currentPlayer in PhotonNetwork.PlayerList)

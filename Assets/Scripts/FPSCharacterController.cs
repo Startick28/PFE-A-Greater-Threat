@@ -115,7 +115,18 @@ public class FPSCharacterController : AdvancedWalkerController
 
 			SetChildrenActive(fpsModels[1], false);
 		}
+
+
+
+		//Do this for first person
+		SetRendererInChildrenActive(modelAnimator.gameObject, false);
+		//Do this for the view of other player
+		/*foreach(GameObject go in fpsModels)
+        {
+			SetRendererInChildrenActive(modelAnimator.gameObject, false);
+		}*/
 		
+
 
 		//weaponAnimator.gameObject.SetActive(false);
 		Debug.Log(pistolBullets);
@@ -476,6 +487,7 @@ public class FPSCharacterController : AdvancedWalkerController
 		if(listSize == 0)
         {
 			weapons.Add(weapon);
+			weaponAnimator = fpsModels[weapon.type - 1].GetComponent<Animator>();
         }
 		else
         {
@@ -504,15 +516,28 @@ public class FPSCharacterController : AdvancedWalkerController
             }
 
 		}
+
+		//Maintentant on met en place les models nécessaire
+		tpMonitor.setUpModels(weapon.type);
+
+
+
+
+
     }
 
 	public void switchWeapon(float delta)
     {
 		int formerIndex = currentWeaponIndex;
+		if(weapons.Count == 0)
+        {
+			
+			return;
+        }
 		if(delta > 0)
         {
 			currentWeaponIndex++;
-			if(currentWeaponIndex == weapons.Count)
+			if(currentWeaponIndex >= weapons.Count)
             {
 				currentWeaponIndex = 0;
             }
@@ -526,8 +551,16 @@ public class FPSCharacterController : AdvancedWalkerController
             }
         }
 		//weaponAnimator.gameObject.SetActive(false);
-		SetChildrenActive(weaponAnimator.gameObject, false);
-		weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+		if(weapons.Count != 0)
+        {
+			if(weaponAnimator != null)
+            {
+				SetChildrenActive(weaponAnimator.gameObject, false);
+			}
+			
+			weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+		}
+		
 		//weaponAnimator.gameObject.SetActive(true);
 		
 
@@ -657,25 +690,44 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 	public void changeGun(BasicGun newGun)
     {
-		BasicGun playerGun = GetComponentInChildren<BasicGun>();
+		GameObject playerGun = getCurrentWeapon(newGun.type);
 		Vector3 oldPos = newGun.transform.position;
 		// On met le nouveau gun sur le joueur
-		newGun.transform.position = playerGun.transform.position;
-		newGun.transform.parent = playerGun.transform.parent;
-		newGun.transform.rotation = playerGun.transform.rotation;
-		newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
-		newGun.GetComponent<BoxCollider>().enabled = false;
-		// Player layer
-		newGun.gameObject.layer = 3;
-		newGun.View = transform.gameObject.GetComponent<PhotonView>();
+		if(playerGun != null)
+        {
+			newGun.transform.position = playerGun.transform.position;
+			newGun.transform.parent = playerGun.transform.parent;
+			newGun.transform.rotation = playerGun.transform.rotation;
+			newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
+			newGun.GetComponent<BoxCollider>().enabled = false;
+			// Player layer
+			newGun.gameObject.layer = 3;
+			newGun.View = transform.gameObject.GetComponent<PhotonView>();
 
-		// On enl�ve l'ancien gun du joueur
-		playerGun.transform.parent = null;
-		playerGun.transform.position = oldPos;
-		playerGun.GetComponentInChildren<MeshRenderer>().enabled = true;
-		playerGun.canInteract = true;
-		playerGun.gameObject.layer = 0;
-		playerGun.GetComponent<BoxCollider>().enabled = true;
+			// On enl�ve l'ancien gun du joueur
+			playerGun.transform.parent = null;
+			playerGun.transform.position = oldPos;
+			playerGun.GetComponentInChildren<MeshRenderer>().enabled = true;
+			playerGun.GetComponent<BasicGun>().canInteract = true;
+			playerGun.gameObject.layer = 0;
+			playerGun.GetComponent<BoxCollider>().enabled = true;
+			weapons.Remove(playerGun.GetComponent<BasicGun>());
+		}
+        else
+        {
+			newGun.transform.position = transform.position;
+			newGun.transform.parent = transform;
+			newGun.transform.rotation = transform.rotation;
+			newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
+			newGun.GetComponent<BoxCollider>().enabled = false;
+			// Player layer
+			newGun.gameObject.layer = 3;
+			newGun.View = transform.gameObject.GetComponent<PhotonView>();
+		}
+
+		addWeapon(newGun);
+
+		
 	}
 
 
@@ -687,8 +739,48 @@ public class FPSCharacterController : AdvancedWalkerController
 		}
 	}
 
-	public GameObject giveCurrentWeapon()
+
+	public void SetRendererInChildrenActive(GameObject target, bool active)
+	{
+		Renderer[] rs = GetComponentsInChildren<Renderer>();
+		foreach (Renderer r in rs)
+        {
+			r.enabled = active;
+		}
+			
+	}
+
+	public GameObject getCurrentWeapon(int type)
     {
-		return weapons[currentWeaponIndex].gameObject;
+		foreach(BasicGun weapon in weapons)
+        {
+			if(weapon.type == type)
+            {
+				return weapon.gameObject;
+            }
+        }
+			
+		
+		
+		return null;
+        
     }
+
+	public GameObject getCurrentWeapon()
+	{
+		Debug.Log(currentWeaponIndex);
+		Debug.Log(currentWeaponIndex);
+		if(weapons.Count != 0)
+        {
+			return weapons[currentWeaponIndex].gameObject;
+        }
+		else
+        {
+			return null;
+		}
+
+
+		
+
+	}
 }

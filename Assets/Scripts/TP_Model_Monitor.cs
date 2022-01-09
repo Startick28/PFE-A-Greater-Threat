@@ -37,8 +37,12 @@ public class TP_Model_Monitor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drawGunModel.SetActive(false);
-        idleGunModel.SetActive(true);
+        //drawGunModel.SetActive(false);
+       // idleGunModel.SetActive(true);
+        foreach(GameObject model in weaponModels)
+        {
+            model.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -61,15 +65,11 @@ public class TP_Model_Monitor : MonoBehaviour
         weaponModels[index * 2].SetActive(true);
     }
 
-    public void switchToWeaponType(int type)
+    public void setUpModels(int type)
     {
-        for (int i = 0; i < weaponModels.Length / 2;i++)
-        {
-            weaponModels[i * 2 + 1].SetActive(false);
-        }
-
-        //On fait le switch
+        weaponModels[type - 1].SetActive(true);
     }
+
 
 
     public void onEquip(int weaponIndex)
