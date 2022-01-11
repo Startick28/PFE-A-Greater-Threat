@@ -13,7 +13,6 @@ public class GT_JumpAttack : ActionNode
 
     protected override State OnUpdate() {
         context.animator.SetTrigger("JumpClawsAttack");
-        context.greaterThreatColliders.JumpAttackCollider.enabled = true;
         if (EnemiesManager.Instance)
         {
             EnemiesManager.Instance.photonView.RPC("GT_JumpAttack", 

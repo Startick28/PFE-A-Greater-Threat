@@ -6,8 +6,10 @@ using BehaviourTreeAI;
 public class SetPauseAfterAttack : ActionNode
 {
     public float pauseDuration;
+    float startTime;
 
     protected override void OnStart() {
+        startTime = Time.time;
     }
 
     protected override void OnStop() {
@@ -15,6 +17,9 @@ public class SetPauseAfterAttack : ActionNode
 
     protected override State OnUpdate() {
         blackboard.pausingAfterAttack = pauseDuration;
-        return State.Success;
+        if (Time.time - startTime > pauseDuration) {
+            return State.Success;
+        }
+        return State.Running;
     }
 }

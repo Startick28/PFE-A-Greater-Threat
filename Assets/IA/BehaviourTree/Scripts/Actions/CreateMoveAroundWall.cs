@@ -17,7 +17,7 @@ public class CreateMoveAroundWall : ActionNode
     protected override State OnUpdate() {
         if (setParentToPlayer)
         {
-            //transform.SetParent(blackboard.lastDetectedPlayer.transform);
+            //transform.SetParent(blackboard.focusedPlayer.transform);
         }
         
         return State.Success;

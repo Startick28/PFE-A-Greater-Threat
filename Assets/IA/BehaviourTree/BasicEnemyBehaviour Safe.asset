@@ -21,15 +21,89 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
   - {fileID: -2177805498193511251}
   - {fileID: 7989708894610056594}
   - {fileID: 5103909335829613659}
+--- !u!114 &-8955665993499687307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8a50341455a89f145a7548dac9e62857
+  position: {x: -508, y: 1288.0002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+  description: 
+  drawGizmos: 0
+  attackType: 1
+  cooldown: 8
+--- !u!114 &-8898386214539866314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7472336164001754bbbb5207d2b6fb42
+  position: {x: 1493, y: 1496}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+  description: 
+  drawGizmos: 0
+  attackType: 3
+  cooldown: 0
 --- !u!114 &-8738967557918009035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,15 +119,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 031e6722dc6af8d4d8bf70d76302baf3
-  position: {x: 645.8762, y: 2146.5178}
+  position: {x: 655.2088, y: 2147}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-8716267466282534891
@@ -77,9 +157,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -101,15 +187,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d560475cbc9cf174581d2c4e30ee6769
-  position: {x: 427.87625, y: 2145.5178}
+  position: {x: 437.20877, y: 2146}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -134,15 +226,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e7589a38db4df4840941944c26e17f68
-  position: {x: 872.8762, y: 2149.5178}
+  position: {x: 882.20874, y: 2150}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -174,9 +272,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: ClawAttack Sequence
   drawGizmos: 0
   children:
@@ -204,9 +308,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -228,15 +338,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7787b1f32d0f07248818e5c3b610efaa
-  position: {x: 1061.7394, y: 1495.9884}
+  position: {x: 993, y: 1496}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 4
@@ -261,9 +377,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 5
@@ -294,9 +416,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -323,9 +451,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-6754154264480653484
@@ -349,9 +483,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-6600651498586666446
@@ -375,9 +515,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -399,15 +545,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e2766c1081bee4f4394453d4df207624
-  position: {x: 867.8762, y: 2015.5178}
+  position: {x: 877.20874, y: 2016}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -416,10 +568,9 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 1
-  axisRange: 70
-  minDistance: 3
-  maxDistance: 5
+  circleRadius: 2
+  circleDistance: 12
+  circlePerturbation: 1
 --- !u!114 &-6284958860332471747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,9 +592,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-6206926765968578924
@@ -461,15 +618,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 682d63f0312893b4abf83f93a091a1a3
-  position: {x: 584.8762, y: 1626.518}
+  position: {x: 594.20874, y: 1627}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: 8213088646771628929}
@@ -496,9 +659,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-6141599799120569497
@@ -522,9 +691,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-6051934264814158079
@@ -548,9 +723,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5961557010054266279
@@ -574,9 +755,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5850481080605882236
@@ -600,9 +787,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -630,9 +823,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -659,9 +858,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -693,13 +898,52 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   min: {x: -10, y: -10}
   max: {x: 10, y: 10}
+--- !u!114 &-5289949890859841952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6eb222447441479f549f7c39faaaa, type: 3}
+  m_Name: CheckCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8516a96dc586e93449df4682ceff93a9
+  position: {x: -401.99994, y: 1497.0002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+  description: 
+  drawGizmos: 0
+  attackType: 1
 --- !u!114 &-5173459081983542895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,14 +965,22 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: DisengageJumpSequence
   drawGizmos: 0
   children:
   - {fileID: -7888436039895726741}
+  - {fileID: 5324705435630979911}
   - {fileID: 1267223752813314888}
+  - {fileID: -8898386214539866314}
 --- !u!114 &-5070244924388310048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,9 +1002,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: Too close to jump?
   drawGizmos: 0
   range: 12
@@ -777,9 +1035,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: Chase player to jump on him
   drawGizmos: 0
   children:
@@ -806,9 +1070,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 6
@@ -833,9 +1103,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-4108524264762071114
@@ -853,15 +1129,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0ace371ce85314d4baf1979b0096daf5
-  position: {x: 268.8762, y: 2143.5178}
+  position: {x: 278.2087, y: 2144}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-4002215715823341631
@@ -879,15 +1161,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 94654b4dd4d865c4ebb93e30b106d55a
-  position: {x: 359.87616, y: 2007.518}
+  position: {x: 369.20874, y: 2008}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -908,15 +1196,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c3959e86218b20947bd75b22a0c43e13
-  position: {x: 386.99997, y: 1622.4791}
+  position: {x: 396.20877, y: 1622}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 4
@@ -941,9 +1235,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: -3037733223691514840}
@@ -962,15 +1262,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c959cf32d077123459c92859aaabb8ba
-  position: {x: 464.87622, y: 1876.518}
+  position: {x: 474.20874, y: 1877}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -998,9 +1304,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 'Attack player if detected
 
 '
@@ -1030,11 +1342,51 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
+--- !u!114 &-3305295887129564874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4d60cf643340ace4bb4bede69d614efc
+  position: {x: 76.00005, y: 1491.0002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+  description: 
+  drawGizmos: 0
+  attackType: 1
+  cooldown: 8
 --- !u!114 &-3099438743072857764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,9 +1408,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   min: {x: -10, y: -10}
@@ -1084,9 +1442,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: 2996546159922678676}
@@ -1107,15 +1471,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ae90f1a4cc49e9a4ba42e3141b0dcc2b
-  position: {x: 1212.7391, y: 1737.9884}
+  position: {x: 1224, y: 1744}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-2745370373989757613
@@ -1139,9 +1509,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -1167,15 +1543,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6627765cdf54fa14caa5377ff14f74fb
-  position: {x: 1406.7391, y: 1737.9884}
+  position: {x: 1418, y: 1744}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   duration: 0.5
@@ -1200,9 +1582,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1229,9 +1617,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 8
@@ -1250,15 +1644,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6261fbaa8a8a8664cb788300029cb92b
-  position: {x: -412.12326, y: 1609.0835}
+  position: {x: -552.3, y: 1613.0002}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 6
@@ -1283,9 +1683,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-1064434144549496265
@@ -1303,15 +1709,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8b62145b5256671468a1270316276e85
-  position: {x: 790.3078, y: 1495.9884}
+  position: {x: 799.20874, y: 1496}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   minDuration: 0.2
@@ -1337,9 +1749,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 'Chose a valid attack move
 
 '
@@ -1447,14 +1865,25 @@ MonoBehaviour:
   - {fileID: -6588889838584645358}
   - {fileID: 1802648160991246969}
   - {fileID: 75460443379023550}
+  - {fileID: -5289949890859841952}
+  - {fileID: -3305295887129564874}
+  - {fileID: -8955665993499687307}
+  - {fileID: 5324705435630979911}
+  - {fileID: -8898386214539866314}
   blackboard:
-    moveToPosition: {x: 2.8275404, y: 0, z: -14.2269745}
-    lastPlayerSeenPosition: {x: 7.3, y: 1, z: 8.7}
+    moveToPosition: {x: -34.24687, y: 0, z: 23.225304}
+    lastPlayerSeenPosition: {x: -13.45, y: 1, z: 21.64}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    hasEstimationOfPlayerDirection: 1
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    pausingAfterAttack: 0
+    jumpBiteAttackCD: -26.983234
+    clawAttackCD: -447.30417
+    disengageJumpCD: -2.8728085
+    pausingAfterAttack: -447.30417
+    GT_heavyClawAttackCD: -447.30417
+    GT_ComboHitAttackCD: -447.30417
+    GT_JumpAttackCD: -447.30417
 --- !u!114 &75460443379023550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,15 +1899,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cc62316c450a5864d9684a6729a8e411
-  position: {x: 777.87616, y: 1874.518}
+  position: {x: 787.20874, y: 1875}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &101016917723454881
@@ -1502,9 +1937,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -1513,10 +1954,9 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 1
-  axisRange: 70
-  minDistance: 3
-  maxDistance: 5
+  circleRadius: 2
+  circleDistance: 12
+  circlePerturbation: 1
 --- !u!114 &164124117158313367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,9 +1978,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &603838277290068275
@@ -1564,9 +2010,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &959074903398867322
@@ -1590,9 +2042,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1619,9 +2077,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   minDuration: 1
@@ -1647,9 +2111,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 5
@@ -1680,9 +2150,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -1707,15 +2183,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ce1969efe861ce345a557dabf3891eba
-  position: {x: 1281.7391, y: 1489.9884}
+  position: {x: 1293, y: 1496}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: 3126308511676650173}
@@ -1742,9 +2224,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1771,9 +2259,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1801,9 +2295,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1824,15 +2324,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2875639b3e9d9d543a70bacbe7daa7d2
-  position: {x: 616.4791, y: 1875}
+  position: {x: 625.20874, y: 1875}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   range: 3
@@ -1857,9 +2363,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: In range to jump?
   drawGizmos: 0
   range: 10
@@ -1878,15 +2390,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a8760f6ded724e846baa6ba276c517dd
-  position: {x: 634.9001, y: 1497.1503}
+  position: {x: 644.20874, y: 1497}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &2560515697152293227
@@ -1904,15 +2422,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ccde5294e2212c54e9055cbbb7e23b2a
-  position: {x: 83.87673, y: 1492.0835}
+  position: {x: 226.0001, y: 1491.0002}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   minDuration: 0.2
@@ -1938,9 +2462,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1969,9 +2499,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -1993,15 +2529,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4cf61958971da4a4db40443470cc3017
-  position: {x: 1299.7394, y: 1596.9884}
+  position: {x: 1311, y: 1603}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2028,9 +2570,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: Jump on player sequence
   drawGizmos: 0
   children:
@@ -2038,6 +2586,7 @@ MonoBehaviour:
   - {fileID: -6158430391657671150}
   - {fileID: 3858560145952760634}
   - {fileID: 7127547411736682088}
+  - {fileID: -8955665993499687307}
 --- !u!114 &3631512042173355211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,9 +2608,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: -8197545111504457615}
@@ -2088,9 +2643,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: -3485983407573911211}
@@ -2117,9 +2678,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &4163018247313250651
@@ -2143,9 +2710,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2172,9 +2745,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   minDuration: 2
@@ -2200,9 +2779,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &5103909335829613659
@@ -2226,9 +2811,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -2237,10 +2828,42 @@ MonoBehaviour:
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 1
-  axisRange: 70
-  minDistance: 3
-  maxDistance: 5
+  circleRadius: 2
+  circleDistance: 12
+  circlePerturbation: 1
+--- !u!114 &5324705435630979911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6eb222447441479f549f7c39faaaa, type: 3}
+  m_Name: CheckCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: fe55a2a3b8adbe249b41d8849aacee66
+  position: {x: 1143, y: 1496}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+  description: 
+  drawGizmos: 0
+  attackType: 3
 --- !u!114 &5365797567609053012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,9 +2885,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: Go in range
   drawGizmos: 0
   child: {fileID: 1416903745506447481}
@@ -2291,15 +2920,23 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: JumpBiteAttack Sequence
   drawGizmos: 0
   children:
   - {fileID: 6260856320332452458}
+  - {fileID: -5289949890859841952}
   - {fileID: 3631512042173355211}
   - {fileID: 164124117158313367}
+  - {fileID: -3305295887129564874}
   - {fileID: 2560515697152293227}
 --- !u!114 &6260856320332452458
 MonoBehaviour:
@@ -2316,15 +2953,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 67567292eb4ff124ab7e04fab076ba38
-  position: {x: -412.12326, y: 1493.0835}
+  position: {x: -552.3, y: 1497.0002}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   child: {fileID: -1675400339831189346}
@@ -2349,9 +2992,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: Is it ok to jump?
   drawGizmos: 0
   children:
@@ -2378,9 +3027,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   duration: 0.5
@@ -2399,15 +3054,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0a6cafd8e18534a4992bea1b7627a190
-  position: {x: 482.71878, y: 1495}
+  position: {x: 492.20874, y: 1495}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2434,9 +3095,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2457,15 +3124,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5adba993e2a06a346b85db77f24d57fc
-  position: {x: 584.8762, y: 1745.518}
+  position: {x: 594.20874, y: 1746}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2487,15 +3160,21 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b17f9e96103b4ef4798f58817cf460cf
-  position: {x: 701.87616, y: 2011.5178}
+  position: {x: 711.20874, y: 2012}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   children:
@@ -2522,9 +3201,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
 --- !u!114 &8821356567426750820
@@ -2548,9 +3233,15 @@ MonoBehaviour:
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 0
-    lastDetectedPlayer: {fileID: 0}
+    focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
     pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
   description: 
   drawGizmos: 0
   speed: 10

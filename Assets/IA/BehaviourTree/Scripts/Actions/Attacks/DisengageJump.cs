@@ -13,7 +13,7 @@ public class DisengageJump : ActionNode
 
     protected override State OnUpdate() {
 
-        Vector3 direction = (blackboard.lastDetectedPlayer.transform.position - context.transform.position);
+        Vector3 direction = (blackboard.focusedPlayer.transform.position - context.transform.position);
         direction = Vector3.ProjectOnPlane(direction, context.transform.up);
 
         direction =  Quaternion.AngleAxis(Random.Range(90f,270f), context.transform.up) * direction;

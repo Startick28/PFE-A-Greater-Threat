@@ -13,8 +13,6 @@ public class GT_ComboHitAttack : ActionNode
 
     protected override State OnUpdate() {
         context.animator.SetTrigger("ClawsAttackCombo");
-        context.greaterThreatColliders.RComboHitAttackCollider.enabled = true;
-        context.greaterThreatColliders.LComboHitAttackCollider.enabled = true;
         if (EnemiesManager.Instance)
         {
             EnemiesManager.Instance.photonView.RPC("GT_ComboHitAttack", 

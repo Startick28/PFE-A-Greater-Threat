@@ -18,6 +18,8 @@ public class SensorManager : MonoBehaviour
 
     private bool _playerDetected = false;
     public bool PlayerDetected { get {return _playerDetected;} private set{} }
+    private GameObject _focusedPlayer;
+    public GameObject FocusedPlayer { get {return _focusedPlayer;} private set{} }
 
     
     void Update()
@@ -56,6 +58,28 @@ public class SensorManager : MonoBehaviour
         foreach (GameObject entity in seenEntities)
         {
             if (entity.CompareTag("Player")) return true;
+        }
+        return false;
+    }
+
+    /*
+        Sets the player to focus
+    */
+    public void FocusPlayer(GameObject player)
+    {
+        _focusedPlayer = player;
+    }
+
+    /*
+        Returns true if the focused player has been seen by any sensor.
+    */
+    public bool CanSeeFocusedPlayer()
+    {
+        if (canSeePlayerLock) return false;
+        List<GameObject> seenEntities = GetSeenEntites();
+        foreach (GameObject entity in seenEntities)
+        {
+            if (entity == _focusedPlayer) return true;
         }
         return false;
     }

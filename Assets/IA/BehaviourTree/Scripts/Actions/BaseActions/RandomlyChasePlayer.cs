@@ -11,11 +11,12 @@ public class RandomlyChasePlayer : ActionNode
     public bool updatePosition = false;
     public bool updateRotation = true;
     public float acceleration = 40.0f;
-    public float range = 1.0f;
 
-    public float axisRange = 70f;
-    public float minDistance = 3f;
-    public float maxDistance = 5f;
+    public float circleRadius = 4f;
+    public float circleDistance = 6f;
+    public float circlePerturbation = 3f;
+
+    Vector3 circleTarget;
 
     protected override void OnStart() {
         context.agent.stoppingDistance = stoppingDistance;
@@ -24,8 +25,17 @@ public class RandomlyChasePlayer : ActionNode
         context.agent.updatePosition = updatePosition;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
+    }
 
-        context.agent.destination = context.transform.position + Quaternion.AngleAxis(Random.Range(-axisRange,axisRange), context.transform.up) * context.transform.forward * Random.Range(minDistance,maxDistance);
+    protected override void OnStop() {
+    }
+
+    protected override State OnUpdate() {
+
+        circleTarget += new Vector3(Random.Range(-circlePerturbation, circlePerturbation), 0f, Random.Range(-circlePerturbation, circlePerturbation));
+        Vector3.Normalize(circleTarget);
+        context.agent.destination = context.transform.position + context.transform.forward * circleDistance + circleTarget * circleRadius;
+
         if (EnemiesManager.Instance)
         {
             EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
@@ -38,19 +48,10 @@ public class RandomlyChasePlayer : ActionNode
                                                     updateRotation,
                                                     acceleration);
         }
-    }
 
-    protected override void OnStop() {
-    }
-
-    protected override State OnUpdate() {
         if (context.sensorManager.CanSeePlayer())
         {
             return State.Failure;
-        }
-
-        if (context.agent.remainingDistance < range) {
-            return State.Success;
         }
 
         if (context.agent.pathPending) {

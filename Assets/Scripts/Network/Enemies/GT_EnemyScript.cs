@@ -42,26 +42,21 @@ public class GT_EnemyScript : MonoBehaviour
     public void RightClawHeavyAttack()
     {
         animator.SetTrigger("HeavyClawsAttackRight");
-        HeavyClawsAttackRightCollider.enabled = true;
     }
 
     public void LeftClawHeavyAttack()
     {
         animator.SetTrigger("HeavyClawsAttackLeft");
-        HeavyClawsAttackLeftCollider.enabled = true;
     }
 
     public void JumpAttack()
     {
         animator.SetTrigger("JumpClawsAttack");
-        JumpAttackCollider.enabled = true;
     }
 
     public void ComboHitAttack()
     {
         animator.SetTrigger("ClawsAttackCombo");
-        RComboHitAttackCollider.enabled = true;
-        LComboHitAttackCollider.enabled = true;
     }
 
     public void Roar()
@@ -69,4 +64,31 @@ public class GT_EnemyScript : MonoBehaviour
         //Code
     }
 
+    public void SetRightClawHeavyAttackCollider()
+    {
+        HeavyClawsAttackRightCollider.enabled = true;
+    }
+
+    public void SetLeftClawHeavyAttackCollider()
+    {
+        HeavyClawsAttackLeftCollider.enabled = true;
+    }
+    public void SetJumpAttackCollider()
+    {
+        JumpAttackCollider.enabled = true;
+    }
+    public void SetComboHitAttackCollider()
+    {
+        RComboHitAttackCollider.enabled = true;
+        LComboHitAttackCollider.enabled = true;
+    }
+
+    public void StopAgentRotation()
+    {
+        agent.updateRotation = false;
+    }
+    public void StartAgentRotation()
+    {
+        agent.updateRotation = true;
+    }
 }

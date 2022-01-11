@@ -12,7 +12,7 @@ public class FocusPlayer : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.lastDetectedPlayer = context.sensorManager.GetSeenPlayer();
+        blackboard.focusedPlayer = context.sensorManager.GetSeenPlayer();
         return State.Success;
     }
 }

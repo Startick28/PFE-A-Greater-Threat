@@ -17,7 +17,6 @@ public class GT_HeavyClawAttack : ActionNode
         if (rightClawAttack)
         {
             context.animator.SetTrigger("HeavyClawsAttackRight");
-            context.greaterThreatColliders.HeavyClawsAttackRightCollider.enabled = true;
             if (EnemiesManager.Instance)
             {
                 EnemiesManager.Instance.photonView.RPC("GT_RightClawHeavyAttack", 
@@ -28,7 +27,6 @@ public class GT_HeavyClawAttack : ActionNode
         else
         {
             context.animator.SetTrigger("HeavyClawsAttackLeft");
-            context.greaterThreatColliders.HeavyClawsAttackLeftCollider.enabled = true;
             if (EnemiesManager.Instance)
             {
                 EnemiesManager.Instance.photonView.RPC("GT_LeftClawHeavyAttack", 
