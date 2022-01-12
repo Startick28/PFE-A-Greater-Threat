@@ -680,7 +680,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c4d2422c6f78de649bbdfdc454dcbe7d
-  position: {x: -1518.0004, y: 1854}
+  position: {x: -1517.5387, y: 1854}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: GreaterThreatBehaviour
+  m_Name: GreaterThreatBehaviour 12;01
   m_EditorClassIdentifier: 
   rootNode: {fileID: 1942798289762625698}
   treeState: 0
@@ -1898,22 +1898,24 @@ MonoBehaviour:
   - {fileID: 6788347869835949783}
   - {fileID: 8621403712524421917}
   blackboard:
-    moveToPosition: {x: -34.971676, y: 0, z: -30.918186}
-    lastPlayerSeenPosition: {x: -36.19, y: 1, z: -25.03}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    moveToPosition: {x: -31.399832, y: 0, z: -21.626135}
+    lastPlayerSeenPosition: {x: -6.84, y: 1, z: -28.4}
+    lastPlayerSeenEstimatedDirection: {x: 0.69168437, y: 0, z: -0.7221999}
     hasEstimationOfPlayerDirection: 1
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
     jumpBiteAttackCD: -0.02
     clawAttackCD: -0.02
     disengageJumpCD: -0.02
-    pausingAfterAttack: 1.2610484
-    GT_heavyClawAttackCD: 0.71281713
-    GT_ComboHitAttackCD: 7.26105
-    GT_JumpAttackCD: -0.0015319772
-    lookAtPlayerLock: -68.40578
-    attackingAracks: []
-    playerIntercepted: 0
+    pausingAfterAttack: 3.7024593
+    GT_heavyClawAttackCD: 0.69146645
+    GT_ComboHitAttackCD: -0.003782067
+    GT_JumpAttackCD: 29.20246
+    lookAtPlayerLock: 3.7024593
+    attackingAracks:
+    - {fileID: 0}
+    - {fileID: 0}
+    playerIntercepted: 1
     canAttackPlayer: 1
 --- !u!114 &59912728796530600
 MonoBehaviour:
@@ -3953,7 +3955,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2eae89bf17205f4448aa0919c510f3e8
-  position: {x: 611, y: 1146}
+  position: {x: 610.99994, y: 1146.2471}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}

@@ -1,6 +1,7 @@
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SensorManager : MonoBehaviour
 {
@@ -254,9 +255,19 @@ public class SensorManager : MonoBehaviour
 
     /*
         Final test to evaluate if we actually want to count the heard sound as is.
+        If the path to reach the sound is much longer than the distance from the sound
+        it is ignored
     */
     public bool CanActuallyHear(EmittedSound sound)
     {
+        NavMeshPath path = new NavMeshPath();
+        if (NavMesh.CalculatePath(transform.position, sound.position, NavMesh.AllAreas, path) == false) return true;
+        float pathLength = 0f;
+        for ( int i = 1; i < path.corners.Length; ++i )
+        {
+            pathLength += Vector3.Distance( path.corners[i-1], path.corners[i] );
+        }
+        if (pathLength > Vector3.Distance(transform.position, sound.position) * 2.5f) return false; 
         return true;
     }
 }

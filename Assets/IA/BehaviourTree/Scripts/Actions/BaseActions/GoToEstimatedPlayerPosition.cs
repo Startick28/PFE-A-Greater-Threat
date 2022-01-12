@@ -14,7 +14,11 @@ public class GoToEstimatedPlayerPosition : ActionNode
     public float range = 1.0f;
     public float searchDistance = 3f;
 
+    bool isPathTooLong;
+
     protected override void OnStart() {
+        isPathTooLong = false;
+
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
         context.agent.angularSpeed = angularSpeed;
@@ -22,18 +26,24 @@ public class GoToEstimatedPlayerPosition : ActionNode
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
 
-        context.agent.destination = blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection;
-        if (EnemiesManager.Instance)
+        Vector3 objective = blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection;
+        isPathTooLong = blackboard.IsPathTooLong(context.transform.position, objective);
+
+        if (!isPathTooLong)
         {
-            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
-                                                    Photon.Pun.RpcTarget.All,
-                                                    context.monsterID,
-                                                    blackboard.lastPlayerSeenPosition + searchDistance * blackboard.lastPlayerSeenEstimatedDirection,
-                                                    stoppingDistance,
-                                                    speed,
-                                                    angularSpeed,
-                                                    updateRotation,
-                                                    acceleration);
+            context.agent.destination = objective;
+            if (EnemiesManager.Instance)
+            {
+                EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                        Photon.Pun.RpcTarget.All,
+                                                        context.monsterID,
+                                                        objective,
+                                                        stoppingDistance,
+                                                        speed,
+                                                        angularSpeed,
+                                                        updateRotation,
+                                                        acceleration);
+            }
         }
 
         blackboard.hasEstimationOfPlayerDirection = false;
@@ -43,6 +53,8 @@ public class GoToEstimatedPlayerPosition : ActionNode
     }
 
     protected override State OnUpdate() {
+        if (isPathTooLong) return State.Success;
+
         if (context.sensorManager.CanSeePlayer())
         {
             return State.Failure;
