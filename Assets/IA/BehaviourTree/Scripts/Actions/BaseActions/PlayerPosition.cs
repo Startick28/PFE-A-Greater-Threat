@@ -12,7 +12,7 @@ public class PlayerPosition : ActionNode
     }
 
     protected override State OnUpdate() {
-        Vector3 pos = blackboard.lastDetectedPlayer.transform.position;
+        Vector3 pos = blackboard.focusedPlayer.transform.position;
         blackboard.moveToPosition.x = pos.x;
         blackboard.moveToPosition.z = pos.z;
         return State.Success;

@@ -18,6 +18,10 @@ public class SensorManager : MonoBehaviour
 
     private bool _playerDetected = false;
     public bool PlayerDetected { get {return _playerDetected;} private set{} }
+    private GameObject _focusedPlayer;
+    public GameObject FocusedPlayer { get {return _focusedPlayer;} private set{} }
+
+    private GameObject lastSeenPlayer;
     
     void Update()
     {
@@ -54,7 +58,37 @@ public class SensorManager : MonoBehaviour
         List<GameObject> seenEntities = GetSeenEntites();
         foreach (GameObject entity in seenEntities)
         {
-            if (entity.CompareTag("Player")) return true;
+            if (entity.CompareTag("Player"))
+            {
+                lastSeenPlayer = entity;
+                return true;
+            } 
+        }
+        return false;
+    }
+
+    /*
+        Sets the player to focus
+    */
+    public void FocusPlayer(GameObject player)
+    {
+        _focusedPlayer = player;
+    }
+
+    /*
+        Returns true if the focused player has been seen by any sensor.
+    */
+    public bool CanSeeFocusedPlayer()
+    {
+        if (canSeePlayerLock) return false;
+        List<GameObject> seenEntities = GetSeenEntites();
+        foreach (GameObject entity in seenEntities)
+        {
+            if (entity == _focusedPlayer) 
+            {
+                lastSeenPlayer = entity;
+                return true;
+            } 
         }
         return false;
     }
@@ -141,6 +175,18 @@ public class SensorManager : MonoBehaviour
         return null;
     }
 
+    /*
+        Returns the last player that has been seen by any sensor.
+    */
+    public GameObject GetLastSeenPlayer()
+    {
+        List<GameObject> seenEntities = GetSeenEntites();
+        foreach (GameObject entity in seenEntities)
+        {
+            if (entity.CompareTag("Player")) return entity;
+        }
+        return lastSeenPlayer;
+    }
 
     /*
         Returns a player that has been heard by any sensor.

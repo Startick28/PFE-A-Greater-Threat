@@ -20,7 +20,7 @@ public class CanSeePlayerWithTimer : ActionNode
         if (context.sensorManager.CanSeePlayer())
         {
             if (Time.time - seenTimer > durationToSeePlayer) {
-                blackboard.lastDetectedPlayer = context.sensorManager.GetSeenPlayer();
+                blackboard.focusedPlayer = context.sensorManager.GetSeenPlayer();
                 return State.Success;
             }
             return State.Running;

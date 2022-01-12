@@ -1,0 +1,2845 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &81456855421985970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7195390362702647798}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7195390362702647798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81456855421985970}
+  m_LocalRotation: {x: 0.0000000037252903, y: -0.0000000015133992, z: 5.6378517e-18, w: 1}
+  m_LocalPosition: {x: -0.108596414, y: -0.0000000047683715, z: 0.000000038146972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5852856097642311463}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000004315875, y: -0.0000016107068, z: -14.999996}
+--- !u!1 &144934643309257930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3298737190872089938}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3298737190872089938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144934643309257930}
+  m_LocalRotation: {x: 0, y: -0, z: -0.1272066, w: 0.99187624}
+  m_LocalPosition: {x: -0.25833935, y: 0, z: 0.000000029871885}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 5948598833289184707}
+  m_Father: {fileID: 7294042380924867722}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.616405}
+--- !u!1 &201575800964946721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107663626388145021}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2107663626388145021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201575800964946721}
+  m_LocalRotation: {x: -0.0000000037252907, y: 0.0000000010477379, z: -9.313226e-10, w: 1}
+  m_LocalPosition: {x: -0.108596414, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 7928239368414137873}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00000016213087, y: -0.0000031059885, z: -14.999998}
+--- !u!1 &409741261652692235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3702186233553573423}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3702186233553573423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409741261652692235}
+  m_LocalRotation: {x: -0.61062694, y: 0.6328547, z: -0.38186643, w: -0.28426704}
+  m_LocalPosition: {x: -0.00000030517577, y: -0.00000015258789, z: -0.17248398}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 145855804991736644}
+  m_Father: {fileID: 2087226241231237074}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 39.009384, y: -155.95633, z: -52.524673}
+--- !u!1 &438689644917770534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3615035524560738863}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3615035524560738863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438689644917770534}
+  m_LocalRotation: {x: -0.0000000037252903, y: -0.000000007683411, z: 4.6566126e-10, w: 1}
+  m_LocalPosition: {x: -0.115836106, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 8838624397029943330}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.00000006905401, y: -0.00000025771308, z: -14.999998}
+--- !u!1 &650150085608483560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166101720480510034}
+  - component: {fileID: 650150085608483564}
+  - component: {fileID: 650150085608483565}
+  - component: {fileID: 6101867832670136872}
+  - component: {fileID: 650150085608483566}
+  - component: {fileID: 650150085608483567}
+  - component: {fileID: 650150085608483573}
+  - component: {fileID: 650150085608483569}
+  - component: {fileID: 650150085608483570}
+  - component: {fileID: 650150085608483571}
+  - component: {fileID: 650150085608483572}
+  - component: {fileID: 650150085608483568}
+  - component: {fileID: 2231070257658908997}
+  - component: {fileID: 6505211797186511306}
+  m_Layer: 11
+  m_Name: GreaterThreat
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &166101720480510034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.3, y: 0, z: -10.7}
+  m_LocalScale: {x: 1.8, y: 1.7, z: 1.7}
+  m_Children:
+  - {fileID: 4059457271646714822}
+  - {fileID: 5884459065826310559}
+  - {fileID: 6505211796869960756}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &650150085608483564
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 2.2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.15, z: 0.15}
+--- !u!54 &650150085608483565
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &6101867832670136872
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: c6263e24721ddb34c91a8904b38475ce, type: 3}
+  m_Controller: {fileID: 9100000, guid: 7a4e82cd5abc9e14fb13bb42d0bf6d46, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &650150085608483566
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.9
+  m_Speed: 8
+  m_Acceleration: 8
+  avoidancePriority: 99
+  m_AngularSpeed: 720
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.2
+  m_BaseOffset: -0.2
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &650150085608483567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57445da64ae0314683235ec2fde830c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &650150085608483573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 11400000, guid: 7a439a3da2a2bd84d8b993c29f347943, type: 2}
+--- !u!114 &650150085608483569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd1782782c33a144aa3b0d575bb80ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 0
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 0
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 1
+  MinimumVisibility: 0.5
+  SensorRange: 30
+  DetectsOnLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  SensorUpdateMode: 0
+  CheckInterval: 1
+  InitialBufferSize: 20
+  DynamicallyIncreaseBufferSize: 1
+--- !u!114 &650150085608483570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282218b7340acaa4187f89dc10dfe11b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  - RandomEmitter
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 0
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 0
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 1
+  MinimumVisibility: 0.5
+  SensorRange: 60
+  DetectsOnLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  SensorUpdateMode: 0
+  CheckInterval: 1
+  InitialBufferSize: 20
+  DynamicallyIncreaseBufferSize: 1
+--- !u!114 &650150085608483571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d2cc311d424f04dabc3b36d9748975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionConeSensors:
+  - {fileID: 6505211796418169153}
+  soundSensors:
+  - {fileID: 650150085608483570}
+  presenceSensor: {fileID: 650150085608483569}
+  timeToDetectPlayer: 0.5
+  timeToForgetPlayer: 7
+--- !u!114 &650150085608483572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 6505211796869960757}
+    m_Active: 1
+  m_Effectors: []
+--- !u!114 &650150085608483568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d653bb826cc7d449d345d5aa50d752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - goalTransform: {fileID: 0}
+    type: 0
+    priorityMultiplier: 1
+    currentPriority: 0
+  - goalTransform: {fileID: 0}
+    type: 0
+    priorityMultiplier: 1
+    currentPriority: 0
+  - goalTransform: {fileID: 0}
+    type: 0
+    priorityMultiplier: 1
+    currentPriority: 0
+  - goalTransform: {fileID: 0}
+    type: 0
+    priorityMultiplier: 1
+    currentPriority: 0
+  maxDangerPlayerDistance: 100
+  minDangerPlayerDistance: 1000
+  maxDangerMonsterDistance: 300
+  minDangerMonsterDistance: 1500
+  playerAsCloseDistance: 100
+  playerTooFarDistance: 350
+  updateFrequency: 2
+  monsterProximityDistance: 200
+  maxIrruptionTime: 40
+--- !u!114 &2231070257658908997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0501881a04c31459a5fd33a044a4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RComboHitAttackCollider: {fileID: 1098316515749291206}
+  LComboHitAttackCollider: {fileID: 2138072936069009169}
+  HeavyClawsAttackRightCollider: {fileID: 551716259169035182}
+  HeavyClawsAttackLeftCollider: {fileID: 6187963864265674676}
+  JumpAttackCollider: {fileID: 3619741435857130490}
+--- !u!114 &6505211797186511306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650150085608483560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd149aa426a74234289baf7d28b1bf86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshBuilder: {fileID: 0}
+  updateFrequency: 0.5
+--- !u!1 &1063612257472647212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5884459065826310559}
+  - component: {fileID: 6073880676791085620}
+  m_Layer: 0
+  m_Name: SK_Ceratoferox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5884459065826310559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063612257472647212}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 166101720480510034}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &6073880676791085620
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063612257472647212}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 677c56dffb9f8f74887bb027007a4b58, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -3922304506044259520, guid: c6263e24721ddb34c91a8904b38475ce, type: 3}
+  m_Bones:
+  - {fileID: 7069632029453259720}
+  - {fileID: 1029709061532314970}
+  - {fileID: 5585074629699531771}
+  - {fileID: 8179973008977655413}
+  - {fileID: 7516742020914891609}
+  - {fileID: 8607168760291057285}
+  - {fileID: 1393279328166143050}
+  - {fileID: 2760976421514308221}
+  - {fileID: 5214611802485285878}
+  - {fileID: 8214782065668288960}
+  - {fileID: 5049721284472121888}
+  - {fileID: 8003828027571470736}
+  - {fileID: 211938591223996203}
+  - {fileID: 7928239368414137873}
+  - {fileID: 2107663626388145021}
+  - {fileID: 8838624397029943330}
+  - {fileID: 6416099782596149203}
+  - {fileID: 3615035524560738863}
+  - {fileID: 7281342995098161662}
+  - {fileID: 3463587952514189673}
+  - {fileID: 4975147115222838425}
+  - {fileID: 6499289470764714635}
+  - {fileID: 1100851482110724442}
+  - {fileID: 7260458244460831618}
+  - {fileID: 5932920064322594273}
+  - {fileID: 5891957920250285200}
+  - {fileID: 5765418733714370203}
+  - {fileID: 4025357630166655370}
+  - {fileID: 2087226241231237074}
+  - {fileID: 8896140905402379497}
+  - {fileID: 8689664602186881532}
+  - {fileID: 5091368936282756003}
+  - {fileID: 851731370150481797}
+  - {fileID: 3702186233553573423}
+  - {fileID: 336750542226059945}
+  - {fileID: 6632367446032766608}
+  - {fileID: 4936171542369310083}
+  - {fileID: 7294042380924867722}
+  - {fileID: 5603414626408420999}
+  - {fileID: 3729447700876516418}
+  - {fileID: 3298737190872089938}
+  - {fileID: 145855804991736644}
+  - {fileID: 9008415989661349953}
+  - {fileID: 5948598833289184707}
+  - {fileID: 7899478002043218707}
+  - {fileID: 575818679160709929}
+  - {fileID: 8971480721563721930}
+  - {fileID: 4955977387059412066}
+  - {fileID: 4614513142394794924}
+  - {fileID: 4529113776391651821}
+  - {fileID: 4207354348884993756}
+  - {fileID: 4006924483657263780}
+  - {fileID: 5852856097642311463}
+  - {fileID: 7195390362702647798}
+  - {fileID: 7167856325941221451}
+  - {fileID: 7359353408143984157}
+  - {fileID: 5866510367140605913}
+  - {fileID: 3628562456756225209}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2087226241231237074}
+  m_AABB:
+    m_Center: {x: -0.34639794, y: 0.7762026, z: -0.0000014901161}
+    m_Extent: {x: 1.4431679, y: 1.4342456, z: 1.4690969}
+  m_DirtyAABB: 0
+--- !u!1 &1171373655135176122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3463587952514189673}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3463587952514189673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171373655135176122}
+  m_LocalRotation: {x: -0.4096561, y: 0.027423833, z: -0.050112773, w: 0.9104496}
+  m_LocalPosition: {x: -0.2819577, y: -0.000000076293944, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 5049721284472121888}
+  m_Father: {fileID: 5585074629699531771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -34.48775, y: 15.636216, z: -25.117867}
+--- !u!1 &1310735934143858920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087226241231237074}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087226241231237074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310735934143858920}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.49999934, w: 0.50000066}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 211938591223996203}
+  - {fileID: 3702186233553573423}
+  - {fileID: 851731370150481797}
+  - {fileID: 4936171542369310083}
+  - {fileID: 5603414626408420999}
+  m_Father: {fileID: 6938823443694088570}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 89.99992, z: 0}
+--- !u!1 &1766644688408461186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7359353408143984157}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7359353408143984157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766644688408461186}
+  m_LocalRotation: {x: 0.20522378, y: 0.09911866, z: 0.87677646, w: -0.42346412}
+  m_LocalPosition: {x: -0.15804267, y: 0.2881233, z: -0.051386107}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+  m_Children:
+  - {fileID: 3628562456756225209}
+  m_Father: {fileID: 6632367446032766608}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -20.341808, y: 17.114197, z: -131.53352}
+--- !u!1 &1988650791129124395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336750542226059945}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &336750542226059945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988650791129124395}
+  m_LocalRotation: {x: -0.000000030877864, y: 0.000000035595008, z: 0.38277945, w: 0.9238398}
+  m_LocalPosition: {x: -0.8080927, y: -0.000000019073486, z: 0.000000076293944}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4006924483657263780}
+  m_Father: {fileID: 8689664602186881532}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000019232457, y: 0.0000032984417, z: 33.189472}
+--- !u!1 &2264827394898487358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8214782065668288960}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8214782065668288960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264827394898487358}
+  m_LocalRotation: {x: -0.07943762, y: 0.1399266, z: 0.10328657, w: 0.9815509}
+  m_LocalPosition: {x: -0.5178694, y: -0.000000019073486, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 7928239368414137873}
+  - {fileID: 8838624397029943330}
+  - {fileID: 6416099782596149203}
+  m_Father: {fileID: 1029709061532314970}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 33.01186, y: -17.146397, z: -36.76343}
+--- !u!1 &2300354436874104998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4893072723605750911}
+  - component: {fileID: 1098316515749291206}
+  - component: {fileID: 7552111651262426584}
+  m_Layer: 0
+  m_Name: RHandComboHitCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4893072723605750911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300354436874104998}
+  m_LocalRotation: {x: 0, y: 0, z: -0.6307435, w: 0.7759914}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006924483657263780}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.21}
+--- !u!136 &1098316515749291206
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300354436874104998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.7
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.43, z: 0}
+--- !u!114 &7552111651262426584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300354436874104998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc203e12cd250724db12f22a5d3e02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamages: 5
+  maxActiveTime: 0.5
+--- !u!1 &2554349337135806818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851731370150481797}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851731370150481797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2554349337135806818}
+  m_LocalRotation: {x: -0.0000021208346, y: 0.00000073725914, z: -0.06399213, w: 0.99795043}
+  m_LocalPosition: {x: -0.15241767, y: -0.00029899596, z: 0.00000021178784}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 5891957920250285200}
+  m_Father: {fileID: 2087226241231237074}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -0.7250174, y: -0.34510425, z: -14.648733}
+--- !u!1 &2594048006824621083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4955977387059412066}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4955977387059412066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594048006824621083}
+  m_LocalRotation: {x: 0.006469508, y: -0.01751732, z: 0.124537356, w: 0.9920392}
+  m_LocalPosition: {x: -0.17857085, y: -0.009312859, z: 0.049894713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4529113776391651821}
+  m_Father: {fileID: 4006924483657263780}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.985486, y: -1.8996588, z: 14.294247}
+--- !u!1 &2602101364597659763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5852856097642311463}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5852856097642311463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602101364597659763}
+  m_LocalRotation: {x: -0.16585557, y: -0.08010468, z: 0.8850681, w: -0.42746896}
+  m_LocalPosition: {x: -0.1535244, y: 0.29381573, z: 0.07688316}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 7195390362702647798}
+  m_Father: {fileID: 6632367446032766608}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 19.396622, y: -12.334385, z: -135.64986}
+--- !u!1 &2656447419068483355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6938823443694088570}
+  m_Layer: 0
+  m_Name: Ceratoferox_
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6938823443694088570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656447419068483355}
+  m_LocalRotation: {x: 0.15304595, y: -0.15304595, z: 0.6903455, w: 0.6903455}
+  m_LocalPosition: {x: -0, y: 0.52099997, z: 1.013}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2087226241231237074}
+  m_Father: {fileID: 4059457271646714822}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 10.998304, y: -0.19436568, z: 88.981285}
+--- !u!1 &2670226237117161839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5866510367140605913}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5866510367140605913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2670226237117161839}
+  m_LocalRotation: {x: -0.0000000037252899, y: 0.000000004190951, z: 4.656613e-10, w: 1}
+  m_LocalPosition: {x: -0.115836106, y: 0.0000000047683715, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7167856325941221451}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000007418172, y: -0.00000053022865, z: -15}
+--- !u!1 &2809596143054484296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5891957920250285200}
+  - component: {fileID: 3619741435857130490}
+  - component: {fileID: 2993940608900147160}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5891957920250285200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809596143054484296}
+  m_LocalRotation: {x: 1.5629224e-11, y: 0.00000036299573, z: -0.13079134, w: 0.99140996}
+  m_LocalPosition: {x: -0.3787963, y: -0.00029121398, z: -8.0792234e-10}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 1}
+  m_Children:
+  - {fileID: 7260458244460831618}
+  m_Father: {fileID: 851731370150481797}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1.4784632, y: 0.2876192, z: -14.488261}
+--- !u!135 &3619741435857130490
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809596143054484296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: -1, y: 1.45, z: 0}
+--- !u!114 &2993940608900147160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809596143054484296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc203e12cd250724db12f22a5d3e02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamages: 50
+  maxActiveTime: 1
+--- !u!1 &3192260272034099172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5603414626408420999}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5603414626408420999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192260272034099172}
+  m_LocalRotation: {x: 0.11716534, y: 0.008119316, z: 0.9223124, w: 0.36816603}
+  m_LocalPosition: {x: 0.024849104, y: -0.19476035, z: -0.070999525}
+  m_LocalScale: {x: 0.99999994, y: 1.0000002, z: 0.99999994}
+  m_Children:
+  - {fileID: 3729447700876516418}
+  m_Father: {fileID: 2087226241231237074}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 7.9684157, y: 16.814651, z: 134.63878}
+--- !u!1 &3411550833042100070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8607168760291057285}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8607168760291057285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411550833042100070}
+  m_LocalRotation: {x: -0.0064695063, y: 0.017517304, z: 0.12453738, w: 0.9920392}
+  m_LocalPosition: {x: -0.17857082, y: -0.009312859, z: -0.04989479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2760976421514308221}
+  m_Father: {fileID: 8003828027571470736}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -0.9854866, y: 1.8996584, z: 14.294244}
+--- !u!1 &3503915194363091252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8971480721563721930}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8971480721563721930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503915194363091252}
+  m_LocalRotation: {x: 0.00000001825958, y: 0.000000010520313, z: -0.2596867, w: 0.96569294}
+  m_LocalPosition: {x: -0.11649428, y: 0.000000076293944, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 575818679160709929}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000017075472, y: -0.0000008537736, z: 0.0000008537736}
+--- !u!1 &3571397625943843162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8003828027571470736}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8003828027571470736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571397625943843162}
+  m_LocalRotation: {x: -0.26978567, y: 0.035055015, z: 0.123623155, w: 0.9543082}
+  m_LocalPosition: {x: -0.8158282, y: 0.000000019073486, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 8179973008977655413}
+  - {fileID: 8607168760291057285}
+  - {fileID: 1393279328166143050}
+  - {fileID: 6210602150417255539}
+  - {fileID: 5069097223277491026}
+  m_Father: {fileID: 5049721284472121888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -39.1664, y: 7.415243, z: 29.779596}
+--- !u!1 &3839418031104822229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4529113776391651821}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4529113776391651821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839418031104822229}
+  m_LocalRotation: {x: 7.521874e-10, y: 0.000000001830545, z: 0.09991517, w: 0.99499595}
+  m_LocalPosition: {x: -0.12257668, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 4955977387059412066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0.000000106721714, z: 0}
+--- !u!1 &4205575592364382908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4936171542369310083}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4936171542369310083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205575592364382908}
+  m_LocalRotation: {x: 0.36816555, y: 0.9223127, z: 0.008116284, w: 0.1171649}
+  m_LocalPosition: {x: 0.024849428, y: -0.1947599, z: 0.07142738}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 7294042380924867722}
+  m_Father: {fileID: 2087226241231237074}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 4.0886993, y: 167.13419, z: 43.060265}
+--- !u!1 &4261236672659125883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3729447700876516418}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3729447700876516418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261236672659125883}
+  m_LocalRotation: {x: 0.00000001775238, y: 0.0000000016078608, z: 0.09020235, w: 0.99592346}
+  m_LocalPosition: {x: -0.168571, y: 0, z: -0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9008415989661349953}
+  m_Father: {fileID: 5603414626408420999}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.011885878, y: -0.000004520352, z: 10.350196}
+--- !u!1 &4415389493438117698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4059457271646714822}
+  m_Layer: 0
+  m_Name: root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4059457271646714822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415389493438117698}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6938823443694088570}
+  m_Father: {fileID: 166101720480510034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &4572027455453129186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6210602150417255539}
+  - component: {fileID: 6187963864265674676}
+  - component: {fileID: 7137498365198322942}
+  m_Layer: 0
+  m_Name: LHandHeavyACollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6210602150417255539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572027455453129186}
+  m_LocalRotation: {x: 0, y: 0, z: -0.6573095, w: 0.7536208}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8003828027571470736}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -82.19}
+--- !u!136 &6187963864265674676
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572027455453129186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.7
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.43, z: 0}
+--- !u!114 &7137498365198322942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572027455453129186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc203e12cd250724db12f22a5d3e02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamages: 50
+  maxActiveTime: 1
+--- !u!1 &4634805395615771302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7294042380924867722}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7294042380924867722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634805395615771302}
+  m_LocalRotation: {x: 0.000000006313181, y: -5.7179483e-10, z: -0.09020236, w: 0.99592346}
+  m_LocalPosition: {x: -0.16857101, y: 0, z: 0.000000018790665}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 3298737190872089938}
+  m_Father: {fileID: 4936171542369310083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000013051945, y: -0.0000071462073, z: -10.350505}
+--- !u!1 &4650145996222797021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6499289470764714635}
+  m_Layer: 0
+  m_Name: Ceratoferox_Tongue_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6499289470764714635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650145996222797021}
+  m_LocalRotation: {x: 0.0000000042119934, y: -0.000000046390923, z: 0.09042151, w: 0.9959036}
+  m_LocalPosition: {x: -0.074806094, y: 0.0000007629394, z: -0.000000008286897}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 5932920064322594273}
+  m_Father: {fileID: 1100851482110724442}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.3220963, y: 1.8789644, z: 9.653163}
+--- !u!1 &4764122865773025291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3628562456756225209}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3628562456756225209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764122865773025291}
+  m_LocalRotation: {x: 0, y: -0.0000000020954756, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12307588, y: 0.0000000023841857, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7359353408143984157}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000008537737, y: 0.00000032016513, z: -0.0000008537736}
+--- !u!1 &4840520688259271496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7899478002043218707}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailRight_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7899478002043218707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840520688259271496}
+  m_LocalRotation: {x: 0, y: 0, z: 0.11245564, w: 0.99365675}
+  m_LocalPosition: {x: -0.28406525, y: -0.00000015258789, z: 0.00000022888183}
+  m_LocalScale: {x: 0.9999996, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 9008415989661349953}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00011490092, y: -0.000478191, z: 12.899959}
+--- !u!1 &4894011202153220998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8179973008977655413}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8179973008977655413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894011202153220998}
+  m_LocalRotation: {x: 0.57265574, y: -0.30039155, z: 0.34570053, w: 0.67994225}
+  m_LocalPosition: {x: -0.10842617, y: 0.0109227365, z: -0.096539915}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000002}
+  m_Children:
+  - {fileID: 7516742020914891609}
+  m_Father: {fileID: 8003828027571470736}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 80.55258, y: -4.3895926, z: 50.17992}
+--- !u!1 &5159403442089666342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8838624397029943330}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8838624397029943330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159403442089666342}
+  m_LocalRotation: {x: 0.04350353, y: 0.021011261, z: 0.8994226, w: -0.43440187}
+  m_LocalPosition: {x: -0.14688607, y: 0.30217877, z: -0.0032972717}
+  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+  m_Children:
+  - {fileID: 3615035524560738863}
+  m_Father: {fileID: 8214782065668288960}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -4.335252, y: 3.4498117, z: -133.41734}
+--- !u!1 &5227470212321688779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4006924483657263780}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4006924483657263780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227470212321688779}
+  m_LocalRotation: {x: 0.26978564, y: -0.035054963, z: 0.1236232, w: 0.9543082}
+  m_LocalPosition: {x: -0.8158284, y: -0.000000019073486, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 575818679160709929}
+  - {fileID: 4955977387059412066}
+  - {fileID: 4614513142394794924}
+  - {fileID: 4159394541833304407}
+  - {fileID: 4893072723605750911}
+  m_Father: {fileID: 336750542226059945}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 45.024357, y: -1.3732297, z: 25.55489}
+--- !u!1 &5320579647500204188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575818679160709929}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575818679160709929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320579647500204188}
+  m_LocalRotation: {x: -0.5726557, y: 0.30039158, z: 0.34570047, w: 0.6799423}
+  m_LocalPosition: {x: -0.108426206, y: 0.010922698, z: 0.09653984}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 8971480721563721930}
+  m_Father: {fileID: 4006924483657263780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -80.552605, y: 4.389603, z: 50.17992}
+--- !u!1 &5720991122427443043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7167856325941221451}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Toe1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7167856325941221451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720991122427443043}
+  m_LocalRotation: {x: -0.043503534, y: -0.021011254, z: 0.8994226, w: -0.43440187}
+  m_LocalPosition: {x: -0.14688614, y: 0.30217883, z: 0.0032971953}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 5866510367140605913}
+  m_Father: {fileID: 6632367446032766608}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 4.3352966, y: -3.4497929, z: -133.41731}
+--- !u!1 &5833691601634804422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6632367446032766608}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6632367446032766608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833691601634804422}
+  m_LocalRotation: {x: 0.07935004, y: -0.13970198, z: 0.10328491, w: 0.98159015}
+  m_LocalPosition: {x: -0.51786965, y: 0.000000057220458, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 5852856097642311463}
+  - {fileID: 7167856325941221451}
+  - {fileID: 7359353408143984157}
+  m_Father: {fileID: 145855804991736644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -35.343872, y: 18.07583, z: -35.470207}
+--- !u!1 &5904004203345185855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145855804991736644}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145855804991736644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904004203345185855}
+  m_LocalRotation: {x: 0.000000077628656, y: -0.000000034499873, z: 0.7747621, w: 0.6322529}
+  m_LocalPosition: {x: -0.7338287, y: 0.000000076293944, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 6632367446032766608}
+  m_Father: {fileID: 3702186233553573423}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000068355066, y: 0.0000070481747, z: 135.87758}
+--- !u!1 &5921901233776911677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5948598833289184707}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailLeft_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5948598833289184707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921901233776911677}
+  m_LocalRotation: {x: -1.921824e-16, y: -1.698124e-15, z: -0.11245548, w: 0.99365675}
+  m_LocalPosition: {x: -0.284065, y: 0.00000030517577, z: 0.000000031787035}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3298737190872089938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.913767}
+--- !u!1 &5952356404955604200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029709061532314970}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029709061532314970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5952356404955604200}
+  m_LocalRotation: {x: 0.000000020966155, y: 0.0000000021235436, z: 0.7747618, w: 0.6322532}
+  m_LocalPosition: {x: -0.7338288, y: -0.000000076293944, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 8214782065668288960}
+  m_Father: {fileID: 211938591223996203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000011297046, y: -0.000011043477, z: 136.18758}
+--- !u!1 &6109522215648291170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5932920064322594273}
+  m_Layer: 0
+  m_Name: Ceratoferox_Tongue_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5932920064322594273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109522215648291170}
+  m_LocalRotation: {x: 0, y: 0, z: 0.014273159, w: 0.99989814}
+  m_LocalPosition: {x: -0.054510497, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6499289470764714635}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.11785958, y: 2.6623619, z: 1.5385725}
+--- !u!1 &6290694010282271702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7516742020914891609}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7516742020914891609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290694010282271702}
+  m_LocalRotation: {x: 0.000000032649524, y: 0.000000006650679, z: -0.2596867, w: 0.96569294}
+  m_LocalPosition: {x: -0.11649427, y: 0.000000076293944, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8179973008977655413}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000025613208, y: -1.9083327e-14, z: -0.0000004268868}
+--- !u!1 &6321041127897337742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7928239368414137873}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7928239368414137873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321041127897337742}
+  m_LocalRotation: {x: 0.16585551, y: 0.08010466, z: 0.88506806, w: -0.427469}
+  m_LocalPosition: {x: -0.15352432, y: 0.2938156, z: -0.07688312}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.99999994}
+  m_Children:
+  - {fileID: 2107663626388145021}
+  m_Father: {fileID: 8214782065668288960}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -18.922129, y: 12.860137, z: -135.6787}
+--- !u!1 &6347329698762606424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4614513142394794924}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4614513142394794924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347329698762606424}
+  m_LocalRotation: {x: 0.051749527, y: -0.1403564, z: 0.101980664, w: 0.9834745}
+  m_LocalPosition: {x: -0.15817246, y: 0.009959831, z: -0.053610608}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 4207354348884993756}
+  m_Father: {fileID: 4006924483657263780}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 7.493627, y: -15.53376, z: 10.816647}
+--- !u!1 &6505211796418169213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6505211796418169212}
+  - component: {fileID: 6505211796418169152}
+  - component: {fileID: 6505211796418169154}
+  - component: {fileID: 6505211796418169155}
+  - component: {fileID: 6505211796418169153}
+  m_Layer: 0
+  m_Name: VisionCone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6505211796418169212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796418169213}
+  m_LocalRotation: {x: 0.030843573, y: -0.7064338, z: 0.030843573, w: 0.7064338}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7069632029453259720}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 5, y: -90, z: 0}
+--- !u!54 &6505211796418169152
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796418169213}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6505211796418169154
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796418169213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &6505211796418169155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796418169213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Length: 35
+  BaseSize: 0.5
+  FOVAngle: 130
+  ElevationAngle: 50
+  Resolution: 5
+--- !u!114 &6505211796418169153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796418169213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 1024
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 8
+  MinimumVisibility: 0.7
+  LineOfSightUpdateMode: 0
+  CheckLineOfSightInterval: 0.2
+--- !u!1 &6505211796869960758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6505211796869960756}
+  - component: {fileID: 6505211796869960757}
+  m_Layer: 0
+  m_Name: AnimationRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6505211796869960756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796869960758}
+  m_LocalRotation: {x: -0, y: -0.38968658, z: -0, w: 0.9209476}
+  m_LocalPosition: {x: -3.7459905, y: 0, z: 0.12696575}
+  m_LocalScale: {x: 0.5719247, y: 0.58823526, z: 0.5709333}
+  m_Children:
+  - {fileID: 6505211797064405581}
+  m_Father: {fileID: 166101720480510034}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6505211796869960757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211796869960758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Effectors: []
+--- !u!1 &6505211797064405582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6505211797064405581}
+  - component: {fileID: 6505211797064405580}
+  m_Layer: 0
+  m_Name: HeadFollowPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6505211797064405581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211797064405582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6505211796869960756}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6505211797064405580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505211797064405582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c430f382484144e925c097c2d33cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 0.8
+  m_Data:
+    m_ConstrainedObject: {fileID: 7069632029453259720}
+    m_SourceObjects:
+      m_Length: 0
+      m_Item0:
+        transform: {fileID: 0}
+        weight: 1
+      m_Item1:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item2:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item3:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item4:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item5:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item6:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item7:
+        transform: {fileID: 0}
+        weight: 0
+    m_Offset: {x: 0, y: 0, z: 10}
+    m_MinLimit: -80
+    m_MaxLimit: 80
+    m_AimAxis: 1
+    m_UpAxis: 2
+    m_WorldUpType: 0
+    m_WorldUpObject: {fileID: 0}
+    m_WorldUpAxis: 2
+    m_MaintainOffset: 0
+    m_ConstrainedAxes:
+      x: 1
+      y: 1
+      z: 1
+  m_SourceObjectsGUIToggle: 1
+  m_SettingsGUIToggle: 1
+--- !u!1 &6517310724914882302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393279328166143050}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393279328166143050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6517310724914882302}
+  m_LocalRotation: {x: -0.051749524, y: 0.14035638, z: 0.1019807, w: 0.9834745}
+  m_LocalPosition: {x: -0.15817241, y: 0.009959831, z: 0.053610533}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 5214611802485285878}
+  m_Father: {fileID: 8003828027571470736}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -7.4936266, y: 15.533758, z: 10.816645}
+--- !u!1 &6563206194190934806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7069632029453259720}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7069632029453259720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563206194190934806}
+  m_LocalRotation: {x: -0.0000000024715696, y: -0.0000002292804, z: 0.082527936, w: 0.99658877}
+  m_LocalPosition: {x: -0.229836, y: 0.00000015258789, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5765418733714370203}
+  - {fileID: 4025357630166655370}
+  - {fileID: 8896140905402379497}
+  - {fileID: 6505211796418169212}
+  m_Father: {fileID: 4975147115222838425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 3.1007683, y: 3.9729395, z: -17.298048}
+--- !u!1 &6740366804572943976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5049721284472121888}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5049721284472121888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740366804572943976}
+  m_LocalRotation: {x: -0.000000014945572, y: -0.000000022322075, z: 0.3827794, w: 0.9238398}
+  m_LocalPosition: {x: -0.80809265, y: -0.000000019073486, z: 0.000000076293944}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 8003828027571470736}
+  m_Father: {fileID: 3463587952514189673}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000022598786, y: -0.00000085110855, z: 24.362776}
+--- !u!1 &6791327972472912559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100851482110724442}
+  m_Layer: 0
+  m_Name: Ceratoferox_Tongue_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1100851482110724442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791327972472912559}
+  m_LocalRotation: {x: 0.98261356, y: 0.18566257, z: 0.0000009981061, w: -0.0000015437315}
+  m_LocalPosition: {x: 0.010082087, y: -0.025076445, z: -0.0000007629394}
+  m_LocalScale: {x: 0.9999997, y: 0.99999976, z: 1}
+  m_Children:
+  - {fileID: 6499289470764714635}
+  m_Father: {fileID: 5765418733714370203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0556144, y: 179.8436, z: 157.58504}
+--- !u!1 &6831766079689944104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5091368936282756003}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5091368936282756003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831766079689944104}
+  m_LocalRotation: {x: 0.5252746, y: -0.46307078, z: 0.5749094, w: -0.42323902}
+  m_LocalPosition: {x: -0.21720023, y: -0.08092209, z: -0.33619118}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8689664602186881532}
+  m_Father: {fileID: 7260458244460831618}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 13.119014, y: 90.240944, z: -88.94213}
+--- !u!1 &6893380252556133643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2760976421514308221}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2760976421514308221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6893380252556133643}
+  m_LocalRotation: {x: 0.0000000014074307, y: -0.000000014015766, z: 0.099915184, w: 0.99499595}
+  m_LocalPosition: {x: -0.12257675, y: -0.000000076293944, z: 0.000000038146972}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8607168760291057285}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000008537737, y: 0.0000006403302, z: 0}
+--- !u!1 &7123617486805858445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5585074629699531771}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5585074629699531771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123617486805858445}
+  m_LocalRotation: {x: -0.52527577, y: 0.46306917, z: 0.5749107, w: -0.42323756}
+  m_LocalPosition: {x: -0.21720023, y: -0.080923915, z: 0.33619064}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 3463587952514189673}
+  m_Father: {fileID: 7260458244460831618}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -8.632453, y: -90.94768, z: -83.74353}
+--- !u!1 &7360024073698508838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8689664602186881532}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8689664602186881532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360024073698508838}
+  m_LocalRotation: {x: 0.4096561, y: -0.02742383, z: -0.050112814, w: 0.9104496}
+  m_LocalPosition: {x: -0.2819577, y: -0.000000076293944, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 336750542226059945}
+  m_Father: {fileID: 5091368936282756003}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 20.887175, y: -17.637886, z: -25.34776}
+--- !u!1 &8096501529114526540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5214611802485285878}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5214611802485285878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096501529114526540}
+  m_LocalRotation: {x: 5.4756544e-10, y: -8.242222e-10, z: 0.09628478, w: 0.9953538}
+  m_LocalPosition: {x: -0.11649429, y: -0.000000076293944, z: 0.000000038146972}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1393279328166143050}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.00000042688686, y: 3.1805545e-15, z: -0.00000042688674}
+--- !u!1 &8317944679068555745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6416099782596149203}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6416099782596149203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317944679068555745}
+  m_LocalRotation: {x: -0.20522368, y: -0.099118665, z: 0.8767764, w: -0.42346427}
+  m_LocalPosition: {x: -0.15804264, y: 0.28812328, z: 0.05138607}
+  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+  m_Children:
+  - {fileID: 7281342995098161662}
+  m_Father: {fileID: 8214782065668288960}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 20.341797, y: -17.114147, z: -131.53355}
+--- !u!1 &8364588299707242800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211938591223996203}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211938591223996203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364588299707242800}
+  m_LocalRotation: {x: -0.6106311, y: 0.63297194, z: 0.3816526, w: 0.28428417}
+  m_LocalPosition: {x: 0.00000022888183, y: 0.00000030517577, z: 0.17248398}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1029709061532314970}
+  m_Father: {fileID: 2087226241231237074}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -33.578632, y: 159.44691, z: -54.097904}
+--- !u!1 &8408005747771913442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7281342995098161662}
+  m_Layer: 0
+  m_Name: Ceratoferox_ L Toe21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7281342995098161662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408005747771913442}
+  m_LocalRotation: {x: 0.0000000037252903, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12307588, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6416099782596149203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -1.908333e-14, y: -0.0000006403302, z: -0.0000017075474}
+--- !u!1 &8593391420639726137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9008415989661349953}
+  m_Layer: 0
+  m_Name: Ceratoferox_TailRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9008415989661349953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593391420639726137}
+  m_LocalRotation: {x: 0.00000012567894, y: 0.0000000090486445, z: 0.12720668, w: 0.99187624}
+  m_LocalPosition: {x: -0.25833932, y: -0.00000015258789, z: 0.000000076293944}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 0.99999994}
+  m_Children:
+  - {fileID: 7899478002043218707}
+  m_Father: {fileID: 3729447700876516418}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000018521825, y: 0.0000032361634, z: 14.616413}
+--- !u!1 &8610437612009186315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8896140905402379497}
+  m_Layer: 0
+  m_Name: Ceratoferox_CheekRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8896140905402379497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610437612009186315}
+  m_LocalRotation: {x: -0.042993024, y: -0.15742664, z: -0.77347857, w: 0.61245364}
+  m_LocalPosition: {x: 0.057433642, y: 0.2370637, z: -0.20000063}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_Children: []
+  m_Father: {fileID: 7069632029453259720}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 3.0590844, y: 6.9986806, z: -82.88251}
+--- !u!1 &8770989978354260737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4159394541833304407}
+  - component: {fileID: 551716259169035182}
+  - component: {fileID: 1640587175365902876}
+  m_Layer: 0
+  m_Name: RHandHeavyACollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4159394541833304407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770989978354260737}
+  m_LocalRotation: {x: 0, y: 0, z: -0.6307435, w: 0.7759914}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006924483657263780}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.21}
+--- !u!136 &551716259169035182
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770989978354260737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.7
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.43, z: 0}
+--- !u!114 &1640587175365902876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770989978354260737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc203e12cd250724db12f22a5d3e02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamages: 50
+  maxActiveTime: 1
+--- !u!1 &8825232803914609584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4207354348884993756}
+  m_Layer: 0
+  m_Name: Ceratoferox_ R Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4207354348884993756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825232803914609584}
+  m_LocalRotation: {x: -8.967218e-11, y: 9.269954e-10, z: 0.09628478, w: 0.9953538}
+  m_LocalPosition: {x: -0.116494365, y: 0.000000038146972, z: -0.000000038146972}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4614513142394794924}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000008537736, y: 0.00000010672167, z: -0.0000008537735}
+--- !u!1 &8994983927462837944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5765418733714370203}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Ponytail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5765418733714370203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994983927462837944}
+  m_LocalRotation: {x: 1.1808942e-12, y: 0.000001263399, z: -0.45550936, w: 0.890231}
+  m_LocalPosition: {x: -0.07784324, y: 0.19296844, z: -0.0000001506193}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 1100851482110724442}
+  m_Father: {fileID: 7069632029453259720}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.00000012698717, y: 0.000007245767, z: -2.6918309}
+--- !u!1 &9014767728133052671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4975147115222838425}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4975147115222838425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014767728133052671}
+  m_LocalRotation: {x: 0.0000000014790839, y: 0.0000002659412, z: -0.09559653, w: 0.99542016}
+  m_LocalPosition: {x: -0.37875283, y: -0.00017974853, z: -4.9883964e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7069632029453259720}
+  m_Father: {fileID: 7260458244460831618}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -3.68865, y: -2.4406204, z: -18.059246}
+--- !u!1 &9016458545301783795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5069097223277491026}
+  - component: {fileID: 2138072936069009169}
+  - component: {fileID: 3926640411386684498}
+  m_Layer: 0
+  m_Name: LHandComboHitCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5069097223277491026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9016458545301783795}
+  m_LocalRotation: {x: 0, y: 0, z: -0.6573095, w: 0.7536208}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8003828027571470736}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -82.19}
+--- !u!136 &2138072936069009169
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9016458545301783795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.7
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.43, z: 0}
+--- !u!114 &3926640411386684498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9016458545301783795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc203e12cd250724db12f22a5d3e02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamages: 5
+  maxActiveTime: 0.5
+--- !u!1 &9115573250044575364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7260458244460831618}
+  m_Layer: 0
+  m_Name: Ceratoferox_ Spine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7260458244460831618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115573250044575364}
+  m_LocalRotation: {x: 0.000000001439061, y: 0.0000007162752, z: -0.25890744, w: 0.96590215}
+  m_LocalPosition: {x: -0.3788688, y: -0.00026115417, z: -7.258495e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5585074629699531771}
+  - {fileID: 4975147115222838425}
+  - {fileID: 5091368936282756003}
+  m_Father: {fileID: 5891957920250285200}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.2696278, y: 0.6894995, z: -19.565298}
+--- !u!1 &9200473871201891552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4025357630166655370}
+  m_Layer: 0
+  m_Name: Ceratoferox_CheekLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4025357630166655370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200473871201891552}
+  m_LocalRotation: {x: -0.6124536, y: 0.77347827, z: 0.15742746, w: 0.04299494}
+  m_LocalPosition: {x: 0.057433337, y: 0.2370628, z: 0.19992764}
+  m_LocalScale: {x: 1.0000001, y: 0.9999998, z: 0.9999997}
+  m_Children: []
+  m_Father: {fileID: 7069632029453259720}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 3.577338, y: 176.39989, z: -90.63916}

@@ -1,0 +1,4143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9149215285313657020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 467792b4a24ce2d4a9eb462973b15466
+  position: {x: -1943.5387, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: Go to the player position if seen
+  drawGizmos: 0
+  children:
+  - {fileID: -5296660222648442414}
+  - {fileID: 9138081652536446768}
+--- !u!114 &-8949376862562057659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 214da505621f3064693ca39aab23b86b
+  position: {x: -681.0001, y: 1391.6083}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: -3171335775321716931}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-8595449604788698150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6cb72f6353bf3de4bb5c7601f45089c9
+  position: {x: -681, y: 907}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 63630210322256940}
+  - {fileID: -1876814956696508820}
+  - {fileID: -8037293821264186483}
+--- !u!114 &-8508746175964500822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cfd633c07548c8f498066f9edf643c42
+  position: {x: -369.0001, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 5
+  cooldown: 4
+--- !u!114 &-8440596950904815281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0449562d6bd6ee4084aea9bb56a2d54, type: 3}
+  m_Name: HeardSomething
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9b84b7275da3f3e4db0f753d29509e12
+  position: {x: -1421.5387, y: 1999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-8418017692532350595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5803ae999ab92d34db4127ba83c24117
+  position: {x: -1592.5387, y: 1709}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: Go to the estimated player position if not seen
+  drawGizmos: 0
+  children:
+  - {fileID: 4432236085958753135}
+  - {fileID: -6794223766034284963}
+--- !u!114 &-8388723414518573864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6eb222447441479f549f7c39faaaa, type: 3}
+  m_Name: CheckCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a8e0ae40ae4925d41bf2dfecea591a07
+  position: {x: 215.99988, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 4
+--- !u!114 &-8241399955195457604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f109934cb95d24eb43a8457a5cc6cc, type: 3}
+  m_Name: GT_GoToCurrentGoal
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6d6c59e241c533549b88a4ded47f7d9b
+  position: {x: -184.00003, y: 132.00002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  noPlayerSpeed: 40
+  yesPlayerSpeed: 20
+  angularSpeed: 720
+  stoppingDistance: 5
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 20
+--- !u!114 &-8178292342298655708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8817b98e5eb415f459aa94d3a56d0c00
+  position: {x: 517.9999, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 4
+  cooldown: 8
+--- !u!114 &-8037293821264186483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 35d222308970157448266b5e49a6ad16
+  position: {x: -681, y: 1137}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 'Main Action Procedure
+
+'
+  drawGizmos: 0
+  children:
+  - {fileID: -2735099180782602560}
+  - {fileID: -8949376862562057659}
+  - {fileID: 4217476380339918676}
+--- !u!114 &-7913429998005330219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960114fb4a261ea4f8b492df758b0974, type: 3}
+  m_Name: GT_IsGoalTimerUp
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2775fca8e35270145838b418151946e1
+  position: {x: -90.000015, y: 872.247}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-7790974994288355395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2dd870b68cc10024c91eb4d3fcc9abe5
+  position: {x: -1089.5387, y: 1999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 3
+--- !u!114 &-7686769819136802702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 334acc75b2f3049458a2ede5818ec2a6
+  position: {x: 268, y: 480.24698}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1208999969187286802}
+  - {fileID: -7312337774165616727}
+--- !u!114 &-7682556771942119133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a3d643c5ba9443b98311707a8105e, type: 3}
+  m_Name: InRangeOfPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c6b690dfd31ba8e418862b41e6f7a729
+  position: {x: 863.9997, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  range: 15
+--- !u!114 &-7630387508742906002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4fa0eb6abdd058541b1a3763b9a8b59b
+  position: {x: 125.99988, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 5
+  cooldown: 4
+--- !u!114 &-7372835725006751285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c09d38665182afa449bd47a26d09dcd1
+  position: {x: 339, y: 967.24695}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5753156623350387373}
+  - {fileID: -548062325008989053}
+  - {fileID: 1669768136079194684}
+  - {fileID: 8656265888125767779}
+--- !u!114 &-7312337774165616727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 04cf9e0137f6413409c88717ff6d35aa
+  position: {x: 659.9998, y: 650.247}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 6106313846669957390}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-6794223766034284963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2ea6667f6e5e242ba87a0d3a876ebc, type: 3}
+  m_Name: GoToEstimatedPlayerPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c4d2422c6f78de649bbdfdc454dcbe7d
+  position: {x: -1517.5387, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  range: 2
+  searchDistance: 3
+--- !u!114 &-6625749758864071790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a3d643c5ba9443b98311707a8105e, type: 3}
+  m_Name: InRangeOfPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 54f0daa454d98bb4cbfb008e4ef36c9c
+  position: {x: 1013.9998, y: 2181}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  range: 10
+--- !u!114 &-6574814599594384750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 19f71eb760a4fd14a8bd7e1ed991cd93
+  position: {x: -802.0001, y: 1844}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 585195848919969036}
+--- !u!114 &-6452398972982844007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee64948bda9e2fe4fb5ad88265395141, type: 3}
+  m_Name: RandomSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5f5b89db81daaea4d8232efaaee291f2
+  position: {x: -145.00018, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 6445564458702466410}
+  - {fileID: 205124132568429403}
+--- !u!114 &-6445418455464079222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221d89e6de07b44b84e708b1a7c39e1, type: 3}
+  m_Name: IsPlayerIntercepted
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0f6baae6b4bedae46ae40dfb34d39801
+  position: {x: -2243, y: 2301}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5958379143974248811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa4d27bd2bd9e843906f36f21ac50d8, type: 3}
+  m_Name: IsPlayerDetected
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 27d2519c895337448b7e34a5c407f784
+  position: {x: -1484.4525, y: 1064}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5641444108976792018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ca67986ee9d01cf4f9d4746bc6812642
+  position: {x: -2242.7107, y: 1977.7103}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: Circle player if attacked by Aracks
+  drawGizmos: 0
+  children:
+  - {fileID: 59912728796530600}
+  - {fileID: 5890032561417371597}
+  - {fileID: -4298094433544293684}
+--- !u!114 &-5296660222648442414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823b3aa877a3c704eb8ed11a22768c00, type: 3}
+  m_Name: CanSeePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ae4b733911f26cb4fa1ab735e5eeca42
+  position: {x: -2039.5388, y: 1999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5179584905433687340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c4137734489ef478d5b785dff84df9, type: 3}
+  m_Name: SetPauseAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 681bdc03e6608c34da5314ccadc7e9a9
+  position: {x: 275.99994, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  pauseDuration: 2.5
+  lockLookAtPlayer: 0
+  lockDuration: 0
+--- !u!114 &-4325651866685961000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8632454520b74d0499d5a587cbae2dec, type: 3}
+  m_Name: FocusPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f2cfc08272f9bb64a93074050c322be4
+  position: {x: -873, y: 658}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-4298094433544293684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e608546c8c5f4468b299404990ed46, type: 3}
+  m_Name: GT_InterceptAttackedPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 08de1aa7f25cab944a6cbd1d3d45c49f
+  position: {x: -2158, y: 2128}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 2
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 3
+--- !u!114 &-3981833598058492854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7fee31d6ec3b21148a47adf203994e29
+  position: {x: -1375.8851, y: 819.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 8106877453807900662}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-3171335775321716931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 878d880323229f34ca6a738aff22b505
+  position: {x: -681.0001, y: 1490.6082}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4558558414487734072}
+  - {fileID: -875845575309045928}
+--- !u!114 &-2735099180782602560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 05f7cdd82c9166b45886d1065cb0e6a9
+  position: {x: -1592.5387, y: 1392.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 5601860498866792199}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-2398213312583173505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7890997f2be637478d06ff5776f10e5, type: 3}
+  m_Name: GT_PositionAroundGoalWithoutTurning
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: eecf986323be6f64b8e574a10b952a8e
+  position: {x: 1054, y: 1403.2468}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  minDistanceFromGoal: 0
+  maxDistanceFromGoal: 30
+--- !u!114 &-2055661947339847082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0c2fec2deb6cc7f47a7e37cb103732ed
+  position: {x: 1412.9999, y: 479.99997}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 6009500882717452347}
+  - {fileID: -51945371007107532}
+  - {fileID: -628868100077741155}
+  - {fileID: -1747712364714137319}
+--- !u!114 &-1876814956696508820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ce2b597b18bd62548b40bea0c4540a2f
+  position: {x: -843.99994, y: 1137}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  duration: 2.5
+--- !u!114 &-1747712364714137319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b4428cb151ecc4eafd4a156b6b352a, type: 3}
+  m_Name: GT_ResetGoalTimer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6d31963c1f7210b4e92056a9246fd164
+  position: {x: 1751.9998, y: 645}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-1712752868582399500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 927e56e9507c5db4899c18dea042c622
+  position: {x: 867.9998, y: 1122.2468}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4843716871722489093}
+  - {fileID: 1983782470282185318}
+--- !u!114 &-1374953742359473281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b042c930a5b164dbeb891468d5fa25, type: 3}
+  m_Name: GT_ComboHitAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dc2d24486fbac7840864070eaf2e18f5
+  position: {x: 365.99982, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-1232647214755428858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6eb222447441479f549f7c39faaaa, type: 3}
+  m_Name: CheckCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a150ccb2b06a3f1468891a65a050904c
+  position: {x: 1179.9998, y: 2069.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 6
+--- !u!114 &-1198062197944553842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 467aa9bd622367040838ad5c3380847d
+  position: {x: 1054, y: 967.24695}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -1712752868582399500}
+  - {fileID: 5120654870831761603}
+  - {fileID: 8194362296710713442}
+--- !u!114 &-1193505198617047405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 817e38c156c35dd48bde336b32cd91b4
+  position: {x: 112.99982, y: 1537.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 8621403712524421917}
+  - {fileID: 9029096200644294777}
+--- !u!114 &-875845575309045928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934335d5f8298a241909b2fd50028650, type: 3}
+  m_Name: GT_StopLooking
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f21fe24b54df7af42a54c3a7085efcbf
+  position: {x: -552.0001, y: 1638.6083}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-628868100077741155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f109934cb95d24eb43a8457a5cc6cc, type: 3}
+  m_Name: GT_GoToCurrentGoal
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3c09381be8105294f9787c4f780cdd71
+  position: {x: 1523.9998, y: 645}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  noPlayerSpeed: 40
+  yesPlayerSpeed: 20
+  angularSpeed: 720
+  stoppingDistance: 5
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 20
+--- !u!114 &-596475227684311124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a7826523709b84eaa2051109b0e7e1, type: 3}
+  m_Name: GT_LookAtFocusedPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c8b59b72e37b7204c971aee093db1603
+  position: {x: -710, y: 1773}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-548062325008989053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9ee7b1a6e57bb4dafce76d7a540e8a, type: 3}
+  m_Name: LoudestSoundPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: efed2dbb473d75044ac5aa1b3afdadda
+  position: {x: 207, y: 1146.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &-273426340446021357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d8471096761f9724dac95cca1a562ac5
+  position: {x: -681, y: 475}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1256936478660159038}
+  - {fileID: -4325651866685961000}
+  - {fileID: 2172056964503212709}
+--- !u!114 &-51945371007107532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4b567446737b25f4aa049c1905d7a09b
+  position: {x: 1312.9996, y: 645}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: GT goes to an other goal !
+  drawGizmos: 0
+  message: GT goes to an other goal !
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: GreaterThreatBehaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 1942798289762625698}
+  treeState: 0
+  nodes:
+  - {fileID: 1942798289762625698}
+  - {fileID: 4303466153142367080}
+  - {fileID: 2919433785545762966}
+  - {fileID: -1198062197944553842}
+  - {fileID: 5120654870831761603}
+  - {fileID: 8194362296710713442}
+  - {fileID: 5753156623350387373}
+  - {fileID: -548062325008989053}
+  - {fileID: -7372835725006751285}
+  - {fileID: 8656265888125767779}
+  - {fileID: -273426340446021357}
+  - {fileID: 1256936478660159038}
+  - {fileID: -4325651866685961000}
+  - {fileID: 2172056964503212709}
+  - {fileID: -3981833598058492854}
+  - {fileID: -5958379143974248811}
+  - {fileID: -8595449604788698150}
+  - {fileID: 63630210322256940}
+  - {fileID: -1876814956696508820}
+  - {fileID: -8037293821264186483}
+  - {fileID: -2735099180782602560}
+  - {fileID: 5601860498866792199}
+  - {fileID: 6785991203684763265}
+  - {fileID: 5209648036750138078}
+  - {fileID: 1380448491888090380}
+  - {fileID: -5296660222648442414}
+  - {fileID: -9149215285313657020}
+  - {fileID: 9138081652536446768}
+  - {fileID: -8418017692532350595}
+  - {fileID: 4432236085958753135}
+  - {fileID: -6794223766034284963}
+  - {fileID: -8440596950904815281}
+  - {fileID: 6032001425584539356}
+  - {fileID: 6432348980834578412}
+  - {fileID: -7790974994288355395}
+  - {fileID: 4268105513110814584}
+  - {fileID: 4217476380339918676}
+  - {fileID: 6910393918877257878}
+  - {fileID: 4650298512287078528}
+  - {fileID: -6452398972982844007}
+  - {fileID: 6445564458702466410}
+  - {fileID: 205124132568429403}
+  - {fileID: 9218964935869921984}
+  - {fileID: 5366979754303760584}
+  - {fileID: -7682556771942119133}
+  - {fileID: 8323879013317286512}
+  - {fileID: -6625749758864071790}
+  - {fileID: 5370009609070413870}
+  - {fileID: 9029096200644294777}
+  - {fileID: 3070920080496149640}
+  - {fileID: -5179584905433687340}
+  - {fileID: 4719247189364445980}
+  - {fileID: 5414698468665672791}
+  - {fileID: -2055661947339847082}
+  - {fileID: 6009500882717452347}
+  - {fileID: -628868100077741155}
+  - {fileID: -1747712364714137319}
+  - {fileID: -7686769819136802702}
+  - {fileID: -7913429998005330219}
+  - {fileID: 3981758904949771697}
+  - {fileID: 1208999969187286802}
+  - {fileID: 6106313846669957390}
+  - {fileID: -7312337774165616727}
+  - {fileID: -1712752868582399500}
+  - {fileID: 4843716871722489093}
+  - {fileID: 2093191797423291381}
+  - {fileID: 1983782470282185318}
+  - {fileID: -2398213312583173505}
+  - {fileID: -51945371007107532}
+  - {fileID: 7612162983235388535}
+  - {fileID: 7439581938110709085}
+  - {fileID: -8241399955195457604}
+  - {fileID: 2354367381223553821}
+  - {fileID: 1160804572291727643}
+  - {fileID: 834945471567258316}
+  - {fileID: -1374953742359473281}
+  - {fileID: 5432735481351693020}
+  - {fileID: 1669768136079194684}
+  - {fileID: 829684121147460159}
+  - {fileID: -8388723414518573864}
+  - {fileID: -1232647214755428858}
+  - {fileID: -8178292342298655708}
+  - {fileID: 8759676397237694652}
+  - {fileID: -8508746175964500822}
+  - {fileID: -7630387508742906002}
+  - {fileID: -8949376862562057659}
+  - {fileID: 4558558414487734072}
+  - {fileID: 7275764150445288422}
+  - {fileID: -596475227684311124}
+  - {fileID: -3171335775321716931}
+  - {fileID: -875845575309045928}
+  - {fileID: -6574814599594384750}
+  - {fileID: 585195848919969036}
+  - {fileID: -5641444108976792018}
+  - {fileID: 59912728796530600}
+  - {fileID: -4298094433544293684}
+  - {fileID: 5890032561417371597}
+  - {fileID: -6445418455464079222}
+  - {fileID: 8106877453807900662}
+  - {fileID: 2088352096604413228}
+  - {fileID: 3610775331316223529}
+  - {fileID: -1193505198617047405}
+  - {fileID: 6788347869835949783}
+  - {fileID: 8621403712524421917}
+  blackboard:
+    moveToPosition: {x: -31.399832, y: 0, z: -21.626135}
+    lastPlayerSeenPosition: {x: -6.84, y: 1, z: -28.4}
+    lastPlayerSeenEstimatedDirection: {x: 0.69168437, y: 0, z: -0.7221999}
+    hasEstimationOfPlayerDirection: 1
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: -0.02
+    clawAttackCD: -0.02
+    disengageJumpCD: -0.02
+    pausingAfterAttack: 3.7024593
+    GT_heavyClawAttackCD: 0.69146645
+    GT_ComboHitAttackCD: -0.003782067
+    GT_JumpAttackCD: 29.20246
+    lookAtPlayerLock: 3.7024593
+    attackingAracks:
+    - {fileID: 0}
+    - {fileID: 0}
+    playerIntercepted: 1
+    canAttackPlayer: 1
+--- !u!114 &59912728796530600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d7b016535ffe64a9de51c5019c421f, type: 3}
+  m_Name: GT_IsPlayerAttackedByAracks
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dbcd4993ab7d706499f3af4b05f211cf
+  position: {x: -2395, y: 2128}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &63630210322256940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cd4afe27d537543b557c7b22b7494b, type: 3}
+  m_Name: GT_Roar
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6a93abe0c52c11e45910a2d9428076c8
+  position: {x: -1022.99994, y: 1137}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &205124132568429403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 932eddc9b165fa64bb3ed835df1cc0ea
+  position: {x: 125.99988, y: 2197}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 834945471567258316}
+  - {fileID: -7630387508742906002}
+  - {fileID: -5179584905433687340}
+--- !u!114 &585195848919969036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88a88a7420b5014aaafb7646977768c, type: 3}
+  m_Name: IsLookingAtPlayerLocked
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bdc3d6ba38c70ad4cbe4eb88cc23ee6b
+  position: {x: -821.0001, y: 1956}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &829684121147460159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6eb222447441479f549f7c39faaaa, type: 3}
+  m_Name: CheckCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9d3d3aef3b396f2449199c133f270480
+  position: {x: -312.00015, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 5
+--- !u!114 &834945471567258316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc09b91ebfd63ea41a36e5092f7a7468, type: 3}
+  m_Name: GT_HeavyClawAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 42a9bd1103a1b5a49b31536bdfc97c04
+  position: {x: -37.00009, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  rightClawAttack: 1
+--- !u!114 &1160804572291727643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc09b91ebfd63ea41a36e5092f7a7468, type: 3}
+  m_Name: GT_HeavyClawAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ce5f1409f71e02d47b273c5f36edbc04
+  position: {x: -528.00006, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  rightClawAttack: 0
+--- !u!114 &1208999969187286802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 988ccb44e909ac5449875f22945697e1
+  position: {x: -90.000015, y: 650.247}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3981758904949771697}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &1256936478660159038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa4d27bd2bd9e843906f36f21ac50d8, type: 3}
+  m_Name: IsPlayerDetected
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0be6297e6c3128c4eb454b3b49bf82d7
+  position: {x: -1038, y: 658}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &1380448491888090380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec6f9a7cec17b14eb8082f64cea0ee6, type: 3}
+  m_Name: WaitForPauseAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8a441e2dce65a074d8e4dae98ce3845a
+  position: {x: -2299.76, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &1669768136079194684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f4606a51b60214386a8b6b78dc5f02, type: 3}
+  m_Name: GT_InterceptLoudestSound
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 262a8e4bd5f0ccc4993fbcb312532dc1
+  position: {x: 390.99994, y: 1146.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
+  speed: 12
+  angularSpeed: 720
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 2
+--- !u!114 &1942798289762625698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 27511bd9db0ef51419e8f22ea384b009
+  position: {x: -22.057518, y: -191.84001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 7612162983235388535}
+--- !u!114 &1983782470282185318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d15086813570444915fee1c87618d1, type: 3}
+  m_Name: GT_PositionAroundGoal
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 367a11a4139225143b0df0fcc1d35c1e
+  position: {x: 1054, y: 1271.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  minDistanceFromGoal: 0
+  maxDistanceFromGoal: 30
+--- !u!114 &2088352096604413228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beafcc6b3baf0a940953e66bd1db1993, type: 3}
+  m_Name: Failure
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: abe6b2773d192bf459826de3c458eccc
+  position: {x: -1301, y: 1064.225}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3610775331316223529}
+--- !u!114 &2093191797423291381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6c4002dcbdb2b4fb48d35f2fdfe090, type: 3}
+  m_Name: IsPlayerPresent
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ae319a80a1410bc4fb81fa577f30bb92
+  position: {x: 867.9998, y: 1403.2468}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &2172056964503212709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 50cfc1402a40c754fae352f2d8d6293a
+  position: {x: -681, y: 658.0002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3981833598058492854}
+  - {fileID: -8595449604788698150}
+--- !u!114 &2354367381223553821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b4428cb151ecc4eafd4a156b6b352a, type: 3}
+  m_Name: GT_ResetGoalTimer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 062d09cbcd9c0954db6b4100a594afd6
+  position: {x: 52.99998, y: 132.00002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &2919433785545762966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bf77e26564daa41815cba042a730aa, type: 3}
+  m_Name: InterruptSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 8b76eb97a34c1df40958215a5356c839
+  position: {x: 268, y: 252}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -273426340446021357}
+  - {fileID: -7686769819136802702}
+  - {fileID: -2055661947339847082}
+--- !u!114 &3070920080496149640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c4137734489ef478d5b785dff84df9, type: 3}
+  m_Name: SetPauseAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4df9f58b2ab60794695936ef5e27dd90
+  position: {x: -216.00008, y: 2335.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  pauseDuration: 2.5
+  lockLookAtPlayer: 0
+  lockDuration: 0
+--- !u!114 &3610775331316223529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298a2b7fde3a6f44db2c9fbe6c4cd6c1, type: 3}
+  m_Name: ResetWhenPlayerNotDetected
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 92858c0d7a074fe4d8cab4f81f2f0732
+  position: {x: -1335, y: 1169}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &3981758904949771697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8617d8522408b82438e7f8bfa2154554
+  position: {x: -90.000015, y: 757.247}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: -7913429998005330219}
+--- !u!114 &4217476380339918676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 24d24517b8ed80e4bb709f5d15f2e30a
+  position: {x: 112.99982, y: 1391.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: -1193505198617047405}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &4268105513110814584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc45b83f1b008ab40afbc7b723e4276a, type: 3}
+  m_Name: RandomlyChasePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b596ec87fd952744eb26b89f4d73feab
+  position: {x: -1149.9801, y: 1709.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 480
+  stoppingDistance: 1
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 100
+  circleRadius: 2
+  circleDistance: 12
+  circlePerturbation: 2
+--- !u!114 &4303466153142367080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 7ccae1d41f03ed24fab039ab879d1bf2
+  position: {x: 268, y: 132}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 2919433785545762966}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &4432236085958753135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817e17affe90aff40b9ce7697e1e1356, type: 3}
+  m_Name: HasPlayerDirectionEstimation
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4447f2bb6248c1541b5aa38a36ec2ee7
+  position: {x: -1760.5387, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &4558558414487734072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1ee579d04a8d38a47aca1b7c6cf46a2c
+  position: {x: -802, y: 1638.6083}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 7275764150445288422}
+  - {fileID: -6574814599594384750}
+  - {fileID: -596475227684311124}
+--- !u!114 &4650298512287078528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 20a2f69dd5251204ba54230a792236c5
+  position: {x: -145.00018, y: 1910.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 6910393918877257878}
+  - {fileID: 829684121147460159}
+  - {fileID: -6452398972982844007}
+--- !u!114 &4719247189364445980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c4137734489ef478d5b785dff84df9, type: 3}
+  m_Name: SetPauseAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d63d1a32400e09d45a7f5a7abcc83f4c
+  position: {x: 667.99994, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  pauseDuration: 2
+  lockLookAtPlayer: 0
+  lockDuration: 0
+--- !u!114 &4843716871722489093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c93f428e3d872f24fa3d939e717e3485
+  position: {x: 867.9998, y: 1271.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 2093191797423291381}
+  - {fileID: -2398213312583173505}
+--- !u!114 &5120654870831761603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6de7b66fa1d3e1d4e887504c9815c011
+  position: {x: 1054, y: 1131.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  speed: 7
+  angularSpeed: 720
+  stoppingDistance: 2
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 20
+  tolerance: 2
+--- !u!114 &5209648036750138078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 00b54da280521db4283563f9cfbf0648
+  position: {x: -2374.76, y: 1709}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: Wait after attacks
+  drawGizmos: 0
+  children:
+  - {fileID: 6785991203684763265}
+  - {fileID: 1380448491888090380}
+--- !u!114 &5366979754303760584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 174cc1046bd373b4094f98a4999abd81
+  position: {x: 1182, y: 1910.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -7682556771942119133}
+  - {fileID: 8323879013317286512}
+  - {fileID: -1232647214755428858}
+  - {fileID: 5432735481351693020}
+  - {fileID: 8759676397237694652}
+  - {fileID: 5370009609070413870}
+--- !u!114 &5370009609070413870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c4137734489ef478d5b785dff84df9, type: 3}
+  m_Name: SetPauseAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: eed7c46ae0cc7ca4998b688b7aa56aeb
+  position: {x: 1638.9998, y: 2069.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  pauseDuration: 4.5
+  lockLookAtPlayer: 1
+  lockDuration: 4.5
+--- !u!114 &5414698468665672791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a3d643c5ba9443b98311707a8105e, type: 3}
+  m_Name: InRangeOfPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 753adfe6ff792ec4b9bd8cb6da862136
+  position: {x: 65.99982, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  range: 4
+--- !u!114 &5432735481351693020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa01c228bf814cab9529447e5640f, type: 3}
+  m_Name: GT_JumpAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 12e5631214a2f874ba5799d242d15db2
+  position: {x: 1331.9998, y: 2069.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &5601860498866792199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bf77e26564daa41815cba042a730aa, type: 3}
+  m_Name: InterruptSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8041884b88c317b479ee3b9e8cb23df3
+  position: {x: -1592.5387, y: 1510}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5209648036750138078}
+  - {fileID: -5641444108976792018}
+  - {fileID: -9149215285313657020}
+  - {fileID: -8418017692532350595}
+  - {fileID: 6032001425584539356}
+  - {fileID: 4268105513110814584}
+--- !u!114 &5753156623350387373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0449562d6bd6ee4084aea9bb56a2d54, type: 3}
+  m_Name: HeardSomething
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: eea42582c1a6ab54286ab723642d6081
+  position: {x: 37.99991, y: 1146.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &5890032561417371597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4d71d82f0e04c55478c99a715a4b0084
+  position: {x: -2243, y: 2201}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6445418455464079222}
+--- !u!114 &6009500882717452347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9336502a0e767a74c990bc60f21595ef, type: 3}
+  m_Name: GT_ChangeGoal
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5450575c1e82e6a45ae2c69954198aa0
+  position: {x: 1112.9996, y: 645}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &6032001425584539356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8fbe586c47aa44848bd0d53ec8971d76
+  position: {x: -1264.5387, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: Go to the last heard sound
+  drawGizmos: 0
+  children:
+  - {fileID: -8440596950904815281}
+  - {fileID: 6432348980834578412}
+  - {fileID: -7790974994288355395}
+--- !u!114 &6106313846669957390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bf77e26564daa41815cba042a730aa, type: 3}
+  m_Name: InterruptSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: fe7e561be2d0bbb47bfde0b986e47a78
+  position: {x: 659.9998, y: 767.247}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -7372835725006751285}
+  - {fileID: -1198062197944553842}
+--- !u!114 &6432348980834578412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9ee7b1a6e57bb4dafce76d7a540e8a, type: 3}
+  m_Name: LoudestSoundPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 61d222a2bd98f194487760a90ae5aa69
+  position: {x: -1271.5386, y: 1999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &6445564458702466410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d0b98823d628b054ca69d0c1b5850c1e
+  position: {x: -366.00012, y: 2197}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1160804572291727643}
+  - {fileID: -8508746175964500822}
+  - {fileID: 3070920080496149640}
+--- !u!114 &6785991203684763265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35608fbf16ef184796a93ea611ab14f, type: 3}
+  m_Name: IsPausingAfterAttack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b8fe96131930d9c4b9c8c3d7a5a16122
+  position: {x: -2467.76, y: 1854}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &6788347869835949783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18c3b426f0d54b44b8242f54711ab44, type: 3}
+  m_Name: CanAttackPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5e222960cccc58544a1894b96a872cdb
+  position: {x: -366.00003, y: 1812}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &6910393918877257878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2a3d643c5ba9443b98311707a8105e, type: 3}
+  m_Name: InRangeOfPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: aabf359cc70f92c4db41d3cd0042835c
+  position: {x: -462.00006, y: 2065}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  range: 5
+--- !u!114 &7275764150445288422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823b3aa877a3c704eb8ed11a22768c00, type: 3}
+  m_Name: CanSeePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0e7e7588f6389254ca176b50158f02f2
+  position: {x: -890.0001, y: 1772.6082}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &7439581938110709085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9336502a0e767a74c990bc60f21595ef, type: 3}
+  m_Name: GT_ChangeGoal
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ad56ab56c793db246be6606cc002fe2d
+  position: {x: -404.77, y: 132}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+--- !u!114 &7612162983235388535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8ff78d9953d9b8442ad66d1a444dc41b
+  position: {x: -22.057518, y: -63.84001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 7439581938110709085}
+  - {fileID: -8241399955195457604}
+  - {fileID: 2354367381223553821}
+  - {fileID: 4303466153142367080}
+--- !u!114 &8106877453807900662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7ce94916e46be8841a57f964548d33c7
+  position: {x: -1375.8851, y: 925.0002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -5958379143974248811}
+  - {fileID: 2088352096604413228}
+--- !u!114 &8194362296710713442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f693f581dd29a51449c724e2dee76718, type: 3}
+  m_Name: RandomWait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 86cd68591bad4c1418a31e824a30738c
+  position: {x: 1263, y: 1122.2468}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  minDuration: 5
+  maxDuration: 10
+--- !u!114 &8323879013317286512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4ca42e45f8cfcc84da7e13d3428846c0
+  position: {x: 1013.9998, y: 2064}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6625749758864071790}
+--- !u!114 &8621403712524421917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a913eb896b9d0654680d27e50a95ba3f
+  position: {x: -366, y: 1712.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  child: {fileID: 6788347869835949783}
+--- !u!114 &8656265888125767779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f693f581dd29a51449c724e2dee76718, type: 3}
+  m_Name: RandomWait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2eae89bf17205f4448aa0919c510f3e8
+  position: {x: 610.99994, y: 1146.2471}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  minDuration: 2
+  maxDuration: 5
+--- !u!114 &8759676397237694652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da752217d541bf4ba3d0898d5bad5ae, type: 3}
+  m_Name: SetCooldown
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5bb27b5e55dca874598864ed26f7a4b8
+  position: {x: 1488.9998, y: 2069.9995}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  attackType: 6
+  cooldown: 30
+--- !u!114 &9029096200644294777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee64948bda9e2fe4fb5ad88265395141, type: 3}
+  m_Name: RandomSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e247fab2fdc9cbc469f8416e430dec69
+  position: {x: 367.99988, y: 1712.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4650298512287078528}
+  - {fileID: 9218964935869921984}
+  - {fileID: 5366979754303760584}
+--- !u!114 &9138081652536446768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d3bbbbd34611d45941c58dfbe2a090, type: 3}
+  m_Name: GoToLastSeenPlayerPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 102ed5f9729620449ae1e921e1327ec3
+  position: {x: -1878.5387, y: 1999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  speed: 10
+  angularSpeed: 720
+  stoppingDistance: 3
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  range: 6
+--- !u!114 &9218964935869921984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 628cc58c714a2d842903d92ac8e9a3d8
+  position: {x: 366.99982, y: 1910.9998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5414698468665672791}
+  - {fileID: -8388723414518573864}
+  - {fileID: -1374953742359473281}
+  - {fileID: -8178292342298655708}
+  - {fileID: 4719247189364445980}

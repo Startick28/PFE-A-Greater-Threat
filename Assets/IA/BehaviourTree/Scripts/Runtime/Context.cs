@@ -23,6 +23,11 @@ namespace BehaviourTreeAI {
         // Add other game specific systems here
         public int monsterID;
         public EnemyScript monsterColliderInfos;
+        
+        //GT Specifics
+        public GoalManager goalManager;
+        public GT_EnemyScript greaterThreatColliders;
+        public GT_HeadFollow headFollow;
 
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
@@ -38,8 +43,12 @@ namespace BehaviourTreeAI {
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.sensorManager = gameObject.GetComponent<SensorManager>();
             // Add whatever else you need here...
-            context.monsterID = gameObject.GetComponent<EnemyScript>().ID;
             context.monsterColliderInfos = gameObject.GetComponent<EnemyScript>();
+            if (context.monsterColliderInfos != null) context.monsterID = context.monsterColliderInfos.ID;
+            //GT Specifics 
+            context.goalManager = gameObject.GetComponent<GoalManager>();
+            context.greaterThreatColliders = gameObject.GetComponent<GT_EnemyScript>();
+            context.headFollow = gameObject.GetComponent<GT_HeadFollow>();
 
             return context;
         }

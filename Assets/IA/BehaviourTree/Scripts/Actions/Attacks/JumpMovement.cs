@@ -9,7 +9,7 @@ public class JumpMovement : ActionNode
     public bool jumpOnPlayer = true;
 
     protected override void OnStart() {
-        if (jumpOnPlayer) jumpPosition = blackboard.lastDetectedPlayer.transform.position;
+        if (jumpOnPlayer) jumpPosition = blackboard.focusedPlayer.transform.position;
     }
 
     protected override void OnStop() {
