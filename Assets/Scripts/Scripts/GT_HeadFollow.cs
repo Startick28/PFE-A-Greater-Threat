@@ -23,22 +23,33 @@ public class GT_HeadFollow : MonoBehaviour
         //DEBUG
         if (Input.GetKeyDown(KeyCode.B))
         {
-            StartCoroutine(SetAimTarget(aimTransform));
+            SetAimTarget(aimTransform);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            StartCoroutine(StopLookingAtTarget());
+            StopLookingAtTarget();
         }
 
         if (lookingAtTarget)
         {
             float lookAngle = Vector3.Angle(transform.forward, Vector3.ProjectOnPlane(aimTransform.position - transform.position, Vector3.up));
-            
+            aimConstraint.weight = Mathf.Lerp(0.9f,0f,(lookAngle - 140) / 20f);
         }
+    }
+
+    public void SetAimTarget(Transform aim, float transition = 0.15f)
+    {
+        if (lookingAtTarget) return;
+        StartCoroutine(SetAimTargetRoutine(aim, transition));
+    }
+    public void StopLookingAtTarget(float transition = 0.25f)
+    {
+        if (!lookingAtTarget) return;
+        StartCoroutine(StopLookingAtTargetRoutine(transition));
     }
     
     // Sets the transform the GT will look at. It will take it "transition" seconds to look at the transform.
-    public IEnumerator SetAimTarget(Transform aim, float transition = 0.15f)
+    IEnumerator SetAimTargetRoutine(Transform aim, float transition)
     {
         var data = aimConstraint.data.sourceObjects;
         data.Clear();
@@ -55,7 +66,7 @@ public class GT_HeadFollow : MonoBehaviour
     }
 
     // Clears the transform the GT is looking at.
-    public IEnumerator StopLookingAtTarget(float transition = 0.25f)
+    IEnumerator StopLookingAtTargetRoutine(float transition = 0.25f)
     {
         float initWeight = aimConstraint.weight;
         for (float t = 0f; t < transition; t+= Time.deltaTime)

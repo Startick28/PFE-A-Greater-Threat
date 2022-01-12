@@ -41,16 +41,19 @@ namespace BehaviourTreeAI {
         public float GT_ComboHitAttackCD = 0f;
         public float GT_JumpAttackCD = 0f;
 
+        public float lookAtPlayerLock = 0f;
+        public List<GameObject> attackingAracks;
 
         public void Update()
         {  
             pausingAfterAttack -= Time.deltaTime;
-            GT_heavyClawAttackCD -= Time.deltaTime;
-            GT_ComboHitAttackCD -= Time.deltaTime;
-            GT_JumpAttackCD -= Time.deltaTime;
-            jumpBiteAttackCD -= Time.deltaTime;
-            clawAttackCD -= Time.deltaTime;
-            disengageJumpCD -= Time.deltaTime;
+            lookAtPlayerLock -= Time.deltaTime;
+            if (GT_heavyClawAttackCD >= 0) GT_heavyClawAttackCD -= Time.deltaTime;
+            if (GT_ComboHitAttackCD >= 0) GT_ComboHitAttackCD -= Time.deltaTime;
+            if (GT_JumpAttackCD >= 0) GT_JumpAttackCD -= Time.deltaTime;
+            if (jumpBiteAttackCD >= 0) jumpBiteAttackCD -= Time.deltaTime;
+            if (clawAttackCD >= 0) clawAttackCD -= Time.deltaTime;
+            if (disengageJumpCD >= 0) disengageJumpCD -= Time.deltaTime;
         }
 
         public void SetContext(Context c)

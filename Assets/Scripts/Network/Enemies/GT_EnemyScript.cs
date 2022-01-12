@@ -91,4 +91,19 @@ public class GT_EnemyScript : MonoBehaviour
     {
         agent.updateRotation = true;
     }
+
+
+    public List<GameObject> monsterFocusingPlayer(GameObject player)
+    {
+        List<GameObject> result = new List<GameObject>();
+        foreach (Transform child in GameObject.Find("EnnemiesManager").transform)
+        {
+            child.GetComponent<EnemyScript>();
+            if (child.GetComponent<EnemyScript>().focusedPlayer == player)
+            {
+                result.Add(child.gameObject);
+            }
+        }
+        return result;
+    }
 }
