@@ -32,6 +32,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -70,6 +72,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   attackType: 1
@@ -106,10 +110,12 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   attackType: 3
-  cooldown: 0
+  cooldown: 10
 --- !u!114 &-8738967557918009035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +148,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-8716267466282534891
@@ -176,6 +184,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -214,6 +224,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -255,6 +267,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -297,6 +311,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: ClawAttack Sequence
   drawGizmos: 0
   children:
@@ -335,6 +351,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -373,6 +391,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 4
@@ -408,6 +428,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 5
@@ -449,6 +471,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -486,6 +510,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-6754154264480653484
@@ -520,6 +546,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-6600651498586666446
@@ -554,6 +582,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -592,6 +622,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -635,6 +667,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-6206926765968578924
@@ -669,6 +703,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: 8213088646771628929}
@@ -706,6 +742,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-6141599799120569497
@@ -740,6 +778,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-6051934264814158079
@@ -774,6 +814,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-5961557010054266279
@@ -808,6 +850,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-5850481080605882236
@@ -842,6 +886,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -880,6 +926,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -917,6 +965,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -959,6 +1009,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   min: {x: -10, y: -10}
@@ -995,6 +1047,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   attackType: 1
@@ -1030,6 +1084,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: DisengageJumpSequence
   drawGizmos: 0
   children:
@@ -1069,6 +1125,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: Too close to jump?
   drawGizmos: 0
   range: 12
@@ -1104,6 +1162,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: Chase player to jump on him
   drawGizmos: 0
   children:
@@ -1141,6 +1201,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 6
@@ -1176,6 +1238,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-4108524264762071114
@@ -1210,6 +1274,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-4002215715823341631
@@ -1244,6 +1310,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -1281,6 +1349,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 4
@@ -1316,6 +1386,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: -3037733223691514840}
@@ -1351,6 +1423,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -1389,6 +1463,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 'Attack player if detected
 
 '
@@ -1429,6 +1505,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-3305295887129564874
@@ -1463,6 +1541,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   attackType: 1
@@ -1499,6 +1579,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   min: {x: -10, y: -10}
@@ -1535,6 +1617,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: 2996546159922678676}
@@ -1572,6 +1656,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-2745370373989757613
@@ -1606,6 +1692,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -1648,6 +1736,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   duration: 0.5
@@ -1683,6 +1773,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -1720,6 +1812,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 8
@@ -1755,6 +1849,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 6
@@ -1790,6 +1886,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &-1064434144549496265
@@ -1824,6 +1922,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   minDuration: 0.2
@@ -1860,6 +1960,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 'Chose a valid attack move
 
 '
@@ -1973,21 +2075,23 @@ MonoBehaviour:
   - {fileID: 5324705435630979911}
   - {fileID: -8898386214539866314}
   blackboard:
-    moveToPosition: {x: 13.511167, y: 0, z: -0.9793658}
-    lastPlayerSeenPosition: {x: 19.22, y: 1, z: -20.17}
+    moveToPosition: {x: 9.22249, y: 0, z: -12.055801}
+    lastPlayerSeenPosition: {x: -6.84, y: 1, z: -28.4}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 1
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: -0.0012482046
+    jumpBiteAttackCD: -0.002295144
     clawAttackCD: -447.30417
-    disengageJumpCD: -0.0060966
-    pausingAfterAttack: -1031.4788
+    disengageJumpCD: 3.4868279
+    pausingAfterAttack: -2373.76
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -584.18176
+    lookAtPlayerLock: -1926.4808
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
 --- !u!114 &75460443379023550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2020,6 +2124,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &101016917723454881
@@ -2054,6 +2160,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -2097,6 +2205,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &603838277290068275
@@ -2131,6 +2241,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &959074903398867322
@@ -2165,6 +2277,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2202,6 +2316,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   minDuration: 1
@@ -2238,6 +2354,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 5
@@ -2279,11 +2397,13 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
   angularSpeed: 720
-  stoppingDistance: 1
+  stoppingDistance: 2
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
@@ -2320,6 +2440,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: 3126308511676650173}
@@ -2357,6 +2479,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2394,6 +2518,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2432,6 +2558,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2469,6 +2597,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   range: 3
@@ -2504,6 +2634,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: In range to jump?
   drawGizmos: 0
   range: 10
@@ -2539,6 +2671,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &2560515697152293227
@@ -2573,6 +2707,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   minDuration: 0.2
@@ -2609,6 +2745,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2648,6 +2786,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2686,6 +2826,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2723,6 +2865,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: Jump on player sequence
   drawGizmos: 0
   children:
@@ -2763,6 +2907,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: -8197545111504457615}
@@ -2800,6 +2946,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: -3485983407573911211}
@@ -2837,6 +2985,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &4163018247313250651
@@ -2871,6 +3021,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -2908,6 +3060,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   minDuration: 2
@@ -2944,6 +3098,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &5103909335829613659
@@ -2978,6 +3134,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
@@ -3021,6 +3179,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   attackType: 3
@@ -3056,6 +3216,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: Go in range
   drawGizmos: 0
   child: {fileID: 1416903745506447481}
@@ -3093,6 +3255,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: JumpBiteAttack Sequence
   drawGizmos: 0
   children:
@@ -3134,6 +3298,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   child: {fileID: -1675400339831189346}
@@ -3169,6 +3335,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: Is it ok to jump?
   drawGizmos: 0
   children:
@@ -3206,6 +3374,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   duration: 0.5
@@ -3241,6 +3411,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -3278,6 +3450,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -3315,6 +3489,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -3353,6 +3529,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   children:
@@ -3390,6 +3568,8 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
 --- !u!114 &8821356567426750820
@@ -3424,11 +3604,13 @@ MonoBehaviour:
     GT_JumpAttackCD: 0
     lookAtPlayerLock: 0
     attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
   description: 
   drawGizmos: 0
   speed: 10
   angularSpeed: 720
-  stoppingDistance: 1
+  stoppingDistance: 2
   updatePosition: 0
   updateRotation: 1
   acceleration: 40

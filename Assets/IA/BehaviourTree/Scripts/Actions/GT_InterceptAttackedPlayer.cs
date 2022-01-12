@@ -17,6 +17,7 @@ public class GT_InterceptAttackedPlayer : ActionNode
     GameObject createdWall;
 
     protected override void OnStart() {
+        blackboard.canAttackPlayer = false;
 
         Vector3 positionToIntercept = blackboard.focusedPlayer.transform.position * (blackboard.attackingAracks.Count + 1);
         foreach(GameObject arack in blackboard.attackingAracks)
@@ -24,7 +25,7 @@ public class GT_InterceptAttackedPlayer : ActionNode
             positionToIntercept -= arack.transform.position;
         }
 
-        positionToIntercept = 2 * (positionToIntercept - blackboard.focusedPlayer.transform.position) + blackboard.focusedPlayer.transform.position;
+        positionToIntercept = (positionToIntercept - blackboard.focusedPlayer.transform.position).normalized  * 10f + blackboard.focusedPlayer.transform.position;
 
         blackboard.moveToPosition.x = positionToIntercept.x;
         blackboard.moveToPosition.z = positionToIntercept.z;
@@ -46,35 +47,49 @@ public class GT_InterceptAttackedPlayer : ActionNode
 
     protected override void OnStop() {
         Destroy(createdWall);
+        blackboard.canAttackPlayer = true;
     }
 
     protected override State OnUpdate() {
+        Vector3 positionToIntercept = blackboard.focusedPlayer.transform.position * (blackboard.attackingAracks.Count + 1);
+        foreach(GameObject arack in blackboard.attackingAracks)
+        {
+            positionToIntercept -= arack.transform.position;
+        }
 
-    context.agent.destination = blackboard.moveToPosition;
-    
-    if (EnemiesManager.Instance)
-    {
-        EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
-                                                Photon.Pun.RpcTarget.All,
-                                                context.monsterID,
-                                                blackboard.moveToPosition,
-                                                stoppingDistance,
-                                                context.agent.speed,
-                                                angularSpeed,
-                                                updateRotation,
-                                                acceleration);
-    }
+        positionToIntercept = (positionToIntercept - blackboard.focusedPlayer.transform.position).normalized * 10f + blackboard.focusedPlayer.transform.position;
 
-    if (context.agent.hasPath && context.agent.remainingDistance < tolerance) {
-        return State.Success;
-    }
+        blackboard.moveToPosition.x = positionToIntercept.x;
+        blackboard.moveToPosition.z = positionToIntercept.z;
 
-    if (context.agent.pathPending) {
+        context.agent.destination = blackboard.moveToPosition;
+        
+        
+        if (EnemiesManager.Instance)
+        {
+            EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
+                                                    Photon.Pun.RpcTarget.All,
+                                                    context.monsterID,
+                                                    blackboard.moveToPosition,
+                                                    stoppingDistance,
+                                                    context.agent.speed,
+                                                    angularSpeed,
+                                                    updateRotation,
+                                                    acceleration);
+        }
+
+        if (context.agent.hasPath && context.agent.remainingDistance < tolerance) {
+            
+            blackboard.playerIntercepted = true;
+            return State.Success;
+        }
+
+        if (context.agent.pathPending) {
+            return State.Running;
+        }
+        if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
+            return State.Failure;
+        }
         return State.Running;
-    }
-    if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
-        return State.Failure;
-    }
-    return State.Running;
     }
 }

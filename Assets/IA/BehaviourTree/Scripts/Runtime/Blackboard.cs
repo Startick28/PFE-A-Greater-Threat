@@ -43,6 +43,8 @@ namespace BehaviourTreeAI {
 
         public float lookAtPlayerLock = 0f;
         public List<GameObject> attackingAracks;
+        public bool playerIntercepted = false;
+        public bool canAttackPlayer = true;
 
         public void Update()
         {  
@@ -59,6 +61,14 @@ namespace BehaviourTreeAI {
         public void SetContext(Context c)
         {
             context = c;
+        }
+
+        public void Reset()
+        {
+            attackingAracks = new List<GameObject>();
+            playerIntercepted = false;
+            hasEstimationOfPlayerDirection = false;
+            focusedPlayer = null;
         }
     }
 }
