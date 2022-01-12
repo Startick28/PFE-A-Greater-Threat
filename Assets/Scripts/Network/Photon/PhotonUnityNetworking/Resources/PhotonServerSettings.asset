@@ -57,6 +57,10 @@ MonoBehaviour:
   - OpenChest
   - InteractWithChest
   - InteractWithButton
+  - GT_ComboHitAttack
+  - GT_JumpAttack
+  - GT_LeftClawHeavyAttack
+  - GT_RightClawHeavyAttack
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
