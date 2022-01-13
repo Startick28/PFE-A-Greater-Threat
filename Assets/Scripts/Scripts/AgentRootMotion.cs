@@ -9,6 +9,8 @@ public class AgentRootMotion : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
 
+    Quaternion desiredRotation;
+
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -18,6 +20,24 @@ public class AgentRootMotion : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Velocity", agent.velocity.magnitude);
+
+        int layerMask = (1 << 10);
+        RaycastHit slopeHit;
+
+        //Perform raycast from the object's position downwards
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out slopeHit, 10f, layerMask))
+        {
+            //Drawline to show the hit point
+            Debug.DrawLine(transform.position + Vector3.up, slopeHit.point, Color.red);
+
+            //Get slope angle from the raycast hit normal then calcuate new pos of the object
+            Quaternion newRot = Quaternion.FromToRotation(transform.up, slopeHit.normal) * transform.rotation;
+
+            //Apply the rotation 
+            desiredRotation = Quaternion.Lerp(desiredRotation, newRot, Time.deltaTime * 10f);
+            transform.rotation = desiredRotation;
+
+        }
     }
 
     void OnAnimatorMove () {
@@ -25,6 +45,6 @@ public class AgentRootMotion : MonoBehaviour
         position.y = agent.nextPosition.y;
         transform.position = position;
         agent.nextPosition = transform.position;
-        transform.rotation = animator.rootRotation;
+        transform.rotation = animator.rootRotation; 
     }
 }
