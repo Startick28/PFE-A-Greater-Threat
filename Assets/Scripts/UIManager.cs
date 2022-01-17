@@ -53,7 +53,8 @@ public class UIManager : MonoBehaviourPunCallbacks
                 //Objects in the scene don't have an owner, its means view.owner will be null
                 if (view.IsMine && view.gameObject.name.Contains("Player"))
                 {
-                    playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+                    //playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+
                     bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100) / 2.0f;
                     player = view;
                     GameObject playerGun = view.GetComponent<FPSCharacterController>().getCurrentWeapon();
@@ -70,7 +71,7 @@ public class UIManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+            //playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
             bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
             GameObject playerGun = player.GetComponent<FPSCharacterController>().getCurrentWeapon();
@@ -90,17 +91,18 @@ public class UIManager : MonoBehaviourPunCallbacks
         {
             if(currentPlayer != PhotonNetwork.LocalPlayer)
             {
-                playersHealth[i].value = float.Parse(currentPlayer.CustomProperties["HP"].ToString()) / 100.0f;
+                //playersHealth[i].value = float.Parse(currentPlayer.CustomProperties["HP"].ToString()) / 100.0f;
                 playersNames[i].text = currentPlayer.NickName;
                 i++;
             }
         }
-        while (i <= 2)
+
+        /*while (i <= 2)
         {
             playersHealth[i].gameObject.SetActive(false);
             playersNames[i].gameObject.SetActive(false);
             i++;
-        }
+        }*/
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
