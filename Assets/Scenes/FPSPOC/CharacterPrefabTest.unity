@@ -776,60 +776,60 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3620831398171058699, guid: 23497922f37c8824ba51d91ba2446cdd, type: 3}
   m_PrefabInstance: {fileID: 1096303467}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8947780269234298569
+--- !u!1001 &6992464376611368606
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8947780267817519187, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
-      propertyPath: m_Name
-      value: AmmunitionCollectible
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.28791022
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.504901
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.109105
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8947780267817519188, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+    - target: {fileID: 6992464377878722563, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6992464377878722564, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
+      propertyPath: m_Name
+      value: Pistol_Munitions
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e7041cbcd3993d54aa416c1756eeaa58, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
