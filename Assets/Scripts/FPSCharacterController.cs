@@ -550,51 +550,61 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void switchWeapon(float delta)
     {
 		int formerIndex = currentWeaponIndex;
-		if(weapons.Count == 0)
-        {
-			
+		if (weapons.Count == 0)
+		{
+
 			return;
-        }
-		if(delta > 0)
+		}
+		if (currentWeaponEquipped)
         {
-			currentWeaponIndex++;
-			if(currentWeaponIndex >= weapons.Count)
-            {
-				currentWeaponIndex = 0;
-            }
-        }
-		else
-        {
-			currentWeaponIndex--;
-			if(currentWeaponIndex<0)
-            {
-				currentWeaponIndex = weapons.Count - 1;
-            }
-        }
-		//weaponAnimator.gameObject.SetActive(false);
-		if(weapons.Count != 0)
-        {
-			if(weaponAnimator != null)
-            {
+			if (delta > 0)
+			{
+				currentWeaponIndex++;
+				if (currentWeaponIndex >= weapons.Count)
+				{
+					currentWeaponIndex = 0;
+				}
+			}
+			else
+			{
+				currentWeaponIndex--;
+				if (currentWeaponIndex < 0)
+				{
+					currentWeaponIndex = weapons.Count - 1;
+				}
+			}
+			//weaponAnimator.gameObject.SetActive(false);
+
+			
+			if (weaponAnimator != null)
+			{
 				SetChildrenActive(weaponAnimator.gameObject, false);
 			}
-			
 			weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
-		}
-		
-		//weaponAnimator.gameObject.SetActive(true);
-		
 
-		// On s'assure qu'on utilise le bon model d'arme
-		if (currentWeaponEquipped)
+			
+				SetChildrenActive(weaponAnimator.gameObject, true);
+				weaponAnimator.SetTrigger("equip");
+				tpMonitor.onWeaponPutBack(weapons[formerIndex].type - 1);
+				modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+				modelAnimator.SetTrigger("idle");
+				modelAnimator.SetTrigger("equip");
+			
+
+		}
+        else
         {
 			SetChildrenActive(weaponAnimator.gameObject, true);
 			weaponAnimator.SetTrigger("equip");
-			tpMonitor.onWeaponPutBack(weapons[formerIndex].type-1);
 			modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
 			modelAnimator.SetTrigger("idle");
+			modelAnimator.SetLayerWeight(1, 1);
 			modelAnimator.SetTrigger("equip");
 		}
+		
+		
+	
+		
 		
 		
 
@@ -753,6 +763,20 @@ public class FPSCharacterController : AdvancedWalkerController
 		addWeapon(newGun);
 
 		
+		for(int i =0;i<weapons.Count;i++)
+        {
+			if(weapons[i]  == newGun)
+            {
+				currentWeaponIndex = i;
+            }
+        }
+
+		SetChildrenActive(weaponAnimator.gameObject, true);
+		weaponAnimator.SetTrigger("equip");
+		modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+		modelAnimator.SetTrigger("idle");
+		modelAnimator.SetLayerWeight(1, 1);
+		modelAnimator.SetTrigger("equip");
 	}
 
 
