@@ -123,6 +123,7 @@ public class BasicGun : Interactable
             Debug.DrawRay(position, direction * 1000, Color.red);
             if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
             {
+                // Instancie un bulletHole si la cible est un mur.
                 if (layerMask == 10)
                 {
                     Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
