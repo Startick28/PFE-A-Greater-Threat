@@ -50,7 +50,9 @@ MonoBehaviour:
   crateTop: {fileID: 3452591872926790883}
   id: 0
   rarity: 0
-  prefabGun: {fileID: 4672324460278089109, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
+  prefabGun:
+  - {fileID: 6148455832089343234, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
+  - {fileID: 764030142301075375, guid: 7db899b1348c7724c95729d0dc0ddadd, type: 3}
   isOpened: 0
   rotationZ: 90
   timeToOpen: 3

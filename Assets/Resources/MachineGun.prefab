@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  iType: 0
+  iType: 1
   rarity: 0
   magSize: 30
   fireRate: 5
