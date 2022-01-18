@@ -30,6 +30,9 @@ public class BasicGun : Interactable
     [SerializeField]
     public int type; //Gun = 1, machineGun = 2,
 
+    [SerializeField]
+    private GameObject bulletHolePrefab;
+
 
     public bool canReload
     {
@@ -120,6 +123,10 @@ public class BasicGun : Interactable
             Debug.DrawRay(position, direction * 1000, Color.red);
             if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
             {
+                if (layerMask == 10)
+                {
+                    Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                }
                 Debug.DrawRay(position, direction * hit.distance, Color.yellow);
                 Debug.Log("Did Hit");
                 if (EnemiesManager.Instance)
