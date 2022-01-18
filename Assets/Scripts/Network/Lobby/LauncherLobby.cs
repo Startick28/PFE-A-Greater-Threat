@@ -40,7 +40,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         ExitGames.Client.Photon.Hashtable PlayerProperties = new ExitGames.Client.Photon.Hashtable();
-        PlayerProperties["HP"] = 90;
+        PlayerProperties["HP"] = 100;
         PhotonNetwork.SetPlayerCustomProperties(PlayerProperties);
         MenuManager.Instance.OpenMenu("mainMenu");
         PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
@@ -104,7 +104,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     public void StartGame()
     {
         // Permet de charger la scene que l'on veut, le 1 représente l'index de la scene indiqué dans le build settings d'unity
-        PhotonNetwork.LoadLevel("BaseScene");
+        PhotonNetwork.LoadLevel("Lena_LD_Base");
     }
 
     public override void OnLeftRoom()

@@ -57,6 +57,9 @@ MonoBehaviour:
   - OpenChest
   - InteractWithChest
   - InteractWithButton
+  - testDeath
+  - TestDeath
+  - InteractWithHandle
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
