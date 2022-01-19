@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyAttack
   - RandomEmitter
+  - Destructible
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Door
+  - Base Roof
   - 
   - Terrain
   - Enemy

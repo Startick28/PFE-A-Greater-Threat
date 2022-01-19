@@ -36,15 +36,24 @@ public class LocalNavMeshBuilder : MonoBehaviour
                 // not used in this example
 
                 fakeGameObject.transform.position = new Vector3(tree.position.x * size.x, tree.position.y * size.y, tree.position.z * size.z);
+                fakeGameObject.transform.position += terrain.GetPosition();
                 fakeGameObject.transform.rotation = Quaternion.AngleAxis(tree.rotation, Vector3.up);
                 fakeGameObject.transform.localScale = new Vector3(1f,1f,1f);
 
                 var src = new NavMeshBuildSource();
                 src.transform = fakeGameObject.transform.localToWorldMatrix;
                 src.shape = NavMeshBuildSourceShape.Capsule; // update this to your convenience
-                float sourceRadius = prototype.prefab.GetComponentInChildren<CapsuleCollider>().radius;
-                src.size = new Vector3( sourceRadius, 10f, 1f); // update this according to tree heightScale / widthScale and the prefab size.
-                m_TreeSources.Add(src);
+                CapsuleCollider tmpCollider = prototype.prefab.GetComponentInChildren<CapsuleCollider>();
+                // update this according to tree heightScale / widthScale and the prefab size.
+                
+                if (tmpCollider != null) 
+                {
+                    if (tmpCollider.radius >= 0.5f)
+                    {
+                        src.size = new Vector3( tmpCollider.radius, 10f, 2f); 
+                        m_TreeSources.Add(src);
+                    }
+                }
             }
         }
         DestroyImmediate(fakeGameObject);
