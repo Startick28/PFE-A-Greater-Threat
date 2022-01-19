@@ -105,7 +105,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         StaticClass.CrossSceneMaster = true;
         // Permet de charger la scene que l'on veut, le 1 représente l'index de la scene indiqué dans le build settings d'unity
-        PhotonNetwork.LoadLevel("BaseScene");
+        PhotonNetwork.LoadLevel("MapForest");
     }
 
     public override void OnLeftRoom()

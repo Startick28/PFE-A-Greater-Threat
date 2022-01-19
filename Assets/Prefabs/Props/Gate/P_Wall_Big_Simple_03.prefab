@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  openMaterial: {fileID: 2100000, guid: e971306efb8aa2949ab83c6df9646000, type: 2}
-  closeMaterial: {fileID: 2100000, guid: 6b7a37ed3ba7eb242a7baabaccf6ec39, type: 2}
+  openMaterial: {fileID: 2100000, guid: b82b533a25418524b893e81d10f873be, type: 2}
+  closeMaterial: {fileID: 2100000, guid: da14b302f426e744ebc8b9430167a2bf, type: 2}
   collider: {fileID: 5069201755602933946}
   forceFieldA: {fileID: 5941603850226910443}
   forceFieldB: {fileID: 3471677124029481698}
@@ -335,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 5496028951846026127, guid: a9b6faf0cc04732458fa362897953c10, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e971306efb8aa2949ab83c6df9646000, type: 2}
+      objectReference: {fileID: 2100000, guid: da14b302f426e744ebc8b9430167a2bf, type: 2}
     - target: {fileID: 7815371768782088038, guid: a9b6faf0cc04732458fa362897953c10, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -418,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 5496028951846026127, guid: a9b6faf0cc04732458fa362897953c10, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e971306efb8aa2949ab83c6df9646000, type: 2}
+      objectReference: {fileID: 2100000, guid: da14b302f426e744ebc8b9430167a2bf, type: 2}
     - target: {fileID: 7815371768782088038, guid: a9b6faf0cc04732458fa362897953c10, type: 3}
       propertyPath: m_RootOrder
       value: 1
