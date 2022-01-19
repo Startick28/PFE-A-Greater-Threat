@@ -54,7 +54,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	Animator modelAnimator;
 
 	[SerializeField]
-	bool Died;
+	public bool Died;
 
 	
 	Animator weaponAnimator = null;
@@ -77,7 +77,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	int[] ammunitions = new int[2];
 
-	Transform targetDied;
+	Camera deadCamera;
 
 	void Awake()
 	{
@@ -258,6 +258,12 @@ public class FPSCharacterController : AdvancedWalkerController
 
 							case InteractionType.handle:
 								GetComponent<PhotonView>().RPC("InteractWithHandle", RpcTarget.All, nearestInteractable.GetComponent<handleInteraction>().id);
+								Debug.Log("Je peux interargir avec le coffre");
+								//nearestInteractable.interact();
+								break;
+
+							case InteractionType.win:
+								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
 								Debug.Log("Je peux interargir avec le coffre");
 								//nearestInteractable.interact();
 								break;
@@ -477,24 +483,72 @@ public class FPSCharacterController : AdvancedWalkerController
             if (GetComponent<PhotonView>().IsMine)
 			{
 				var cameras = FindObjectsOfType<Camera>();
-				foreach (var camera in cameras)
-				{
-					if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+				if(deadCamera == null)
+                {
+					foreach (var camera in cameras)
 					{
-						camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
-						camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
-						camera.enabled = true;
+						if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = true;
+							camera.transform.rotation = camera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+							deadCamera = camera;
+						}
 					}
-				}
-				foreach (var camera in cameras)
-				{
-					if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+					foreach (var camera in cameras)
 					{
-						camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
-						camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
-						camera.enabled = false;
+						if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = false;
+						}
 					}
+					deadCamera.transform.rotation = deadCamera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
 				}
+                else
+				{
+					foreach (var camera in cameras)
+					{
+						if (deadCamera == camera)
+						{
+							deadCamera = camera;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = true;
+							camera.transform.rotation = camera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+						}
+					}
+					foreach (var camera in cameras)
+					{
+						if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = false;
+						}
+					}
+
+				}
+
+				if (Input.GetKeyDown(KeyCode.Mouse0))
+				{
+					Camera temp = null;
+					foreach (var camera in cameras)
+					{
+						if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine && camera != deadCamera)
+						{
+							temp = camera;
+						}
+					}
+					if(temp != null)
+                    {
+						deadCamera = temp;
+                    }
+				}
+
+				deadCamera.transform.rotation = deadCamera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
 			}
 		}
 	}

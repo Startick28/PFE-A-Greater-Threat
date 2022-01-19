@@ -7,6 +7,8 @@ public class HandleManager : Interactable
     static HandleManager instance;
     [SerializeField]
     List<GameObject> handles;
+    [SerializeField]
+    GameObject Plateform;
 
     static public HandleManager Instance()
     {
@@ -34,7 +36,9 @@ public class HandleManager : Interactable
                 return;
             }
         }
-        SceneManager.LoadScene("winScene");
+        Animator plateform = Plateform.gameObject.GetComponent<Animator>();
+        plateform.SetBool("Interact", true);
+        Plateform.GetComponentInChildren<WinInteraction>().canInteract = true;
     }
     public override void interact(FPSCharacterController player)
     {
