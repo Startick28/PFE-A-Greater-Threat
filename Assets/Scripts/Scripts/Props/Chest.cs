@@ -51,16 +51,34 @@ public class Chest : Interactable
         int randomGunIndex = Random.Range(0, prefabGun.Count);
         Debug.Log("RandomGunIndex : " + randomGunIndex);
         GameObject gun = Instantiate(prefabGun[randomGunIndex], transform.position ,Quaternion.identity);
-        gun.transform.Translate(0,0,- (gun.transform.localScale.x / 4));
-        gun.GetComponent<BasicGun>().Rarity = rarity;
-        gun.GetComponent<BasicGun>().canInteract = true;
-        gun.GetComponent<BoxCollider>().enabled = true;
-        gun.GetComponentInChildren<MeshRenderer>().enabled = true;
-        // Default layer
-        gun.gameObject.layer = 0;
-        gun.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+        //Si l'objet est un gun
+        if (gun.GetComponent<BasicGun>())
+        {
+            //gun.transform.Translate(0, transform.localScale.y / 2, 0);
+            gun.transform.Translate(0, 0, -(gun.transform.localScale.x / 4));
+            gun.GetComponent<BasicGun>().Rarity = rarity;
+            gun.GetComponent<BasicGun>().canInteract = true;
+            gun.GetComponent<BoxCollider>().enabled = true;
+            gun.GetComponentInChildren<MeshRenderer>().enabled = true;
+            // Default layer
+            gun.gameObject.layer = 0;
 
-        player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<BasicGun>();
+            player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<BasicGun>();
+        }
+        //Si l'objet est une munition
+        else if(gun.GetComponent<AmmunitionCollectible>())
+        {
+            //gun.transform.Translate(0, 0.5f, -(gun.transform.localScale.x / 4));
+            gun.transform.Translate(0, transform.localScale.y/2, 0);
+            gun.GetComponent<AmmunitionCollectible>().canInteract = true;
+            gun.GetComponent<BoxCollider>().enabled = true;
+
+            // Default layer
+            gun.gameObject.layer = 0;
+
+            player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<AmmunitionCollectible>();
+        }
+        
 
         // Animations
         if (!isOpened)
@@ -114,7 +132,10 @@ public class Chest : Interactable
         {
             t += Time.deltaTime;
             float yPosition = Mathf.Lerp(startPosition, endPosition, t / duration);
-            transformGun.position = new Vector3(transformGun.position.x, yPosition, transformGun.position.z);
+            if(transformGun)
+            {
+                transformGun.position = new Vector3(transformGun.position.x, yPosition, transformGun.position.z);
+            }
             yield return null;
         }
     }
