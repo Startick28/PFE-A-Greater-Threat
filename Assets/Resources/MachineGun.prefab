@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764030142301075375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.34, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9133756628503028403}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  iType: 0
+  iType: 1
   rarity: 0
   magSize: 30
   fireRate: 5
@@ -55,6 +55,7 @@ MonoBehaviour:
   fullReloadTime: 0
   fastReloadTime: 0
   type: 2
+  bulletHolePrefab: {fileID: 6591166940014735020, guid: f8db61c3bd4aaf14cad3e33799b1c5f3, type: 3}
 --- !u!65 &2145584730213170468
 BoxCollider:
   m_ObjectHideFlags: 0

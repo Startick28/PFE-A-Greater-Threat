@@ -12,7 +12,7 @@ public class Chest : Interactable
 
     [Header("Chest Gun Setup")]
     [SerializeField] RarityType rarity;
-    [SerializeField] BasicGun prefabGun;
+    [SerializeField] List<GameObject> prefabGun;
     [SerializeField] bool isOpened;
     
 
@@ -32,33 +32,53 @@ public class Chest : Interactable
 
     [PunRPC]
     public override void interact(FPSCharacterController player)
-    {       
+    {
 
-        if(players.Count == 0)
+        if (players.Count == 0)
         {
             return;
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
         //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
-        BasicGun playerGun = player.GetComponentInChildren<BasicGun>();
-        if(playerGun == null)
+        GameObject playerGun = player.getCurrentWeapon();
+        if (playerGun == null)
         {
             Debug.Log("Error demanded basic or gun MeshRenderer gun was not found for chest interaction");
         }
         //Remove chest's collider
         gameObject.GetComponent<BoxCollider>().enabled = false;
 
-        BasicGun gun = Instantiate(prefabGun, transform.position ,Quaternion.identity);
-        gun.transform.Translate(0,0,- (gun.transform.localScale.x / 4));
-        gun.Rarity = rarity;
-        gun.canInteract = true;
-        gun.GetComponent<BoxCollider>().enabled = true;
-        gun.GetComponentInChildren<MeshRenderer>().enabled = true;
-        // Default layer
-        gun.gameObject.layer = 0;
-        gun.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+        int randomGunIndex = Random.Range(0, prefabGun.Count);
+        Debug.Log("RandomGunIndex : " + randomGunIndex);
+        GameObject gun = Instantiate(prefabGun[randomGunIndex], transform.position ,Quaternion.identity);
+        //Si l'objet est un gun
+        if (gun.GetComponent<BasicGun>())
+        {
+            //gun.transform.Translate(0, transform.localScale.y / 2, 0);
+            gun.transform.Translate(0, 0, -(gun.transform.localScale.x / 4));
+            gun.GetComponent<BasicGun>().Rarity = rarity;
+            gun.GetComponent<BasicGun>().canInteract = true;
+            gun.GetComponent<BoxCollider>().enabled = true;
+            gun.GetComponentInChildren<MeshRenderer>().enabled = true;
+            // Default layer
+            gun.gameObject.layer = 0;
 
-        player.GetComponent<FPSCharacterController>().nearestInteractable = gun;
+            player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<BasicGun>();
+        }
+        //Si l'objet est une munition
+        else if(gun.GetComponent<AmmunitionCollectible>())
+        {
+            //gun.transform.Translate(0, 0.5f, -(gun.transform.localScale.x / 4));
+            gun.transform.Translate(0, transform.localScale.y/2, 0);
+            gun.GetComponent<AmmunitionCollectible>().canInteract = true;
+            gun.GetComponent<BoxCollider>().enabled = true;
+
+            // Default layer
+            gun.gameObject.layer = 0;
+
+            player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<AmmunitionCollectible>();
+        }
+        
 
         // Animations
         if (!isOpened)
@@ -112,7 +132,10 @@ public class Chest : Interactable
         {
             t += Time.deltaTime;
             float yPosition = Mathf.Lerp(startPosition, endPosition, t / duration);
-            transformGun.position = new Vector3(transformGun.position.x, yPosition, transformGun.position.z);
+            if(transformGun)
+            {
+                transformGun.position = new Vector3(transformGun.position.x, yPosition, transformGun.position.z);
+            }
             yield return null;
         }
     }
