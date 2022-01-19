@@ -10,6 +10,7 @@ public class LocalNavMeshBuilder : MonoBehaviour
 {
     // The center of the build
     public Transform m_Tracked;
+    public Terrain[] m_TrackedTerrains;
 
     // The size of the build bounds
     public Vector3 m_Size = new Vector3(80.0f, 20.0f, 80.0f);
@@ -18,9 +19,37 @@ public class LocalNavMeshBuilder : MonoBehaviour
     AsyncOperation m_Operation;
     NavMeshDataInstance m_Instance;
     List<NavMeshBuildSource> m_Sources = new List<NavMeshBuildSource>();
+    List<NavMeshBuildSource> m_TreeSources = new List<NavMeshBuildSource>();
 
     IEnumerator Start()
     {
+        var fakeGameObject = new GameObject();
+        foreach (Terrain terrain in m_TrackedTerrains)
+        {
+            // Required to have a Transform instance to call localToWorldMatrix (I'm fairly bad at mathematics so maybe there is an other solution !)
+ 
+            var size = terrain.terrainData.size;
+            foreach (var tree in terrain.terrainData.treeInstances)
+            {
+                var prototype = terrain.terrainData.treePrototypes[tree.prototypeIndex];
+                // Use prototype.prefab to reach the prefab of the tree
+                // not used in this example
+
+                fakeGameObject.transform.position = new Vector3(tree.position.x * size.x, tree.position.y * size.y, tree.position.z * size.z);
+                fakeGameObject.transform.rotation = Quaternion.AngleAxis(tree.rotation, Vector3.up);
+                fakeGameObject.transform.localScale = new Vector3(1f,1f,1f);
+
+                var src = new NavMeshBuildSource();
+                src.transform = fakeGameObject.transform.localToWorldMatrix;
+                src.shape = NavMeshBuildSourceShape.Capsule; // update this to your convenience
+                float sourceRadius = prototype.prefab.GetComponentInChildren<CapsuleCollider>().radius;
+                src.size = new Vector3( sourceRadius, 10f, 1f); // update this according to tree heightScale / widthScale and the prefab size.
+                m_TreeSources.Add(src);
+            }
+        }
+        DestroyImmediate(fakeGameObject);
+        
+
         while (true)
         {
             UpdateNavMesh(true);
@@ -47,6 +76,7 @@ public class LocalNavMeshBuilder : MonoBehaviour
     void UpdateNavMesh(bool asyncUpdate = false)
     {
         NavMeshSourceTag.Collect(ref m_Sources);
+        m_Sources.AddRange(m_TreeSources);
         var defaultBuildSettings = NavMesh.GetSettingsByID(-1372625422);
         var bounds = QuantizedBounds();
 

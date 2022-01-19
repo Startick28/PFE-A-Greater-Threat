@@ -19,6 +19,7 @@ namespace UnityEngine.AI
     [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
     public class NavMeshSurface : MonoBehaviour
     {
+
         [SerializeField]
         int m_AgentTypeID;
         public int agentTypeID { get { return m_AgentTypeID; } set { m_AgentTypeID = value; } }
@@ -339,6 +340,49 @@ namespace UnityEngine.AI
                     NavMeshBuilder.CollectSources(worldBounds, m_LayerMask, m_UseGeometry, m_DefaultArea, markups, sources);
                 }
             }
+
+            /***** Terrain trees *****/
+ 
+            var fakeGameObject = new GameObject();
+            // Required to have a Transform instance to call localToWorldMatrix (I'm fairly bad at mathematics so maybe there is an other solution !)
+            
+            foreach (Terrain coolTerrain in GetComponentsInChildren<Terrain>())
+            {
+                var size = coolTerrain.terrainData.size;
+                // Do not use Terrain.activeTerrain but maybe add a properties or detect terrains inside the bounding box of NavMeshSurface
+                // Then simply loop through all selected terrains
+                foreach (var tree in coolTerrain.terrainData.treeInstances)
+                {
+                    var prototype = coolTerrain.terrainData.treePrototypes[tree.prototypeIndex];
+                    // Use prototype.prefab to reach the prefab of the tree
+                    // not used in this example
+
+                    fakeGameObject.transform.position = new Vector3(tree.position.x * size.x, tree.position.y * size.y, tree.position.z * size.z);
+                    fakeGameObject.transform.position += coolTerrain.GetPosition();
+                    fakeGameObject.transform.rotation = Quaternion.AngleAxis(tree.rotation, Vector3.up);
+                    fakeGameObject.transform.localScale = new Vector3(1f,1f,1f);
+    
+                    var src = new NavMeshBuildSource();
+                    src.transform = fakeGameObject.transform.localToWorldMatrix;
+                    src.shape = NavMeshBuildSourceShape.Capsule; // update this to your convenience
+                    CapsuleCollider tmpCollider = prototype.prefab.GetComponentInChildren<CapsuleCollider>();
+                    // update this according to tree heightScale / widthScale and the prefab size.
+                    if (tmpCollider != null) 
+                    {
+                        if (tmpCollider.radius >= 0.5f)
+                        {
+                            src.size = new Vector3( tmpCollider.radius, 10f, 1f); 
+                            sources.Add(src);
+                        }
+                        
+                    }
+                }
+            }
+
+            
+            DestroyImmediate(fakeGameObject);
+ 
+            /***** End ofTerrain trees *****/
 
             if (m_IgnoreNavMeshAgent)
                 sources.RemoveAll((x) => (x.component != null && x.component.gameObject.GetComponent<NavMeshAgent>() != null));
