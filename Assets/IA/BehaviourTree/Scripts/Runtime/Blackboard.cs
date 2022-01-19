@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 namespace BehaviourTreeAI {
 
@@ -43,6 +45,8 @@ namespace BehaviourTreeAI {
 
         public float lookAtPlayerLock = 0f;
         public List<GameObject> attackingAracks;
+        public bool playerIntercepted = false;
+        public bool canAttackPlayer = true;
 
         public void Update()
         {  
@@ -60,5 +64,31 @@ namespace BehaviourTreeAI {
         {
             context = c;
         }
+
+        public void Reset()
+        {
+            attackingAracks = new List<GameObject>();
+            playerIntercepted = false;
+            hasEstimationOfPlayerDirection = false;
+            focusedPlayer = null;
+        }
+
+
+        public bool IsPathTooLong(Vector3 startPosition, Vector3 endPosition)
+        {
+            NavMeshPath path = new NavMeshPath();
+            if (NavMesh.CalculatePath(startPosition, endPosition, NavMesh.AllAreas, path) == false) return true;
+            float pathLength = 0f;
+            for ( int i = 1; i < path.corners.Length; ++i )
+            {
+                pathLength += Vector3.Distance( path.corners[i-1], path.corners[i] );
+            }
+            Debug.Log("pathlength : " + pathLength);
+            Debug.Log("distance : " + Vector3.Distance(startPosition, endPosition));
+            if (pathLength > Vector3.Distance(startPosition, endPosition) * 3f) return true; 
+
+            return false;
+        }
+
     }
 }

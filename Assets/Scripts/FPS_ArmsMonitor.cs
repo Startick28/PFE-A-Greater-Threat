@@ -9,10 +9,13 @@ public class FPS_ArmsMonitor : MonoBehaviour
     [SerializeField]
     FPSCharacterController parentController;
 
-   
+
 
     [SerializeField]
     Animator animator;
+
+    [SerializeField]
+    GameObject shotVFX;
 
     public void Start()
     {
@@ -35,12 +38,26 @@ public class FPS_ArmsMonitor : MonoBehaviour
     public void onFire()
     {
         parentController.onFire();
+        shotVFX.SetActive(true);
+
     }
 
     public void onReloadComplete()
     {
         parentController.onReloadComplete();
     }
+
+    public void onSlowDownReload()
+    {
+        parentController.onSlowDownReload();
+    }
+
+    public void onSpeedUpReload()
+    {
+        parentController.onSpeedUpReload();
+
+    }
+
 }
 
-    
+

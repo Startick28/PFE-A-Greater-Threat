@@ -54,6 +54,9 @@ MonoBehaviour:
   - EnemySpitAttackWithId
   - EnemyTakeDamageWithId
   - InstantiateEnemy
+  - OpenChest
+  - InteractWithChest
+  - InteractWithButton
   - GT_ComboHitAttack
   - GT_JumpAttack
   - GT_LeftClawHeavyAttack
