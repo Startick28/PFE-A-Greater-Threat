@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eucalyptus-Globulus-Bark-8
+  m_Shader: {fileID: 4800000, guid: b4b0069bb246a414ea3f417f7125ef56, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 1b612ec95580d0d47bf72cd277e0e0d5, type: 3}
+        m_Scale: {x: 3, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: b14abd493f810c24da29cc0d293e756f, type: 3}
+        m_Scale: {x: 4, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMaskMap:
+        m_Texture: {fileID: 2800000, guid: 69bd97d017c142e43912208872d08103, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: 67a6a7bfcdf35c3428e1406f44398fbe, type: 3}
+        m_Scale: {x: 4, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d89a7c83cc09c4a4c9e0e8c27e87dbb6, type: 3}
+        m_Scale: {x: 3, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 30f9d42f655d0ae4fae9a91c2284643c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: ae6f7061f3a6eac4f98e0dce5dfcf838, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _BaseDetail: 0
+    - _BlendColor: 0
+    - _BlendHeight: 0.415
+    - _Brightness: 1
+    - _BumpScale: 1.5
+    - _ColorMask: 15
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DetailBlendHeight: 0.243
+    - _DetailBlendInfluence: 0.8
+    - _DetailBlendSmooth: 0.024
+    - _DetailBrightness: 0.4
+    - _DetailNormalMapScale: 1.1
+    - _DetailOffsetXDetail: 0.2
+    - _DetailOffsetXDetailMask: 0.67
+    - _DetailOffsetYDetail: 0.83
+    - _DetailOffsetYDetailMask: 0
+    - _DetailTilingXDetail: 4
+    - _DetailTilingXDetailMask: 2
+    - _DetailTilingYDetail: 5
+    - _DetailTilingYDetailMask: -0.5
+    - _Detail_BlendAmountMask: 0.5
+    - _Detail_BlendFalloffMask: 0.5
+    - _Detail_BlendHardnessMask: 1
+    - _Detail_UVSet: 0
+    - _DstBlend: 0
+    - _EnableDetailMap: 1
+    - _EnableDetailMask: 2
+    - _GlobalWindInfluence: 1
+    - _GlobalWindInfluence1: 1
+    - _GlobalWindInfluenceOther: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.4
+    - _GlossinessThreshold: 0
+    - _GlossinessVariance: 0
+    - _GlossyReflections: 1
+    - _Height: 0.171
+    - _LocalRandomWindOffset: 0.2
+    - _LocalWindDirection: 1
+    - _LocalWindPulse: 0.1
+    - _LocalWindStrength: 0.3
+    - _Metallic: 0.1
+    - _MetallicStrength: 0
+    - _Mian_UVSet: 0
+    - _Mode: 0
+    - _NormalStrength: 1
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrength: 0.3
+    - _OcclusionStrengthAO: 0.5
+    - _OffsetX: 0.5
+    - _OffsetY: 0.4
+    - _Parallax: 0.02
+    - _Smooth: 0.018
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessStrength: 0.25
+    - _SmoothnessTextureChannel: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TextureInfluence: 0.108
+    - _TilingX: 2
+    - _TilingY: 0.4
+    - _TillingMode: 0
+    - _TillingModeDetail: 0
+    - _UVSec: 0
+    - _WindMode: 1
+    - _ZTestMode: 4
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 0.7546353, g: 0.842485, b: 0.89411765, a: 1}
+    - _ColorDetail: {r: 0.8, g: 0.7675127, b: 0.68629444, a: 1}
+    - _DetailColor: {r: 0.818, g: 0.818, b: 0.818, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

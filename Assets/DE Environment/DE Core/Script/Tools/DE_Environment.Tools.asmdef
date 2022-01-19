@@ -1,0 +1,18 @@
+﻿{
+	"name": "DE_Environment.Tools",
+	"references": [
+        "DE_Environment.Utils",
+        "Unity.TextMeshPro"
+    ],
+    "optionalunityreferences": [],
+    "includeplatforms": [
+        "Editor"
+    ],
+    "excludeplatforms": [
+    ],
+    "allowunsafecode": false,
+    "overridereferences": false,
+    "precompiledreferences": [],
+    "autoreferenced": true,
+    "defineconstraints": []
+}

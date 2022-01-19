@@ -1,0 +1,294 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcfa0475d8b21e4486ba4d1e13c1c70, type: 3}
+  m_Name: AE Path
+  m_EditorClassIdentifier: 
+  password: 
+  Paths:
+  - name: C.V.P - Eucalyptus Forest (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Post-Processing-Stack-V2/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Eucalyptus Forest (Demo Scene)
+    - Eucalyptus Forest (Prefab Viewer)
+  - name: C.V.P - Artificial Cells (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Post-Processing-Stack-V2/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Assets/Materials/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Otherside-World/Otherside-World.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Artificial Cells (Demo Scene)
+    - Artificial Cells (Prefab Viewer)
+  - name: C.V.P - Japanese Garden (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Post-Processing-Stack-V2/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Japanese Garden (Demo Scene)
+    - Japanese Garden (Prefab Viewer)
+  - name: C.V.P - Pine Woods (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Post-Processing-Stack-V2/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Render Pipelines
+      Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/National-Park/National-Park.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/Prefab-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Pine Woods (Demo Scene)
+    - Pine Woods (Prefab Viewer)
+  - name: C.V.P - Eucalyptus Forest (HDRP)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Eucalyptus Forest (Demo Scene)
+    - Eucalyptus Forest (Prefab Viewer)
+  - name: C.V.P - Artificial Cells (HDRP)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Assets/Materials/Render
+      Pipelines Demo Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Otherside-World/Otherside-World.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Artificial Cells (Demo Scene)
+    - Artificial Cells (Prefab Viewer)
+  - name: C.V.P - Japanese Garden (HDRP)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Japanese Garden (Demo Scene)
+    - Japanese Garden (Prefab Viewer)
+  - name: C.V.P - Pine Woods (HDRP)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Render Pipelines
+      Demo Versions/HDRP/HDRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/National-Park/National-Park.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/Prefab-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Pine Woods (Demo Scene)
+    - Pine Woods (Prefab Viewer)
+  - name: C.V.P - Eucalyptus Forest (URP)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/URP/URP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Eucalyptus Forest (Demo Scene)
+    - Eucalyptus Forest (Prefab Viewer)
+  - name: C.V.P - Artificial Cells (URP)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Assets/Materials/Render
+      Pipelines Demo Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Render
+      Pipelines Demo Versions/URP/URP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Otherside-World/Otherside-World.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Artificial Cells/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Artificial Cells (Demo Scene)
+    - Artificial Cells (Prefab Viewer)
+  - name: C.V.P - Japanese Garden (URP)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/URP/URP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Current
+      Demos Scenes Versions/Prefabs-Viewer/Prefabs-Viewer.unity
+    names2019:
+    - Japanese Garden (Demo Scene)
+    - Japanese Garden (Prefab Viewer)
+  - name: C.V.P - Pine Woods (URP)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader 10x 11x URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Render Pipelines
+      Demo Versions/URP/URP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/National-Park/National-Park.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Pine Woods/Demos/Current Demos
+      Scenes Versions/Prefab-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Pine Woods (Demo Scene)
+    - Pine Woods (Prefab Viewer)
+  Info_Slot_0:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Info_Slot_1:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Info_Slot_2:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Info_Slot_3:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Info_Slot_4:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Logo: 

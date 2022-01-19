@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Forest-Rock-Triplanar-1
+  m_Shader: {fileID: 4800000, guid: e3f83cc681c95094c8e4902a9046f668, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Bottom_BumpMap:
+        m_Texture: {fileID: 2800000, guid: ce43df39b36534242884e54bd3f44864, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bottom_MainTex:
+        m_Texture: {fileID: 2800000, guid: f8532fc7af43ead4daa2fef53e352eb5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bottom_MetallicMap:
+        m_Texture: {fileID: 2800000, guid: bfc09320b05201f4cbee31ec35dcd6ab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bottom_OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 7514799e05d0b834989a83e1e281da4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bottom_SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: a89c6529137602d49b0e3a5b97c8353d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: ce43df39b36534242884e54bd3f44864, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Curvaturewear_GrungeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Curvaturewear_GrungeNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 87446402b3dcc00429028b0dbf968e71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: ce43df39b36534242884e54bd3f44864, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Horizontalwear_GrungeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Horizontalwear_GrungeNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f8532fc7af43ead4daa2fef53e352eb5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metal:
+        m_Texture: {fileID: 2800000, guid: bfc09320b05201f4cbee31ec35dcd6ab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 7514799e05d0b834989a83e1e281da4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 87446402b3dcc00429028b0dbf968e71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: a89c6529137602d49b0e3a5b97c8353d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_BumpMap:
+        m_Texture: {fileID: 2800000, guid: ce43df39b36534242884e54bd3f44864, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_MainTex:
+        m_Texture: {fileID: 2800000, guid: f8532fc7af43ead4daa2fef53e352eb5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_MetallicMap:
+        m_Texture: {fileID: 2800000, guid: bfc09320b05201f4cbee31ec35dcd6ab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 0047bc8643f6ee44587a329ed216b666, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: a89c6529137602d49b0e3a5b97c8353d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Verticalwear_GrungeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Verticalwear_GrungeNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.49
+    - _AlphatoCoverage: 0
+    - _BlendColor: 0
+    - _BlendHeight: 1
+    - _Blend_CoverageAmount: 0.7
+    - _Blend_CoverageFactor: 0.895
+    - _Blend_CoverageFalloff: 2
+    - _Blend_Space: 0
+    - _Bottom_Brightness: 1
+    - _Bottom_MetallicStrength: 1
+    - _Bottom_NormalStrength: 1
+    - _Bottom_OcclusionSourceMode: 0
+    - _Bottom_OcclusionStrengthAO: 1
+    - _Bottom_OffsetX: 0
+    - _Bottom_OffsetY: 0
+    - _Bottom_SmoothnessMode: 2
+    - _Bottom_SmoothnessStrength: 1
+    - _Bottom_SmoothnessThreshold: 0
+    - _Bottom_SmoothnessType: 0
+    - _Bottom_SmoothnessVariance: 0.2
+    - _Bottom_TilingX: 1
+    - _Bottom_TilingY: 1
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _CullMode: 2
+    - _Curvaturewear_BlendHardness: 2
+    - _Curvaturewear_BlendMix: 0
+    - _Curvaturewear_BlendStrength: 0.5
+    - _Curvaturewear_MaskingColorFuzziness: 0.1
+    - _Curvaturewear_MaskingColorRange: 0.2
+    - _Curvaturewear_MaskingSource: 0
+    - _Curvaturewear_Metallic: 0
+    - _Curvaturewear_Mode: 0
+    - _Curvaturewear_NormalMultiplier: 1
+    - _Curvaturewear_OffsetX: 0
+    - _Curvaturewear_OffsetY: 0
+    - _Curvaturewear_Saturation: 1
+    - _Curvaturewear_Smoothness: 0
+    - _Curvaturewear_TilingX: 1
+    - _Curvaturewear_TilingY: 1
+    - _Curvaturewear_UVPosition: 1
+    - _Cutoff: 0.5
+    - _DetailBlendHeight: 1.25
+    - _DetailBlendInfluence: 1.1
+    - _DetailBlendSmooth: 0.407
+    - _DetailBrightness: 0.635
+    - _DetailNormalMapScale: 1
+    - _DetailOffsetXDetail: 0
+    - _DetailOffsetXDetailMask: 0
+    - _DetailOffsetYDetail: 0
+    - _DetailOffsetYDetailMask: 0
+    - _DetailTilingXDetail: 1
+    - _DetailTilingXDetailMask: 1
+    - _DetailTilingYDetail: 1
+    - _DetailTilingYDetailMask: 1
+    - _Detail_UVSet: 0
+    - _DisplacementStrength: 0
+    - _Displacement_Mode: 1
+    - _DstBlend: 0
+    - _EnableDetailMap: 0
+    - _EnableDetailMask: 0
+    - _GlancingClipMode: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Gradient_Contrast: 0
+    - _Gradient_Height: 0.5
+    - _Gradient_Mode: 1
+    - _Gradient_Ramp: 0.191
+    - _Gradient_UVPosition: 1
+    - _Horizontalwear_BlendMix: 1
+    - _Horizontalwear_BlendStrength: 0.5
+    - _Horizontalwear_MaskingColorFuzziness: 0.1
+    - _Horizontalwear_MaskingColorRange: 0.2
+    - _Horizontalwear_MaskingSource: 0
+    - _Horizontalwear_Metallic: 0
+    - _Horizontalwear_Mode: 0
+    - _Horizontalwear_NormalMultiplier: 1
+    - _Horizontalwear_OffsetX: 0
+    - _Horizontalwear_OffsetY: 0
+    - _Horizontalwear_Saturation: 1
+    - _Horizontalwear_Smoothness: 0
+    - _Horizontalwear_TilingX: 1
+    - _Horizontalwear_TilingY: 1
+    - _Horizontalwear_UVPosition: 0
+    - _MaskClipValue: 0.5
+    - _Metallic: 0
+    - _MetallicStrength: 1
+    - _Mian_UVSet: 0
+    - _Mode: 0
+    - _NormalMode: 0
+    - _NormalStrength: 1.1
+    - _OcclusionSourceMode: 0
+    - _OcclusionStrength: 1
+    - _OcclusionStrengthAO: 1
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Parallax: 0.02
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessStrength: 1
+    - _SmoothnessTextureChannel: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TessellationDistanceMax: 5
+    - _TessellationDistanceMin: 0
+    - _TessellationMode: 0
+    - _TessellationStrength: 6
+    - _TilingX: 1
+    - _TilingY: 1
+    - _TillingMode: 0
+    - _TillingModeDetail: 0
+    - _Top_Brightness: 1
+    - _Top_MetallicStrength: 1
+    - _Top_NormalStrength: 1
+    - _Top_OcclusionSourceMode: 0
+    - _Top_OcclusionStrengthAO: 1
+    - _Top_OffsetX: 0
+    - _Top_OffsetY: 0
+    - _Top_SmoothnessMode: 2
+    - _Top_SmoothnessStrength: 1
+    - _Top_SmoothnessThreshold: 0
+    - _Top_SmoothnessType: 0
+    - _Top_SmoothnessVariance: 0.2
+    - _Top_TilingX: 0.5
+    - _Top_TilingY: 0.5
+    - _UVSec: 0
+    - _Verticalwear_BlendMix: 1
+    - _Verticalwear_BlendStrength: 0.5
+    - _Verticalwear_MaskingColorFuzziness: 0.1
+    - _Verticalwear_MaskingColorRange: 0.2
+    - _Verticalwear_MaskingSource: 0
+    - _Verticalwear_Metallic: 0
+    - _Verticalwear_Mode: 0
+    - _Verticalwear_NormalMultiplier: 1
+    - _Verticalwear_OffsetX: 0
+    - _Verticalwear_OffsetY: 0
+    - _Verticalwear_Saturation: 1
+    - _Verticalwear_Smoothness: 0
+    - _Verticalwear_TilingX: 1
+    - _Verticalwear_TilingY: 1
+    - _Verticalwear_UVPosition: 0
+    - _ZTestMode: 4
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _Bottom_Color: {r: 0.55, g: 0.51927376, b: 0.4977654, a: 0}
+    - _Color: {r: 1, g: 0.9678817, b: 0.95, a: 1}
+    - _ColorDetail: {r: 0.3392109, g: 0.34117648, b: 0.13333334, a: 0}
+    - _Curvaturewear_MaskingColor: {r: 0.5019608, g: 0, b: 0, a: 0}
+    - _Curvaturewear_Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Gradient_Bottom: {r: 0.103773594, g: 0.078327164, b: 0.062166255, a: 0}
+    - _Gradient_BottomSide: {r: 0.1, g: 0.04982076, b: 0, a: 0}
+    - _Gradient_TintCurvature: {r: 0.05, g: 0.04002498, b: 0.0351, a: 0}
+    - _Gradient_Top: {r: 0.447, g: 0.3151368, b: 0.20606698, a: 0}
+    - _Gradient_TopSide: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Horizontalwear_MaskingColor: {r: 0.5019608, g: 0, b: 0, a: 0}
+    - _Horizontalwear_Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Top_Color: {r: 0.9, g: 0.87479997, b: 0.81, a: 0}
+    - _Verticalwear_MaskingColor: {r: 0.5019608, g: 0, b: 0, a: 0}
+    - _Verticalwear_Tint: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

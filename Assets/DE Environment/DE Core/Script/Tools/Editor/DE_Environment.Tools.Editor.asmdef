@@ -1,0 +1,17 @@
+{
+    "name": "DE_Environment.Tools.Editor",
+    "references": [
+        "DE_Environment.Utils",
+        "DE_Environment.Tools",
+        "DE_Environment.Utils.Editor"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

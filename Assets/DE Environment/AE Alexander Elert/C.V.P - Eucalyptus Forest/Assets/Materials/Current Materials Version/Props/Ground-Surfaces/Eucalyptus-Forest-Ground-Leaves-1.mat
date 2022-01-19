@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eucalyptus-Forest-Ground-Leaves-1
+  m_Shader: {fileID: 4800000, guid: 95560e6ee78d67f4184120ac54f804ff, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 831d37b22bcbd4b44a6172a4a5bd6049, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f2ece8f54ac736141b9666d44458e2ce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metal:
+        m_Texture: {fileID: 2800000, guid: cc7d2a5b63170a34d85a8a860fea0ba1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: cc7d2a5b63170a34d85a8a860fea0ba1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: f2b4dfc72aa74164fa498420cd6ed36a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 1ce672f77f9be7b4292fcc038b11d90c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: 7d7f7225c0fce62499a51a061150b74d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _BlendColor: 0
+    - _BlendHeight: 1
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DetailBlendHeight: 1
+    - _DetailBlendInfluence: 1
+    - _DetailBlendSmooth: 0.35
+    - _DetailBrightness: 1
+    - _DetailNormalMapScale: 1
+    - _DetailOffsetXDetail: 0
+    - _DetailOffsetXDetailMask: 0
+    - _DetailOffsetYDetail: 0
+    - _DetailOffsetYDetailMask: 0
+    - _DetailTilingXDetail: 1
+    - _DetailTilingXDetailMask: 1
+    - _DetailTilingYDetail: 1
+    - _DetailTilingYDetailMask: 1
+    - _Detail_BlendAmountMask: 0.5
+    - _Detail_BlendFalloffMask: 0.5
+    - _Detail_BlendHardnessMask: 1
+    - _Detail_UVSet: 0
+    - _DisplacementStrength: 0.0008
+    - _Displacement_Mode: 1
+    - _Displacement_Strength: 0.001
+    - _DstBlend: 0
+    - _EnableDetailMap: 0
+    - _EnableDetailMask: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _MetallicStrength: 0.2
+    - _Mian_UVSet: 0
+    - _Mode: 0
+    - _NormalStrength: 1
+    - _OcclusionSourceMode: 0
+    - _OcclusionStrength: 1
+    - _OcclusionStrengthAO: 1
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Parallax: 0.02
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessStrength: 1
+    - _SmoothnessTextureChannel: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TessellationDistanceMax: 5
+    - _TessellationDistanceMin: 0
+    - _TessellationMode: 1
+    - _TessellationPhong: 0.5
+    - _TessellationStrength: 100
+    - _TilingX: 1
+    - _TilingY: 1
+    - _TillingMode: 0
+    - _TillingModeDetail: 0
+    - _UVSec: 0
+    - _ZTestMode: 4
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDetail: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

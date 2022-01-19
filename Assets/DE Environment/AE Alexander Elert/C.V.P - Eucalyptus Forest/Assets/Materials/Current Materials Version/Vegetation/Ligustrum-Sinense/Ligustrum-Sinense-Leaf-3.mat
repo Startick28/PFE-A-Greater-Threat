@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ligustrum-Sinense-Leaf-3
+  m_Shader: {fileID: 4800000, guid: 3d595383dbc330d49a97f948e89cf22f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 55ce5782cc62e4744a002bf764c5bbdc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorShift_MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 42a4590a37c4a0b41867cd51c7bec06b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.5
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphatoCoverage: 0
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _ColorMode: 2
+    - _ColorShiftRGBBrightness: 1
+    - _ColorShiftRGBHue: -0.2
+    - _ColorShiftRGBSaturation: 0.95
+    - _ColorShift_MaskFuzziness: 0.25
+    - _ColorShift_MaskMode: 0
+    - _ColorShift_Mode: 0
+    - _ColorShift_NoiseScale: 1
+    - _ColorShift_ShiftInfluence: 0.75
+    - _ColorShift_ShiftSaturation: 0.85
+    - _ColorShift_ShiftVariation: 0.2
+    - _ColorShift_ShiftVariationRGB: 0.2
+    - _ColorShift_WorldSpaceDistance: 5
+    - _ColorShift_WorldSpaceNoiseShift: 5
+    - _ColorShift_WorldSpaceOffset: 1
+    - _ColorVariation: 0.07
+    - _CullMode: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Distortion: 0.5
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 0
+    - _EnableTranslucency: 1
+    - _GlancingClipMode: 0
+    - _GlobalTurbulenceInfluence: 0.1
+    - _GlobalWindInfluence: 1
+    - _GlobalWindInfluence1: 1
+    - _GlobalWindInfluenceOther: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossinessThreshold: 0
+    - _GlossinessVariance: 0.5
+    - _GlossyReflections: 1
+    - _Hue: 0.09
+    - _LightSouce: 0
+    - _LocalRandomWindOffset: 0.2
+    - _LocalWindDirection: 1
+    - _LocalWindPulse: 0.1
+    - _LocalWindStrength: 0.3
+    - _LocalWindTurbulence: 0.2
+    - _MapInverted: 0
+    - _MaskClipValue: 0.5
+    - _Metallic: 0
+    - _MetallicStrength: 0
+    - _Mian_UVSet: 0
+    - _Mode: 0
+    - _NormalMode: 2
+    - _NormalStrength: 1
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrength: 0.3
+    - _OcclusionStrengthAO: 0.5
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Parallax: 0.02
+    - _Power: 1
+    - _RGBColorBrightness: 2
+    - _RGBColorHue: 0
+    - _RGBColorSaturation: 0.95
+    - _Saturation: 1.28
+    - _Scale: 1
+    - _ShiftVariation: 0.08
+    - _SmoothnessModeCutout: 3
+    - _SmoothnessStrength: 0.33
+    - _SmoothnessTextureChannel: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _TransAmbient: 1
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0
+    - _TransScattering: 4
+    - _TransShadow: 0.98
+    - _Translucency: 1
+    - _TranslucencyCullForward: 0
+    - _TranslucencySource: 0
+    - _TranslucencyThickness: 1
+    - _URP_TranslucencyAmbient: 1
+    - _URP_TranslucencyDirect: 1
+    - _URP_TranslucencyNormalDistortion: 0
+    - _URP_TranslucencyScattering: 1
+    - _URP_TranslucencyShadow: 0.98
+    - _URP_TranslucencyStrength: 1
+    - _URP_TransmissionShadow: 0.98
+    - _UVSec: 0
+    - _Value: 1.25
+    - _WindMode: 1
+    - _WindModeCutoutShader: 1
+    - _WindModeLeaves: 0
+    - _WindType: 0
+    - _ZTestMode: 4
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _TranslucencyTint: {r: 0.30147058, g: 0.5, b: 0.25, a: 1}
+    - _TranslucentColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TransmissionTint: {r: 0.075, g: 0.1, b: 0.075, a: 1}
+  m_BuildTextureStacks: []
