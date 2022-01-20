@@ -15,6 +15,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
 
     private int lastId = 0;
     [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject endgameEnemyPrefab;
     
     [SerializeField] private GT_EnemyScript greaterThreat;
 
@@ -30,6 +31,19 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
         lastId++;
     }
 
+
+    // Instantiate an enemy with RPC.
+    // How to call it : 
+    // EnemiesManager.Instance.photonView.RPC("InstantiateEndgameEnemy", RpcTarget.All, position);
+    [PunRPC]
+    public void InstantiateEndgameEnemy(Vector3 position, Vector3 endgameObjective)
+    {
+        GameObject enemyInstantiate = Instantiate(endgameEnemyPrefab, position, Quaternion.identity);
+        enemyInstantiate.GetComponent<EndgameArack>().FinalObjective = endgameObjective;
+        enemyInstantiate.transform.parent = gameObject.transform;
+        enemyInstantiate.GetComponent<EnemyScript>().ID = lastId;
+        lastId++;
+    }
 
     // Parcours tous les enfants de l'EnemiesManager en fonction d'un ID.
     // Appel par la suite la fonction TakeDamage de l'enfant en question

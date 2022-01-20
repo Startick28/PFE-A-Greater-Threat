@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class EndgameSpawner : MonoBehaviour
 {
+    [SerializeField] private Transform endgameObjective;
     [SerializeField] private GameObject ArackPrefab;
 
     [SerializeField] private float startSpawnFrequency = 2f;
@@ -45,7 +46,7 @@ public class EndgameSpawner : MonoBehaviour
     {
         if (EnemiesManager.Instance)
         {
-            EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, transform.position);
+            EnemiesManager.Instance.photonView.RPC("InstantiateEndgameEnemy", RpcTarget.All, transform.position, endgameObjective.position);
         }
     }
 

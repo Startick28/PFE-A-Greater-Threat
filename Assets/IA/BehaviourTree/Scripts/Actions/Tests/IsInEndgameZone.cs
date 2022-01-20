@@ -14,7 +14,7 @@ public class IsInEndgameZone : ActionNode
     }
 
     protected override State OnUpdate() {
-        if (Vector3.Distance(context.transform.position, context.endgameArackScript.FinalObjective.position) <= distanceFromZone && !blackboard.reachedEndgameZone) 
+        if (Vector3.Distance(context.transform.position, context.endgameArackScript.FinalObjective) <= distanceFromZone || blackboard.reachedEndgameZone) 
         {
             blackboard.reachedEndgameZone = true;
             return State.Success;

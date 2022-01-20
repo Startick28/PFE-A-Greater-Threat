@@ -61,6 +61,11 @@ MonoBehaviour:
   - GT_JumpAttack
   - GT_LeftClawHeavyAttack
   - GT_RightClawHeavyAttack
+  - InteractWithHandle
+  - InteractWithWinInteractable
+  - InteractWithRedButton
+  - InstantiateEngameEnemy
+  - InstantiateEndgameEnemy
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
