@@ -109,16 +109,20 @@ public class BasicGun : Interactable
 
     public bool fire(Vector3 position,Vector3 direction)
     {
-        
-            Debug.Log(loadedBullets);
+        if(playerController == null)
+        {
+            playerController = GetComponentInParent<FPSCharacterController>();
+        }
+            
             if (loadedBullets == 0)
             {
                 Debug.Log("Tried to shoot with empty mag");
                 return false;
             }
             playerController.addRecoilToCamera(-recoil, Random.Range(-2.0f,2.0f));
-            //Debug.Log("Tried to shoot with basic gun");
-            int layerMask = 1 << 11;
+        Debug.Log("fire");
+        //Debug.Log("Tried to shoot with basic gun");
+        int layerMask = 1 << 11;
             RaycastHit hit;
             Debug.DrawRay(position, direction * 1000, Color.red);
             if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
