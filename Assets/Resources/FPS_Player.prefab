@@ -3010,6 +3010,7 @@ GameObject:
   - component: {fileID: 8787347992579279498}
   - component: {fileID: 1043111731510450747}
   - component: {fileID: 4104020838665050556}
+  - component: {fileID: 2470545316960309152}
   m_Layer: 3
   m_Name: FPS_Player
   m_TagString: Player
@@ -3241,6 +3242,30 @@ MonoBehaviour:
   emissionType: 0
   emissionIntensity: 20
   emissionDuration: 10
+--- !u!114 &2470545316960309152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477986025960081341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bcfbf5558f5b0439b9b23f7e8f23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioPrefab: {fileID: 8034586173597488785, guid: 8db92371849e72741867c20d51987d3b, type: 3}
+  listAudios:
+  - {fileID: 8300000, guid: 6c8f9f7a0cf4a1b4988cc7966f400fe4, type: 3}
+  - {fileID: 8300000, guid: ddf8c5cfdb2ef8840a2595d3706b9204, type: 3}
+  - {fileID: 8300000, guid: 9421fc15f4c626b44be587f219142c46, type: 3}
+  - {fileID: 8300000, guid: 8ea82b8cdfccc9e48a4f44f180155d3c, type: 3}
+  volumeChangeMultiplier: 0.2
+  pitchChangeMultiplier: 0.2
+  randomRangeX: 100
+  randomRangeY: 3
+  randomRangeZ: 100
+  timeToPlay: 150
 --- !u!1001 &2743922355911460054
 PrefabInstance:
   m_ObjectHideFlags: 0
