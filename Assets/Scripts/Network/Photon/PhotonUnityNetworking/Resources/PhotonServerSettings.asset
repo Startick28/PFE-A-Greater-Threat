@@ -61,6 +61,7 @@ MonoBehaviour:
   - GT_JumpAttack
   - GT_LeftClawHeavyAttack
   - GT_RightClawHeavyAttack
+  - InteractWithHandle
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
