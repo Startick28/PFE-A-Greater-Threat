@@ -839,7 +839,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 10
+  speed: 5
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
@@ -1203,6 +1203,44 @@ MonoBehaviour:
   description: Too close to jump?
   drawGizmos: 0
   range: 12
+--- !u!114 &-4790032713423104276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c540d9e953ade14fa6e838f35cf1973, type: 3}
+  m_Name: IsInEndgameZone
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9009ab0052385334091017f7c09e69ab
+  position: {x: -40, y: 574}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+    reachedEndgameZone: 0
+  description: 
+  drawGizmos: 0
+  distanceFromZone: 3
 --- !u!114 &-4608398738694230860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,22 +2210,22 @@ MonoBehaviour:
   - {fileID: 6117860784336067636}
   - {fileID: 2903631432209632890}
   - {fileID: -6058594782101489560}
-  - {fileID: 856594020886556347}
+  - {fileID: -4790032713423104276}
   blackboard:
-    moveToPosition: {x: 15.153238, y: 0, z: -54.927895}
-    lastPlayerSeenPosition: {x: 35.2, y: 1, z: 8.5}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    moveToPosition: {x: 2.8318524, y: 0, z: -59.482315}
+    lastPlayerSeenPosition: {x: -12.662366, y: -8.139999, z: -57.4854}
+    lastPlayerSeenEstimatedDirection: {x: -0.21308641, y: -0.13698256, z: -0.967383}
     hasEstimationOfPlayerDirection: 1
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: -0.0039002313
+    jumpBiteAttackCD: -0.19999687
     clawAttackCD: -447.30417
-    disengageJumpCD: -0.070431255
-    pausingAfterAttack: -3469.5027
+    disengageJumpCD: -0.19999497
+    pausingAfterAttack: -41758.195
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -3022.2234
+    lookAtPlayerLock: -41300.94
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
@@ -2349,44 +2387,6 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
---- !u!114 &856594020886556347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c540d9e953ade14fa6e838f35cf1973, type: 3}
-  m_Name: IsInEndgameZone
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: f7c224483e706dd4687950563fddd14e
-  position: {x: -39.999943, y: 569.5475}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  distanceFromZone: 3
 --- !u!114 &959074903398867322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2503,7 +2503,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 6
+  speed: 5
   angularSpeed: 720
   stoppingDistance: 2
   updatePosition: 0
@@ -2946,7 +2946,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  child: {fileID: 856594020886556347}
+  child: {fileID: -4790032713423104276}
 --- !u!114 &2996546159922678676
 MonoBehaviour:
   m_ObjectHideFlags: 0

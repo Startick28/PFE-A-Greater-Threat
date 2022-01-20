@@ -142,7 +142,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 
 		//weaponAnimator.gameObject.SetActive(false);
-		Debug.Log(pistolBullets);
+		//Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
 
 		modelAnimator.SetTrigger("idle");

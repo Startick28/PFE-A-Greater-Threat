@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EndgameArack : MonoBehaviour
 {
 
-    public Transform FinalObjective;
+    public Vector3 FinalObjective;
 
     private NavMeshAgent agent;
     private BehaviourTreeAI.BehaviourTreeRunner treeRunner;
@@ -23,6 +23,7 @@ public class EndgameArack : MonoBehaviour
         agent.enabled = false;
         treeRunner.enabled = false;
         rb.useGravity = true;
+        rb.drag = 0;
     }
 
 
@@ -33,6 +34,7 @@ public class EndgameArack : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.1f, layerMask))
         {
             rb.useGravity = false;
+            rb.drag = float.PositiveInfinity;
             agent.enabled = true;
             treeRunner.enabled = true;
             Destroy(this);

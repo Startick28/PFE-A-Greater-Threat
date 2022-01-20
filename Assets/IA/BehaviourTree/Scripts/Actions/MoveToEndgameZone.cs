@@ -21,13 +21,13 @@ public class MoveToEndgameZone : ActionNode
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
 
-        context.agent.destination = context.endgameArackScript.FinalObjective.position;
+        context.agent.destination = context.endgameArackScript.FinalObjective;
         if (EnemiesManager.Instance)
         {
             EnemiesManager.Instance.photonView.RPC("EnemyMoveToPositionWithId", 
                                                     Photon.Pun.RpcTarget.All,
                                                     context.monsterID,
-                                                    context.endgameArackScript.FinalObjective.position,
+                                                    context.endgameArackScript.FinalObjective,
                                                     stoppingDistance,
                                                     speed,
                                                     angularSpeed,

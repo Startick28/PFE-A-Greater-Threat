@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class InteractRedButton : Interactable
 {
-    [SerializeField]
-    TextMeshProUGUI timeLeftText;
-    [SerializeField]
-    GameObject doubleDoor;
+    [SerializeField] TextMeshProUGUI timeLeftText;
+    [SerializeField] GameObject doubleDoor;
+    [SerializeField] EndgameSpawner endgameSpawnerW;
+    [SerializeField] EndgameSpawner endgameSpawnerE;
 
     private bool clicked = false;
 
@@ -30,6 +30,8 @@ public class InteractRedButton : Interactable
         whenClickedTime = Time.time;
         doubleDoor.GetComponent<DoorDoubleSlide>().enabled = true;
         doubleDoor.GetComponent<AudioSource>().enabled = true;
+        endgameSpawnerW.StartEndgame();
+        endgameSpawnerE.StartEndgame();
     }
     public override void finishInteraction()
     {
@@ -55,17 +57,21 @@ public class InteractRedButton : Interactable
     // Update is called once per frame
     void Update()
     {
-        if (clicked)
+        if (timeLeftText)
         {
-            timeLeftText.text = "Time left : " + (timeLeftAfterClicking - (Time.time - whenClickedTime)).ToString("F2");
+            if (clicked)
+            {
+                timeLeftText.text = "Time left : " + (timeLeftAfterClicking - (Time.time - whenClickedTime)).ToString("F2");
+            }
+            else
+            {
+                timeLeftText.text = "";
+            }
+            if (clicked && 0 >= (timeLeftAfterClicking - (Time.time - whenClickedTime)))
+            {
+                SceneManager.LoadScene("lost");
+            }
         }
-        else
-        {
-            timeLeftText.text = "";
-        }
-        if (clicked && 0 >= (timeLeftAfterClicking - (Time.time - whenClickedTime)))
-        {
-            SceneManager.LoadScene("lost");
-        }
+        
     }
 }

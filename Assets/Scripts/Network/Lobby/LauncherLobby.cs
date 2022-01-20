@@ -103,8 +103,8 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        // Permet de charger la scene que l'on veut, le 1 représente l'index de la scene indiqué dans le build settings d'unity
-        PhotonNetwork.LoadLevel("BaseScene");
+        // Permet de charger la scene que l'on veut, le 1 reprï¿½sente l'index de la scene indiquï¿½ dans le build settings d'unity
+        PhotonNetwork.LoadLevel("MapForest");
     }
 
     public override void OnLeftRoom()

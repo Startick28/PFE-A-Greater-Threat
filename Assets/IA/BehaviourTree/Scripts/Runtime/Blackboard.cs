@@ -65,6 +65,12 @@ namespace BehaviourTreeAI {
         public void SetContext(Context c)
         {
             context = c;
+            
+            playerIntercepted = false;
+            hasEstimationOfPlayerDirection = false;
+            focusedPlayer = null;
+            canAttackPlayer = true;
+            reachedEndgameZone = false;
         }
 
         public void Reset()

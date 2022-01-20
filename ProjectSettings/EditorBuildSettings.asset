@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Loading.unity
     guid: 2aee79dbabdbbfc40bbb8c0df3a9b96a
   - enabled: 1
-    path: Assets/Scenes/BaseScene.unity
-    guid: 51fee4f9bf1a42748a0e1881cf9856bc
-  - enabled: 1
     path: Assets/Scenes/MapForest.unity
     guid: afe3537c0f4bd724f80a5ac2eb7bc715
+  - enabled: 1
+    path: Assets/Scenes/BaseScene/BaseScene.unity
+    guid: 51fee4f9bf1a42748a0e1881cf9856bc
   m_configObjects: {}

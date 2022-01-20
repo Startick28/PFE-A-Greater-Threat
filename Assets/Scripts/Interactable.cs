@@ -26,7 +26,7 @@ public abstract class Interactable : MonoBehaviour
         
         if (playerController != null && canInteract)
         {
-               Debug.Log("chest is now NearestInteractabe");
+               //Debug.Log("chest is now NearestInteractabe");
                playerController.nearestInteractable = this;
                players.Add(playerController);
         }
