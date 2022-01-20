@@ -7,8 +7,16 @@ public class WinInteraction : Interactable
 {
     private Collider coll;
     private bool isInTheArea = false;
+    static WinInteraction instance;
+
+    static public WinInteraction Instance()
+    {
+        return instance;
+    }
+
     private void Start()
     {
+        instance = this;
         coll = GetComponent<Collider>();
         canInteract = false;
     }

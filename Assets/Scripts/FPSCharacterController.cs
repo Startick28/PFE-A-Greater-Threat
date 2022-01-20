@@ -256,7 +256,12 @@ public class FPSCharacterController : AdvancedWalkerController
 								break;
 
 							case InteractionType.win:
-								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								GetComponent<PhotonView>().RPC("InteractWithWinInteractable", RpcTarget.All);
+								Debug.Log("Je peux interargir avec le win");
+								//nearestInteractable.interact();
+								break;
+							case InteractionType.redButton:
+								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All);
 								Debug.Log("Je peux interargir avec le win");
 								//nearestInteractable.interact();
 								break;
@@ -554,6 +559,11 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 
 	[PunRPC]
+	public void InteractWithWinInteractable()
+	{
+		WinInteraction.Instance().interact(this);
+	}
+	[PunRPC]
 	public void InteractWithChest(int id)
 	{
 		ChestManager.Instance.OpenChest(id, this);
@@ -610,6 +620,11 @@ public class FPSCharacterController : AdvancedWalkerController
         }
     }
 
+	[PunRPC]
+	public void InteractWithRedButton()
+	{
+		InteractRedButton.Instance().interactRedButton();
+	}
 	void die()
     {
 		Debug.Log("Died");
