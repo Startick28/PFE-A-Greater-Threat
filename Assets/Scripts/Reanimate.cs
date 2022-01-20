@@ -7,10 +7,12 @@ public class Reanimate : Interactable
     public void died()
     {
         canInteract = true;
+        GetComponent<SphereCollider>().enabled = true;
     }
     private void Start()
     {
         canInteract = false;
+        GetComponent<SphereCollider>().enabled = false;
     }
     public override void finishInteraction()
     {
@@ -19,6 +21,7 @@ public class Reanimate : Interactable
 
     public override void interact(FPSCharacterController player)
     {
-        //gameObject.transform.parent.GetComponent<FPSCharacterController>().Reanimate();
+        GetComponent<SphereCollider>().enabled = false;
+        gameObject.transform.parent.GetComponent<FPSCharacterController>().Reanimate();
     }
 }
