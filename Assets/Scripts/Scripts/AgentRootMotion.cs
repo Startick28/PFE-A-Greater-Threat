@@ -11,6 +11,8 @@ public class AgentRootMotion : MonoBehaviour
 
     Quaternion desiredRotation;
 
+    float epsilon = 5f;
+
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
@@ -35,7 +37,7 @@ public class AgentRootMotion : MonoBehaviour
 
             //Apply the rotation 
             desiredRotation = Quaternion.Lerp(desiredRotation, newRot, Time.deltaTime * 10f);
-            transform.rotation = desiredRotation;
+            if (Quaternion.Angle(transform.rotation, newRot) > epsilon) transform.rotation = desiredRotation;
 
         }
     }

@@ -61,7 +61,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousJump;
 
 
-	List<BasicGun> weapons = new List<BasicGun>();
+	public List<BasicGun> weapons = new List<BasicGun>();
 	[SerializeField]
 	TP_Model_Monitor tpMonitor;
 
@@ -131,7 +131,6 @@ public class FPSCharacterController : AdvancedWalkerController
 
 
 		//weaponAnimator.gameObject.SetActive(false);
-		Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
 
 		modelAnimator.SetTrigger("idle");
@@ -143,6 +142,13 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
+		if(weapons.Count != 0)
+        {
+			Debug.Log(weapons[currentWeaponIndex].isReadyToFire);
+
+		}
+		//Debug.Log(cameraController.GetAimingDirection() == null);
+		
 		float scroll = fcharacterInput.getCurrentMouseScroll();
 		if(scroll != 0)
         {
@@ -725,6 +731,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 	public void changeGun(BasicGun newGun)
     {
+		Debug.Log("called change gun");
 		GameObject playerGun = getCurrentWeapon(newGun.type);
 		Vector3 oldPos = newGun.transform.position;
 		// On met le nouveau gun sur le joueur
@@ -817,8 +824,8 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	public GameObject getCurrentWeapon()
 	{
-		Debug.Log(currentWeaponIndex);
-		Debug.Log(currentWeaponIndex);
+		//Debug.Log(currentWeaponIndex);
+		//Debug.Log(currentWeaponIndex);
 		if(weapons.Count != 0)
         {
 			return weapons[currentWeaponIndex].gameObject;
@@ -836,6 +843,6 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void collectAmmunition(int quantity,int type)
     {
 		ammunitions[type - 1] += quantity;
-		Debug.Log("CollectedAmmunition");
+		//Debug.Log("CollectedAmmunition");
     }
 }
