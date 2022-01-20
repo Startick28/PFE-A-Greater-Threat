@@ -48,7 +48,7 @@ MonoBehaviour:
   canInteract: 0
   iType: 1
   rarity: 0
-  magSize: 0
+  magSize: 10
   fireRate: 2
   noise: 0
   recoil: 0
