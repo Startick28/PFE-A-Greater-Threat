@@ -48,6 +48,8 @@ namespace BehaviourTreeAI {
         public bool playerIntercepted = false;
         public bool canAttackPlayer = true;
 
+        public bool reachedEndgameZone = false;
+
         public void Update()
         {  
             pausingAfterAttack -= Time.deltaTime;

@@ -29,6 +29,9 @@ namespace BehaviourTreeAI {
         public GT_EnemyScript greaterThreatColliders;
         public GT_HeadFollow headFollow;
 
+        //Endgame Aracks
+        public EndgameArack endgameArackScript;
+
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
             Context context = new Context();
@@ -49,6 +52,8 @@ namespace BehaviourTreeAI {
             context.goalManager = gameObject.GetComponent<GoalManager>();
             context.greaterThreatColliders = gameObject.GetComponent<GT_EnemyScript>();
             context.headFollow = gameObject.GetComponent<GT_HeadFollow>();
+            //Endgame Aracks
+            context.endgameArackScript = gameObject.GetComponent<EndgameArack>();
 
             return context;
         }
