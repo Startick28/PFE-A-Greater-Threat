@@ -504,7 +504,16 @@ public class FPSCharacterController : AdvancedWalkerController
 							camera.enabled = false;
 						}
 					}
-					cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+					if(cameraTargetWhenDead == null)
+                    {
+						cameras[0].gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = cameras[0].transform.parent.parent.parent;
+						cameras[0].gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = cameras[0].transform.parent.parent.parent;
+						cameras[0].enabled = true;
+                    }
+                    else
+                    {
+						cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+					}
 				}
 				else
 				{
@@ -512,9 +521,6 @@ public class FPSCharacterController : AdvancedWalkerController
 					{
 						if (cameraTargetWhenDead == camera)
 						{
-							cameraTargetWhenDead = camera;
-							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
-							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
 							camera.enabled = true;
 							camera.transform.rotation = camera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
 						}
@@ -547,7 +553,10 @@ public class FPSCharacterController : AdvancedWalkerController
 					}
 				}
 
-				cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+				if(cameraTargetWhenDead != null)
+                {
+					cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+				}
 			}
 		}
 	}
@@ -964,8 +973,8 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	public GameObject getCurrentWeapon()
 	{
-		Debug.Log(currentWeaponIndex);
-		Debug.Log(currentWeaponIndex);
+		//Debug.Log(currentWeaponIndex);
+		//Debug.Log(currentWeaponIndex);
 		if(weapons.Count != 0)
         {
 			return weapons[currentWeaponIndex].gameObject;
