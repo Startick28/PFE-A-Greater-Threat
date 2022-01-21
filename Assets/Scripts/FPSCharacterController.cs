@@ -236,7 +236,7 @@ public class FPSCharacterController : AdvancedWalkerController
 								break;
 							case InteractionType.player:
 								Debug.Log("Je peux interargir avec le player");
-								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								GetComponent<PhotonView>().RPC("InteractWithAlly", RpcTarget.All, nearestInteractable.transform.parent.GetComponent<PhotonView>().ViewID);
 								//nearestInteractable.interact(this);
 								break;
 
@@ -261,7 +261,7 @@ public class FPSCharacterController : AdvancedWalkerController
 								//nearestInteractable.interact();
 								break;
 							case InteractionType.redButton:
-								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All);
+								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All, nearestInteractable.GetComponent<InteractRedButton>().id);
 								Debug.Log("Je peux interargir avec le win");
 								//nearestInteractable.interact();
 								break;
@@ -579,6 +579,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	[PunRPC]
 	public void InteractWithHandle(int id)
 	{
+		Debug.Log("Call Handle Manager with id " + id);
 		HandleManager.Instance().interactWithID(id);
 		//handle.GetComponent<handleInteraction>().interact(this);
 	}
@@ -586,6 +587,19 @@ public class FPSCharacterController : AdvancedWalkerController
     {
 		return cameraController.GetAimingDirection();
 
+	}
+
+	[PunRPC]
+	void InteractWithAlly(int id)
+	{
+		var players = GameObject.FindObjectsOfType<FPSCharacterController>();
+		foreach (FPSCharacterController player in players)
+		{
+			if (player.gameObject.GetComponent<PhotonView>().ViewID == id)
+			{
+				player.Reanimate();
+			}
+		}
 	}
 
 	public void emitSound()
@@ -621,10 +635,11 @@ public class FPSCharacterController : AdvancedWalkerController
     }
 
 	[PunRPC]
-	public void InteractWithRedButton()
+	public void InteractWithRedButton(int id)
 	{
-		InteractRedButton.Instance().interactRedButton();
+		FinalButtonManager.Instance().InteractWithRedButtonWithID(id);
 	}
+
 	void die()
     {
 		Debug.Log("Died");

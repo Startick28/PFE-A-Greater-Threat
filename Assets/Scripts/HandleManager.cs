@@ -25,6 +25,7 @@ public class HandleManager : Interactable
         {
             if(handle.GetComponent<handleInteraction>().id == id)
             {
+                Debug.Log("Calling interaction with handle Manager handle");
                 handle.GetComponent<handleInteraction>().interactWithHandleManger();
             }
         }
@@ -42,7 +43,7 @@ public class HandleManager : Interactable
     }
     public override void interact(FPSCharacterController player)
     {
-        throw new System.NotImplementedException();
+
     }
 
     // Start is called before the first frame update

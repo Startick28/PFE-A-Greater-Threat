@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class InteractRedButton : Interactable
 {
+    [SerializeField] public int id;
     [SerializeField] TextMeshProUGUI timeLeftText;
     [SerializeField] GameObject doubleDoor;
     [SerializeField] EndgameSpawner endgameSpawnerW;
@@ -17,16 +18,10 @@ public class InteractRedButton : Interactable
     [SerializeField]
     private float timeLeftAfterClicking;
 
-    static InteractRedButton instance;
-
-    static public InteractRedButton Instance()
-    {
-        return instance;
-    }
-
     public void interactRedButton()
     {
         clicked = true;
+        canInteract = false;
         whenClickedTime = Time.time;
         doubleDoor.GetComponent<DoorDoubleSlide>().enabled = true;
         doubleDoor.GetComponent<AudioSource>().enabled = true;
@@ -48,7 +43,6 @@ public class InteractRedButton : Interactable
     void Start()
     {
         clicked = false;
-        instance = this;
         canInteract = true;
         doubleDoor.GetComponent<DoorDoubleSlide>().enabled = false;
         doubleDoor.GetComponent<AudioSource>().enabled = false;

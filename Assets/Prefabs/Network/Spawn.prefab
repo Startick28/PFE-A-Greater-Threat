@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5537012296447147080}
   - component: {fileID: 5537012296447147081}
   - component: {fileID: 6321965518967938343}
+  - component: {fileID: 1597452393}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -61,5 +62,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 0
   iType: 0
-  handles: []
+  handles:
+  - {fileID: 0}
+  - {fileID: 0}
   Plateform: {fileID: 0}
+--- !u!114 &1597452393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537012296447147082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07c149c0fcb57643b389911ad30376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalButtons:
+  - {fileID: 0}
+  - {fileID: 0}

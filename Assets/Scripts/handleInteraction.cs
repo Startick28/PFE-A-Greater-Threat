@@ -29,7 +29,6 @@ public class handleInteraction : Interactable
         anim.SetBool("Interact", true);
         canInteract = false;
         Debug.Log("HELLOOO FROM THE OTHER SIDE ");
-
     }
     public override void interact(FPSCharacterController player)
     {
