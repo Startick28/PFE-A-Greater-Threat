@@ -61,7 +61,7 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool previousJump;
 
 
-	public List<BasicGun> weapons = new List<BasicGun>();
+	List<BasicGun> weapons = new List<BasicGun>();
 	[SerializeField]
 	TP_Model_Monitor tpMonitor;
 
@@ -71,8 +71,19 @@ public class FPSCharacterController : AdvancedWalkerController
 	int currentWeaponIndex;
 
 	int[] ammunitions = new int[2];
+
+	[SerializeField]
+    public bool Died;
+
+	Camera cameraTargetWhenDead;
+
 	void Awake()
 	{
+        if (GetComponent<PhotonView>().IsMine)
+        {
+			gameObject.AddComponent<AudioListener>();
+        }
+		Died = false;
 		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
 		mover = GetComponent<Mover>();
@@ -131,6 +142,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 
 		//weaponAnimator.gameObject.SetActive(false);
+		//Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
 
 		modelAnimator.SetTrigger("idle");
@@ -142,309 +154,411 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
-		if(weapons.Count != 0)
-        {
-			Debug.Log(weapons[currentWeaponIndex].isReadyToFire);
-
-		}
-		//Debug.Log(cameraController.GetAimingDirection() == null);
-		
-		float scroll = fcharacterInput.getCurrentMouseScroll();
-		if(scroll != 0)
-        {
-			switchWeapon(scroll);
-        }
-		
-		if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
-        {
-			currentlyWalking = true;
-		}
-        else
-        {
-			currentlyWalking = false;
-			
-        }
-
-		if(currentlyWalking)
-        {
-			if(!previouslyWalking)
-            {
-				modelAnimator.SetBool("walking",true);
-            }
-        }
-        else
-        {
-			if(previouslyWalking)
-            {
-				modelAnimator.SetBool("walking",false);
-            }
-        }
-
-		
-		
-        if (GetComponent<PhotonView>().IsMine)
+		if (!Died)
 		{
-		if(fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
-        {
-			if(timeSinceSoundEmission> soundEmissionTime)
-            {
-				emitSound();
-				timeSinceSoundEmission = 0;
-            }
-            else
-            {
 
-            }
-
-
-        }
-		timeSinceSoundEmission += Time.deltaTime;
-       
-
-			HandleJumpKeyInput();
-
-		if(fcharacterInput.isInteractKeyPressed() && nearestInteractable != null)
-		{
-			
-				if(nearestInteractable.canInteract)
-                {
-					switch(nearestInteractable.iType)
-                    {
-						case InteractionType.chest:
-							// Cette ligne permet d'executer la fonction
-							GetComponent<PhotonView>().RPC("InteractWithChest", RpcTarget.All, nearestInteractable.GetComponent<Chest>().Id);
-							Debug.Log("Je peux interargir avec le coffre");
-							//nearestInteractable.interact();
-							break;
-						case InteractionType.gun:
-							GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
-							Debug.Log("Je peux interargir avec le gun");
-							//nearestInteractable.interact();
-							break;
-						case InteractionType.ammunition:
-							Debug.Log("Je peux interargir avec les munitions");
-							//GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
-							nearestInteractable.interact(this);
-							break;
-
-						case InteractionType.button:
-							// Cette ligne permet d'executer la fonction
-							// TODO : InteractWithChest a changer
-							GetComponent<PhotonView>().RPC("InteractWithButton", RpcTarget.All, nearestInteractable.GetComponent<ButtonForceField>().Id);
-							Debug.Log("Je peux interargir avec le coffre");
-							//nearestInteractable.interact();
-							break;
-						default:
-
-							break;
-                    }
-                }
-			
-		}
-			if (Input.GetKeyDown(fcharacterInput.equipKey))
+			float scroll = fcharacterInput.getCurrentMouseScroll();
+			if (scroll != 0)
 			{
-				if (currentWeaponEquipped)
+				switchWeapon(scroll);
+			}
+
+			if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+			{
+				currentlyWalking = true;
+			}
+			else
+			{
+				currentlyWalking = false;
+
+			}
+
+			if (currentlyWalking)
+			{
+				if (!previouslyWalking)
 				{
-					//currentWeaponEquipped = false;
-					weaponAnimator.SetTrigger("unequip");
-					modelAnimator.SetInteger("weaponIndex", 0);
-					modelAnimator.SetTrigger("unequip");
-					
-					//modelAnimator.SetTrigger("idle");
+					modelAnimator.SetBool("walking", true);
+				}
+			}
+			else
+			{
+				if (previouslyWalking)
+				{
+					modelAnimator.SetBool("walking", false);
+				}
+			}
+
+
+
+			if (GetComponent<PhotonView>().IsMine)
+			{
+				if (fcharacterInput.GetHorizontalMovementInput() != 0 || fcharacterInput.GetVerticalMovementInput() != 0)
+				{
+					if (timeSinceSoundEmission > soundEmissionTime)
+					{
+						emitSound();
+						timeSinceSoundEmission = 0;
+					}
+					else
+					{
+
+					}
+
+
+				}
+				timeSinceSoundEmission += Time.deltaTime;
+
+
+				HandleJumpKeyInput();
+
+				if (fcharacterInput.isInteractKeyPressed() && nearestInteractable != null)
+				{
+
+					if (nearestInteractable.canInteract)
+					{
+						switch (nearestInteractable.iType)
+						{
+							case InteractionType.chest:
+								// Cette ligne permet d'executer la fonction
+								GetComponent<PhotonView>().RPC("InteractWithChest", RpcTarget.All, nearestInteractable.GetComponent<Chest>().Id);
+								Debug.Log("Je peux interargir avec le coffre");
+								//nearestInteractable.interact();
+								break;
+							case InteractionType.gun:
+								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								Debug.Log("Je peux interargir avec le gun");
+								//nearestInteractable.interact();
+								break;
+							case InteractionType.ammunition:
+								Debug.Log("Je peux interargir avec les munitions");
+								//GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								nearestInteractable.interact(this);
+								break;
+							case InteractionType.player:
+								Debug.Log("Je peux interargir avec le player");
+								GetComponent<PhotonView>().RPC("InteractWithAlly", RpcTarget.All, nearestInteractable.transform.parent.GetComponent<PhotonView>().ViewID);
+								//nearestInteractable.interact(this);
+								break;
+
+							case InteractionType.button:
+								// Cette ligne permet d'executer la fonction
+								// TODO : InteractWithChest a changer
+								GetComponent<PhotonView>().RPC("InteractWithButton", RpcTarget.All, nearestInteractable.GetComponent<ButtonForceField>().Id);
+								Debug.Log("Je peux interargir avec le bouton");
+								//nearestInteractable.interact();
+								break;
+
+
+							case InteractionType.handle:
+								GetComponent<PhotonView>().RPC("InteractWithHandle", RpcTarget.All, nearestInteractable.GetComponent<handleInteraction>().id);
+								Debug.Log("Je peux interargir avec le Handle");
+								//nearestInteractable.interact();
+								break;
+
+							case InteractionType.win:
+								GetComponent<PhotonView>().RPC("InteractWithWinInteractable", RpcTarget.All);
+								Debug.Log("Je peux interargir avec le win");
+								//nearestInteractable.interact();
+								break;
+							case InteractionType.redButton:
+								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All, nearestInteractable.GetComponent<InteractRedButton>().id);
+								Debug.Log("Je peux interargir avec le win");
+								//nearestInteractable.interact();
+								break;
+							default:
+
+								break;
+						}
+					}
+
+				}
+				if (Input.GetKeyDown(fcharacterInput.equipKey))
+				{
+					if (currentWeaponEquipped)
+					{
+						//currentWeaponEquipped = false;
+						weaponAnimator.SetTrigger("unequip");
+						modelAnimator.SetInteger("weaponIndex", 0);
+						modelAnimator.SetTrigger("unequip");
+
+						//modelAnimator.SetTrigger("idle");
+					}
+					else
+					{
+						//weaponAnimator.gameObject.SetActive(true);
+						if (weapons.Count != 0)
+						{
+							SetChildrenActive(weaponAnimator.gameObject, true);
+							weaponAnimator.SetTrigger("equip");
+							modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+							modelAnimator.SetTrigger("idle");
+							modelAnimator.SetLayerWeight(1, 1);
+							modelAnimator.SetTrigger("equip");
+						}
+
+
+
+
+						//currentWeaponEquipped = true;
+					}
+
 				}
 				else
 				{
-					//weaponAnimator.gameObject.SetActive(true);
-					if(weapons.Count != 0)
-                    {
-						SetChildrenActive(weaponAnimator.gameObject, true);
-						weaponAnimator.SetTrigger("equip");
-						modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
-						modelAnimator.SetTrigger("idle");
-						modelAnimator.SetLayerWeight(1, 1);
-						modelAnimator.SetTrigger("equip");
-					}
-					
-					
-
-
-					//currentWeaponEquipped = true;
-				}
-
-			}
-            else
-            {
-				if(!currentWeaponEquipped)
-                {
-					//modelAnimator.SetTrigger("idle");
-				}
-                else
-                {
-					//modelAnimator.ResetTrigger("idle");
-				}
-				
-			}
-
-			if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
-			{
-
-				if (weapons[currentWeaponIndex].isReadyToFire)
-				{
-					if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
+					if (!currentWeaponEquipped)
 					{
-						weaponAnimator.SetTrigger("fire");
-						modelAnimator.SetTrigger("fire");
+						//modelAnimator.SetTrigger("idle");
+					}
+					else
+					{
+						//modelAnimator.ResetTrigger("idle");
 					}
 
 				}
 
-				weaponAnimator.SetBool("isFiring", true);
-				//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
+				if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
+				{
+
+					if (weapons[currentWeaponIndex].isReadyToFire)
+					{
+						if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
+						{
+							weaponAnimator.SetTrigger("fire");
+							modelAnimator.SetTrigger("fire");
+						}
+
+					}
+
+					weaponAnimator.SetBool("isFiring", true);
+					//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
 
 
+				}
+				else
+				{
+					if (currentWeaponEquipped)
+					{
+						weaponAnimator.SetBool("isFiring", false);
+					}
+
+				}
+				if (fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
+				{
+					if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >= timeToFullReload && weapons[currentWeaponIndex].canReload)
+					{
+						weaponAnimator.SetFloat("reloadSpeed", 1);
+						weaponAnimator.SetTrigger("reload");
+
+						modelAnimator.SetTrigger("reload");
+
+						isFullReloading = true;
+						timeSincePressedReloadKey = 0;
+
+					}
+					else if (!previousReload && !isFastReloading)
+					{
+
+					}
+
+					timeSincePressedReloadKey += Time.deltaTime;
+					//gun.reload();
+
+
+					previousReload = true;
+				}
+				else if (!fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
+				{
+					if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
+					{
+						weaponAnimator.SetFloat("reloadSpeed", 1);
+						weaponAnimator.SetTrigger("reload");
+
+						modelAnimator.SetTrigger("reload");
+
+						isFastReloading = true;
+						//weaponAnimator.get
+						timeSincePressedReloadKey = 0;
+					}
+					else if (previousReload && isFullReloading)
+					{
+						//weaponAnimator.SetFloat("reloadSpeed", 2);
+						weaponAnimator.SetTrigger("idle");
+						isFullReloading = false;
+					}
+
+					previousReload = false;
+				}
+
+				if (fcharacterInput.isZoomKeyPressed())
+				{
+					fcameraController.zoom();
+				}
+				else
+				{
+					fcameraController.unZoom();
+				}
+
+
+				if (fcharacterInput.isRunKeyPressed())
+				{
+					if (!previousRun)
+					{
+						movementSpeed *= 2;
+						previousRun = true;
+						modelAnimator.SetBool("running", true);
+
+						//movementSpeed
+					}
+					//Debug.Log("is running");
+				}
+				else
+				{
+					if (previousRun)
+					{
+						movementSpeed /= 2;
+						previousRun = false;
+						modelAnimator.SetBool("running", false);
+
+					}
+
+				}
+
+				//Debug.L
+
+
+				if (fcharacterInput.isCrouchKeyPressed())
+				{
+					//Debug.Log("iuze");
+					if (!previousCrouch)
+					{
+						mover.SetColliderHeight(1.0f);
+						cameraController.transform.Translate(0, -1, 0);
+						transform.Translate(0, -1, 0);
+						modelAnimator.SetBool("crouching", true);
+						modelAnimator.SetTrigger("crouch");
+					}
+
+					previousCrouch = true;
+				}
+				else
+				{
+					if (previousCrouch)
+					{
+						mover.SetColliderHeight(2.0f);
+						cameraController.transform.Translate(0, 1, 0);
+						transform.Translate(0, 1, 0);
+						previousCrouch = false;
+						modelAnimator.SetBool("crouching", false);
+						//modelAnimator.ResetTrigger("crouch");
+					}
+
+				}
+
+
+
+			}
+
+			if (fcharacterInput.IsJumpKeyPressed())
+			{
+				if (!previousJump)
+				{
+					modelAnimator.SetTrigger("jump");
+					previousJump = true;
+				}
 			}
 			else
 			{
-				if(currentWeaponEquipped)
-                {
-					weaponAnimator.SetBool("isFiring", false);
-                }
-				
-			}
-			if (fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped )
-			{
-				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >=timeToFullReload && weapons[currentWeaponIndex].canReload)
-                {
-					weaponAnimator.SetFloat("reloadSpeed", 1);
-					weaponAnimator.SetTrigger("reload");
-
-					modelAnimator.SetTrigger("reload");
-
-					isFullReloading = true;
-					timeSincePressedReloadKey = 0;
-					
-				}
-				else if(!previousReload && !isFastReloading)
-                {
-					
-				}
-
-				timeSincePressedReloadKey += Time.deltaTime;
-				//gun.reload();
-
-
-				previousReload = true;
-			}
-			else if(!fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped )
-            {
-				if(previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
-                {
-					weaponAnimator.SetFloat("reloadSpeed", 1);
-					weaponAnimator.SetTrigger("reload");
-
-					modelAnimator.SetTrigger("reload");
-
-					isFastReloading = true;
-					//weaponAnimator.get
-					timeSincePressedReloadKey = 0;
-				}
-				else if(previousReload && isFullReloading)
-                {
-					//weaponAnimator.SetFloat("reloadSpeed", 2);
-					weaponAnimator.SetTrigger("idle");
-					isFullReloading = false;
-				}
-
-				previousReload = false;
-            }
-
-			if (fcharacterInput.isZoomKeyPressed())
-			{
-				fcameraController.zoom();
-			}
-			else
-			{
-				fcameraController.unZoom();
-			}
-
-
-			if (fcharacterInput.isRunKeyPressed())
-			{
-				if (!previousRun)
+				if (previousJump)
 				{
-					movementSpeed *= 2;
-					previousRun = true;
-					modelAnimator.SetBool("running",true);
-
-					//movementSpeed
+					//modelAnimator.ResetTrigger("jump");
+					previousJump = false;
 				}
-				//Debug.Log("is running");
 			}
-			else
-			{
-				if (previousRun)
-				{
-					movementSpeed /= 2;
-					previousRun = false;
-					modelAnimator.SetBool("running", false);
-
-				}
-
-			}
-
-			//Debug.L
-
-
-			if (fcharacterInput.isCrouchKeyPressed())
-			{
-				//Debug.Log("iuze");
-				if (!previousCrouch)
-				{
-					mover.SetColliderHeight(1.0f);
-					cameraController.transform.Translate(0, -1, 0);
-					transform.Translate(0, -1, 0);
-					modelAnimator.SetBool("crouching", true);
-					modelAnimator.SetTrigger("crouch");
-				}
-
-				previousCrouch = true;
-			}
-			else
-			{
-				if (previousCrouch)
-				{
-					mover.SetColliderHeight(2.0f);
-					cameraController.transform.Translate(0, 1, 0);
-					transform.Translate(0, 1, 0);
-					previousCrouch = false;
-					modelAnimator.SetBool("crouching", false);
-					//modelAnimator.ResetTrigger("crouch");
-				}
-
-			}
-
-			
-
+			previouslyWalking = currentlyWalking;
 		}
-
-		if(fcharacterInput.IsJumpKeyPressed())
-        {
-			if(!previousJump)
-            {
-				modelAnimator.SetTrigger("jump");
-				previousJump = true;
-			}
-        }
 		else
-        {
-			if (previousJump)
+		{
+
+			if (GetComponent<PhotonView>().IsMine)
 			{
-				//modelAnimator.ResetTrigger("jump");
-				previousJump = false;
+				var cameras = FindObjectsOfType<Camera>();
+				if (cameraTargetWhenDead == null)
+				{
+					foreach (var camera in cameras)
+					{
+						if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = true;
+							camera.transform.rotation = camera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+							cameraTargetWhenDead = camera;
+						}
+					}
+					foreach (var camera in cameras)
+					{
+						if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = false;
+						}
+					}
+					if(cameraTargetWhenDead == null)
+                    {
+						cameras[0].gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = cameras[0].transform.parent.parent.parent;
+						cameras[0].gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = cameras[0].transform.parent.parent.parent;
+						cameras[0].enabled = true;
+                    }
+                    else
+                    {
+						cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+					}
+				}
+				else
+				{
+					foreach (var camera in cameras)
+					{
+						if (cameraTargetWhenDead == camera)
+						{
+							camera.enabled = true;
+							camera.transform.rotation = camera.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+						}
+					}
+					foreach (var camera in cameras)
+					{
+						if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+						{
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+							camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+							camera.enabled = false;
+						}
+					}
+
+				}
+
+				if (Input.GetKeyDown(KeyCode.Mouse0))
+				{
+					Camera temp = null;
+					foreach (var camera in cameras)
+					{
+						if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine && camera != cameraTargetWhenDead)
+						{
+							temp = camera;
+						}
+					}
+					if (temp != null)
+					{
+						cameraTargetWhenDead = temp;
+					}
+				}
+
+				if(cameraTargetWhenDead != null)
+                {
+					cameraTargetWhenDead.transform.rotation = cameraTargetWhenDead.gameObject.transform.parent.parent.parent.GetChild(0).transform.rotation;
+				}
 			}
 		}
-		previouslyWalking = currentlyWalking;
-
 	}
 
 	[PunRPC]
@@ -453,6 +567,11 @@ public class FPSCharacterController : AdvancedWalkerController
 		nearestInteractable.interact(this);
 	}
 
+	[PunRPC]
+	public void InteractWithWinInteractable()
+	{
+		WinInteraction.Instance().interact(this);
+	}
 	[PunRPC]
 	public void InteractWithChest(int id)
 	{
@@ -465,10 +584,31 @@ public class FPSCharacterController : AdvancedWalkerController
 		ChestManager.Instance.OpenButton(id, this);
 	}
 
+
+	[PunRPC]
+	public void InteractWithHandle(int id)
+	{
+		Debug.Log("Call Handle Manager with id " + id);
+		HandleManager.Instance().interactWithID(id);
+		//handle.GetComponent<handleInteraction>().interact(this);
+	}
 	public Vector3 getAimingDirection()
     {
 		return cameraController.GetAimingDirection();
 
+	}
+
+	[PunRPC]
+	void InteractWithAlly(int id)
+	{
+		var players = GameObject.FindObjectsOfType<FPSCharacterController>();
+		foreach (FPSCharacterController player in players)
+		{
+			if (player.gameObject.GetComponent<PhotonView>().ViewID == id)
+			{
+				player.Reanimate();
+			}
+		}
 	}
 
 	public void emitSound()
@@ -490,6 +630,8 @@ public class FPSCharacterController : AdvancedWalkerController
 		}
     }
 
+
+	[PunRPC]
 	public void takeDamage(float damage)
     {
 		health -= damage;
@@ -501,10 +643,18 @@ public class FPSCharacterController : AdvancedWalkerController
         }
     }
 
+	[PunRPC]
+	public void InteractWithRedButton(int id)
+	{
+		FinalButtonManager.Instance().InteractWithRedButtonWithID(id);
+	}
+
 	void die()
     {
 		Debug.Log("Died");
-    }
+		Died = true;
+		GetComponentInChildren<Reanimate>().died();
+	}
 	// Update is called once per frame
 
 
@@ -731,7 +881,6 @@ public class FPSCharacterController : AdvancedWalkerController
 	}
 	public void changeGun(BasicGun newGun)
     {
-		Debug.Log("called change gun");
 		GameObject playerGun = getCurrentWeapon(newGun.type);
 		Vector3 oldPos = newGun.transform.position;
 		// On met le nouveau gun sur le joueur
@@ -843,6 +992,34 @@ public class FPSCharacterController : AdvancedWalkerController
 	public void collectAmmunition(int quantity,int type)
     {
 		ammunitions[type - 1] += quantity;
-		//Debug.Log("CollectedAmmunition");
+		Debug.Log("CollectedAmmunition");
     }
+
+	public void Reanimate()
+	{
+		Died = false;
+		health = 100;
+		ExitGames.Client.Photon.Hashtable PlayerProperties = PhotonNetwork.LocalPlayer.CustomProperties;
+		PlayerProperties["HP"] = 100;
+		PhotonNetwork.SetPlayerCustomProperties(PlayerProperties);
+		var cameras = FindObjectsOfType<Camera>();
+		foreach (var camera in cameras)
+		{
+			if (!camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+			{
+				camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+				camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+				camera.enabled = false;
+			}
+		}
+		foreach (var camera in cameras)
+		{
+			if (camera.transform.parent.parent.parent.GetComponent<PhotonView>().IsMine)
+			{
+				camera.gameObject.transform.parent.parent.GetComponent<SmoothPosition>().target = camera.transform.parent.parent.parent;
+				camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
+				camera.enabled = true;
+			}
+		}
+	}
 }

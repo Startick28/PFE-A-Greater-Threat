@@ -14,6 +14,7 @@ public class InRangeOfPlayer : ActionNode
     }
 
     protected override State OnUpdate() {
+        if (blackboard.focusedPlayer == null) return State.Failure;
         if (Vector3.Distance(blackboard.focusedPlayer.transform.position, context.transform.position) <= range)
         {
             return State.Success;
