@@ -66,6 +66,7 @@ MonoBehaviour:
   - InteractWithRedButton
   - InstantiateEngameEnemy
   - InstantiateEndgameEnemy
+  - InteractWithAlly
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -797,7 +797,7 @@ MonoBehaviour:
   RequiresLineOfSight: 1
   BlocksLineOfSight:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1025
   TestLOSTargetsOnly: 0
   NumberOfRays: 4
   MinimumVisibility: 0.5
