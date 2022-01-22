@@ -52,16 +52,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void EnemyTakeDamageWithId(int id, float damages)
     {
-        if (!photonView.IsMine)
+        foreach (Transform child in transform)
         {
-            foreach (Transform child in transform)
+            EnemyScript enemy = child.GetComponent<EnemyScript>();
+            if (enemy.ID == id)
             {
-                EnemyScript enemy = child.GetComponent<EnemyScript>();
-                if (enemy.ID == id)
-                {
-                    enemy.TakeDamage(damages);
-                    return;
-                }
+                enemy.TakeDamage(damages);
+                return;
             }
         }
     }

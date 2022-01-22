@@ -37,12 +37,14 @@ public class EnemyScript : MonoBehaviour
     // Fonctions qui seront amen�s � �tre appel�es par des joueurs ou par le monstre lui-m�me
     public void Die()
     {
+
         Destroy(this.gameObject);
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log("OUCH");
         if (currentHealth <= 0) 
         {
             if (EnemiesManager.Instance) EnemiesManager.Instance.photonView.RPC("EnemyDieWithId", Photon.Pun.RpcTarget.All, ID);

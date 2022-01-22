@@ -114,33 +114,35 @@ public class BasicGun : Interactable
             playerController = GetComponentInParent<FPSCharacterController>();
         }
             
-            if (loadedBullets == 0)
+        if (loadedBullets == 0)
+        {
+            Debug.Log("Tried to shoot with empty mag");
+            return false;
+        }
+        playerController.addRecoilToCamera(-recoil, Random.Range(-2.0f,2.0f));
+            
+        int layerMask = (1 << 11) | (1 << 10);
+        RaycastHit hit;
+        Debug.DrawRay(position, direction * 1000, Color.red);
+        if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(position, direction * hit.distance, Color.yellow);
+            // Instancie un bulletHole si la cible est un mur.
+            if (hit.transform.gameObject.layer == 10)
             {
-                Debug.Log("Tried to shoot with empty mag");
-                return false;
+                Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
             }
-            playerController.addRecoilToCamera(-recoil, Random.Range(-2.0f,2.0f));
-        Debug.Log("fire");
-        //Debug.Log("Tried to shoot with basic gun");
-        int layerMask = 1 << 11;
-            RaycastHit hit;
-            Debug.DrawRay(position, direction * 1000, Color.red);
-            if (Physics.Raycast(position, direction, out hit, Mathf.Infinity, layerMask))
+            else if (hit.transform.gameObject.layer == 11)
             {
-                // Instancie un bulletHole si la cible est un mur.
-                if (layerMask == 10)
-                {
-                    Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
-                }
-                Debug.DrawRay(position, direction * hit.distance, Color.yellow);
                 Debug.Log("Did Hit");
                 if (EnemiesManager.Instance)
                 {
                     EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID, 10.0f);
                 }
             }
-            loadedBullets--;
-            timeSinceFire = 0;
+        }
+        loadedBullets--;
+        timeSinceFire = 0f;
         return true;
        
     }
