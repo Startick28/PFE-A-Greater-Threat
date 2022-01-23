@@ -3506,7 +3506,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e2e376805491ce84cb9f0d7279061505, type: 3}
   - {fileID: 8300000, guid: 90b7118acce61f14bba4ec3e8264b327, type: 3}
   - {fileID: 8300000, guid: 69a1f8754e8ca7641a443d7a33f45710, type: 3}
-  alarmSound: {fileID: 0}
+  alarmSound: {fileID: 8300000, guid: b287837d4a9f07044a0ac13773ecbb59, type: 3}
 --- !u!82 &5956409965712478832
 AudioSource:
   m_ObjectHideFlags: 0
