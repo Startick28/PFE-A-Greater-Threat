@@ -38,7 +38,8 @@ public class FPS_ArmsMonitor : MonoBehaviour
     public void onFire()
     {
         parentController.onFire();
-        shotVFX.SetActive(true);
+        //shotVFX.SetActive(true);
+        AudioManager.Instance.playRandomGunSoundRPC();
 
     }
 

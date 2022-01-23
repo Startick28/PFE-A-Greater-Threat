@@ -344,49 +344,54 @@ public class FPSCharacterController : AdvancedWalkerController
 				}
 				if (fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
 				{
-					if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >= timeToFullReload && weapons[currentWeaponIndex].canReload)
+					if (ammunitions[weapons[currentWeaponIndex].type - 1] > 0)
 					{
-						weaponAnimator.SetFloat("reloadSpeed", 1);
-						weaponAnimator.SetTrigger("reload");
+						if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >= timeToFullReload && weapons[currentWeaponIndex].canReload)
+						{
+							weaponAnimator.SetFloat("reloadSpeed", 1);
+							weaponAnimator.SetTrigger("reload");
 
-						modelAnimator.SetTrigger("reload");
+							modelAnimator.SetTrigger("reload");
 
-						isFullReloading = true;
-						timeSincePressedReloadKey = 0;
+							isFullReloading = true;
+							timeSincePressedReloadKey = 0;
 
+						}
+						else if (!previousReload && !isFastReloading)
+						{
+
+						}
+
+						timeSincePressedReloadKey += Time.deltaTime;
+						//gun.reload();
+
+
+						previousReload = true;
 					}
-					else if (!previousReload && !isFastReloading)
-					{
-
-					}
-
-					timeSincePressedReloadKey += Time.deltaTime;
-					//gun.reload();
-
-
-					previousReload = true;
 				}
 				else if (!fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
-				{
-					if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
-					{
-						weaponAnimator.SetFloat("reloadSpeed", 1);
-						weaponAnimator.SetTrigger("reload");
+				{	
+						if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
+						{
+							weaponAnimator.SetFloat("reloadSpeed", 1);
+							weaponAnimator.SetTrigger("reload");
 
-						modelAnimator.SetTrigger("reload");
+							modelAnimator.SetTrigger("reload");
 
-						isFastReloading = true;
-						//weaponAnimator.get
-						timeSincePressedReloadKey = 0;
-					}
-					else if (previousReload && isFullReloading)
-					{
-						//weaponAnimator.SetFloat("reloadSpeed", 2);
-						weaponAnimator.SetTrigger("idle");
-						isFullReloading = false;
-					}
+							isFastReloading = true;
+							//weaponAnimator.get
+							timeSincePressedReloadKey = 0;
+						}
+						else if (previousReload && isFullReloading)
+						{
+							//weaponAnimator.SetFloat("reloadSpeed", 2);
+							weaponAnimator.SetTrigger("idle");
+							isFullReloading = false;
+						}
 
-					previousReload = false;
+						previousReload = false;
+					
+					
 				}
 
 				if (fcharacterInput.isZoomKeyPressed())
@@ -891,6 +896,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			newGun.transform.rotation = playerGun.transform.rotation;
 			newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
 			newGun.GetComponent<BoxCollider>().enabled = false;
+			newGun.stopParticles();
 			// Player layer
 			newGun.gameObject.layer = 3;
 			newGun.View = transform.gameObject.GetComponent<PhotonView>();
@@ -903,6 +909,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			playerGun.gameObject.layer = 0;
 			playerGun.GetComponent<BoxCollider>().enabled = true;
 			weapons.Remove(playerGun.GetComponent<BasicGun>());
+			playerGun.GetComponent<BasicGun>().resetParticles();
 		}
         else
         {
@@ -911,6 +918,7 @@ public class FPSCharacterController : AdvancedWalkerController
 			newGun.transform.rotation = transform.rotation;
 			newGun.GetComponentInChildren<MeshRenderer>().enabled = false;
 			newGun.GetComponent<BoxCollider>().enabled = false;
+			newGun.stopParticles();
 			// Player layer
 			newGun.gameObject.layer = 3;
 			newGun.View = transform.gameObject.GetComponent<PhotonView>();
