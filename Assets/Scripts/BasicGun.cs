@@ -129,8 +129,8 @@ public class BasicGun : Interactable
             Debug.DrawRay(position, direction * hit.distance, Color.yellow);
             // Instancie un bulletHole si la cible est un mur.
             if (hit.transform.gameObject.layer == 10)
-            {
-                Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
+            { 
+                Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));                
             }
             else if (hit.transform.gameObject.layer == 11)
             {
@@ -146,7 +146,6 @@ public class BasicGun : Interactable
         return true;
        
     }
-
     public void reload(int bullets)
     {
         loadedBullets += bullets;

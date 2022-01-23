@@ -51,10 +51,10 @@ MonoBehaviour:
   id: 0
   rarity: 0
   prefabGun:
+  - {fileID: 4451196773711292431, guid: 55a62f58a2c7045458d5ab5e8be9f78b, type: 3}
   - {fileID: 6148455832089343234, guid: a9adec306ec3ce245bdb7f0f78335969, type: 3}
   - {fileID: 764030142301075375, guid: 7db899b1348c7724c95729d0dc0ddadd, type: 3}
   - {fileID: 6992464377878722564, guid: 9abfe6b34c5819245ac71c4a46631cb0, type: 3}
-  - {fileID: 4451196773711292431, guid: 55a62f58a2c7045458d5ab5e8be9f78b, type: 3}
   isOpened: 0
   rotationZ: 90
   timeToOpen: 3

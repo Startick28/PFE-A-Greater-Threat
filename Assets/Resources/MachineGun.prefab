@@ -55,7 +55,7 @@ MonoBehaviour:
   fullReloadTime: 0
   fastReloadTime: 0
   type: 2
-  bulletHolePrefab: {fileID: 6591166940014735020, guid: f8db61c3bd4aaf14cad3e33799b1c5f3, type: 3}
+  bulletHolePrefab: {fileID: 6591166940014735020, guid: b3735af5d439ab84b8b316795e0464a1, type: 3}
 --- !u!65 &2145584730213170468
 BoxCollider:
   m_ObjectHideFlags: 0
