@@ -5,7 +5,7 @@ using Photon.Pun;
 using UnityEngine.UI;
 using Photon.Realtime;
 using System.Linq;
-using UnityEngine.SceneManagement;
+using TMPro;
 public class LauncherLobby : MonoBehaviourPunCallbacks
 {
     public static LauncherLobby Instance;
@@ -21,6 +21,8 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
 
     [SerializeField] GameObject startGameButton;
     [SerializeField] Slider progressBar;
+    [SerializeField]
+    TextMeshProUGUI Ratio;
     private void Awake()
     {
         Instance = this;
@@ -58,6 +60,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loadingMenu");
         progressBar.gameObject.SetActive(true);
+        Ratio.gameObject.SetActive(true);
     }
 
     public override void OnJoinedRoom()
@@ -102,7 +105,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("loadingMenu");
         progressBar.gameObject.SetActive(true);
-
+        Ratio.gameObject.SetActive(true);
     }
 
     public void StartGame()
@@ -137,6 +140,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     }
     private void Update()
     {
+        Ratio.text = System.Math.Round(PhotonNetwork.LevelLoadingProgress * 100.00f).ToString() + "%";
         progressBar.value =  PhotonNetwork.LevelLoadingProgress;
     }
 }
