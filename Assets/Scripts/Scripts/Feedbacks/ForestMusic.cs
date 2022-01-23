@@ -7,6 +7,8 @@ public class ForestMusic : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
+    [SerializeField] private float maxVolume;
+    [SerializeField] private float timeTransition;
 
     // Start is called before the first frame update
     void Start()
@@ -20,24 +22,23 @@ public class ForestMusic : MonoBehaviour
     }
     IEnumerator LaunchForestMusic()
     {
-        while(audioSource.volume < 0.5)
+        float volume = audioSource.volume;
+        for (float d = 0; d < timeTransition; d += Time.deltaTime)
         {
-            audioSource.volume += 0.1f;
-            Debug.Log("J'augmente le volume");
-            yield return new WaitForSeconds(.3f);
+            
+            audioSource.volume = Mathf.Lerp(volume, maxVolume,d/ timeTransition);
+            yield return null;
         }
-
-        audioSource.volume = 0.5f;
+        audioSource.volume = maxVolume;
     }
 
     IEnumerator StopForestMusic()
     {
-        while (audioSource.volume > 0.1)
+        float volume = audioSource.volume;
+        for(float d = 0; d < timeTransition; d += Time.deltaTime)
         {
-            audioSource.volume -= 0.1f;
-            Debug.Log("Je baisse le volume");
-            
-            yield return new WaitForSeconds(.3f);
+            audioSource.volume = Mathf.Lerp(volume, 0, d / timeTransition);
+            yield return null;
         }
         audioSource.volume = 0;
         audioSource.loop = false;
@@ -51,8 +52,13 @@ public class ForestMusic : MonoBehaviour
             if (other.GetComponent<PhotonView>() != null)
             {
                 if (other.GetComponent<PhotonView>().IsMine)
-                    audioSource = other.GetComponent<AudioSource>();
+                {
+                    Debug.Log("Enter du collider");
+                    audioSource = other.GetComponentInChildren<AudioSource>();
+                    StopCoroutine("LaunchForestMusic");
                     StartCoroutine(StopForestMusic());
+                }
+                    
             }
         }
     }
@@ -65,12 +71,13 @@ public class ForestMusic : MonoBehaviour
             {
                 if (other.GetComponent<PhotonView>().IsMine)
                 {
-                    audioSource = other.GetComponent<AudioSource>();
+                    Debug.Log("Exit du collider");
+                    audioSource = other.GetComponentInChildren<AudioSource>();
                     audioSource.clip = clip;
                     audioSource.spatialBlend = 0;
-                    audioSource.volume = 0;
                     audioSource.loop = true;
                     audioSource.Play();
+                    StopCoroutine("StopForestMusic");
                     StartCoroutine(LaunchForestMusic());
                 }
             }

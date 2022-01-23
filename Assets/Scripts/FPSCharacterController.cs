@@ -81,8 +81,9 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
         if (GetComponent<PhotonView>().IsMine)
         {
-			gameObject.AddComponent<AudioListener>();
-        }
+			//gameObject.AddComponent<AudioListener>();
+			cameraController.cam.gameObject.AddComponent<AudioListener>();
+		}
 		Died = false;
 		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
