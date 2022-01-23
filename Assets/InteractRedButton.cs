@@ -25,6 +25,7 @@ public class InteractRedButton : Interactable
         whenClickedTime = Time.time;
         doubleDoor.GetComponent<DoorDoubleSlide>().enabled = true;
         doubleDoor.GetComponent<AudioSource>().enabled = true;
+        AudioManager.Instance.PlayAlarmSoundRPC();
         endgameSpawnerW.StartEndgame();
         endgameSpawnerE.StartEndgame();
     }

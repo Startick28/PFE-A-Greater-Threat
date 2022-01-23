@@ -67,6 +67,8 @@ MonoBehaviour:
   - InstantiateEngameEnemy
   - InstantiateEndgameEnemy
   - InteractWithAlly
+  - PlayRandomGunSound
+  - PlayAlarmSound
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

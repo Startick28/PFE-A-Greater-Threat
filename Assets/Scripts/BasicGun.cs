@@ -14,9 +14,9 @@ public class BasicGun : Interactable
 
     int loadedBullets; // When this is equal to 0, player has to use bullets in inventory to reload
     // Start is called before the first frame update
-    [SerializeField]
+   
     int magSize;
-    [SerializeField]
+  
     float fireRate;
     [SerializeField]
     float noise;
@@ -33,6 +33,10 @@ public class BasicGun : Interactable
     [SerializeField]
     private GameObject bulletHolePrefab;
 
+    [SerializeField]
+    ParticleSystem particles;
+
+    float damage;
 
     public bool canReload
     {
@@ -88,11 +92,13 @@ public class BasicGun : Interactable
 
         iType = InteractionType.gun;
         collider = GetComponent<BoxCollider>();
+        setStats();
         loadedBullets = magSize;
         setFireTime();
         //fireTime = 1;
         timeSinceFire = fireTime + 1;
         playerController = GetComponentInParent<FPSCharacterController>();
+        resetParticles();
     }
 
     // Update is called once per frame
@@ -129,15 +135,15 @@ public class BasicGun : Interactable
             Debug.DrawRay(position, direction * hit.distance, Color.yellow);
             // Instancie un bulletHole si la cible est un mur.
             if (hit.transform.gameObject.layer == 10)
-            {
-                Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
+            { 
+                Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));                
             }
             else if (hit.transform.gameObject.layer == 11)
             {
                 Debug.Log("Did Hit");
                 if (EnemiesManager.Instance)
                 {
-                    EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID, 10.0f);
+                    EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID,damage);
                 }
             }
         }
@@ -146,7 +152,6 @@ public class BasicGun : Interactable
         return true;
        
     }
-
     public void reload(int bullets)
     {
         loadedBullets += bullets;
@@ -238,7 +243,76 @@ public class BasicGun : Interactable
         return noise;
     }
 
+    public void resetParticles()
+    {
+        switch(rarity)
+        {
+            case RarityType.blanche:
+                particles.startColor = Color.white;
+                break;
+            case RarityType.bleu:
+                particles.startColor = Color.blue;
+                break;
+            case RarityType.dore:
+                particles.startColor = Color.yellow;
+                break;
+        }
 
+        particles.Play();
+
+
+    }
+
+    public void stopParticles()
+    {
+        particles.Stop();
+    }
+
+    public void setStats()
+    {
+        if(type == 1)
+        {
+            switch(rarity)
+            {
+                case (RarityType.blanche):
+                    damage = 10.0f;
+                    fireRate = 1;
+                    magSize = 5;
+                    break;
+                case (RarityType.bleu):
+                    damage = 15.0f;
+                    fireRate = 2;
+                    magSize = 7;
+                    break;
+                case (RarityType.dore):
+                    damage = 20.0f;
+                    fireRate = 4;
+                    magSize = 10;
+                    break;
+            }
+        }
+        else if(type == 2)
+        {
+            switch (rarity)
+            {
+                case (RarityType.blanche):
+                    damage = 5.0f;
+                    fireRate = 4;
+                    magSize = 20;
+                    break;
+                case (RarityType.bleu):
+                    damage = 8.0f;
+                    fireRate = 5;
+                    magSize = 25;
+                    break;
+                case (RarityType.dore):
+                    damage = 10.0f;
+                    fireRate = 8;
+                    magSize = 30;
+                    break;
+            }
+        }
+    }
    
        
 }

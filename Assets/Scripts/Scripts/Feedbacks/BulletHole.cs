@@ -9,11 +9,18 @@ public class BulletHole : MonoBehaviour
     {
         transform.position += transform.forward / 1000;
         transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)) * Time.deltaTime);
+        StartCoroutine(DeleteAuto());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator DeleteAuto()
+    {
+        yield return new WaitForSeconds(30f);
+        Destroy(gameObject);
     }
 }
