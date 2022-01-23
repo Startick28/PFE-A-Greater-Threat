@@ -69,6 +69,7 @@ MonoBehaviour:
   - InteractWithAlly
   - PlayRandomGunSound
   - PlayAlarmSound
+  - PlayRandomHitMarker
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

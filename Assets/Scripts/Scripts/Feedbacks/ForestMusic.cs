@@ -51,6 +51,7 @@ public class ForestMusic : MonoBehaviour
             if (other.GetComponent<PhotonView>() != null)
             {
                 if (other.GetComponent<PhotonView>().IsMine)
+                    audioSource = other.GetComponent<AudioSource>();
                     StartCoroutine(StopForestMusic());
             }
         }
@@ -64,6 +65,7 @@ public class ForestMusic : MonoBehaviour
             {
                 if (other.GetComponent<PhotonView>().IsMine)
                 {
+                    audioSource = other.GetComponent<AudioSource>();
                     audioSource.clip = clip;
                     audioSource.spatialBlend = 0;
                     audioSource.volume = 0;

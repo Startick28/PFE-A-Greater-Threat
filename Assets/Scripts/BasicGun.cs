@@ -143,6 +143,7 @@ public class BasicGun : Interactable
                 Debug.Log("Did Hit");
                 if (EnemiesManager.Instance)
                 {
+                    GetComponentInParent<AudioManager>().PlayRandomHitMarkerRPC(hit.point);
                     EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID,damage);
                 }
             }
