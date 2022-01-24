@@ -164,8 +164,8 @@ public class FPSCharacterController : AdvancedWalkerController
         {
 			heal();
         }
-		Debug.Log("canHeal");
-		Debug.Log(canHeal);
+		//Debug.Log("canHeal");
+		//Debug.Log(canHeal);
 
 		if (!Died)
 		{

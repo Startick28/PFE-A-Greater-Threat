@@ -37,10 +37,12 @@ public class MoveToEndgameZone : ActionNode
     }
 
     protected override void OnStop() {
+        context.agent.ResetPath();
     }
 
     protected override State OnUpdate() {
         if (context.agent.pathPending) {
+            Debug.Log("merde");
             return State.Running;
         }
 

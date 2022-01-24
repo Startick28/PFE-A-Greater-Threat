@@ -31,7 +31,7 @@ public class EndgameArack : MonoBehaviour
     {
         int layerMask = (1 << 10);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.1f, layerMask))
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.5f, layerMask))
         {
             rb.useGravity = false;
             rb.drag = float.PositiveInfinity;

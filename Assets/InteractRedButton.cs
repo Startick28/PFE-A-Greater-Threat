@@ -52,7 +52,7 @@ public class InteractRedButton : Interactable
     // Update is called once per frame
     void Update()
     {
-        if (timeLeftText)
+        if (timeLeftText != null)
         {
             if (clicked)
             {
