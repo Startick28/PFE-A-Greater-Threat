@@ -992,10 +992,25 @@ public class FPSCharacterController : AdvancedWalkerController
         {
 			return null;
 		}
+	}
 
-
-		
-
+	public BasicGun getSecondGun()
+	{
+		if (weapons.Count <= 1)
+		{
+			return null;
+		}
+		else
+		{
+            if (currentWeaponIndex + 1 >= weapons.Count)
+            {
+				return weapons[0];
+            }
+            else
+            {
+				return weapons[currentWeaponIndex + 1];
+            }
+		}
 	}
 
 	public void collectAmmunition(int quantity,int type)

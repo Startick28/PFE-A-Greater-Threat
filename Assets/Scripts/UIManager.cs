@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     TextMeshProUGUI playerName;
+    [SerializeField]
+    TextMeshProUGUI timeLeft;
     PhotonView player;
     [SerializeField]
     VideoPlayer healthCurrentPlayer;
@@ -33,11 +35,24 @@ public class UIManager : MonoBehaviourPunCallbacks
     VideoClip flatClip;
 
     [SerializeField]
-    VideoPlayer[] healthPlayers; 
+    VideoPlayer[] healthPlayers;
 
+    [SerializeField]
+    Image firstGun;
+    [SerializeField]
+    Image secondGun;
+
+
+    [SerializeField]
+    Sprite pistoletRare;
+    [SerializeField]
+    Sprite pistoletEpic;
+    [SerializeField]
+    Sprite pistoletLegendaire;
     // Start is called before the first frame update
     void Start()
     {
+        timeLeft.text = "";
         var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();
         healthCurrentPlayer.clip = flatClip;
         healthCurrentPlayer.Play();
@@ -104,11 +119,28 @@ public class UIManager : MonoBehaviourPunCallbacks
                     if (playerGun != null)
                     {
                         playerBullets.text = playerGun.GetComponent<BasicGun>().LoadedBullets.ToString();
+                        if(playerGun.GetComponent<BasicGun>().type == 1)
+                        {
+                            if(playerGun.GetComponent<BasicGun>().Rarity == RarityType.blanche)
+                            {
+                                firstGun.sprite = pistoletRare;
+                            }
+                            if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.bleu)
+                            {
+                                firstGun.sprite = pistoletEpic;
+                            }
+                            if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.dore)
+                            {
+                                firstGun.sprite = pistoletLegendaire;
+                            }
+                        }
                     }
                     else
                     {
+                        firstGun.sprite = null;
                         playerBullets.text = "0";
                     }
+                    secondGun.sprite = null;
                 }
             }
         }
@@ -118,15 +150,64 @@ public class UIManager : MonoBehaviourPunCallbacks
             bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
             GameObject playerGun = player.GetComponent<FPSCharacterController>().getCurrentWeapon();
-            if(playerGun != null)
+            BasicGun playerSecondGun = player.GetComponent<FPSCharacterController>().getSecondGun();
+            if (playerGun != null)
             {
+                firstGun.enabled = true;
+                playerBullets.text = playerGun.GetComponent<BasicGun>().LoadedBullets.ToString();
+                if (playerGun.GetComponent<BasicGun>().type == 1)
+                {
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.blanche)
+                    {
+                        firstGun.sprite = pistoletRare;
+                    }
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.bleu)
+                    {
+                        firstGun.sprite = pistoletEpic;
+                    }
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.dore)
+                    {
+                        firstGun.sprite = pistoletLegendaire;
+                    }
+                }
                 playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
                 + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
             }
             else
             {
+                firstGun.sprite = null;
+                firstGun.enabled = false;
                 playerBullets.text = "0/0";
             }
+            if(playerSecondGun != null)
+            {
+                secondGun.enabled = true;
+                if (playerSecondGun.type == 1)
+                {
+                    if (playerSecondGun.Rarity == RarityType.blanche)
+                    {
+                        secondGun.sprite = pistoletRare;
+                    }
+                    if (playerSecondGun.Rarity == RarityType.bleu)
+                    {
+                        secondGun.sprite = pistoletEpic;
+                    }
+                    if (playerSecondGun.Rarity == RarityType.dore)
+                    {
+                        secondGun.sprite = pistoletLegendaire;
+                    }
+                }
+                else {/// second type, on attend Ergan
+                    secondGun.sprite = null;
+                    secondGun.enabled = false;
+                }   
+            }
+            else
+            {
+                secondGun.sprite = null;
+                secondGun.enabled = false;
+            }
+
 
             bloodScreen.alpha = Mathf.Max(0.34f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100) / 3.0f,0);
             float health = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString());
@@ -186,7 +267,7 @@ public class UIManager : MonoBehaviourPunCallbacks
         
         while (i <= 2)
         {
-           // playersHealth[i].gameObject.SetActive(false);
+            playersHealth[i].gameObject.SetActive(false);
             playersNames[i].gameObject.SetActive(false);
             i++;
         }
