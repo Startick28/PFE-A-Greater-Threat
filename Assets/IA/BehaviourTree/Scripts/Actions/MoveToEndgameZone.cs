@@ -53,7 +53,7 @@ public class MoveToEndgameZone : ActionNode
         if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
             return State.Failure;
         }
-
+        Debug.Log("grosse merde");
         return State.Running;
     }
 }
