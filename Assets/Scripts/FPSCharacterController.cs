@@ -40,6 +40,8 @@ public class FPSCharacterController : AdvancedWalkerController
 	bool isFastReloading;
 	bool isFullReloading;
 
+	public bool canHeal = false;
+
 	float soundEmissionTime = 2;
 	float timeSinceSoundEmission;
 	[SerializeField]
@@ -155,6 +157,13 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Update()
 	{
+		if(fcharacterInput.isHealKeyPressed())
+        {
+			heal();
+        }
+		Debug.Log("canHeal");
+		Debug.Log(canHeal);
+
 		if (!Died)
 		{
 
@@ -265,6 +274,10 @@ public class FPSCharacterController : AdvancedWalkerController
 								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All, nearestInteractable.GetComponent<InteractRedButton>().id);
 								Debug.Log("Je peux interargir avec le win");
 								//nearestInteractable.interact();
+								break;
+							case InteractionType.healthKit:
+								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								Debug.Log("Je peux interargir avec le health kit");
 								break;
 							default:
 
@@ -980,6 +993,21 @@ public class FPSCharacterController : AdvancedWalkerController
         
     }
 
+	public void heal()
+    {
+		if(canHeal)
+        {
+			health += 50;
+			if(health>100)
+            {
+				health = 100;
+            }
+
+			canHeal = false;
+			
+        }
+		
+    }
 	public GameObject getCurrentWeapon()
 	{
 		//Debug.Log(currentWeaponIndex);

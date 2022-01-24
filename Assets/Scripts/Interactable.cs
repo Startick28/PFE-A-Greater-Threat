@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum InteractionType { chest, gun, button, ammunition, player, handle, win, redButton }
+public enum InteractionType { chest, gun, button, ammunition, player, handle, win, redButton,healthKit }
 
 public enum RarityType { blanche, bleu, dore }
 
