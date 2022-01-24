@@ -37,8 +37,21 @@ public class EnemyScript : MonoBehaviour
     // Fonctions qui seront amen�s � �tre appel�es par des joueurs ou par le monstre lui-m�me
     public void Die()
     {
+        animator.SetTrigger("DeathTrigger");
+        foreach (Component component in GetComponents(typeof(Component)))
+        {
+            if (component.GetType() != typeof(Animator) 
+            && component.GetType() != typeof(Transform)
+            && component != this) Destroy(component);
+        }
+        StartCoroutine(deathRoutine());
+    }
 
-        Destroy(this.gameObject);
+    private IEnumerator deathRoutine()
+    {
+        yield return new WaitForSeconds(1.33f);
+        animator.enabled = false;
+        Destroy(this);
     }
 
     public void TakeDamage(float damage)

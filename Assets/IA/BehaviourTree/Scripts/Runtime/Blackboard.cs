@@ -91,8 +91,8 @@ namespace BehaviourTreeAI {
             {
                 pathLength += Vector3.Distance( path.corners[i-1], path.corners[i] );
             }
-            Debug.Log("pathlength : " + pathLength);
-            Debug.Log("distance : " + Vector3.Distance(startPosition, endPosition));
+            //Debug.Log("pathlength : " + pathLength);
+            //Debug.Log("distance : " + Vector3.Distance(startPosition, endPosition));
             if (pathLength > Vector3.Distance(startPosition, endPosition) * 3f) return true; 
 
             return false;

@@ -14,7 +14,7 @@ public class CanSeePlayer : ActionNode
     protected override State OnUpdate() {
         if (context.sensorManager.CanSeePlayer())
         {
-            blackboard.focusedPlayer = context.sensorManager.GetSeenPlayer();
+            blackboard.focusedPlayer = context.sensorManager.GetLastSeenPlayer();
             return State.Success;
         } 
         return State.Failure;
