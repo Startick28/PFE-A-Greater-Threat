@@ -9,17 +9,31 @@ public class ForestMusic : MonoBehaviour
     [SerializeField] private AudioClip clip;
     [SerializeField] private float maxVolume;
     [SerializeField] private float timeTransition;
+    public static ForestMusic Instance;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+    public AudioSource AudioSource
+    {
+        get { return AudioSource; }
+        set { audioSource = value;
+            audioSource.clip = clip;
+            audioSource.spatialBlend = 0;
+            audioSource.loop = true;
+            audioSource.Play();
+            StopCoroutine("StopForestMusic");
+            StartCoroutine(LaunchForestMusic());
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.volume = 0;
+        if(audioSource)
+            audioSource.volume = 0;
     }
 
-    private void Update()
-    {
-        
-    }
     IEnumerator LaunchForestMusic()
     {
         float volume = audioSource.volume;
@@ -62,6 +76,7 @@ public class ForestMusic : MonoBehaviour
             }
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
