@@ -40,8 +40,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   iType: 7
+  id: 0
   timeLeftText: {fileID: 0}
   doubleDoor: {fileID: 0}
+  endgameSpawnerW: {fileID: 0}
+  endgameSpawnerE: {fileID: 0}
   timeLeftAfterClicking: 180
 --- !u!1 &6762066597765792703
 GameObject:
@@ -52,6 +55,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 784860356427982721}
+  - component: {fileID: 1503550060150121229}
+  - component: {fileID: 483593761152458075}
   m_Layer: 0
   m_Name: FinalButton
   m_TagString: Untagged
@@ -74,6 +79,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
+--- !u!65 &1503550060150121229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762066597765792703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0937371, y: 1.08213, z: 0.9549228}
+  m_Center: {x: -0.014306228, y: -0.10901631, z: 0.24432836}
+--- !u!114 &483593761152458075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762066597765792703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d482a355ec35849bae7fde991576a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 1
+  iType: 7
+  id: 0
+  timeLeftText: {fileID: 0}
+  doubleDoor: {fileID: 0}
+  endgameSpawnerW: {fileID: 0}
+  endgameSpawnerE: {fileID: 0}
+  timeLeftAfterClicking: 180
 --- !u!1001 &3470715500849978167
 PrefabInstance:
   m_ObjectHideFlags: 0

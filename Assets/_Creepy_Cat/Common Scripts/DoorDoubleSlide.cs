@@ -26,53 +26,65 @@ public class DoorDoubleSlide : MonoBehaviour {
     private float point = 0.0f;
     private bool opening = false;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+
     //Record initial positions
 	void Start () {
         if (doorL){
-            initialDoorL = doorL.localPosition;
+            initialDoorL = doorL.position;
         }
 
         if (doorR){
-            initialDoorR = doorR.localPosition;
+            initialDoorR = doorR.position;
         }
+
+        doorDirection = -this.transform.forward;
+        //audioSource = GetComponent<AudioSource>();
 	}
 
     //Something approaching? open doors
     void OnTriggerEnter(Collider other)
     {
-        opening = true;
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        {
+            opening = true;
 
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
+            //AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
+        }
+        
     }
 
     //Something left? close doors
     void OnTriggerExit(Collider other)
     {
-        opening = false;
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        {
+            opening = false;
 
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
+            //AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
+        }
     }
 	
 
     //Open or close doors
 	void Update () {
         // Direction selection
-        if (directionType == Direction.X)
-        {
-            doorDirection = Vector3.right;
-        }
-        else if (directionType == Direction.Y)
-        {
-            doorDirection = Vector3.up;
-        }
-        else if (directionType == Direction.Z)
-        {
-            doorDirection = Vector3.back;
-        }
+        // if (directionType == Direction.X)
+        // {
+        //     doorDirection = Vector3.right;
+        // }
+        // else if (directionType == Direction.Y)
+        // {
+        //     doorDirection = Vector3.up;
+        // }
+        // else if (directionType == Direction.Z)
+        // {
+        //     doorDirection = Vector3.back;
+        // }
 
         // If opening
+
         if (opening)
         {
             point = Mathf.Lerp(point, 1.0f, Time.deltaTime * speed);
@@ -85,12 +97,13 @@ public class DoorDoubleSlide : MonoBehaviour {
         // Move doors
         if (doorL)
         {
-            doorL.localPosition = initialDoorL + (doorDirection * point * openDistance);
+            doorL.position = initialDoorL + (doorDirection * point * openDistance);
         }
 
         if (doorR)
         {
-            doorR.localPosition = initialDoorR + (-doorDirection * point * openDistance);
+            doorR.position = initialDoorR + (-doorDirection * point * openDistance);
         }
 	}
+
 }

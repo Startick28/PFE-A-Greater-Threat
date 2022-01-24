@@ -817,7 +817,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 748c8fd9ae8ca1e4abaa855c2cea4a25
-  position: {x: 203.75304, y: 465}
+  position: {x: 203, y: 464}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -839,7 +839,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 5
+  speed: 8
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
@@ -2212,20 +2212,20 @@ MonoBehaviour:
   - {fileID: -6058594782101489560}
   - {fileID: -4790032713423104276}
   blackboard:
-    moveToPosition: {x: 2.8318524, y: 0, z: -59.482315}
-    lastPlayerSeenPosition: {x: -12.662366, y: -8.139999, z: -57.4854}
-    lastPlayerSeenEstimatedDirection: {x: -0.21308641, y: -0.13698256, z: -0.967383}
-    hasEstimationOfPlayerDirection: 1
+    moveToPosition: {x: -20.420666, y: 0, z: 29.860664}
+    lastPlayerSeenPosition: {x: -11.213026, y: -8.140001, z: -71.7888}
+    lastPlayerSeenEstimatedDirection: {x: 0.06830748, y: -0.0000014111076, z: 0.99766433}
+    hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: -0.19999687
+    jumpBiteAttackCD: -0.015582517
     clawAttackCD: -447.30417
     disengageJumpCD: -0.19999497
-    pausingAfterAttack: -41758.195
+    pausingAfterAttack: -43543.242
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -41300.94
+    lookAtPlayerLock: -43085.99
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
