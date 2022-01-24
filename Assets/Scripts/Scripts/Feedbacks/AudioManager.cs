@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private List<AudioClip> gunSound;
+    [SerializeField] private List<AudioClip> hitMarkerMonsterSound;
+    [SerializeField] private List<AudioClip> deathMonsterSound;
     [SerializeField] private AudioClip alarmSound;
 
     public static AudioManager Instance;
@@ -82,14 +84,14 @@ public class AudioManager : MonoBehaviour
         Destroy(tempObject);
     }
 
-    IEnumerator PlaySpecificSoundOnPosition(AudioClip audio, Vector3 position)
+    IEnumerator PlaySpecificSoundOnPosition(AudioClip audio, Vector3 position, float spatialBlend, float volume)
     {
         GameObject tempObject = Instantiate(AudioPrefab, position, Quaternion.identity);
         AudioSource source = tempObject.GetComponent<AudioSource>();
         source.clip = audio;
-        source.volume = 1;
+        source.volume = volume;
         source.pitch = 1;
-        source.spatialBlend = 0;
+        source.spatialBlend = spatialBlend;
         source.loop = false;
         source.Play();
         yield return new WaitForSeconds(source.clip.length * 4);
@@ -104,7 +106,7 @@ public class AudioManager : MonoBehaviour
     [PunRPC]
     private void PlayRandomGunSound(Vector3 position)
     {
-        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position));
+        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position,0f,0.5f));
     }
 
     public void PlayAlarmSoundRPC()
@@ -123,5 +125,16 @@ public class AudioManager : MonoBehaviour
         source.spatialBlend = 0;
         source.loop = true;
         source.Play();
+    }
+
+    public void PlayRandomHitMarkerRPC(Vector3 position)
+    {
+        GetComponent<PhotonView>().RPC("PlayRandomHitMarker", RpcTarget.All, position);
+    }
+
+    [PunRPC]
+    private void PlayRandomHitMarker(Vector3 position)
+    {
+        StartCoroutine(PlaySpecificSoundOnPosition(hitMarkerMonsterSound[Random.Range(0, hitMarkerMonsterSound.Count - 1)], position, 1f,0.5f));
     }
 }

@@ -81,8 +81,9 @@ public class FPSCharacterController : AdvancedWalkerController
 	{
         if (GetComponent<PhotonView>().IsMine)
         {
-			gameObject.AddComponent<AudioListener>();
-        }
+			//gameObject.AddComponent<AudioListener>();
+			cameraController.cam.gameObject.AddComponent<AudioListener>();
+		}
 		Died = false;
 		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
@@ -991,10 +992,25 @@ public class FPSCharacterController : AdvancedWalkerController
         {
 			return null;
 		}
+	}
 
-
-		
-
+	public BasicGun getSecondGun()
+	{
+		if (weapons.Count <= 1)
+		{
+			return null;
+		}
+		else
+		{
+            if (currentWeaponIndex + 1 >= weapons.Count)
+            {
+				return weapons[0];
+            }
+            else
+            {
+				return weapons[currentWeaponIndex + 1];
+            }
+		}
 	}
 
 	public void collectAmmunition(int quantity,int type)

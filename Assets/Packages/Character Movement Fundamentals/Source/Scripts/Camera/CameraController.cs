@@ -43,7 +43,7 @@ namespace CMF
 
 		//References to transform and camera components;
 		protected Transform tr;
-		protected Camera cam;
+		public Camera cam;
 		protected CameraInput cameraInput;
 
 		[SerializeField]GameObject Player;

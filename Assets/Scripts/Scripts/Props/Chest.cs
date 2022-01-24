@@ -20,6 +20,7 @@ public class Chest : Interactable
     [SerializeField] private float rotationZ = 90;
     [SerializeField] private float timeToOpen = 3f;
     [SerializeField] private float gunDeplacementY = 0.5f;
+    [SerializeField] private AudioClip crateSound;
 
     public int Id
     {
@@ -47,6 +48,7 @@ public class Chest : Interactable
         }
         //Remove chest's collider
         gameObject.GetComponent<BoxCollider>().enabled = false;
+        GetComponent<AudioSource>().PlayOneShot(crateSound);
 
         int randomGunIndex = Random.Range(0, prefabGun.Count);
         Debug.Log("RandomGunIndex : " + randomGunIndex);

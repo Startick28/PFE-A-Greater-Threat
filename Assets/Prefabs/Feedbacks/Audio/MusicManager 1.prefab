@@ -90,3 +90,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 8140d57e6ee1f324a825434a8aece423, type: 3}
+  maxVolume: 0.3
+  timeTransition: 2
