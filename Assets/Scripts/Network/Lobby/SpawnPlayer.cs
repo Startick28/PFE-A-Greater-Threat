@@ -23,7 +23,8 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
         {
             int spawnIndex = int.Parse(PhotonNetwork.LocalPlayer.CustomProperties["SpawnIndex"].ToString());
             Debug.Log("Spawning at position " + spawnIndex);
-            PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition[spawnIndex], Quaternion.identity);
+            GameObject player = PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition[spawnIndex], Quaternion.identity);
+            ForestMusic.Instance.AudioSource = player.GetComponentInChildren<AudioSource>();
         }
         else
         {
@@ -38,7 +39,7 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
         if (StaticClass.CrossSceneMaster)
         {
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
-            PhotonNetwork.Instantiate("Enemies", new Vector3(0, 0, 0), Quaternion.identity);
+            //PhotonNetwork.Instantiate("Enemies", new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
 }
