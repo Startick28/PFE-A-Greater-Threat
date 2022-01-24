@@ -35,10 +35,12 @@ namespace CMF
 			foreach (var view in photonViews)
 			{
 				//Objects in the scene don't have an owner, its means view.owner will be null
-				if (view.IsMine && !view.transform.name.StartsWith("Enemy"))
+				if (view.IsMine && !view.transform.name.StartsWith("Enemy") && view.transform.name.StartsWith("FPS"))
 				{
+					
 					target = view.gameObject.transform;
 					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = true;
+					//view.transform.GetComponentInChildren<Camera>().enabled = true;
 				}
                 if(!view.IsMine && !view.transform.name.StartsWith("Enemy"))
 				{
