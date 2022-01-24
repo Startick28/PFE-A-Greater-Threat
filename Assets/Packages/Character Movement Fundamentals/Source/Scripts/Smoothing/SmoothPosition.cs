@@ -60,7 +60,7 @@ namespace CMF
 					//view.transform.GetComponentInChildren<Camera>().enabled = true;
 
 				}
-				if (!view.IsMine && !view.transform.name.StartsWith("Enemy"))
+				if (!view.IsMine && !view.transform.name.StartsWith("Enemy") && view.transform.name.StartsWith("FPS"))
 				{
 					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = false;
 				}
