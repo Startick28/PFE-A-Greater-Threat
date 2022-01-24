@@ -2967,6 +2967,7 @@ MonoBehaviour:
   cameraSpeed: 250
   smoothCameraRotation: 0
   cameraSmoothingFactor: 25
+  cam: {fileID: 0}
   Player: {fileID: 0}
 --- !u!114 &8373527386517270731
 MonoBehaviour:
@@ -3003,6 +3004,7 @@ MonoBehaviour:
   cameraSpeed: 250
   smoothCameraRotation: 0
   cameraSmoothingFactor: 25
+  cam: {fileID: 0}
   Player: {fileID: 8477986025960081341}
 --- !u!114 &7297360516377234923
 MonoBehaviour:
@@ -3307,6 +3309,7 @@ MonoBehaviour:
   zoomKey: 324
   interactKey: 101
   equipKey: 308
+  healKey: 116
 --- !u!114 &6224040936624951008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3337,6 +3340,7 @@ MonoBehaviour:
   gunHandsAvatar: {fileID: 0}
   machineGunHandsAvatar: {fileID: 0}
   maxHealth: 100
+  canHeal: 0
   timeToFullReload: 0.75
   pistolBullets: 100
   modelAnimator: {fileID: 6996903033910803417}

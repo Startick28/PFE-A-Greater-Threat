@@ -42,4 +42,5 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
             //PhotonNetwork.Instantiate("Enemies", new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
+
 }

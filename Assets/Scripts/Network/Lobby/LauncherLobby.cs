@@ -77,7 +77,19 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
 
         for (int i = 0; i < players.Count(); i++)
         {
+            
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
+        }
+
+        int j = 0;
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            if(player.IsLocal)
+            {
+                Debug.Log("ADd index " + j);
+                player.CustomProperties.Add("SpawnIndex", j);
+            }
+            j++;
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
@@ -110,13 +122,10 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        
         // Permet de charger la scene que l'on veut, le 1 repr�sente l'index de la scene indiqu� dans le build settings d'unity
         PhotonNetwork.LoadLevel("MapForest");
-        int i = 0;
-        foreach(Player player in PhotonNetwork.PlayerList)
-        {
-            player.CustomProperties.Add("SpawnIndex", i);
-        }
+        
     }
 
     public override void OnLeftRoom()
