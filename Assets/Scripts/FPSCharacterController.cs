@@ -81,11 +81,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	void Awake()
 	{
-        if (GetComponent<PhotonView>().IsMine)
-        {
-			//gameObject.AddComponent<AudioListener>();
-			cameraController.cam.gameObject.AddComponent<AudioListener>();
-		}
+
 		Died = false;
 		timeSinceSoundEmission = soundEmissionTime + 1;
 		Cursor.visible = false;
@@ -154,8 +150,15 @@ public class FPSCharacterController : AdvancedWalkerController
 		//view = GetComponent<PhotonView>();
 
 	}
-
-	void Update()
+    private void Start()
+    {
+		if (GetComponent<PhotonView>().IsMine)
+		{
+			//gameObject.AddComponent<AudioListener>();
+			cameraController.cam.gameObject.AddComponent<AudioListener>();
+		}
+	}
+    void Update()
 	{
 		if(fcharacterInput.isHealKeyPressed())
         {
