@@ -12,6 +12,7 @@ public class FPS_CharacterInput : CharacterKeyboardInput
     public KeyCode zoomKey = KeyCode.Mouse1;
     public KeyCode interactKey = KeyCode.E;
     public KeyCode equipKey = KeyCode.LeftAlt;
+    public KeyCode healKey = KeyCode.T;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,5 +58,10 @@ public class FPS_CharacterInput : CharacterKeyboardInput
     public float getCurrentMouseScroll()
     {
         return Input.mouseScrollDelta.y;
+    }
+
+    public bool isHealKeyPressed()
+    {
+        return Input.GetKeyDown(healKey);
     }
 }
