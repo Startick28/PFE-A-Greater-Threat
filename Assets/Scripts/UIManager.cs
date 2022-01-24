@@ -80,9 +80,13 @@ public class UIManager : MonoBehaviourPunCallbacks
             {
                 player = view;
                 //playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
-                
-                playerBullets.text = view.gameObject.GetComponentInChildren<BasicGun>().getLoadedBullets().ToString() + "/" 
-                    + view.gameObject.GetComponentInChildren<BasicGun>().getMaxLoadedBullets().ToString();
+                GameObject playerGun = player.GetComponent<FPSCharacterController>().getCurrentWeapon();
+                if(playerGun != null)
+                {
+                    playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
+                    + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
+
+                }
             }
         }
     }
