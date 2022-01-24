@@ -112,6 +112,11 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     {
         // Permet de charger la scene que l'on veut, le 1 repr�sente l'index de la scene indiqu� dans le build settings d'unity
         PhotonNetwork.LoadLevel("MapForest");
+        int i = 0;
+        foreach(Player player in PhotonNetwork.PlayerList)
+        {
+            player.CustomProperties.Add("SpawnIndex", i);
+        }
     }
 
     public override void OnLeftRoom()

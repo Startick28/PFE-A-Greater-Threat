@@ -8,16 +8,28 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
     [SerializeField] GameObject cubePlayer;
     [SerializeField] GameObject enemy;
     [SerializeField] Terrain terrain;
-    Vector3 spawnPosition;
+    Vector3[] spawnPosition;
     // Start is called before the first frame update
     
     void Start()
     {
-        float newX = Random.Range(450f, 460f);
-        float newY = Random.Range(-0.6f, 0.6f);
+        spawnPosition = new Vector3[4];
         //spawnPosition = new Vector3(newX, newY, 418);
-        spawnPosition = new Vector3(5.922914f, -9.389999f, -58.21814f);
-        PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition, Quaternion.identity);
+        spawnPosition[0] = new Vector3(-456, -5.13f, -368.72f);
+        spawnPosition[1] = new Vector3(-229.5f, -25.47f, 583.5f);
+        spawnPosition[2] = new Vector3(608, 2.19f, 249.16f);
+        spawnPosition[3] = new Vector3(210, -11.08f, -458.05f);
+        if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("SpawnIndex"))
+        {
+            int spawnIndex = int.Parse(PhotonNetwork.LocalPlayer.CustomProperties["SpawnIndex"].ToString());
+            Debug.Log("Spawning at position " + spawnIndex);
+            PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition[spawnIndex], Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("Spawning at a random position");
+            PhotonNetwork.Instantiate(cubePlayer.name, spawnPosition[(int)Random.Range(0,3)], Quaternion.identity);
+        }
         /* if (PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate(enemy.name, new Vector3(-30, -0.6799681f, -19.24005f), Quaternion.identity);
