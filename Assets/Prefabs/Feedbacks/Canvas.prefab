@@ -1813,6 +1813,9 @@ MonoBehaviour:
   pistoletRare: {fileID: 21300000, guid: 1dbbb8aac5d94784286d590b6ac92579, type: 3}
   pistoletEpic: {fileID: 21300000, guid: 68ccae918d6af434db67b6d903101963, type: 3}
   pistoletLegendaire: {fileID: 21300000, guid: 635feed300e697a4399adf40f8ce38bf, type: 3}
+  ARRare: {fileID: 21300000, guid: 430998d3e0f706848acddb1ae67fd8d3, type: 3}
+  AREpic: {fileID: 21300000, guid: 40e6b9f16e6abea4db77c6157840319e, type: 3}
+  ARLegendaire: {fileID: 21300000, guid: 9ac923e5118379141922c2e81cf877ff, type: 3}
 --- !u!328 &9121217229051197396
 VideoPlayer:
   m_ObjectHideFlags: 0

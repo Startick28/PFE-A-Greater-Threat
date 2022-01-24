@@ -49,6 +49,15 @@ public class UIManager : MonoBehaviourPunCallbacks
     Sprite pistoletEpic;
     [SerializeField]
     Sprite pistoletLegendaire;
+
+
+    [SerializeField]
+    Sprite ARRare;
+    [SerializeField]
+    Sprite AREpic;
+    [SerializeField]
+    Sprite ARLegendaire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,14 +142,28 @@ public class UIManager : MonoBehaviourPunCallbacks
                             {
                                 firstGun.sprite = pistoletLegendaire;
                             }
+                        }else if(playerGun.GetComponent<BasicGun>().type == 2)
+                        {
+                            if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.blanche)
+                            {
+                                firstGun.sprite = ARRare;
+                            }
+                            if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.bleu)
+                            {
+                                firstGun.sprite = AREpic;
+                            }
+                            if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.dore)
+                            {
+                                firstGun.sprite = ARLegendaire;
+                            }
                         }
                     }
                     else
                     {
                         firstGun.sprite = null;
+                        firstGun.enabled = false;
                         playerBullets.text = "0";
                     }
-                    secondGun.sprite = null;
                 }
             }
         }
@@ -170,6 +193,26 @@ public class UIManager : MonoBehaviourPunCallbacks
                         firstGun.sprite = pistoletLegendaire;
                     }
                 }
+                else if (playerGun.GetComponent<BasicGun>().type == 2)
+                {
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.blanche)
+                    {
+                        firstGun.sprite = ARRare;
+                    }
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.bleu)
+                    {
+                        firstGun.sprite = AREpic;
+                    }
+                    if (playerGun.GetComponent<BasicGun>().Rarity == RarityType.dore)
+                    {
+                        firstGun.sprite = ARLegendaire;
+                    }
+                }
+                else
+                {
+                    firstGun.sprite = null;
+                    firstGun.enabled = false;
+                }
                 playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
                 + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
             }
@@ -197,7 +240,22 @@ public class UIManager : MonoBehaviourPunCallbacks
                         secondGun.sprite = pistoletLegendaire;
                     }
                 }
-                else {/// second type, on attend Ergan
+                else if (playerSecondGun.type == 2)
+                {
+                    if (playerSecondGun.Rarity == RarityType.blanche)
+                    {
+                        secondGun.sprite = ARRare;
+                    }
+                    if (playerSecondGun.Rarity == RarityType.bleu)
+                    {
+                        secondGun.sprite = AREpic;
+                    }
+                    if (playerSecondGun.Rarity == RarityType.dore)
+                    {
+                        secondGun.sprite = ARLegendaire;
+                    }
+                }
+                else {
                     secondGun.sprite = null;
                     secondGun.enabled = false;
                 }   

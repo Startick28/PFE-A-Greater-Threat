@@ -50,11 +50,12 @@ public class HandleManager : Interactable
     void Start()
     {
         instance = this;
+        int i = 0;
+        foreach(GameObject handle in handles)
+        {
+            handle.GetComponent<handleInteraction>().id = i;
+            i++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
