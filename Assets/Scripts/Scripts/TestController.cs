@@ -8,6 +8,8 @@ public class TestController : MonoBehaviour
     private int id = 0;
     private SoundEmitter soundEmitter;
 
+    public EnemyScript arack;
+
     void Start()
     {
         soundEmitter = gameObject.GetComponent<SoundEmitter>();
@@ -23,7 +25,7 @@ public class TestController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            //EnemiesManager.Instance.photonView.RPC("EnemyDieWithId", RpcTarget.All, id);
+            arack.Die();
         }
         if (Input.GetKeyDown(KeyCode.L))
         {

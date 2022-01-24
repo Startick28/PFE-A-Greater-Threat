@@ -21,6 +21,7 @@ public class GT_GoToCurrentGoal : ActionNode
         context.agent.updatePosition = updatePosition;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
+        context.agent.ResetPath();
     }
 
     protected override void OnStop() {

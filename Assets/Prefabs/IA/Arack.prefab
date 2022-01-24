@@ -614,8 +614,8 @@ GameObject:
   - component: {fileID: 6800926112983541925}
   - component: {fileID: 6800926112983541944}
   - component: {fileID: 6800926112983541927}
-  - component: {fileID: 6800926112983541949}
   - component: {fileID: 6800926112983541948}
+  - component: {fileID: 6800926112983541949}
   - component: {fileID: 6800926112983541946}
   - component: {fileID: 6800926112983541951}
   - component: {fileID: 6800926112983541947}
@@ -740,20 +740,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 2f30fedc66ca13644aff52a96441cd08, type: 2}
---- !u!64 &6800926112983541949
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6800926112983541923}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_Mesh: {fileID: 0}
 --- !u!114 &6800926112983541948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,6 +757,20 @@ MonoBehaviour:
   FOVAngle: 100
   ElevationAngle: 50
   Resolution: 5
+--- !u!64 &6800926112983541949
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800926112983541923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 0}
 --- !u!114 &6800926112983541946
 MonoBehaviour:
   m_ObjectHideFlags: 0
