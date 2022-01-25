@@ -28,6 +28,9 @@ public class UIManager : MonoBehaviourPunCallbacks
     TextMeshProUGUI playerBullets;
 
     [SerializeField]
+    TextMeshProUGUI playerHeals;
+
+    [SerializeField]
     VideoClip greenClip;
     [SerializeField]
     VideoClip redClip;
@@ -127,7 +130,7 @@ public class UIManager : MonoBehaviourPunCallbacks
                         healthCurrentPlayer.clip = flatClip;
                         healthCurrentPlayer.Play();
                     }
-
+                    playerHeals.text = (player.canHeal ) ? "1":"0";
                     GameObject playerGun = player.getCurrentWeapon();
                     if (playerGun != null)
                     {
