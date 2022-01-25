@@ -179,6 +179,7 @@ public class UIManager : MonoBehaviourPunCallbacks
             //playerHealth.value = float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f;
             bloodScreen.alpha = 0.5f - (float.Parse(PhotonNetwork.LocalPlayer.CustomProperties["HP"].ToString()) / 100.0f)/2;
             playerName.text = PhotonNetwork.LocalPlayer.NickName;
+            playerHeals.text = (player.GetComponent<FPSCharacterController>().canHeal) ? "1" : "0";
             GameObject playerGun = player.GetComponent<FPSCharacterController>().getCurrentWeapon();
             BasicGun playerSecondGun = player.GetComponent<FPSCharacterController>().getSecondGun();
             if (playerGun != null)
