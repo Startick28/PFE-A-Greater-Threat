@@ -26,7 +26,6 @@ namespace BehaviourTreeAI {
                 {
                     if (EnemiesManager.Instance.photonView.IsMine) tree.Update();
                 }
-                else tree.Update();
             }
             
         }

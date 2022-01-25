@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class GoalManager : MonoBehaviour
 {
@@ -61,7 +62,10 @@ public class GoalManager : MonoBehaviour
         if (updateTimer <= 0)
         {
             updateTimer += updateFrequency;
-            UpdateGoals();
+            if (EnemiesManager.Instance != null) 
+            {
+                if (EnemiesManager.Instance.photonView.IsMine) UpdateGoals();
+            }
         }
     }
 
