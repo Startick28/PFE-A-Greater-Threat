@@ -6,8 +6,10 @@ using Photon.Realtime;
 public class SpawnPlayer : MonoBehaviourPunCallbacks
 {
     [SerializeField] GameObject cubePlayer;
-    [SerializeField] GameObject enemy;
-    [SerializeField] Terrain terrain;
+    [SerializeField] Transform spawn1;
+    [SerializeField] Transform spawn2;
+    [SerializeField] Transform spawn3;
+    [SerializeField] Transform spawn4;
     Vector3[] spawnPosition;
     // Start is called before the first frame update
     
@@ -15,10 +17,10 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
     {
         spawnPosition = new Vector3[4];
         //spawnPosition = new Vector3(newX, newY, 418);
-        spawnPosition[0] = new Vector3(-456, -5.13f, -368.72f);
-        spawnPosition[1] = new Vector3(-229.5f, -25.47f, 583.5f);
-        spawnPosition[2] = new Vector3(608, 2.19f, 249.16f);
-        spawnPosition[3] = new Vector3(210, -11.08f, -458.05f);
+        spawnPosition[0] = spawn1.position;
+        spawnPosition[1] = spawn2.position;
+        spawnPosition[2] = spawn3.position;
+        spawnPosition[3] = spawn4.position;
         if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("SpawnIndex"))
         {
             int spawnIndex = int.Parse(PhotonNetwork.LocalPlayer.CustomProperties["SpawnIndex"].ToString());
