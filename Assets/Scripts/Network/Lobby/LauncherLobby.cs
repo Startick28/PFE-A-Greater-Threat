@@ -122,10 +122,9 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        
         // Permet de charger la scene que l'on veut, le 1 repr�sente l'index de la scene indiqu� dans le build settings d'unity
+        StaticClass.CrossSceneMaster = true;
         PhotonNetwork.LoadLevel("MapForest");
-        
     }
 
     public override void OnLeftRoom()
