@@ -41,6 +41,7 @@ public class SpawnPlayer : MonoBehaviourPunCallbacks
         if (StaticClass.CrossSceneMaster)
         {
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
+            Debug.Log(PhotonNetwork.LocalPlayer.IsMasterClient);
             //PhotonNetwork.Instantiate("Enemies", new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
