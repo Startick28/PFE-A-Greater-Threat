@@ -843,43 +843,6 @@ MonoBehaviour:
   children:
   - {fileID: 6445564458702466410}
   - {fileID: 205124132568429403}
---- !u!114 &-6445418455464079222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e221d89e6de07b44b84e708b1a7c39e1, type: 3}
-  m_Name: IsPlayerIntercepted
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 0f6baae6b4bedae46ae40dfb34d39801
-  position: {x: -2243, y: 2301}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &-5958379143974248811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,47 +880,6 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
---- !u!114 &-5641444108976792018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: ca67986ee9d01cf4f9d4746bc6812642
-  position: {x: -2242.7107, y: 1977.7103}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: Circle player if attacked by Aracks
-  drawGizmos: 0
-  children:
-  - {fileID: 59912728796530600}
-  - {fileID: 5890032561417371597}
-  - {fileID: -4298094433544293684}
 --- !u!114 &-5296660222648442414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,51 +994,6 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
---- !u!114 &-4298094433544293684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e608546c8c5f4468b299404990ed46, type: 3}
-  m_Name: GT_InterceptAttackedPlayer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 08de1aa7f25cab944a6cbd1d3d45c49f
-  position: {x: -2158, y: 2128}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
-  speed: 10
-  angularSpeed: 720
-  stoppingDistance: 2
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 3
 --- !u!114 &-3981833598058492854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,11 +1763,6 @@ MonoBehaviour:
   - {fileID: -875845575309045928}
   - {fileID: -6574814599594384750}
   - {fileID: 585195848919969036}
-  - {fileID: -5641444108976792018}
-  - {fileID: 59912728796530600}
-  - {fileID: -4298094433544293684}
-  - {fileID: 5890032561417371597}
-  - {fileID: -6445418455464079222}
   - {fileID: 8106877453807900662}
   - {fileID: 2088352096604413228}
   - {fileID: 3610775331316223529}
@@ -1917,43 +1789,6 @@ MonoBehaviour:
     playerIntercepted: 0
     canAttackPlayer: 1
     reachedEndgameZone: 0
---- !u!114 &59912728796530600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d7b016535ffe64a9de51c5019c421f, type: 3}
-  m_Name: GT_IsPlayerAttackedByAracks
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: dbcd4993ab7d706499f3af4b05f211cf
-  position: {x: -2395, y: 2128}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &63630210322256940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2320,7 +2155,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8a441e2dce65a074d8e4dae98ce3845a
-  position: {x: -2299.76, y: 1854}
+  position: {x: -2161.2964, y: 1853.9998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3156,7 +2991,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 00b54da280521db4283563f9cfbf0648
-  position: {x: -2374.76, y: 1709}
+  position: {x: -2236.2964, y: 1708.9998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3379,7 +3214,6 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 5209648036750138078}
-  - {fileID: -5641444108976792018}
   - {fileID: -9149215285313657020}
   - {fileID: -8418017692532350595}
   - {fileID: 6032001425584539356}
@@ -3421,44 +3255,6 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
---- !u!114 &5890032561417371597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
-  m_Name: Inverter
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 4d71d82f0e04c55478c99a715a4b0084
-  position: {x: -2243, y: 2201}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  child: {fileID: -6445418455464079222}
 --- !u!114 &6009500882717452347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3670,7 +3466,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b8fe96131930d9c4b9c8c3d7a5a16122
-  position: {x: -2467.76, y: 1854}
+  position: {x: -2329.2964, y: 1853.9998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}

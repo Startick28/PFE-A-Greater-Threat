@@ -76,9 +76,12 @@ public class SoundEmitter : MonoBehaviour
     {
         foreach (SensorToolkit.SoundSensor listener in soundListeners)
         {
-            if (CanHearSound(baseIntensity, listener.transform.position, position))
+            if (listener != null)
             {
-                listener.Notify(new EmittedSound(position, emissionType, baseIntensity, Time.time, duration, this));
+                if (CanHearSound(baseIntensity, listener.transform.position, position))
+                {
+                    listener.Notify(new EmittedSound(position, emissionType, baseIntensity, Time.time, duration, this));
+                }
             }
         }
     }

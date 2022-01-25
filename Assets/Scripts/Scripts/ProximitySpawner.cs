@@ -4,8 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 
 public class ProximitySpawner : MonoBehaviour
-{
-    
+{    
     void OnTriggerEnter(Collider col)
     {
         if (col.CompareTag("Player"))
