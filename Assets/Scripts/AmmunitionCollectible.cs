@@ -10,10 +10,18 @@ public class AmmunitionCollectible : Interactable
     [SerializeField]
     int type;
 
-
+    [SerializeField] private int id;
+    public int Id
+    {
+        get { return id; }
+        set
+        {
+            id = value;
+        }
+    }
     public override void finishInteraction()
     {
-        Destroy(gameObject);
+        
     }
 
     public override void interact(FPSCharacterController player)
@@ -28,7 +36,7 @@ public class AmmunitionCollectible : Interactable
         { 
             return;
         }
-
+        
         finishInteraction();
     }
 

@@ -254,7 +254,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 								//nearestInteractable.interact();
 								break;
 							case InteractionType.gun:
-								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								GetComponent<PhotonView>().RPC("InteractWithGun", RpcTarget.All, nearestInteractable.GetComponent<BasicGun>().Id);
 								Debug.Log("Je peux interargir avec le gun");
 								//nearestInteractable.interact();
 								break;
@@ -262,6 +262,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 								Debug.Log("Je peux interargir avec les munitions");
 								//GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
 								nearestInteractable.interact(this);
+								GetComponent<PhotonView>().RPC("InteractWithAmmunition", RpcTarget.All, nearestInteractable.GetComponent<AmmunitionCollectible>().Id);
 								break;
 							case InteractionType.player:
 								Debug.Log("Je peux interargir avec le player");
@@ -657,9 +658,22 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 	}
 
 	[PunRPC]
+	public void InteractWithGun(int id)
+	{
+		ChestManager.Instance.OpenGun(id, this);
+	}
+
+	[PunRPC]
 	public void InteractWithButton(int id)
 	{
 		ChestManager.Instance.OpenButton(id, this);
+	}
+
+	[PunRPC]
+	public void InteractWithAmmunition(int id)
+	{
+		ChestManager.Instance.DestroyAmmunition(id);
+		//handle.GetComponent<handleInteraction>().interact(this);
 	}
 
 	public int[] getAmmuniation()
@@ -675,6 +689,8 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 		HandleManager.Instance().interactWithID(id);
 		//handle.GetComponent<handleInteraction>().interact(this);
 	}
+
+	
 	public Vector3 getAimingDirection()
     {
 		return cameraController.GetAimingDirection();
@@ -964,6 +980,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 		// On met le nouveau gun sur le joueur
 		if(playerGun != null)
         {
+			GameObject parent = newGun.transform.parent.gameObject;
 			newGun.transform.position = playerGun.transform.position;
 			newGun.transform.parent = playerGun.transform.parent;
 			newGun.transform.rotation = playerGun.transform.rotation;
@@ -975,7 +992,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			newGun.View = transform.gameObject.GetComponent<PhotonView>();
 
 			// On enl�ve l'ancien gun du joueur
-			playerGun.transform.parent = null;
+			playerGun.transform.parent = parent.transform;
 			playerGun.transform.position = oldPos;
 			playerGun.GetComponentInChildren<MeshRenderer>().enabled = true;
 			playerGun.GetComponent<BasicGun>().canInteract = true;
@@ -996,7 +1013,6 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			newGun.gameObject.layer = 3;
 			newGun.View = transform.gameObject.GetComponent<PhotonView>();
 		}
-
 		addWeapon(newGun);
 
 		

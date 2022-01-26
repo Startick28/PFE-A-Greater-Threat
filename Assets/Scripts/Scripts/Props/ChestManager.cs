@@ -28,6 +28,14 @@ public class ChestManager : MonoBehaviour
             {
                 child.GetComponent<ButtonForceField>().Id = id;
             }
+            else if (child.GetComponent<BasicGun>())
+            {
+                child.GetComponent<BasicGun>().Id = id;
+            }
+            else if (child.GetComponent<AmmunitionCollectible>())
+            {
+                child.GetComponent<AmmunitionCollectible>().Id = id;
+            }
             id++;
         }
     }
@@ -52,6 +60,30 @@ public class ChestManager : MonoBehaviour
             {
                 if(child.GetComponent<ButtonForceField>().Id == id)
                     child.GetComponent<ButtonForceField>().interact(player);
+            }
+        }
+    }
+
+    public void OpenGun(int id, FPSCharacterController player)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<BasicGun>())
+            {
+                if (child.GetComponent<BasicGun>().Id == id)
+                    child.GetComponent<BasicGun>().interact(player);
+            }
+        }
+    }
+
+    public void DestroyAmmunition(int id)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<AmmunitionCollectible>())
+            {
+                if (child.GetComponent<AmmunitionCollectible>().Id == id)
+                    Destroy(child.gameObject);
             }
         }
     }

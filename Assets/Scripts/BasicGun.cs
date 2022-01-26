@@ -38,6 +38,16 @@ public class BasicGun : Interactable
 
     float damage;
 
+    [SerializeField] private int id;
+    public int Id
+    {
+        get { return id; }
+        set
+        {
+            id = value;
+        }
+    }
+
     public bool canReload
     {
         get { return !(loadedBullets == magSize); }
@@ -87,7 +97,7 @@ public class BasicGun : Interactable
     {
         if(transform.parent != null)
         {
-            view = transform.parent.parent.gameObject.GetComponent<PhotonView>();
+            view = transform.parent.gameObject.GetComponent<PhotonView>();
         }
 
         iType = InteractionType.gun;

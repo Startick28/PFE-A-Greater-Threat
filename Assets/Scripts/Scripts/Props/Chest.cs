@@ -80,7 +80,8 @@ public class Chest : Interactable
 
             player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<AmmunitionCollectible>();
         }
-        
+
+        gun.transform.SetParent(transform.parent);
 
         // Animations
         if (!isOpened)
@@ -103,6 +104,7 @@ public class Chest : Interactable
     // Start is called before the first frame update
     void Start()
     {
+        
         iType = InteractionType.chest;
         collider = GetComponent<BoxCollider>();
         canInteract = true;
