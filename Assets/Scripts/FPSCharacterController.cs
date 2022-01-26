@@ -118,33 +118,44 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 		if(weapons.Count != 0)
         {
-		
-			weaponAnimator = fpsModels[0].GetComponent<Animator>();
-			SetChildrenActive(weaponAnimator.gameObject, true);
+			if (GetComponent<PhotonView>().IsMine)
+            {
+				weaponAnimator = fpsModels[0].GetComponent<Animator>();
+				SetChildrenActive(weaponAnimator.gameObject, true);
 
-			SetChildrenActive(fpsModels[1], false);
+				SetChildrenActive(fpsModels[1], false);
+			}
+				
 		}
 		else
         {
-			SetChildrenActive(fpsModels[0], false);
+			if(GetComponent<PhotonView>().IsMine)
+            {
+				SetChildrenActive(fpsModels[0], false);
 
-			SetChildrenActive(fpsModels[1], false);
+				SetChildrenActive(fpsModels[1], false);
+			}
+
+			
 		}
 
 
 
 		//Do this for first person
-		
+
 		//Do this for the view of other player
-		
-		
+
+
 
 
 		//weaponAnimator.gameObject.SetActive(false);
 		//Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
-
-		modelAnimator.SetTrigger("idle");
+		if (GetComponent<PhotonView>().IsMine)
+        {
+			modelAnimator.SetTrigger("idle");
+		}
+			
 		Setup();
 		
 		//view = GetComponent<PhotonView>();
@@ -190,14 +201,19 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			{
 				if (!previouslyWalking)
 				{
-					modelAnimator.SetBool("walking", true);
+					if(GetComponent<PhotonView>().IsMine)
+                    {
+						modelAnimator.SetBool("walking", true);
+					}
+					
 				}
 			}
 			else
 			{
 				if (previouslyWalking)
 				{
-					modelAnimator.SetBool("walking", false);
+					if (GetComponent<PhotonView>().IsMine)
+						modelAnimator.SetBool("walking", false);
 				}
 			}
 
@@ -291,99 +307,122 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 				}
 				if (Input.GetKeyDown(fcharacterInput.equipKey))
 				{
-					if (currentWeaponEquipped)
-					{
-						//currentWeaponEquipped = false;
-						weaponAnimator.SetTrigger("unequip");
-						modelAnimator.SetInteger("weaponIndex", 0);
-						modelAnimator.SetTrigger("unequip");
-
-						//modelAnimator.SetTrigger("idle");
-					}
-					else
-					{
-						//weaponAnimator.gameObject.SetActive(true);
-						if (weapons.Count != 0)
+					if (GetComponent<PhotonView>().IsMine)
+                    {
+						if (currentWeaponEquipped)
 						{
-							SetChildrenActive(weaponAnimator.gameObject, true);
-							weaponAnimator.SetTrigger("equip");
-							modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
-							modelAnimator.SetTrigger("idle");
-							modelAnimator.SetLayerWeight(1, 1);
-							modelAnimator.SetTrigger("equip");
+
+							//currentWeaponEquipped = false;
+							weaponAnimator.SetTrigger("unequip");
+							modelAnimator.SetInteger("weaponIndex", 0);
+							modelAnimator.SetTrigger("unequip");
+
+							//modelAnimator.SetTrigger("idle");
 						}
-						//currentWeaponEquipped = true;
+						else
+						{
+							//weaponAnimator.gameObject.SetActive(true);
+							if (weapons.Count != 0)
+							{
+								SetChildrenActive(weaponAnimator.gameObject, true);
+								weaponAnimator.SetTrigger("equip");
+								modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+								modelAnimator.SetTrigger("idle");
+								modelAnimator.SetLayerWeight(1, 1);
+								modelAnimator.SetTrigger("equip");
+							}
+							//currentWeaponEquipped = true;
+						}
 					}
+						
 
 				}
 				else
 				{
-					if (!currentWeaponEquipped)
-					{
-						//modelAnimator.SetTrigger("idle");
+
+					if (GetComponent<PhotonView>().IsMine)
+                    {
+						if (!currentWeaponEquipped)
+						{
+							//modelAnimator.SetTrigger("idle");
+						}
+						else
+						{
+							//modelAnimator.ResetTrigger("idle");
+						}
 					}
-					else
-					{
-						//modelAnimator.ResetTrigger("idle");
-					}
+						
 
 				}
-
-				if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
+				
+					if (fcharacterInput.isFireKeyPressed() && currentWeaponEquipped)
 				{
-
-					if (weapons[currentWeaponIndex].isReadyToFire)
+					if (GetComponent<PhotonView>().IsMine)
 					{
-						if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
+						if (weapons[currentWeaponIndex].isReadyToFire)
 						{
-							weaponAnimator.SetTrigger("fire");
-							modelAnimator.SetTrigger("fire");
+							if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
+							{
+								weaponAnimator.SetTrigger("fire");
+								modelAnimator.SetTrigger("fire");
+							}
+
 						}
 
+						weaponAnimator.SetBool("isFiring", true);
 					}
-
-					weaponAnimator.SetBool("isFiring", true);
+					
 					//gun.fire(cameraTransform.position, cameraController.GetAimingDirection());
 
 
 				}
 				else
 				{
-					if (currentWeaponEquipped)
-					{
-						weaponAnimator.SetBool("isFiring", false);
+					if (GetComponent<PhotonView>().IsMine)
+                    {
+						if (currentWeaponEquipped)
+						{
+							weaponAnimator.SetBool("isFiring", false);
+						}
 					}
+						
 
 				}
 				if (fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
 				{
-					if (ammunitions[weapons[currentWeaponIndex].type - 1] > 0)
-					{
-						if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >= timeToFullReload && weapons[currentWeaponIndex].canReload)
+					if (GetComponent<PhotonView>().IsMine)
+                    {
+						if (ammunitions[weapons[currentWeaponIndex].type - 1] > 0)
 						{
-							weaponAnimator.SetFloat("reloadSpeed", 1);
-							weaponAnimator.SetTrigger("reload");
+							if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey >= timeToFullReload && weapons[currentWeaponIndex].canReload)
+							{
+								weaponAnimator.SetFloat("reloadSpeed", 1);
+								weaponAnimator.SetTrigger("reload");
 
-							modelAnimator.SetTrigger("reload");
+								modelAnimator.SetTrigger("reload");
 
-							isFullReloading = true;
-							timeSincePressedReloadKey = 0;
+								isFullReloading = true;
+								timeSincePressedReloadKey = 0;
 
+							}
+							else if (!previousReload && !isFastReloading)
+							{
+
+							}
+
+							timeSincePressedReloadKey += Time.deltaTime;
+							//gun.reload();
+
+
+							previousReload = true;
 						}
-						else if (!previousReload && !isFastReloading)
-						{
-
-						}
-
-						timeSincePressedReloadKey += Time.deltaTime;
-						//gun.reload();
-
-
-						previousReload = true;
 					}
+						
 				}
 				else if (!fcharacterInput.isReloadKeyPressed() && currentWeaponEquipped)
-				{	
+				{
+					if (GetComponent<PhotonView>().IsMine)
+                    {
 						if (previousReload && (!isFastReloading && !isFullReloading) && timeSincePressedReloadKey != 0 && weapons[currentWeaponIndex].canReload)
 						{
 							weaponAnimator.SetFloat("reloadSpeed", 1);
@@ -403,6 +442,9 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						}
 
 						previousReload = false;
+					}
+
+						
 					
 					
 				}
@@ -423,7 +465,12 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 					{
 						movementSpeed *= 2;
 						previousRun = true;
-						modelAnimator.SetBool("running", true);
+						if (GetComponent<PhotonView>().IsMine)
+                        {
+							modelAnimator.SetBool("running", true);
+
+						}
+
 
 						//movementSpeed
 					}
@@ -435,7 +482,11 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 					{
 						movementSpeed /= 2;
 						previousRun = false;
-						modelAnimator.SetBool("running", false);
+						if (GetComponent<PhotonView>().IsMine)
+                        {
+							modelAnimator.SetBool("running", false);
+						}
+							
 
 					}
 
@@ -443,8 +494,8 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 				//Debug.L
 
-
-				if (fcharacterInput.isCrouchKeyPressed())
+				
+					if (fcharacterInput.isCrouchKeyPressed())
 				{
 					//Debug.Log("iuze");
 					if (!previousCrouch)
@@ -452,8 +503,12 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						mover.SetColliderHeight(1.0f);
 						cameraController.transform.Translate(0, -1, 0);
 						transform.Translate(0, -1, 0);
-						modelAnimator.SetBool("crouching", true);
-						modelAnimator.SetTrigger("crouch");
+						if (GetComponent<PhotonView>().IsMine)
+						{
+							modelAnimator.SetBool("crouching", true);
+							modelAnimator.SetTrigger("crouch");
+						}
+						
 					}
 
 					previousCrouch = true;
@@ -466,7 +521,11 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						cameraController.transform.Translate(0, 1, 0);
 						transform.Translate(0, 1, 0);
 						previousCrouch = false;
-						modelAnimator.SetBool("crouching", false);
+						if (GetComponent<PhotonView>().IsMine)
+						{
+							modelAnimator.SetBool("crouching", false);
+						}
+						
 						//modelAnimator.ResetTrigger("crouch");
 					}
 
@@ -480,7 +539,8 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			{
 				if (!previousJump)
 				{
-					modelAnimator.SetTrigger("jump");
+					if (GetComponent<PhotonView>().IsMine)
+						modelAnimator.SetTrigger("jump");
 					previousJump = true;
 				}
 			}

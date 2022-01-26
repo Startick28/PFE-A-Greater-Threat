@@ -245,8 +245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -97}
-  m_SizeDelta: {x: 105.30011, y: 88.621}
+  m_AnchoredPosition: {x: -48.423, y: -70.845}
+  m_SizeDelta: {x: 82.147, y: 60.311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4304449353869104343
 CanvasRenderer:
@@ -396,8 +396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -8.04166}
-  m_SizeDelta: {x: 105.30011, y: 88.621}
+  m_AnchoredPosition: {x: -48.423, y: -2.6106}
+  m_SizeDelta: {x: 82.147, y: 77.759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &428877814544625230
 CanvasRenderer:
@@ -473,8 +473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: 80.75835}
-  m_SizeDelta: {x: 105.30011, y: 88.621}
+  m_AnchoredPosition: {x: -48.423462, y: 71.01549}
+  m_SizeDelta: {x: 82.147, y: 69.1353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1127881376619869589
 CanvasRenderer:
@@ -783,7 +783,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 328.9384, y: 44.8376}
+  m_SizeDelta: {x: 235.6554, y: 33.8804}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &9121217227744373222
 CanvasRenderer:
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.35
+  m_fontSize: 28.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1061,7 +1061,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -9, y: 0}
-  m_SizeDelta: {x: 126.5639, y: 47.185}
+  m_SizeDelta: {x: 104.1848, y: 38.8417}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &9121217227974157144
 CanvasRenderer:
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 18.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
