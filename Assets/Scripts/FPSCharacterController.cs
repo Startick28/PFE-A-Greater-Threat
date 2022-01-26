@@ -5,8 +5,10 @@ using CMF;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Pun.Demo.PunBasics;
+using Photon;
+using Photon.Pun;
 
-public class FPSCharacterController : AdvancedWalkerController
+public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 {
 	[SerializeField]
 	CameraController cameraController;
@@ -28,6 +30,7 @@ public class FPSCharacterController : AdvancedWalkerController
 
 	[SerializeField]
 	float maxHealth = 100;
+	[SerializeField]
 	float health;
 
 	//PhotonView view;
@@ -312,10 +315,6 @@ public class FPSCharacterController : AdvancedWalkerController
 							modelAnimator.SetLayerWeight(1, 1);
 							modelAnimator.SetTrigger("equip");
 						}
-
-
-
-
 						//currentWeaponEquipped = true;
 					}
 
@@ -606,6 +605,11 @@ public class FPSCharacterController : AdvancedWalkerController
 		ChestManager.Instance.OpenButton(id, this);
 	}
 
+	public int[] getAmmuniation()
+    {
+		return ammunitions;
+    }
+
 
 	[PunRPC]
 	public void InteractWithHandle(int id)
@@ -658,7 +662,7 @@ public class FPSCharacterController : AdvancedWalkerController
     {
 		health -= damage;
 		PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
-		PhotonNetwork.SetPlayerCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
+		PhotonNetwork.LocalPlayer.SetCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
 		if (health<=0)
         {
 			die();
@@ -718,11 +722,6 @@ public class FPSCharacterController : AdvancedWalkerController
 
 		//Maintentant on met en place les models nécessaire
 		tpMonitor.setUpModels(weapon.type);
-
-
-
-
-
     }
 
 	public void switchWeapon(float delta)
@@ -1075,6 +1074,20 @@ public class FPSCharacterController : AdvancedWalkerController
 				camera.gameObject.transform.parent.parent.GetComponent<SmoothRotation>().target = camera.transform.parent.parent.parent;
 				camera.enabled = true;
 			}
+		}
+	}
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.IsReading)
+		{
+			health = (float)stream.ReceiveNext();
+		}
+		else if (stream.IsWriting)// && transform.parent.GetComponent<PhotonView>().IsMine)
+		{
+			stream.SendNext(health);
+			PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
+			PhotonNetwork.LocalPlayer.SetCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
 		}
 	}
 }
