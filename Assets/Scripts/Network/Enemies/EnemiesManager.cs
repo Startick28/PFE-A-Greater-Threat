@@ -55,10 +55,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
         foreach (Transform child in transform)
         {
             EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            if (enemy != null)
             {
-                enemy.TakeDamage(damages);
-                return;
+                if (enemy.ID == id)
+                {
+                    enemy.TakeDamage(damages);
+                    return;
+                }
             }
         }
     }
@@ -69,10 +72,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
         foreach (Transform child in transform)
         {
             EnemyScript enemy = child.GetComponent<EnemyScript>();
-            if (enemy.ID == id)
+            if (enemy != null)
             {
-                enemy.Die();
-                return;
+                if (enemy.ID == id)
+                {
+                    enemy.Die();
+                    return;
+                }
             }
         }
     }
@@ -85,11 +91,15 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             foreach (Transform child in transform)
             {
                 EnemyScript enemy = child.GetComponent<EnemyScript>();
-                if (enemy.ID == id)
+                if (enemy != null)
                 {
-                    enemy.GetHit();
-                    return;
+                    if (enemy.ID == id)
+                    {
+                        enemy.GetHit();
+                        return;
+                    }
                 }
+                
             }
         }
     }
