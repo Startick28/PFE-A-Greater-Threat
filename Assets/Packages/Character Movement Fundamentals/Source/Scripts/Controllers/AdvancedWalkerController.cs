@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -61,6 +62,7 @@ namespace CMF
 		[Tooltip("Whether to calculate and apply momentum relative to the controller's transform.")]
 		public bool useLocalMomentum = false;
 
+		FPSCharacterController player;
 		//Enum describing basic controller states; 
 		public enum ControllerState
 		{
@@ -93,8 +95,11 @@ namespace CMF
 		protected virtual void Setup()
 		{
 		}
-
-		void Update()
+        private void Start()
+        {
+			player = GetComponent<FPSCharacterController>();
+        }
+        void Update()
 		{
 			HandleJumpKeyInput();
 		}
@@ -118,12 +123,65 @@ namespace CMF
 
         void FixedUpdate()
 		{
-			ControllerUpdate();
+            if (player != null)
+			{
+                if (!player.Died)
+				{
+					ControllerUpdate();
+				}else
+				{
+					Died();
+				}
+            }
+            else
+            {
+				player = GetComponent<FPSCharacterController>();
+            }
 		}
 
-		//Update controller;
-		//This function must be called every fixed update, in order for the controller to work correctly;
-		void ControllerUpdate()
+        private void Died()
+        {
+			//Check if mover is grounded;
+			mover.CheckForGround();
+
+			//Determine controller state;
+			currentControllerState = DetermineControllerState();
+
+			//Apply friction and gravity to 'momentum';
+			HandleMomentum();
+
+			//Check if the player has initiated a jump;
+			HandleJumping();
+
+
+
+			//If local momentum is used, transform momentum into world space first;
+			Vector3 _worldMomentum = momentum;
+			if (useLocalMomentum)
+				_worldMomentum = tr.localToWorldMatrix * momentum;
+
+			//If player is grounded or sliding on a slope, extend mover's sensor range;
+			//This enables the player to walk up/down stairs and slopes without losing ground contact;
+			mover.SetExtendSensorRange(IsGrounded());
+
+			//Set mover velocity;		
+			mover.SetVelocity(_worldMomentum);
+
+			//Store velocity for next frame;
+			savedVelocity = _worldMomentum;
+
+			//Save controller movement velocity;
+			savedMovementVelocity = Vector3.zero;
+
+			//Reset jump key booleans;
+			jumpKeyWasLetGo = false;
+			jumpKeyWasPressed = false;
+
+		}
+
+        //Update controller;
+        //This function must be called every fixed update, in order for the controller to work correctly;
+        void ControllerUpdate()
 		{
 			//Check if mover is grounded;
 			mover.CheckForGround();
