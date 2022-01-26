@@ -87,7 +87,7 @@ public class UIManager : MonoBehaviourPunCallbacks
                 if(playerGun != null)
                 {
                     playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
-                    + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
+                    + player.GetComponent<FPSCharacterController>().getAmmuniation()[playerGun.GetComponent<BasicGun>().type - 1];
 
                 }
             }
@@ -222,7 +222,7 @@ public class UIManager : MonoBehaviourPunCallbacks
                     firstGun.enabled = false;
                 }
                 playerBullets.text = playerGun.GetComponent<BasicGun>().getLoadedBullets().ToString() + "/"
-                + playerGun.GetComponent<BasicGun>().getMaxLoadedBullets().ToString();
+                + player.GetComponent<FPSCharacterController>().getAmmuniation()[playerGun.GetComponent<BasicGun>().type - 1];
             }
             else
             {
@@ -351,7 +351,6 @@ public class UIManager : MonoBehaviourPunCallbacks
             {
                 targetPlayer.CustomProperties[element.Key] = element.Value;
             }
-            Debug.Log(element.Key + " " + element.Value + " " + targetPlayer.NickName);
         }
     }
 }
