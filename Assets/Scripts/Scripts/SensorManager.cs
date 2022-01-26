@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class SensorManager : MonoBehaviour
 {
-    [SerializeField] private List<SensorToolkit.TriggerSensor> visionConeSensors;
+    [SerializeField] private List<SensorToolkit.BaseVolumeSensor> visionConeSensors;
     [SerializeField] private List<SensorToolkit.SoundSensor> soundSensors;
     [SerializeField] private SensorToolkit.RangeSensor presenceSensor;
     [SerializeField] private float timeToDetectPlayer = 1f;
@@ -209,7 +209,7 @@ public class SensorManager : MonoBehaviour
     {
         List<GameObject> seenEntities = new List<GameObject>();
 
-        foreach (SensorToolkit.TriggerSensor visionSensor in visionConeSensors)
+        foreach (SensorToolkit.BaseVolumeSensor visionSensor in visionConeSensors)
         {
             foreach (GameObject entity in visionSensor.GetDetected())
             {

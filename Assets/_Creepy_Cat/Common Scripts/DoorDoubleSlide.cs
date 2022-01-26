@@ -50,7 +50,7 @@ public class DoorDoubleSlide : MonoBehaviour {
         {
             opening = true;
 
-            //AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
+            AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
         }
         
     }
@@ -62,7 +62,7 @@ public class DoorDoubleSlide : MonoBehaviour {
         {
             opening = false;
 
-            //AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
+            AudioSource.PlayClipAtPoint(audioClip, initialDoorL + Vector3.up * 1.5f, 0.2f);
         }
     }
 	

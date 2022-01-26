@@ -1883,7 +1883,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b9710b6b2d556a149885140bd64d5b9f
-  position: {x: -1254, y: 1969.9998}
+  position: {x: -1271, y: 1974}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2221,15 +2221,15 @@ MonoBehaviour:
     jumpBiteAttackCD: -0.015582517
     clawAttackCD: -447.30417
     disengageJumpCD: -0.19999497
-    pausingAfterAttack: -43543.242
+    pausingAfterAttack: -43549.945
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -43085.99
+    lookAtPlayerLock: -43092.69
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
-    reachedEndgameZone: 1
+    reachedEndgameZone: 0
 --- !u!114 &75460443379023550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2365,7 +2365,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f69e88a6d0b00d94bbda07aa8bfe4bf5
-  position: {x: -1345, y: 2106}
+  position: {x: -1362, y: 2110}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2525,7 +2525,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 217e62a7754059e4692a116a461b0099
-  position: {x: -1186, y: 2107.9998}
+  position: {x: -1203, y: 2112}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}

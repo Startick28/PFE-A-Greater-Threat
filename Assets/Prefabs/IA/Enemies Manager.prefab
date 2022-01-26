@@ -66,6 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca974c8301a2d548bb61c82a94004e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6800926112983541923, guid: 8f7629edf34c0c44a81f320d1b03b719, type: 3}
+  enemy: {fileID: 6006811925654220893, guid: 87a2c62a98ae13c4ab53481aa9f1ed09, type: 3}
   endgameEnemyPrefab: {fileID: 8017090145799438041, guid: 7ea6936898b617e4ab24900c3591f99b, type: 3}
   greaterThreat: {fileID: 0}

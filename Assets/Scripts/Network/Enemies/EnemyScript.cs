@@ -7,8 +7,7 @@ using UnityEngine.AI;
 public class EnemyScript : MonoBehaviour
 {
     // Enemy's general variables 
-    float maxHealth = 100;
-    float currentHealth = 100;
+    float currentHealth = 60;
     [SerializeField] private int id;
     public int ID
     {
