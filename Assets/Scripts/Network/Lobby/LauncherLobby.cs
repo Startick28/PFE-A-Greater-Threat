@@ -23,6 +23,8 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     [SerializeField] Slider progressBar;
     [SerializeField]
     TextMeshProUGUI Ratio;
+    [SerializeField]
+    TMP_InputField NickName;
     private void Awake()
     {
         Instance = this;
@@ -32,7 +34,6 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
         progressBar.gameObject.SetActive(false);
         PhotonNetwork.ConnectUsingSettings();
         MenuManager.Instance.OpenMenu("loadingMenu");
-
     }
 
     public override void OnConnectedToMaster()
@@ -61,6 +62,11 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu("loadingMenu");
         progressBar.gameObject.SetActive(true);
         Ratio.gameObject.SetActive(true);
+        if (NickName.text != "")
+        {
+            Debug.Log("Updated Nickname from " + PhotonNetwork.NickName + " to " + NickName.text);
+            PhotonNetwork.NickName = NickName.text;
+        }
     }
 
     public override void OnJoinedRoom()
@@ -87,7 +93,14 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
             if(player.IsLocal)
             {
                 Debug.Log("ADd index " + j);
-                player.CustomProperties.Add("SpawnIndex", j);
+                if (!player.CustomProperties.ContainsKey("SpawnIndex"))
+                {
+                    player.CustomProperties.Add("SpawnIndex", j);
+                }
+                else
+                {
+                    player.CustomProperties["SpawnIndex"] = j;
+                }
             }
             j++;
         }
@@ -110,6 +123,9 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("loadingMenu");
+        string[] removedProperties = new string[1];
+        removedProperties[0] = "SpawnIndex";
+        PhotonNetwork.RemovePlayerCustomProperties(removedProperties);
     }
 
     public void JoinRoom(RoomInfo info)
@@ -118,13 +134,18 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu("loadingMenu");
         progressBar.gameObject.SetActive(true);
         Ratio.gameObject.SetActive(true);
+        if (NickName.text != "")
+        {
+            Debug.Log("Updated Nickname from " + PhotonNetwork.NickName + " to " + NickName.text);
+            PhotonNetwork.NickName = NickName.text;
+        }
     }
 
     public void StartGame()
     {
         // Permet de charger la scene que l'on veut, le 1 repr�sente l'index de la scene indiqu� dans le build settings d'unity
         StaticClass.CrossSceneMaster = true;
-        PhotonNetwork.LoadLevel("MapForest");
+        PhotonNetwork.LoadLevel("BaseScene");
     }
 
     public override void OnLeftRoom()
