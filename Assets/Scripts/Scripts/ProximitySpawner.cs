@@ -9,7 +9,7 @@ public class ProximitySpawner : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            if (EnemiesManager.Instance)
+            if (EnemiesManager.Instance && PhotonNetwork.LocalPlayer.IsMasterClient)
             {
                 EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, transform.position);
                 Destroy(this.gameObject);
