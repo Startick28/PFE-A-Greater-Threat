@@ -427,7 +427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad4070e1686992749be34b11c9e2ef8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d48ed1b637e1f434e927cf76b8e80eb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 5552546792447290780}
   - component: {fileID: 1127881376619869589}
   - component: {fileID: 6619442299364822937}
+  - component: {fileID: 4952124532919494412}
   m_Layer: 5
   m_Name: 1stGun
   m_TagString: Untagged
@@ -503,7 +504,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad4070e1686992749be34b11c9e2ef8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d48ed1b637e1f434e927cf76b8e80eb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -513,6 +514,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &4952124532919494412
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511916660907497603}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &8034457733469944310
 GameObject:
   m_ObjectHideFlags: 0
