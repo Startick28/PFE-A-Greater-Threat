@@ -219,7 +219,7 @@ public class SensorManager : MonoBehaviour
                 }
             }
         }
-
+        
         return seenEntities;
     }
 

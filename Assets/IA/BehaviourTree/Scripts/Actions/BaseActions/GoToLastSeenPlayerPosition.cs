@@ -31,7 +31,7 @@ public class GoToLastSeenPlayerPosition : ActionNode
         if (context.sensorManager.CanSeePlayer())
         {
             oldPlayerPosition = newPlayerPosition;
-            newPlayerPosition = blackboard.focusedPlayer.transform.position;
+            newPlayerPosition = context.sensorManager.GetLastSeenPlayer().transform.position;
             blackboard.lastPlayerSeenEstimatedDirection = (newPlayerPosition - oldPlayerPosition).normalized;
             blackboard.hasEstimationOfPlayerDirection = true;
             blackboard.lastPlayerSeenPosition = blackboard.focusedPlayer.transform.position;

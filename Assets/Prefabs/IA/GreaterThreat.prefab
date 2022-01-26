@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 257811810946882714}
   - component: {fileID: 257811810946882715}
   - component: {fileID: 257811810946882689}
+  - component: {fileID: 8319470098570848920}
   - component: {fileID: 257811810946882693}
   - component: {fileID: 257811810946882694}
   - component: {fileID: 257811810946882695}
@@ -22,7 +23,6 @@ GameObject:
   - component: {fileID: 257811810946882692}
   - component: {fileID: 1468306395508205361}
   - component: {fileID: 257811810946882691}
-  - component: {fileID: 257811810946882690}
   m_Layer: 11
   m_Name: GreaterThreat
   m_TagString: Enemy
@@ -143,6 +143,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 7a439a3da2a2bd84d8b993c29f347943, type: 2}
+--- !u!114 &8319470098570848920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257811810946882716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd1782782c33a144aa3b0d575bb80ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 1025
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 3
+  MinimumVisibility: 0.6
+  SensorRange: 10
+  DetectsOnLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  SensorUpdateMode: 0
+  CheckInterval: 1
+  InitialBufferSize: 20
+  DynamicallyIncreaseBufferSize: 1
 --- !u!114 &257811810946882693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +216,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   SensorUpdateMode: 0
-  CheckInterval: 1
+  CheckInterval: 5
   InitialBufferSize: 20
   DynamicallyIncreaseBufferSize: 1
 --- !u!114 &257811810946882694
@@ -355,86 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimTransform: {fileID: 0}
---- !u!114 &257811810946882690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257811810946882716}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boneShape: 1
-  drawBones: 1
-  drawTripods: 0
-  boneSize: 1
-  tripodSize: 1
-  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
-  m_Transforms:
-  - {fileID: 7532906619630822844}
-  - {fileID: 6527056979459627247}
-  - {fileID: 4416574488699492350}
-  - {fileID: 8206494695347788445}
-  - {fileID: 5823442247146684168}
-  - {fileID: 350261079523449646}
-  - {fileID: 8689386195423709108}
-  - {fileID: 5121729396034028943}
-  - {fileID: 4217340208773857053}
-  - {fileID: 8868494126747009025}
-  - {fileID: 7117648381339761965}
-  - {fileID: 9071635126449694961}
-  - {fileID: 3226502691078757385}
-  - {fileID: 1856554373476078142}
-  - {fileID: 4812139879073863042}
-  - {fileID: 5512991674003954772}
-  - {fileID: 7315373396063631332}
-  - {fileID: 605408082827929951}
-  - {fileID: 7246540033268004965}
-  - {fileID: 1705121059220567305}
-  - {fileID: 8088245545523715670}
-  - {fileID: 4088439288266353755}
-  - {fileID: 6024886892579457447}
-  - {fileID: 8041921053936281482}
-  - {fileID: 5736855325985413869}
-  - {fileID: 5810838833408752895}
-  - {fileID: 6396190273633637269}
-  - {fileID: 419152387315187502}
-  - {fileID: 7950109230519113206}
-  - {fileID: 5493845524162684375}
-  - {fileID: 6580413221806602980}
-  - {fileID: 1612696869810968998}
-  - {fileID: 4176785965128147035}
-  - {fileID: 92279108140136945}
-  - {fileID: 5626948299485422583}
-  - {fileID: 5140139469462888691}
-  - {fileID: 8215060077294595976}
-  - {fileID: 1025205130784163037}
-  - {fileID: 6241080313244836068}
-  - {fileID: 6606683807887350099}
-  - {fileID: 7633448738035527231}
-  - {fileID: 7833886868406677609}
-  - {fileID: 8047799018185188094}
-  - {fileID: 2833139684812305190}
-  - {fileID: 4131923584382003766}
-  - {fileID: 8616073188137700917}
-  - {fileID: 617007871862226224}
-  - {fileID: 6348819180359316407}
-  - {fileID: 7437333134327012711}
-  - {fileID: 967036414034777437}
-  - {fileID: 8509331979787015870}
-  - {fileID: 5643302098604575254}
-  - {fileID: 3768534927145351065}
-  - {fileID: 5376217367394223576}
-  - {fileID: 3527906246583488680}
-  - {fileID: 4399267938049547472}
-  - {fileID: 3688167974493851427}
-  - {fileID: 5292166895790535179}
-  - {fileID: 7587733172682008450}
-  - {fileID: 6628219411260922285}
-  - {fileID: 4092958574564061901}
 --- !u!1 &312041131601372760
 GameObject:
   m_ObjectHideFlags: 0

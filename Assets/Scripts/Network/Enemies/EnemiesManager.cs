@@ -112,10 +112,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
             foreach (Transform child in transform)
             {
                 EnemyScript enemy = child.GetComponent<EnemyScript>();
-                if (enemy.ID == id)
+                if (enemy != null)
                 {
-                    enemy.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
-                    return;
+                    if (enemy.ID == id)
+                    {
+                        enemy.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
+                        return;
+                    }
                 }
             }
         }

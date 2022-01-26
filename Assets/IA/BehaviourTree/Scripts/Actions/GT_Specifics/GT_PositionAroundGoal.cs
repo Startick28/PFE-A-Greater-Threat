@@ -17,7 +17,7 @@ public class GT_PositionAroundGoal : ActionNode
     protected override State OnUpdate() {
         Vector3 randomVec = Quaternion.Euler(0f, Random.Range(0f,360f), 0f) * Vector3.right * Random.Range(minDistanceFromGoal, maxDistanceFromGoal);
         Vector3 objective = new Vector3(context.goalManager.GetCurrentGoal().x + randomVec.x, 
-                                        blackboard.moveToPosition.y, 
+                                        context.transform.position.y, 
                                         context.goalManager.GetCurrentGoal().z + randomVec.z);
 
         if (blackboard.IsPathTooLong(context.transform.position, objective))
@@ -26,6 +26,7 @@ public class GT_PositionAroundGoal : ActionNode
         }
 
         blackboard.moveToPosition.x = objective.x;
+        blackboard.moveToPosition.y = objective.y;
         blackboard.moveToPosition.z = objective.z;
         return State.Success;
     }
