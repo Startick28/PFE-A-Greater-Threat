@@ -3340,6 +3340,7 @@ MonoBehaviour:
   gunHandsAvatar: {fileID: 0}
   machineGunHandsAvatar: {fileID: 0}
   maxHealth: 100
+  health: 0
   canHeal: 0
   timeToFullReload: 0.75
   pistolBullets: 100

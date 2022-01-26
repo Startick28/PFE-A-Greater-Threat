@@ -134,12 +134,9 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 
 		//Do this for first person
-		SetRendererInChildrenActive(modelAnimator.gameObject, false);
+		
 		//Do this for the view of other player
-		/*foreach(GameObject go in fpsModels)
-        {
-			SetRendererInChildrenActive(modelAnimator.gameObject, false);
-		}*/
+		
 		
 
 
@@ -1090,4 +1087,21 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			PhotonNetwork.LocalPlayer.SetCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
 		}
 	}
+	public void setModelAnimator(bool value)
+    {
+		SetRendererInChildrenActive(modelAnimator.gameObject, value);
+
+	}
+
+	public void setTPAnimator(bool value)
+	{
+		SetRendererInChildrenActive(modelAnimator.gameObject, value);
+		foreach(GameObject go in fpsModels)
+        {
+			SetRendererInChildrenActive(modelAnimator.gameObject, value);
+		}
+
+	}
+
+
 }

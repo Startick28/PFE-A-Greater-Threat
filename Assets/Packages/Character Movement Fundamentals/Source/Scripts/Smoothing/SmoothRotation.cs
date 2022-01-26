@@ -40,11 +40,15 @@ namespace CMF
 					
 					target = view.gameObject.transform;
 					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = true;
+					view.transform.GetComponent<FPSCharacterController>().setModelAnimator(true);
+					view.transform.GetComponent<FPSCharacterController>().setTPAnimator(false);
 					//view.transform.GetComponentInChildren<Camera>().enabled = true;
 				}
                 if(!view.IsMine && !view.transform.name.StartsWith("Enemy") && view.transform.name.StartsWith("FPS"))
 				{
 					view.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Camera>().enabled = false;
+					view.transform.GetComponent<FPSCharacterController>().setModelAnimator(false);
+					view.transform.GetComponent<FPSCharacterController>().setTPAnimator(true);
 				}
 			}
 
