@@ -21,7 +21,7 @@ public class EndgameSpawner : MonoBehaviour
     void Start()
     {
         spawnFrequency = startSpawnFrequency;
-        spawnTimer = spawnFrequency;
+        spawnTimer = 0;
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class EndgameSpawner : MonoBehaviour
 
     void Spawn()
     {
-        if (numberSpawned < 4)
+        if (numberSpawned < 28)
         {
             if (EnemiesManager.Instance)
             {

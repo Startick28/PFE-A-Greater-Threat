@@ -839,7 +839,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 8
+  speed: 12
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
