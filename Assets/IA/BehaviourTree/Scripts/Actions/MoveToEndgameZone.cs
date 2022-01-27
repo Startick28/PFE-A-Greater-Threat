@@ -42,7 +42,6 @@ public class MoveToEndgameZone : ActionNode
 
     protected override State OnUpdate() {
         if (context.agent.pathPending) {
-            Debug.Log("merde");
             return State.Running;
         }
 
@@ -53,7 +52,6 @@ public class MoveToEndgameZone : ActionNode
         if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
             return State.Failure;
         }
-        Debug.Log("grosse merde");
         return State.Running;
     }
 }

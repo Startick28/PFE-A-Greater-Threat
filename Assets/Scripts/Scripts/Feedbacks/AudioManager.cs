@@ -88,6 +88,7 @@ public class AudioManager : MonoBehaviour
     {
         GameObject tempObject = Instantiate(AudioPrefab, position, Quaternion.identity);
         AudioSource source = tempObject.GetComponent<AudioSource>();
+        source.rolloffMode = AudioRolloffMode.Logarithmic;
         source.clip = audio;
         source.volume = volume;
         source.pitch = 1;
@@ -106,7 +107,8 @@ public class AudioManager : MonoBehaviour
     [PunRPC]
     private void PlayRandomGunSound(Vector3 position)
     {
-        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position,0f,0.5f));
+        
+        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position,1f,0.5f));
     }
 
     public void PlayAlarmSoundRPC()
