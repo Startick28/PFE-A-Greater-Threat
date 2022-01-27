@@ -1040,14 +1040,19 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
             }
         }
 
-		if (weaponAnimator != null)
+		if (GetComponent<PhotonView>().IsMine)
 		{
-			SetChildrenActive(weaponAnimator.gameObject, false);
+			if (weaponAnimator != null)
+			{
+				SetChildrenActive(weaponAnimator.gameObject, false);
+			}
+			weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+			SetChildrenActive(weaponAnimator.gameObject, true);
+			weaponAnimator.SetTrigger("equip");
 		}
-		weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+			
 
-		SetChildrenActive(weaponAnimator.gameObject, true);
-		weaponAnimator.SetTrigger("equip");
+		
 		if(GetComponent<PhotonView>().IsMine)
         {
 			modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
@@ -1070,11 +1075,14 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 	public void SetRendererInChildrenActive(GameObject target, bool active)
 	{
-		Renderer[] rs = GetComponentsInChildren<Renderer>();
-		foreach (Renderer r in rs)
-        {
-			r.enabled = active;
-		}
+		
+			Renderer[] rs = GetComponentsInChildren<Renderer>();
+			foreach (Renderer r in rs)
+			{
+				r.enabled = active;
+			}
+		
+		
 			
 	}
 
@@ -1197,6 +1205,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 	public void setTPAnimator(bool value)
 	{
+		
 		SetRendererInChildrenActive(modelAnimator.gameObject, value);
 		foreach(GameObject go in fpsModels)
         {
