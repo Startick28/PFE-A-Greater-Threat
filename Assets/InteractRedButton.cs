@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class InteractRedButton : Interactable
     public void interactRedButton()
     {
         canInteract = false;
+        EnemiesManager.Instance.photonView.RPC("RemoveAllArrack", RpcTarget.All);
         doubleDoor.GetComponent<DoorDoubleSlide>().enabled = true;
         doubleDoor.GetComponent<AudioSource>().enabled = true;
         AudioManager.Instance.PlayAlarmSoundRPC();

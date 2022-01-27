@@ -120,7 +120,7 @@ public class AudioManager : MonoBehaviour
         GameObject tempObject = Instantiate(AudioPrefab, position, Quaternion.identity);
         AudioSource source = tempObject.GetComponent<AudioSource>();
         source.clip = alarmSound;
-        source.volume = 0.5f;
+        source.volume = 0.2f;
         source.pitch = 1;
         source.spatialBlend = 0;
         source.loop = true;

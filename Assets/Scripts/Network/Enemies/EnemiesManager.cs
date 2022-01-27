@@ -45,6 +45,13 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
         lastId++;
     }
 
+    [PunRPC]
+    public void RemoveAllArrack()
+    {
+        foreach (Transform child in transform)
+            Destroy(child.gameObject);
+    }
+
     // Parcours tous les enfants de l'EnemiesManager en fonction d'un ID.
     // Appel par la suite la fonction TakeDamage de l'enfant en question
     // Pour appeler la fonction :
