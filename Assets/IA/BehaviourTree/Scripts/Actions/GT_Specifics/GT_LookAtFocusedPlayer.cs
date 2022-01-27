@@ -12,7 +12,7 @@ public class GT_LookAtFocusedPlayer : ActionNode
     }
 
     protected override State OnUpdate() {
-        context.headFollow.SetAimTarget(blackboard.focusedPlayer.transform);
+        context.headFollow.SetAimTarget(context.sensorManager.GetLastSeenPlayer().transform);
         return State.Success;
     }
 }
