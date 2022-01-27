@@ -868,12 +868,21 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 		}
         else
         {
-			SetChildrenActive(weaponAnimator.gameObject, true);
-			weaponAnimator.SetTrigger("equip");
-			modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
-			modelAnimator.SetTrigger("idle");
-			modelAnimator.SetLayerWeight(1, 1);
-			modelAnimator.SetTrigger("equip");
+			if (GetComponent<PhotonView>().IsMine)
+            {
+				SetChildrenActive(weaponAnimator.gameObject, true);
+				weaponAnimator.SetTrigger("equip");
+			}
+			if (GetComponent<PhotonView>().IsMine)
+            {
+				modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
+				modelAnimator.SetTrigger("idle");
+				modelAnimator.SetLayerWeight(1, 1);
+				modelAnimator.SetTrigger("equip");
+
+			}
+
+				
 		}
 		
 		
