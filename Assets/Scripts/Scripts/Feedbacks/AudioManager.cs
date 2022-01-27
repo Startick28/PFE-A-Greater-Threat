@@ -108,7 +108,7 @@ public class AudioManager : MonoBehaviour
     private void PlayRandomGunSound(Vector3 position)
     {
         
-        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position,1f,0.8f, AudioRolloffMode.Linear));
+        StartCoroutine(PlaySpecificSoundOnPosition(gunSound[Random.Range(0,gunSound.Count-1)], position,1f,0.7f, AudioRolloffMode.Custom));
     }
 
     public void PlayAlarmSoundRPC()
