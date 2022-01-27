@@ -60,6 +60,7 @@ public class Chest : Interactable
             gun.transform.Translate(0, 0, -(gun.transform.localScale.x / 4));
             gun.GetComponent<BasicGun>().Rarity = rarity;
             gun.GetComponent<BasicGun>().canInteract = true;
+            gun.GetComponent<BasicGun>().Id = id;
             gun.GetComponent<BoxCollider>().enabled = true;
             gun.GetComponentInChildren<MeshRenderer>().enabled = true;
             // Default layer
@@ -74,6 +75,7 @@ public class Chest : Interactable
             gun.transform.Translate(0, transform.localScale.y/2, 0);
             gun.GetComponent<AmmunitionCollectible>().canInteract = true;
             gun.GetComponent<BoxCollider>().enabled = true;
+            gun.GetComponent<AmmunitionCollectible>().Id = id;
 
             // Default layer
             gun.gameObject.layer = 0;
