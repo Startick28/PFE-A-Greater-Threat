@@ -154,7 +154,8 @@ public class BasicGun : Interactable
                 if (EnemiesManager.Instance)
                 {
                     GetComponentInParent<AudioManager>().PlayRandomHitMarkerRPC(hit.point);
-                    EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", Photon.Pun.RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID,damage);
+                    EnemiesManager.Instance.photonView.RPC("InstantiateBloodEffect", RpcTarget.All, hit.point.x, hit.point.y, hit.point.z);
+                    EnemiesManager.Instance.photonView.RPC("EnemyTakeDamageWithId", RpcTarget.All, hit.collider.GetComponent<EnemyScript>().ID,damage);
                 }
             }
         }

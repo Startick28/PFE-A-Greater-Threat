@@ -7,20 +7,20 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BloodMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: e05e72c6a5b4edc459278fcba74b3581, type: 3}
+  m_Name: BloodMat
+  m_Shader: {fileID: -6465566751694194690, guid: 3962ce9158af755429fa5497c2018090, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_4c8257b661064daba366c9c573b241d8:
-        m_Texture: {fileID: 2800000, guid: 78ab99492631e0a41a0572e9b82a480a, type: 3}
+    - Texture2D_543a393df6624275b23ab3c5109c553a:
+        m_Texture: {fileID: 2800000, guid: 0531da34c1cb81f4e81089b3168083c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -80,6 +80,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_061ea23c7cc248f5a75c6cd3f428eedd: 0.05
+    - Vector1_33629bff32414e17a3997a186eb23b97: 5
+    - Vector1_3b214e0bf39b4488bf23970c0e761937: 1
+    - Vector1_56ca7cd1d9b840c4923c917a8f5b59be: 3
+    - Vector1_627b5b77ce074296abe2df137b3100d3: 0.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -107,13 +112,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_e53b62c455964d6fa6f51d80940098a6: {r: 1, g: 1, b: 1, a: 1}
+    - Color_3ae30b477cbc4fb9adfcfd870b0b47ab: {r: 2, g: 2, b: 2, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &397672187441783076
+--- !u!114 &549719605592623190
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
