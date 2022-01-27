@@ -1,5 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7729122241593174755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8166169079068703901}
+  - component: {fileID: 3225758318552197392}
+  - component: {fileID: 5037711724055236587}
+  - component: {fileID: 5511184577033556378}
+  m_Layer: 0
+  m_Name: VisionCone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8166169079068703901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729122241593174755}
+  m_LocalRotation: {x: -0, y: 0.31362647, z: -0, w: 0.9495465}
+  m_LocalPosition: {x: 62.106155, y: -10.65, z: 56.09162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8017090145799856889}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3225758318552197392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729122241593174755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Length: 40
+  BaseSize: 0.5
+  FOVAngle: 100
+  ElevationAngle: 50
+  Resolution: 5
+--- !u!64 &5037711724055236587
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729122241593174755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 0}
+--- !u!114 &5511184577033556378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729122241593174755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 1025
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 3
+  MinimumVisibility: 0.6
+  LineOfSightUpdateMode: 0
+  CheckLineOfSightInterval: 0.4
 --- !u!1 &8017090145799437953
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,10 +703,8 @@ GameObject:
   - component: {fileID: 8017090145799438047}
   - component: {fileID: 8017090145799438018}
   - component: {fileID: 8017090145799438045}
-  - component: {fileID: 8017090145799438023}
-  - component: {fileID: 8017090145799438022}
-  - component: {fileID: 8017090145799438016}
   - component: {fileID: 8017090145799438021}
+  - component: {fileID: 6681369907657921315}
   - component: {fileID: 8017090145799438017}
   - component: {fileID: 8017090145799438019}
   - component: {fileID: 8017090145799438026}
@@ -635,6 +729,7 @@ Transform:
   m_Children:
   - {fileID: 8017090145799856775}
   - {fileID: 8017090145799856891}
+  - {fileID: 8166169079068703901}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -734,69 +829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 59ec6bab8d0f79b4690ce14c6057a4e2, type: 2}
---- !u!64 &8017090145799438023
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017090145799438041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_Mesh: {fileID: 0}
---- !u!114 &8017090145799438022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017090145799438041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Length: 40
-  BaseSize: 0.5
-  FOVAngle: 100
-  ElevationAngle: 50
-  Resolution: 5
---- !u!114 &8017090145799438016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017090145799438041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreList: []
-  EnableTagFilter: 1
-  AllowedTags:
-  - Player
-  OnDetected:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLostDetection:
-    m_PersistentCalls:
-      m_Calls: []
-  DetectionMode: 0
-  RequiresLineOfSight: 1
-  BlocksLineOfSight:
-    serializedVersion: 2
-    m_Bits: 1024
-  TestLOSTargetsOnly: 0
-  NumberOfRays: 4
-  MinimumVisibility: 0.5
-  LineOfSightUpdateMode: 0
-  CheckLineOfSightInterval: 0.25
 --- !u!114 &8017090145799438021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,12 +859,50 @@ MonoBehaviour:
   TestLOSTargetsOnly: 0
   NumberOfRays: 1
   MinimumVisibility: 0.5
-  SensorRange: 40
+  SensorRange: 30
   DetectsOnLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   SensorUpdateMode: 0
-  CheckInterval: 1
+  CheckInterval: 5
+  InitialBufferSize: 20
+  DynamicallyIncreaseBufferSize: 1
+--- !u!114 &6681369907657921315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017090145799438041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd1782782c33a144aa3b0d575bb80ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 1025
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 3
+  MinimumVisibility: 0.6
+  SensorRange: 12
+  DetectsOnLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  SensorUpdateMode: 0
+  CheckInterval: 0.5
   InitialBufferSize: 20
   DynamicallyIncreaseBufferSize: 1
 --- !u!114 &8017090145799438017
@@ -868,7 +938,7 @@ MonoBehaviour:
   SensorRange: 40
   DetectsOnLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   SensorUpdateMode: 0
   CheckInterval: 1
   InitialBufferSize: 20
@@ -886,7 +956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionConeSensors:
-  - {fileID: 8017090145799438016}
+  - {fileID: 5511184577033556378}
+  - {fileID: 6681369907657921315}
   soundSensors:
   - {fileID: 8017090145799438017}
   presenceSensor: {fileID: 8017090145799438021}
@@ -922,7 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e7130ced4621343bbdc16ec8e9e4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinalObjective: {fileID: 0}
+  FinalObjective: {x: 0, y: 0, z: 0}
 --- !u!1 &8017090145799438043
 GameObject:
   m_ObjectHideFlags: 0

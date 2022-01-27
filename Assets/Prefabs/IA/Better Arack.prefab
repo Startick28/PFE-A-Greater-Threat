@@ -607,9 +607,6 @@ GameObject:
   - component: {fileID: 6006811925654220891}
   - component: {fileID: 6006811925654220870}
   - component: {fileID: 6006811925654220889}
-  - component: {fileID: 6006811925654220866}
-  - component: {fileID: 6006811925654220867}
-  - component: {fileID: 6006811925654220868}
   - component: {fileID: 6006811925654220865}
   - component: {fileID: 6006811925654220882}
   - component: {fileID: 6006811925654220869}
@@ -635,6 +632,7 @@ Transform:
   m_Children:
   - {fileID: 6006811925654318083}
   - {fileID: 6006811925654318207}
+  - {fileID: 1417465119157977272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -734,69 +732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: bd4fd595a81c5d84f9c65e69d524ba51, type: 2}
---- !u!114 &6006811925654220866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6006811925654220893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Length: 40
-  BaseSize: 0.5
-  FOVAngle: 100
-  ElevationAngle: 50
-  Resolution: 5
---- !u!64 &6006811925654220867
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6006811925654220893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_Mesh: {fileID: 0}
---- !u!114 &6006811925654220868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6006811925654220893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreList: []
-  EnableTagFilter: 1
-  AllowedTags:
-  - Player
-  OnDetected:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLostDetection:
-    m_PersistentCalls:
-      m_Calls: []
-  DetectionMode: 0
-  RequiresLineOfSight: 1
-  BlocksLineOfSight:
-    serializedVersion: 2
-    m_Bits: 1025
-  TestLOSTargetsOnly: 0
-  NumberOfRays: 4
-  MinimumVisibility: 0.5
-  LineOfSightUpdateMode: 0
-  CheckLineOfSightInterval: 0.5
 --- !u!114 &6006811925654220865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,9 +765,9 @@ MonoBehaviour:
   SensorRange: 30
   DetectsOnLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   SensorUpdateMode: 0
-  CheckInterval: 1
+  CheckInterval: 5
   InitialBufferSize: 20
   DynamicallyIncreaseBufferSize: 1
 --- !u!114 &6006811925654220882
@@ -906,7 +841,7 @@ MonoBehaviour:
   SensorRange: 40
   DetectsOnLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   SensorUpdateMode: 0
   CheckInterval: 1
   InitialBufferSize: 20
@@ -924,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionConeSensors:
-  - {fileID: 6006811925654220868}
+  - {fileID: 43950943427226896}
   - {fileID: 6006811925654220882}
   soundSensors:
   - {fileID: 6006811925654220869}
@@ -1548,3 +1483,99 @@ Transform:
   m_Father: {fileID: 6006811925654318109}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7400863784162519781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417465119157977272}
+  - component: {fileID: 4873617544498877318}
+  - component: {fileID: 277271156529245862}
+  - component: {fileID: 43950943427226896}
+  m_Layer: 0
+  m_Name: VisionCone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417465119157977272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400863784162519781}
+  m_LocalRotation: {x: -0, y: 0.31362647, z: -0, w: 0.9495465}
+  m_LocalPosition: {x: 12.616154, y: 0, z: -10.248375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6006811925654318205}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4873617544498877318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400863784162519781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Length: 40
+  BaseSize: 0.5
+  FOVAngle: 100
+  ElevationAngle: 50
+  Resolution: 5
+--- !u!64 &277271156529245862
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400863784162519781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 0}
+--- !u!114 &43950943427226896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400863784162519781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList: []
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 0
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 1025
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 4
+  MinimumVisibility: 0.5
+  LineOfSightUpdateMode: 0
+  CheckLineOfSightInterval: 0.25
