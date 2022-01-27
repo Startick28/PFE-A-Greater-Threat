@@ -34,7 +34,7 @@ public class GoToLastSeenPlayerPosition : ActionNode
             newPlayerPosition = context.sensorManager.GetLastSeenPlayer().transform.position;
             blackboard.lastPlayerSeenEstimatedDirection = (newPlayerPosition - oldPlayerPosition).normalized;
             blackboard.hasEstimationOfPlayerDirection = true;
-            blackboard.lastPlayerSeenPosition = blackboard.focusedPlayer.transform.position;
+            blackboard.lastPlayerSeenPosition = context.sensorManager.GetLastSeenPlayer().transform.position;
         }
         else if (context.agent.hasPath && context.agent.remainingDistance < range)  return State.Failure;
 

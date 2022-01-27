@@ -730,7 +730,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
     }
 
 
-	
+	[PunRPC]
 	public void takeDamage(float damage, string nickname)
     {
 		if(PhotonNetwork.LocalPlayer.NickName == nickname)
