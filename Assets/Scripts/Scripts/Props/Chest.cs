@@ -107,8 +107,28 @@ public class Chest : Interactable
         
         iType = InteractionType.chest;
         collider = GetComponent<BoxCollider>();
+        //setRandomRarity();
         canInteract = true;
         isOpened = false;
+    }
+
+    private void setRandomRarity()
+    {
+        // 33% de chance d'être bleu
+        if(Random.Range(0,3) == 1)
+        {
+            rarity = RarityType.bleu;
+        }
+        // 16% de chance d'être doré
+        else if(Random.Range(0,2) == 1)
+        {
+            rarity = RarityType.dore;
+        }
+        // 51% de chance d'être blanche
+        else
+        {
+            rarity = RarityType.blanche;
+        }
     }
 
     IEnumerator Rotate(float duration)
