@@ -2379,7 +2379,7 @@ MonoBehaviour:
     moveToPosition: {x: 43.114544, y: 0, z: -8.721062}
     lastPlayerSeenPosition: {x: 30.08922, y: 2.6799393, z: -26.81429}
     lastPlayerSeenEstimatedDirection: {x: 0.000006253268, y: -1, z: -0.000006253268}
-    hasEstimationOfPlayerDirection: 1
+    hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
     jumpBiteAttackCD: -0.09999462

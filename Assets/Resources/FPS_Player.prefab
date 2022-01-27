@@ -3382,6 +3382,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 6224040936624951008}
   - {fileID: 8787347992579279498}
   - {fileID: 5169647229146978825}
   - {fileID: 7297360516377234923}
@@ -3490,7 +3491,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ddf8c5cfdb2ef8840a2595d3706b9204, type: 3}
   - {fileID: 8300000, guid: 9421fc15f4c626b44be587f219142c46, type: 3}
   - {fileID: 8300000, guid: 8ea82b8cdfccc9e48a4f44f180155d3c, type: 3}
-  volumeChangeMultiplier: 0.2
+  volumeChangeMultiplier: 0
   pitchChangeMultiplier: 0.2
   randomRangeX: 100
   randomRangeY: 3
