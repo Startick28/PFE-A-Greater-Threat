@@ -290,7 +290,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 								break;
 							case InteractionType.redButton:
 								GetComponent<PhotonView>().RPC("InteractWithRedButton", RpcTarget.All, nearestInteractable.GetComponent<InteractRedButton>().id);
-								Debug.Log("Je peux interargir avec le win");
+								Debug.Log("Je peux interargir avec le bouton");
 								//nearestInteractable.interact();
 								break;
 							case InteractionType.healthKit:
@@ -1104,6 +1104,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 				health = 100;
             }
 
+			PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
 			canHeal = false;
 			
         }
