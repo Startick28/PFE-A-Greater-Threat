@@ -1,3 +1,5 @@
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +35,8 @@ public class MonsterAttackCollider : MonoBehaviour
     {
         if (hit.CompareTag("Player"))
         {
-            hit.gameObject.GetComponent<FPSCharacterController>().takeDamage(attackDamages);
+            PhotonView view = hit.gameObject.GetComponent<PhotonView>();
+            view.RPC("takeDamage", RpcTarget.All, attackDamages, view.Owner.NickName);
             col.enabled = false;
         }
     }

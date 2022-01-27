@@ -730,16 +730,20 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
     }
 
 
-	[PunRPC]
-	public void takeDamage(float damage)
+	
+	public void takeDamage(float damage, string nickname)
     {
-		health -= damage;
-		PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
-		PhotonNetwork.LocalPlayer.SetCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
-		if (health<=0)
+		if(PhotonNetwork.LocalPlayer.NickName == nickname)
         {
-			die();
-        }
+			Debug.Log("I Take damage");
+			health -= damage;
+			PhotonNetwork.LocalPlayer.CustomProperties["HP"] = health;
+			PhotonNetwork.LocalPlayer.SetCustomProperties(PhotonNetwork.LocalPlayer.CustomProperties);
+			if (health <= 0)
+			{
+				die();
+			}
+		}
     }
 
 	[PunRPC]
