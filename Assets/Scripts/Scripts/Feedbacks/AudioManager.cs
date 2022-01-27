@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private GameObject AudioPrefab;
     [SerializeField] private List<AudioClip> listAudios;
 
-    [SerializeField] private float volumeChangeMultiplier = 0.2f;
+    [SerializeField] private float volumeChangeMultiplier = 0f;
     [SerializeField] private float pitchChangeMultiplier = 0.2f;
 
     [SerializeField] private float randomRangeX = 100f;
@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
     IEnumerator PlayRandomSound()
     {
-        Vector3 randomPos = new Vector3(Random.Range(-randomRangeX, randomRangeX), Random.Range(-randomRangeY, randomRangeY), Random.Range(-randomRangeZ, randomRangeZ));
+        Vector3 randomPos = new Vector3(Random.Range(randomRangeX / 2, randomRangeX) * (Random.Range(0,2) == 0 ? -1 : 1), transform.position.y + 2, Random.Range(randomRangeZ / 2, randomRangeZ) * (Random.Range(0, 2) == 0 ? -1 : 1));
         GameObject tempObject = Instantiate(AudioPrefab, transform.position + randomPos, Quaternion.identity);
         AudioSource source = tempObject.GetComponent<AudioSource>();
         source.clip = listAudios[Random.Range(0, listAudios.Count - 1)];

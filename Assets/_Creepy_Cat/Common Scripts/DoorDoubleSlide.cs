@@ -40,8 +40,10 @@ public class DoorDoubleSlide : MonoBehaviour {
         }
 
         doorDirection = -this.transform.forward;
-        //audioSource = GetComponent<AudioSource>();
-	}
+        audioSource = GetComponent<AudioSource>();
+        audioClip = audioSource.clip;
+
+    }
 
     //Something approaching? open doors
     void OnTriggerEnter(Collider other)
