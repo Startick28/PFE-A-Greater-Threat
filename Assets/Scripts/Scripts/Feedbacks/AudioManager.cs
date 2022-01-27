@@ -98,9 +98,9 @@ public class AudioManager : MonoBehaviour
         source.Stop();
         Destroy(tempObject);
     }
-    public void playRandomGunSoundRPC()
+    public void playRandomGunSoundRPC(Vector3 position)
     {
-        GetComponent<PhotonView>().RPC("PlayRandomGunSound", RpcTarget.All, transform.position);
+        GetComponent<PhotonView>().RPC("PlayRandomGunSound", RpcTarget.All, position);
     }
 
     [PunRPC]
