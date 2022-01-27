@@ -18,6 +18,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject endgameEnemyPrefab;
     
     [SerializeField] private GT_EnemyScript greaterThreat;
+    [SerializeField] private GameObject bloodEffect;
 
     // Instantiate an enemy with RPC.
     // How to call it : 
@@ -71,6 +72,12 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
                 }
             }
         }
+    }
+
+    [PunRPC]
+    public void InstantiateBloodEffect(float x, float y, float z)
+    {
+        Instantiate(bloodEffect, new Vector3(x, y, z), Quaternion.identity);
     }
 
     [PunRPC]

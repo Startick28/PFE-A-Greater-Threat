@@ -69,3 +69,4 @@ MonoBehaviour:
   enemy: {fileID: 6006811925654220893, guid: 87a2c62a98ae13c4ab53481aa9f1ed09, type: 3}
   endgameEnemyPrefab: {fileID: 8017090145799438041, guid: 7ea6936898b617e4ab24900c3591f99b, type: 3}
   greaterThreat: {fileID: 0}
+  bloodEffect: {fileID: 233018556762970398, guid: f9235dcadc3fe1749a2839a584f738f9, type: 3}
