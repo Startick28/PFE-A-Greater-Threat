@@ -149,7 +149,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 		//weaponAnimator.gameObject.SetActive(false);
 		//Debug.Log(pistolBullets);
 		//weaponAnimator.avatar = gunHandsAvatar;
-		if (GetComponent<PhotonView>().IsMine)
+		if (!GetComponent<PhotonView>().IsMine)
         {
 			modelAnimator.SetTrigger("idle");
 		}
@@ -199,7 +199,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			{
 				if (!previouslyWalking)
 				{
-					if(GetComponent<PhotonView>().IsMine)
+					if(!GetComponent<PhotonView>().IsMine)
                     {
 						modelAnimator.SetBool("walking", true);
 					}
@@ -210,7 +210,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			{
 				if (previouslyWalking)
 				{
-					if (GetComponent<PhotonView>().IsMine)
+					if (!GetComponent<PhotonView>().IsMine)
 						modelAnimator.SetBool("walking", false);
 				}
 			}
@@ -312,7 +312,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 
 							//currentWeaponEquipped = false;
 							weaponAnimator.SetTrigger("unequip");
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
 						{
 							modelAnimator.SetInteger("weaponIndex", 0);
 							modelAnimator.SetTrigger("unequip");
@@ -328,7 +328,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 							{
 								SetChildrenActive(weaponAnimator.gameObject, true);
 								weaponAnimator.SetTrigger("equip");
-							if (GetComponent<PhotonView>().IsMine)
+							if (!GetComponent<PhotonView>().IsMine)
                             {
 								modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
 								modelAnimator.SetTrigger("idle");
@@ -370,7 +370,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 							if (weapons[currentWeaponIndex].fire(cameraTransform.position, cameraController.GetAimingDirection()))
 							{
 								weaponAnimator.SetTrigger("fire");
-								if (GetComponent<PhotonView>().IsMine)
+								if (!GetComponent<PhotonView>().IsMine)
 								{
 								modelAnimator.SetTrigger("fire");
 
@@ -406,7 +406,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 							{
 								weaponAnimator.SetFloat("reloadSpeed", 1);
 								weaponAnimator.SetTrigger("reload");
-							if (GetComponent<PhotonView>().IsMine)
+							if (!GetComponent<PhotonView>().IsMine)
                             {
 								modelAnimator.SetTrigger("reload");
 
@@ -438,7 +438,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						{
 							weaponAnimator.SetFloat("reloadSpeed", 1);
 							weaponAnimator.SetTrigger("reload");
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
                         {
 							modelAnimator.SetTrigger("reload");
 						}
@@ -479,7 +479,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 					{
 						movementSpeed *= 2;
 						previousRun = true;
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
                         {
 							modelAnimator.SetBool("running", true);
 
@@ -496,7 +496,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 					{
 						movementSpeed /= 2;
 						previousRun = false;
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
                         {
 							modelAnimator.SetBool("running", false);
 						}
@@ -517,7 +517,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						mover.SetColliderHeight(1.0f);
 						cameraController.transform.Translate(0, -1, 0);
 						transform.Translate(0, -1, 0);
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
 						{
 							modelAnimator.SetBool("crouching", true);
 							modelAnimator.SetTrigger("crouch");
@@ -535,7 +535,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 						cameraController.transform.Translate(0, 1, 0);
 						transform.Translate(0, 1, 0);
 						previousCrouch = false;
-						if (GetComponent<PhotonView>().IsMine)
+						if (!GetComponent<PhotonView>().IsMine)
 						{
 							modelAnimator.SetBool("crouching", false);
 						}
@@ -553,7 +553,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			{
 				if (!previousJump)
 				{
-					if (GetComponent<PhotonView>().IsMine)
+					if (!GetComponent<PhotonView>().IsMine)
 						modelAnimator.SetTrigger("jump");
 					previousJump = true;
 				}
@@ -842,19 +842,27 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			}
 			//weaponAnimator.gameObject.SetActive(false);
 
-			
-			if (weaponAnimator != null)
-			{
-				SetChildrenActive(weaponAnimator.gameObject, false);
-			}
-			weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
+			if (GetComponent<PhotonView>().IsMine)
+            {
+				if (weaponAnimator != null)
+				{
+					SetChildrenActive(weaponAnimator.gameObject, false);
+				}
+				weaponAnimator = fpsModels[weapons[currentWeaponIndex].type - 1].GetComponent<Animator>();
 
-			SetChildrenActive(weaponAnimator.gameObject, true);
+				SetChildrenActive(weaponAnimator.gameObject, true);
 				weaponAnimator.SetTrigger("equip");
+			}
+				
+
+			if(!GetComponent<PhotonView>().IsMine)
+            {
 				tpMonitor.onWeaponPutBack(weapons[formerIndex].type - 1);
 				modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
 				modelAnimator.SetTrigger("idle");
 				modelAnimator.SetTrigger("equip");
+			}
+				
 			
 
 		}
@@ -1053,7 +1061,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			
 
 		
-		if(GetComponent<PhotonView>().IsMine)
+		if(!GetComponent<PhotonView>().IsMine)
         {
 			modelAnimator.SetInteger("weaponIndex", weapons[currentWeaponIndex].type);
 			modelAnimator.SetTrigger("idle");
