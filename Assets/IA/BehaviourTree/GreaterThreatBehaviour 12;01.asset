@@ -34,6 +34,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: Go to the player position if seen
   drawGizmos: 0
   children:
@@ -73,6 +74,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: -3171335775321716931}
@@ -112,6 +114,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -152,6 +155,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 5
@@ -190,6 +194,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-8418017692532350595
@@ -226,6 +231,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: Go to the estimated player position if not seen
   drawGizmos: 0
   children:
@@ -265,6 +271,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 4
@@ -302,6 +309,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   noPlayerSpeed: 40
@@ -346,6 +354,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 4
@@ -384,6 +393,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 'Main Action Procedure
 
 '
@@ -426,6 +436,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-7790974994288355395
@@ -462,6 +473,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -505,6 +517,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -544,6 +557,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   range: 15
@@ -581,6 +595,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 5
@@ -619,6 +634,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -660,6 +676,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 6106313846669957390}
@@ -699,6 +716,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -743,6 +761,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   range: 10
@@ -780,6 +799,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 585195848919969036}
@@ -817,6 +837,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -856,6 +877,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5958379143974248811
@@ -892,6 +914,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5641444108976792018
@@ -928,6 +951,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: Circle player if attacked by Aracks
   drawGizmos: 0
   children:
@@ -968,6 +992,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5179584905433687340
@@ -1004,6 +1029,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   pauseDuration: 2.5
@@ -1043,6 +1069,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-4298094433544293684
@@ -1079,6 +1106,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
@@ -1123,6 +1151,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 8106877453807900662}
@@ -1162,6 +1191,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1201,6 +1231,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 5601860498866792199}
@@ -1240,6 +1271,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   minDistanceFromGoal: 0
@@ -1278,6 +1310,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1319,6 +1352,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   duration: 2.5
@@ -1356,6 +1390,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-1712752868582399500
@@ -1392,6 +1427,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1431,6 +1467,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-1232647214755428858
@@ -1467,6 +1504,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 6
@@ -1504,6 +1542,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1544,6 +1583,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1583,6 +1623,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-628868100077741155
@@ -1619,6 +1660,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   noPlayerSpeed: 40
@@ -1663,6 +1705,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-548062325008989053
@@ -1699,6 +1742,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-273426340446021357
@@ -1735,6 +1779,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -1775,6 +1820,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: GT goes to an other goal !
   drawGizmos: 0
   message: GT goes to an other goal !
@@ -1898,25 +1944,26 @@ MonoBehaviour:
   - {fileID: 6788347869835949783}
   - {fileID: 8621403712524421917}
   blackboard:
-    moveToPosition: {x: -31.399832, y: 0, z: -21.626135}
-    lastPlayerSeenPosition: {x: -6.84, y: 1, z: -28.4}
-    lastPlayerSeenEstimatedDirection: {x: 0.69168437, y: 0, z: -0.7221999}
+    moveToPosition: {x: -18.967663, y: -0.0333333, z: 16.31545}
+    lastPlayerSeenPosition: {x: -11.16, y: 1, z: 18.36}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
     hasEstimationOfPlayerDirection: 1
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
     jumpBiteAttackCD: -0.02
     clawAttackCD: -0.02
     disengageJumpCD: -0.02
-    pausingAfterAttack: 3.7024593
-    GT_heavyClawAttackCD: 0.69146645
-    GT_ComboHitAttackCD: -0.003782067
-    GT_JumpAttackCD: 29.20246
-    lookAtPlayerLock: 3.7024593
+    pausingAfterAttack: 1.7589556
+    GT_heavyClawAttackCD: 1.230579
+    GT_ComboHitAttackCD: 7.758954
+    GT_JumpAttackCD: -0.0036513205
+    lookAtPlayerLock: -115.32731
     attackingAracks:
     - {fileID: 0}
     - {fileID: 0}
     playerIntercepted: 1
     canAttackPlayer: 1
+    reachedEndgameZone: 0
 --- !u!114 &59912728796530600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,6 +1998,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &63630210322256940
@@ -1987,6 +2035,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &205124132568429403
@@ -2023,6 +2072,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -2063,6 +2113,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &829684121147460159
@@ -2099,6 +2150,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 5
@@ -2136,6 +2188,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   rightClawAttack: 1
@@ -2173,6 +2226,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   rightClawAttack: 0
@@ -2210,6 +2264,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 3981758904949771697}
@@ -2249,6 +2304,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &1380448491888090380
@@ -2285,6 +2341,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &1669768136079194684
@@ -2321,6 +2378,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
@@ -2365,6 +2423,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 7612162983235388535}
@@ -2402,6 +2461,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   minDistanceFromGoal: 0
@@ -2440,6 +2500,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 3610775331316223529}
@@ -2477,6 +2538,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &2172056964503212709
@@ -2513,6 +2575,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -2552,6 +2615,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &2919433785545762966
@@ -2588,6 +2652,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -2628,6 +2693,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   pauseDuration: 2.5
@@ -2667,6 +2733,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &3981758904949771697
@@ -2703,6 +2770,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: -7913429998005330219}
@@ -2740,6 +2808,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: -1193505198617047405}
@@ -2779,6 +2848,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -2824,6 +2894,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 2919433785545762966}
@@ -2863,6 +2934,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &4558558414487734072
@@ -2899,6 +2971,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -2939,6 +3012,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -2979,6 +3053,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   pauseDuration: 2
@@ -3018,6 +3093,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3057,6 +3133,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   speed: 7
@@ -3100,6 +3177,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: Wait after attacks
   drawGizmos: 0
   children:
@@ -3139,6 +3217,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3182,6 +3261,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   pauseDuration: 4.5
@@ -3221,6 +3301,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   range: 4
@@ -3258,6 +3339,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &5601860498866792199
@@ -3294,6 +3376,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3337,6 +3420,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &5890032561417371597
@@ -3373,6 +3457,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: -6445418455464079222}
@@ -3410,6 +3495,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &6032001425584539356
@@ -3446,6 +3532,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: Go to the last heard sound
   drawGizmos: 0
   children:
@@ -3486,6 +3573,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3525,6 +3613,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &6445564458702466410
@@ -3561,6 +3650,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3601,6 +3691,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &6788347869835949783
@@ -3637,6 +3728,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &6910393918877257878
@@ -3673,6 +3765,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   range: 5
@@ -3710,6 +3803,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &7439581938110709085
@@ -3746,6 +3840,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
 --- !u!114 &7612162983235388535
@@ -3782,6 +3877,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3823,6 +3919,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -3862,6 +3959,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   minDuration: 5
@@ -3900,6 +3998,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: -6625749758864071790}
@@ -3937,6 +4036,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   child: {fileID: 6788347869835949783}
@@ -3974,6 +4074,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   minDuration: 2
@@ -4012,6 +4113,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   attackType: 6
@@ -4050,6 +4152,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:
@@ -4090,6 +4193,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   speed: 10
@@ -4133,6 +4237,7 @@ MonoBehaviour:
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
+    reachedEndgameZone: 0
   description: 
   drawGizmos: 0
   children:

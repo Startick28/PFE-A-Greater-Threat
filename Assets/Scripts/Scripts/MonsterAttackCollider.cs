@@ -36,7 +36,10 @@ public class MonsterAttackCollider : MonoBehaviour
         if (hit.CompareTag("Player"))
         {
             PhotonView view = hit.gameObject.GetComponent<PhotonView>();
-            view.RPC("takeDamage", RpcTarget.All, attackDamages, view.Owner.NickName);
+            if (view != null)
+            {
+                view.RPC("takeDamage", RpcTarget.All, attackDamages, view.Owner.NickName);
+            }
             col.enabled = false;
         }
     }

@@ -79,6 +79,7 @@ namespace BehaviourTreeAI {
             playerIntercepted = false;
             hasEstimationOfPlayerDirection = false;
             focusedPlayer = null;
+            context.headFollow.StopLookingAtTarget();
         }
 
 
