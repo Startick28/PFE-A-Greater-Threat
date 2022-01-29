@@ -173,7 +173,7 @@ MonoBehaviour:
   TestLOSTargetsOnly: 0
   NumberOfRays: 3
   MinimumVisibility: 0.6
-  SensorRange: 10
+  SensorRange: 12
   DetectsOnLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionConeSensors:
   - {fileID: 5823442247146684213}
+  - {fileID: 8319470098570848920}
   soundSensors:
   - {fileID: 257811810946882694}
   presenceSensor: {fileID: 257811810946882693}

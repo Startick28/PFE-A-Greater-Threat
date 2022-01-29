@@ -30,7 +30,7 @@ public class AgentRootMotion : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out slopeHit, 10f, layerMask))
         {
             //Drawline to show the hit point
-            Debug.DrawLine(transform.position + Vector3.up, slopeHit.point, Color.red);
+            //Debug.DrawLine(transform.position + Vector3.up, slopeHit.point, Color.red);
 
             //Get slope angle from the raycast hit normal then calcuate new pos of the object
             Quaternion newRot = Quaternion.FromToRotation(transform.up, slopeHit.normal) * transform.rotation;

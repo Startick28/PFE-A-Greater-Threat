@@ -30,7 +30,7 @@ public class GT_HeadFollow : MonoBehaviour
             StopLookingAtTarget();
         }
 
-        if (lookingAtTarget)
+        if (lookingAtTarget && aimTransform != null)
         {
             float lookAngle = Vector3.Angle(transform.forward, Vector3.ProjectOnPlane(aimTransform.position - transform.position, Vector3.up));
             aimConstraint.weight = Mathf.Lerp(0.9f,0f,(lookAngle - 140) / 20f);

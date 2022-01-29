@@ -33,7 +33,7 @@ public class GT_InterceptAttackedPlayer : ActionNode
         createdWall = Instantiate(MoveAroundWallPrefab, blackboard.focusedPlayer.transform.position, Quaternion.identity);
         createdWall.transform.SetParent(blackboard.focusedPlayer.transform);
 
-        createdWall.transform.localScale = Vector3.one * Mathf.Max( Mathf.Min(Vector3.Distance(positionToIntercept, blackboard.focusedPlayer.transform.position) - 2f,
+        createdWall.transform.localScale = new Vector3(1f,100f,1f) * Mathf.Max( Mathf.Min(Vector3.Distance(positionToIntercept, blackboard.focusedPlayer.transform.position) - 2f,
                                                                               Vector3.Distance(context.transform.position, blackboard.focusedPlayer.transform.position) - 2f), 
                                                             0f);
 

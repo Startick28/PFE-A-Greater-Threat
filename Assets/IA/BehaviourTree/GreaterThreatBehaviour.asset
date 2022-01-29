@@ -159,7 +159,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   attackType: 5
-  cooldown: 4
+  cooldown: 2
 --- !u!114 &-8440596950904815281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6d6c59e241c533549b88a4ded47f7d9b
-  position: {x: -184.00003, y: 132.00002}
+  position: {x: -184, y: 132}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -312,7 +312,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 40
+  noPlayerSpeed: 60
   yesPlayerSpeed: 20
   angularSpeed: 720
   stoppingDistance: 5
@@ -476,7 +476,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 10
+  speed: 12
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   attackType: 5
-  cooldown: 4
+  cooldown: 2
 --- !u!114 &-7372835725006751285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 10
+  speed: 12
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  pauseDuration: 2.5
+  pauseDuration: 2
   lockLookAtPlayer: 0
   lockDuration: 0
 --- !u!114 &-4325651866685961000
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c8b59b72e37b7204c971aee093db1603
-  position: {x: -710, y: 1773}
+  position: {x: -711, y: 1773}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1941,7 +1941,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 40
+  noPlayerSpeed: 60
   yesPlayerSpeed: 20
   angularSpeed: 720
   stoppingDistance: 5
@@ -2529,7 +2529,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  pauseDuration: 2.5
+  pauseDuration: 2
   lockLookAtPlayer: 0
   lockDuration: 0
 --- !u!114 &3610775331316223529
@@ -2889,7 +2889,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  pauseDuration: 2
+  pauseDuration: 1.5
   lockLookAtPlayer: 0
   lockDuration: 0
 --- !u!114 &4843716871722489093
@@ -3968,7 +3968,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 102ed5f9729620449ae1e921e1327ec3
-  position: {x: -1878.5387, y: 1999}
+  position: {x: -1867.5002, y: 1999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3990,13 +3990,13 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 10
+  speed: 12
   angularSpeed: 720
-  stoppingDistance: 3
+  stoppingDistance: 2
   updatePosition: 0
   updateRotation: 1
   acceleration: 40
-  range: 6
+  range: 3
 --- !u!114 &9218964935869921984
 MonoBehaviour:
   m_ObjectHideFlags: 0

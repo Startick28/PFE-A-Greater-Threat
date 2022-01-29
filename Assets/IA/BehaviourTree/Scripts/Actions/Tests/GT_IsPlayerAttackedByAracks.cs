@@ -6,7 +6,7 @@ using BehaviourTreeAI;
 public class GT_IsPlayerAttackedByAracks : ActionNode
 {
     protected override void OnStart() {
-        blackboard.attackingAracks = context.greaterThreatColliders.monsterFocusingPlayer(blackboard.focusedPlayer);
+        blackboard.attackingAracks = context.greaterThreatColliders.monsterFocusingPlayer(context.sensorManager.GetLastSeenPlayer());
     }
 
     protected override void OnStop() {
