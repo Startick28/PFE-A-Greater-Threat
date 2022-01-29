@@ -32,6 +32,8 @@ namespace BehaviourTreeAI {
         public GameObject nearestPresentPlayer;
         public EmittedSound loudestSoundHeard;
 
+        public bool playerDetected = false;
+
         public float jumpBiteAttackCD = 0f;
         public float clawAttackCD = 0f;
         public float disengageJumpCD = 0f;
@@ -75,6 +77,8 @@ namespace BehaviourTreeAI {
 
         public void Reset()
         {
+            playerDetected = false;
+            //STOP MUSIC
             attackingAracks = new List<GameObject>();
             playerIntercepted = false;
             hasEstimationOfPlayerDirection = false;

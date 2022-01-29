@@ -19,6 +19,11 @@ public class IsPlayerDetected : ActionNode
                 if (context.monsterColliderInfos.focusedPlayer == null)
                 {
                     context.monsterColliderInfos.focusedPlayer = context.sensorManager.GetLastSeenPlayer();
+                    if (!blackboard.playerDetected)
+                    {
+                        blackboard.playerDetected = true;
+                        //Play Music
+                    }
                 }
             }
             return State.Success;
