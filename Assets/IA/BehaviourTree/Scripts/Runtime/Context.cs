@@ -51,6 +51,7 @@ namespace BehaviourTreeAI {
             //GT Specifics 
             context.goalManager = gameObject.GetComponent<GoalManager>();
             context.greaterThreatColliders = gameObject.GetComponent<GT_EnemyScript>();
+            if (context.greaterThreatColliders != null) context.monsterID = -1;
             context.headFollow = gameObject.GetComponent<GT_HeadFollow>();
             //Endgame Aracks
             context.endgameArackScript = gameObject.GetComponent<EndgameArack>();

@@ -29,15 +29,25 @@ public class EndgameArack : MonoBehaviour
 
     void Update()
     {
-        int layerMask = (1 << 10);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.5f, layerMask))
+        if (!touchFloor)
         {
-            rb.useGravity = false;
-            rb.drag = float.PositiveInfinity;
-            agent.enabled = true;
-            treeRunner.enabled = true;
-            Destroy(this);
+            int layerMask = (1 << 10);
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1.5f, layerMask))
+            {
+                touchFloor = true;
+                StartCoroutine(StartBehavior());
+            }
         }
+    }
+
+    private IEnumerator StartBehavior()
+    {
+        yield return new WaitForSeconds(1f);
+        rb.useGravity = false;
+        rb.drag = float.PositiveInfinity;
+        agent.enabled = true;
+        treeRunner.enabled = true;
+        Destroy(this);
     }
 }

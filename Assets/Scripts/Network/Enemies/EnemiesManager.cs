@@ -123,6 +123,11 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine)
         {
+            if (id == -1)
+            {
+                greaterThreat.MoveToPosition(position, stoppingDistance, speed, angularSpeed, updateRotation, acceleration);
+                return;
+            }
             foreach (Transform child in transform)
             {
                 EnemyScript enemy = child.GetComponent<EnemyScript>();
