@@ -25,8 +25,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<AudioClip> hitMarkerMonsterSound;
     [SerializeField] private List<AudioClip> deathMonsterSound;
     [SerializeField] private AudioClip alarmSound;
-
+    [SerializeField] private AudioClip focusClip;
+    [SerializeField] private bool focusMusicIsPlaying = false;
     public static AudioManager Instance;
+
+    private PhotonView view;
 
     private void Awake()
     {
@@ -35,6 +38,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        view = gameObject.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -138,5 +142,54 @@ public class AudioManager : MonoBehaviour
     private void PlayRandomHitMarker(Vector3 position)
     {
         StartCoroutine(PlaySpecificSoundOnPosition(hitMarkerMonsterSound[Random.Range(0, hitMarkerMonsterSound.Count - 1)], position, 1f,0.5f));
+    }
+
+    
+    [PunRPC]
+    public void PlayFocusMusic(int viewID)
+    {
+        if (!focusMusicIsPlaying && PhotonView.Find(viewID).IsMine)
+        {
+            focusMusicIsPlaying = true;
+            StartCoroutine(LaunchFocusMusic(0.5f, 0.5f));
+        }
+    }
+
+    [PunRPC]
+    public void StopFocusMusic(int viewID)
+    {
+        if (focusMusicIsPlaying && PhotonView.Find(viewID).IsMine)
+        {
+            focusMusicIsPlaying = false;
+            StartCoroutine(StopForestMusic(0.5f, 0.5f));
+        }
+    }
+
+    IEnumerator LaunchFocusMusic(float maxVolume, float timeTransition)
+    {
+        float volume = playerAudioSource.volume;
+        playerAudioSource.clip = focusClip;
+        playerAudioSource.spatialBlend = 0;
+        playerAudioSource.loop = true;
+        for (float d = 0; d < timeTransition; d += Time.deltaTime)
+        {
+
+            playerAudioSource.volume = Mathf.Lerp(volume, maxVolume, d / timeTransition);
+            yield return null;
+        }
+        playerAudioSource.volume = maxVolume;
+    }
+
+    IEnumerator StopForestMusic(float maxVolume, float timeTransition)
+    {
+        float volume = playerAudioSource.volume;
+        for (float d = 0; d < timeTransition; d += Time.deltaTime)
+        {
+            playerAudioSource.volume = Mathf.Lerp(volume, 0, d / timeTransition);
+            yield return null;
+        }
+        playerAudioSource.volume = 0;
+        playerAudioSource.loop = false;
+        playerAudioSource.Stop();
     }
 }

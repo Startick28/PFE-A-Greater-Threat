@@ -3510,6 +3510,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 21f945ee49b8dc04a88c845c4aada49e, type: 3}
   deathMonsterSound: []
   alarmSound: {fileID: 8300000, guid: b287837d4a9f07044a0ac13773ecbb59, type: 3}
+  focusClip: {fileID: 8300000, guid: 99a547b5925c56e41a80852d70dc9617, type: 3}
+  focusMusicIsPlaying: 0
 --- !u!82 &5956409965712478832
 AudioSource:
   m_ObjectHideFlags: 0

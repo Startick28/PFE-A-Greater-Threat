@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,8 +78,9 @@ namespace BehaviourTreeAI {
 
         public void Reset()
         {
+            PhotonView view = context.monsterColliderInfos.focusedPlayer.GetComponent<PhotonView>();
+            view.RPC("StopFocusMusic", RpcTarget.All, view.ViewID);
             playerDetected = false;
-            //STOP MUSIC
             attackingAracks = new List<GameObject>();
             playerIntercepted = false;
             hasEstimationOfPlayerDirection = false;
@@ -104,4 +106,5 @@ namespace BehaviourTreeAI {
         }
 
     }
+
 }

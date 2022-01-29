@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviourTreeAI;
+using Photon.Pun;
 
 public class IsPlayerDetected : ActionNode
 {
@@ -22,7 +23,8 @@ public class IsPlayerDetected : ActionNode
                     if (!blackboard.playerDetected)
                     {
                         blackboard.playerDetected = true;
-                        //Play Music
+                        PhotonView view = context.monsterColliderInfos.focusedPlayer.GetComponent<PhotonView>();
+                        view.RPC("PlayFocusMusic",RpcTarget.All, view.ViewID);
                     }
                 }
             }
@@ -31,4 +33,6 @@ public class IsPlayerDetected : ActionNode
         if (context.monsterColliderInfos != null) context.monsterColliderInfos.focusedPlayer = null;
         return State.Failure;
     }
+
+      
 }
