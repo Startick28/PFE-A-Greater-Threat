@@ -23,8 +23,7 @@ public class IsPlayerDetected : ActionNode
                     if (!blackboard.playerDetected)
                     {
                         blackboard.playerDetected = true;
-                        PhotonView view = context.monsterColliderInfos.focusedPlayer.GetComponent<PhotonView>();
-                        view.RPC("PlayFocusMusic",RpcTarget.All, view.ViewID);
+                        AudioManager.Instance.view.RPC("PlayFocusMusic", RpcTarget.All);
                     }
                 }
             }

@@ -78,8 +78,7 @@ namespace BehaviourTreeAI {
 
         public void Reset()
         {
-            PhotonView view = context.monsterColliderInfos.focusedPlayer.GetComponent<PhotonView>();
-            view.RPC("StopFocusMusic", RpcTarget.All, view.ViewID);
+            AudioManager.Instance.view.RPC("StopFocusMusic", RpcTarget.All);
             playerDetected = false;
             attackingAracks = new List<GameObject>();
             playerIntercepted = false;

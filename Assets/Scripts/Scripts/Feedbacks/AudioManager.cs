@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private bool focusMusicIsPlaying = false;
     public static AudioManager Instance;
 
-    private PhotonView view;
+    public PhotonView view;
 
     private void Awake()
     {
@@ -148,8 +148,9 @@ public class AudioManager : MonoBehaviour
     [PunRPC]
     public void PlayFocusMusic(int viewID)
     {
-        if (!focusMusicIsPlaying && PhotonView.Find(viewID).IsMine)
+        if(!focusMusicIsPlaying)
         {
+            EnemiesManager.Instance.greaterThreat.gameObject.GetComponent<AudioSource>();
             focusMusicIsPlaying = true;
             StartCoroutine(LaunchFocusMusic(0.5f, 0.5f));
         }
@@ -158,7 +159,7 @@ public class AudioManager : MonoBehaviour
     [PunRPC]
     public void StopFocusMusic(int viewID)
     {
-        if (focusMusicIsPlaying && PhotonView.Find(viewID).IsMine)
+        if(focusMusicIsPlaying)
         {
             focusMusicIsPlaying = false;
             StartCoroutine(StopForestMusic(0.5f, 0.5f));
@@ -167,29 +168,31 @@ public class AudioManager : MonoBehaviour
 
     IEnumerator LaunchFocusMusic(float maxVolume, float timeTransition)
     {
-        float volume = playerAudioSource.volume;
-        playerAudioSource.clip = focusClip;
-        playerAudioSource.spatialBlend = 0;
-        playerAudioSource.loop = true;
+        AudioSource source = EnemiesManager.Instance.greaterThreat.gameObject.GetComponent<AudioSource>();
+        float volume = source.volume;
+        source.clip = focusClip;
+        source.spatialBlend = 1;
+        source.loop = true;
         for (float d = 0; d < timeTransition; d += Time.deltaTime)
         {
 
-            playerAudioSource.volume = Mathf.Lerp(volume, maxVolume, d / timeTransition);
+            source.volume = Mathf.Lerp(volume, maxVolume, d / timeTransition);
             yield return null;
         }
-        playerAudioSource.volume = maxVolume;
+        source.volume = maxVolume;
     }
 
     IEnumerator StopForestMusic(float maxVolume, float timeTransition)
     {
-        float volume = playerAudioSource.volume;
+        AudioSource source = EnemiesManager.Instance.greaterThreat.gameObject.GetComponent<AudioSource>();
+        float volume = source.volume;
         for (float d = 0; d < timeTransition; d += Time.deltaTime)
         {
-            playerAudioSource.volume = Mathf.Lerp(volume, 0, d / timeTransition);
+            source.volume = Mathf.Lerp(volume, 0, d / timeTransition);
             yield return null;
         }
-        playerAudioSource.volume = 0;
-        playerAudioSource.loop = false;
-        playerAudioSource.Stop();
+        source.volume = 0;
+        source.loop = false;
+        source.Stop();
     }
 }

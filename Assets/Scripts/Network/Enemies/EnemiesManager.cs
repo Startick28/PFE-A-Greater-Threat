@@ -17,7 +17,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject endgameEnemyPrefab;
     
-    [SerializeField] private GT_EnemyScript greaterThreat;
+    [SerializeField] public GT_EnemyScript greaterThreat;
     [SerializeField] private GameObject bloodEffect;
 
     // Instantiate an enemy with RPC.
