@@ -81,9 +81,12 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
     public bool Died;
 
 	Camera cameraTargetWhenDead;
+	CursorLockMode lockMode;
 
 	void Awake()
 	{
+		lockMode = CursorLockMode.Locked;
+		Cursor.lockState = lockMode;
 
 		Died = false;
 		timeSinceSoundEmission = soundEmissionTime + 1;
