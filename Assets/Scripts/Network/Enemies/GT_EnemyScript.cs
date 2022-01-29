@@ -13,6 +13,9 @@ public class GT_EnemyScript : MonoBehaviour
     public Collider HeavyClawsAttackRightCollider;
     public Collider HeavyClawsAttackLeftCollider;
     public Collider JumpAttackCollider;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip roarAfterJumpClip;
+    [SerializeField] private AudioClip roarClip;
 
     NavMeshAgent agent;
     Animator animator;
@@ -105,5 +108,15 @@ public class GT_EnemyScript : MonoBehaviour
             }
         }
         return result;
+    }
+
+    public void RoarAfterJumpSound()
+    {
+        audioSource.PlayOneShot(roarAfterJumpClip, 0.5f); 
+    }
+
+    public void RoarSound()
+    {
+        audioSource.PlayOneShot(roarClip, 0.5f);
     }
 }
