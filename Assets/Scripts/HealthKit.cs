@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class HealthKit : Interactable
 {
-    bool wasPickedUp = false;
+
+    private int id;
+    public int Id
+    {
+        get { return id; }
+        set
+        {
+            id = value;
+        }
+    }
+
     public override void finishInteraction()
     {
-        if(wasPickedUp)
-        {
-            Destroy(this.gameObject);
-        }
         
     }
 
@@ -21,7 +27,6 @@ public class HealthKit : Interactable
             if(!player.canHeal)
             {
                 player.canHeal = true;
-                wasPickedUp = true;
             }
         }
     }

@@ -82,6 +82,19 @@ public class Chest : Interactable
 
             player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<AmmunitionCollectible>();
         }
+        else if (gun.GetComponent<HealthKit>())
+        {
+            //gun.transform.Translate(0, 0.5f, -(gun.transform.localScale.x / 4));
+            gun.transform.Translate(0, transform.localScale.y / 2, 0);
+            gun.GetComponent<HealthKit>().canInteract = true;
+            gun.GetComponent<BoxCollider>().enabled = true;
+            gun.GetComponent<HealthKit>().Id = id;
+
+            // Default layer
+            gun.gameObject.layer = 0;
+
+            player.GetComponent<FPSCharacterController>().nearestInteractable = gun.GetComponent<HealthKit>();
+        }
 
         gun.transform.SetParent(transform.parent);
 

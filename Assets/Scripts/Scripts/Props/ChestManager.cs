@@ -36,6 +36,10 @@ public class ChestManager : MonoBehaviour
             {
                 child.GetComponent<AmmunitionCollectible>().Id = id;
             }
+            else if (child.GetComponent<HealthKit>())
+            {
+                child.GetComponent<HealthKit>().Id = id;
+            }
             id++;
         }
     }
@@ -60,6 +64,18 @@ public class ChestManager : MonoBehaviour
             {
                 if(child.GetComponent<ButtonForceField>().Id == id)
                     child.GetComponent<ButtonForceField>().interact(player);
+            }
+        }
+    }
+
+    public void DestroyHealthKit(int id, FPSCharacterController player)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<HealthKit>())
+            {
+                if (child.GetComponent<HealthKit>().Id == id)
+                    Destroy(child.gameObject);
             }
         }
     }

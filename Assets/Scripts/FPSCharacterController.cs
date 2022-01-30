@@ -297,7 +297,8 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 								//nearestInteractable.interact();
 								break;
 							case InteractionType.healthKit:
-								GetComponent<PhotonView>().RPC("InteractWithInteractable", RpcTarget.All);
+								nearestInteractable.interact(this);
+								GetComponent<PhotonView>().RPC("InteractWithHealthKit", RpcTarget.All, nearestInteractable.GetComponent<HealthKit>().Id);
 								Debug.Log("Je peux interargir avec le health kit");
 								break;
 							default:
@@ -667,6 +668,13 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 	{
 		WinInteraction.Instance().interact(this);
 	}
+
+	[PunRPC]
+	public void InteractWithHealthKit(int id)
+    {
+		ChestManager.Instance.DestroyHealthKit(id, this);
+    }
+	
 	[PunRPC]
 	public void InteractWithChest(int id)
 	{
