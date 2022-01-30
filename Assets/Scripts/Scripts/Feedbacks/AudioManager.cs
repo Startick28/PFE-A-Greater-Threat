@@ -146,23 +146,22 @@ public class AudioManager : MonoBehaviour
 
     
     [PunRPC]
-    public void PlayFocusMusic(int viewID)
+    public void PlayFocusMusic()
     {
         if(!focusMusicIsPlaying)
         {
-            EnemiesManager.Instance.greaterThreat.gameObject.GetComponent<AudioSource>();
             focusMusicIsPlaying = true;
-            StartCoroutine(LaunchFocusMusic(0.5f, 0.5f));
+            StartCoroutine(LaunchFocusMusic(0.3f, 0.75f));
         }
     }
 
     [PunRPC]
-    public void StopFocusMusic(int viewID)
+    public void StopFocusMusic()
     {
         if(focusMusicIsPlaying)
         {
             focusMusicIsPlaying = false;
-            StartCoroutine(StopForestMusic(0.5f, 0.5f));
+            StartCoroutine(StopForestMusic(0.3f, 1.5f));
         }
     }
 
@@ -173,6 +172,8 @@ public class AudioManager : MonoBehaviour
         source.clip = focusClip;
         source.spatialBlend = 1;
         source.loop = true;
+        source.Play();
+
         for (float d = 0; d < timeTransition; d += Time.deltaTime)
         {
 

@@ -23,6 +23,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -63,6 +64,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -103,6 +105,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -144,6 +147,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -159,7 +163,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   attackType: 5
-  cooldown: 2
+  cooldown: 1
 --- !u!114 &-8440596950904815281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +187,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -220,6 +225,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -260,6 +266,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -298,6 +305,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -343,6 +351,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -382,6 +391,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -425,6 +435,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -462,6 +473,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -506,6 +518,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -546,6 +559,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -584,6 +598,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -599,7 +614,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   attackType: 5
-  cooldown: 2
+  cooldown: 1
 --- !u!114 &-7372835725006751285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +638,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -640,7 +656,7 @@ MonoBehaviour:
   children:
   - {fileID: 5753156623350387373}
   - {fileID: -548062325008989053}
-  - {fileID: 1669768136079194684}
+  - {fileID: -483894174198518539}
   - {fileID: 8656265888125767779}
 --- !u!114 &-7312337774165616727
 MonoBehaviour:
@@ -665,6 +681,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -705,6 +722,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -719,7 +737,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 12
+  speed: 13
   angularSpeed: 720
   stoppingDistance: 1
   updatePosition: 0
@@ -750,6 +768,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -788,6 +807,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -826,6 +846,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -866,6 +887,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -903,6 +925,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -940,6 +963,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -980,6 +1004,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1017,6 +1042,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1057,6 +1083,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1097,6 +1124,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1137,6 +1165,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1176,6 +1205,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1218,6 +1248,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1256,6 +1287,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1293,6 +1325,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1333,6 +1366,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1370,6 +1404,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1408,6 +1443,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1449,6 +1485,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1489,6 +1526,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1526,6 +1564,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1563,6 +1602,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1577,6 +1617,51 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
+--- !u!114 &-483894174198518539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b77d43aa8e57e9d4d82996db18c2e9a2
+  position: {x: 414, y: 1146}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+    reachedEndgameZone: 0
+  description: 
+  drawGizmos: 0
+  speed: 9
+  angularSpeed: 720
+  stoppingDistance: 2
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 25
+  tolerance: 2
 --- !u!114 &-273426340446021357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,6 +1685,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1641,6 +1727,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1747,7 +1834,6 @@ MonoBehaviour:
   - {fileID: 834945471567258316}
   - {fileID: -1374953742359473281}
   - {fileID: 5432735481351693020}
-  - {fileID: 1669768136079194684}
   - {fileID: 829684121147460159}
   - {fileID: -8388723414518573864}
   - {fileID: -1232647214755428858}
@@ -1770,21 +1856,23 @@ MonoBehaviour:
   - {fileID: 6788347869835949783}
   - {fileID: 8621403712524421917}
   - {fileID: 768075414706913802}
+  - {fileID: -483894174198518539}
   blackboard:
-    moveToPosition: {x: -418.85135, y: 0, z: 246.49622}
-    lastPlayerSeenPosition: {x: -36.19, y: 1, z: -25.03}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    moveToPosition: {x: 9.854184, y: -0.10266662, z: -9.086052}
+    lastPlayerSeenPosition: {x: 4.9859548, y: 1.25, z: -14.575661}
+    lastPlayerSeenEstimatedDirection: {x: -0.33833894, y: 0, z: -0.94102436}
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 1
     jumpBiteAttackCD: -0.02
     clawAttackCD: -0.02
     disengageJumpCD: -0.02
-    pausingAfterAttack: -5636.215
-    GT_heavyClawAttackCD: -0.033225253
-    GT_ComboHitAttackCD: -0.038237005
-    GT_JumpAttackCD: -0.0015319772
-    lookAtPlayerLock: -5705.929
+    pausingAfterAttack: -4.920172
+    GT_heavyClawAttackCD: -0.0015239746
+    GT_ComboHitAttackCD: -0.004558429
+    GT_JumpAttackCD: 0.57934403
+    lookAtPlayerLock: -24.920673
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
@@ -1804,7 +1892,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6a93abe0c52c11e45910a2d9428076c8
-  position: {x: -1022.99994, y: 1137}
+  position: {x: -1023, y: 1137}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1812,6 +1900,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1849,6 +1938,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1890,6 +1980,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1927,6 +2018,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1972,6 +2064,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2010,6 +2103,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2048,6 +2142,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2086,6 +2181,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2126,6 +2222,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2155,7 +2252,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8a441e2dce65a074d8e4dae98ce3845a
-  position: {x: -2161.2964, y: 1853.9998}
+  position: {x: -2170.9995, y: 1853.9998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2163,6 +2260,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2177,51 +2275,6 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
---- !u!114 &1669768136079194684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f4606a51b60214386a8b6b78dc5f02, type: 3}
-  m_Name: GT_InterceptLoudestSound
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 262a8e4bd5f0ccc4993fbcb312532dc1
-  position: {x: 390.99994, y: 1146.2471}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  MoveAroundWallPrefab: {fileID: 8695248136420209939, guid: 1c2e6185498d539439e070c5fa22a9e9, type: 3}
-  speed: 12
-  angularSpeed: 720
-  stoppingDistance: 1
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 2
 --- !u!114 &1942798289762625698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,6 +2298,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2283,6 +2337,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2322,6 +2377,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2360,6 +2416,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2397,6 +2454,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2437,6 +2495,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2474,6 +2533,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2515,6 +2575,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2555,6 +2616,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2592,6 +2654,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2630,6 +2693,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2670,6 +2734,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2716,6 +2781,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2756,6 +2822,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2793,6 +2860,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2834,6 +2902,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2875,6 +2944,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2915,6 +2985,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2947,7 +3018,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6de7b66fa1d3e1d4e887504c9815c011
-  position: {x: 1054, y: 1131.2471}
+  position: {x: 1054, y: 1122}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2955,6 +3026,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2999,6 +3071,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3039,6 +3112,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3083,6 +3157,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3123,6 +3198,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3161,6 +3237,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3198,6 +3275,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3241,6 +3319,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3278,6 +3357,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3315,6 +3395,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3356,6 +3437,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3396,6 +3478,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3433,6 +3516,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3474,6 +3558,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3511,6 +3596,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3548,6 +3634,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3586,6 +3673,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3623,6 +3711,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3660,6 +3749,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3702,6 +3792,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3742,6 +3833,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3781,6 +3873,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3819,6 +3912,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3857,6 +3951,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3896,6 +3991,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3935,6 +4031,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3976,6 +4073,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3990,7 +4088,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  speed: 12
+  speed: 14
   angularSpeed: 720
   stoppingDistance: 2
   updatePosition: 0
@@ -4020,6 +4118,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0

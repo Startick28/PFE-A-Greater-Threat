@@ -15,16 +15,16 @@ public class IsPlayerDetected : ActionNode
     protected override State OnUpdate() {
         if (context.sensorManager.PlayerDetected)
         {
+            if (!blackboard.playerDetected)
+            {
+                blackboard.playerDetected = true;
+                AudioManager.Instance.view.RPC("PlayFocusMusic", RpcTarget.All);
+            }
             if (context.monsterColliderInfos != null) 
             {
                 if (context.monsterColliderInfos.focusedPlayer == null)
                 {
                     context.monsterColliderInfos.focusedPlayer = context.sensorManager.GetLastSeenPlayer();
-                    if (!blackboard.playerDetected)
-                    {
-                        blackboard.playerDetected = true;
-                        AudioManager.Instance.view.RPC("PlayFocusMusic", RpcTarget.All);
-                    }
                 }
             }
             return State.Success;

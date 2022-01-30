@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Length: 40
+  Length: 30
   BaseSize: 0.5
   FOVAngle: 100
   ElevationAngle: 50

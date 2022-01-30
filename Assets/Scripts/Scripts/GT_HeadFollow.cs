@@ -37,7 +37,7 @@ public class GT_HeadFollow : MonoBehaviour
         }
     }
 
-    public void SetAimTarget(Transform aim, float transition = 0.15f)
+    public void SetAimTarget(Transform aim, float transition = 0.25f)
     {
         if (lookingAtTarget) return;
         StartCoroutine(SetAimTargetRoutine(aim, transition));

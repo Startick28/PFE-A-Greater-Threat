@@ -69,6 +69,7 @@ namespace BehaviourTreeAI {
         {
             context = c;
             
+            playerDetected = false;
             playerIntercepted = false;
             hasEstimationOfPlayerDirection = false;
             focusedPlayer = null;
