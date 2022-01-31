@@ -23,6 +23,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -40,7 +41,6 @@ MonoBehaviour:
   children:
   - {fileID: -2177805498193511251}
   - {fileID: 7989708894610056594}
-  - {fileID: -3301162476251544877}
   - {fileID: 5103909335829613659}
 --- !u!114 &-8955665993499687307
 MonoBehaviour:
@@ -65,6 +65,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -104,6 +105,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -135,7 +137,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 031e6722dc6af8d4d8bf70d76302baf3
-  position: {x: 790.62415, y: 2435}
+  position: {x: 947.65015, y: 2207}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -143,6 +145,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -180,6 +183,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -221,6 +225,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -257,7 +262,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e7589a38db4df4840941944c26e17f68
-  position: {x: 1017.62427, y: 2438.0005}
+  position: {x: 1174.6501, y: 2210}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -265,6 +270,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -310,6 +316,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -351,6 +358,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -392,6 +400,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -407,50 +416,6 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   range: 4
---- !u!114 &-7130289081076305933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
-  m_Name: MoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 7d9da669b2ee90641aed07d16c038932
-  position: {x: 172.80002, y: 512}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  speed: 5
-  angularSpeed: 720
-  stoppingDistance: 0.5
-  updatePosition: 1
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 1
 --- !u!114 &-6999952507457081635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +439,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -514,6 +480,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -551,6 +518,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -588,6 +556,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -629,6 +598,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -675,6 +645,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -712,6 +683,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -752,6 +724,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -781,7 +754,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ea709406f1a005745a8566ff673c3d0b
-  position: {x: -13.349999, y: 513}
+  position: {x: 77.948326, y: 512}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -789,6 +762,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -818,7 +792,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c168f32c0ff6c324eab98a935500638f
-  position: {x: -190.34999, y: 514.0001}
+  position: {x: -99.05165, y: 512.99994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -826,6 +800,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -863,6 +838,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -900,6 +876,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -917,45 +894,7 @@ MonoBehaviour:
   children:
   - {fileID: -5391729889318485312}
   - {fileID: 4163018247313250651}
-  - {fileID: 7499111020164595744}
   - {fileID: 101016917723454881}
---- !u!114 &-5395242038196299195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9ee7b1a6e57bb4dafce76d7a540e8a, type: 3}
-  m_Name: LoudestSoundPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 23100583dc7e07346807b984ff7b4503
-  position: {x: -885.7492, y: 2114}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &-5391729889318485312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,6 +918,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1011,7 +951,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2ceea2a2ecb946a47a6765b9050e0a31
-  position: {x: 117.40082, y: 2309.0002}
+  position: {x: 255.00003, y: 2085}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1019,6 +959,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1064,6 +1005,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1103,6 +1045,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1141,6 +1084,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1183,6 +1127,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1198,50 +1143,6 @@ MonoBehaviour:
   description: Too close to jump?
   drawGizmos: 0
   range: 12
---- !u!114 &-4766559308377106678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
-  m_Name: MoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 34874f67f01bee64c90fbe3109e05390
-  position: {x: 1302.6243, y: 2211}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  speed: 10
-  angularSpeed: 720
-  stoppingDistance: 1
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 2
 --- !u!114 &-4608398738694230860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1166,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1305,6 +1207,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1343,6 +1246,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1380,6 +1284,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1417,6 +1322,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1457,6 +1363,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1495,6 +1402,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1533,6 +1441,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1550,8 +1459,52 @@ MonoBehaviour:
   children:
   - {fileID: -4002215715823341631}
   - {fileID: 8456858075732008783}
-  - {fileID: -1926828492136328404}
   - {fileID: -6588889838584645358}
+--- !u!114 &-3578355343561870076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a46c6f8bb11b5d4dad8fe50a2f0ca23, type: 3}
+  m_Name: MoveAndLook
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3b5a3095a9587794987b99e1724bdcdd
+  position: {x: 278.99994, y: 510}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 0
+    focusedPlayer: {fileID: 0}
+    nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
+    jumpBiteAttackCD: 0
+    clawAttackCD: 0
+    disengageJumpCD: 0
+    pausingAfterAttack: 0
+    GT_heavyClawAttackCD: 0
+    GT_ComboHitAttackCD: 0
+    GT_JumpAttackCD: 0
+    lookAtPlayerLock: 0
+    attackingAracks: []
+    playerIntercepted: 0
+    canAttackPlayer: 1
+    reachedEndgameZone: 0
+  description: 
+  drawGizmos: 0
+  speed: 5
+  angularSpeed: 720
+  stoppingDistance: 0.5
+  updatePosition: 0
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
 --- !u!114 &-3539643297868009904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1528,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1617,6 +1571,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1654,6 +1609,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1670,84 +1626,6 @@ MonoBehaviour:
   drawGizmos: 0
   attackType: 1
   cooldown: 8
---- !u!114 &-3301162476251544877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: d495b4905088f3f44b8b6c8d5089ecba
-  position: {x: -875.74915, y: 1975.0001}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 4735631801678934266}
-  - {fileID: -5395242038196299195}
-  - {fileID: 4377768213170142212}
---- !u!114 &-3287458501389485380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9ee7b1a6e57bb4dafce76d7a540e8a, type: 3}
-  m_Name: LoudestSoundPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 1483b49bfaeff8541a8ab54985ff9610
-  position: {x: 237.40074, y: 2080}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &-3099438743072857764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,6 +1649,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1810,6 +1689,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1850,6 +1730,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1879,7 +1760,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cfa11809e5176cd4fb2e757db5acef86
-  position: {x: -1028.33, y: 2337.6775}
+  position: {x: -863, y: 2113}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -1887,6 +1768,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1932,6 +1814,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -1970,6 +1853,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2010,6 +1894,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2025,47 +1910,6 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   range: 8
---- !u!114 &-1926828492136328404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 6968a793532961a44a3981cb1439e913
-  position: {x: 1118.6243, y: 2072}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 6061353853174596278}
-  - {fileID: -1373837419108892534}
-  - {fileID: -4766559308377106678}
 --- !u!114 &-1675400339831189346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,6 +1933,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2104,43 +1949,6 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   range: 6
---- !u!114 &-1373837419108892534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9ee7b1a6e57bb4dafce76d7a540e8a, type: 3}
-  m_Name: LoudestSoundPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: d583cfbf1a1affd4d8a1ccaf50bb83dd
-  position: {x: 1108.6241, y: 2211}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &-1241435029917881125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2156,7 +1964,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11a23523e7326ef4eb8391e506a56dff
-  position: {x: -1255.33, y: 2334.6775}
+  position: {x: -1090, y: 2110}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2164,6 +1972,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2201,6 +2010,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2240,6 +2050,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2320,8 +2131,6 @@ MonoBehaviour:
   - {fileID: 2864820533181001762}
   - {fileID: -6051934264814158079}
   - {fileID: -6141599799120569497}
-  - {fileID: -7130289081076305933}
-  - {fileID: 995968357222693897}
   - {fileID: 5365797567609053012}
   - {fileID: 1416903745506447481}
   - {fileID: -9096691824811410374}
@@ -2363,33 +2172,23 @@ MonoBehaviour:
   - {fileID: -8955665993499687307}
   - {fileID: 5324705435630979911}
   - {fileID: -8898386214539866314}
-  - {fileID: -3301162476251544877}
-  - {fileID: 4735631801678934266}
-  - {fileID: -5395242038196299195}
-  - {fileID: 4377768213170142212}
-  - {fileID: 7499111020164595744}
-  - {fileID: 6454702238234424826}
-  - {fileID: 8568898325877656450}
-  - {fileID: -3287458501389485380}
-  - {fileID: -1926828492136328404}
-  - {fileID: 6061353853174596278}
-  - {fileID: -1373837419108892534}
-  - {fileID: -4766559308377106678}
+  - {fileID: -3578355343561870076}
   blackboard:
-    moveToPosition: {x: 43.114544, y: 0, z: -8.721062}
-    lastPlayerSeenPosition: {x: 30.08922, y: 2.6799393, z: -26.81429}
-    lastPlayerSeenEstimatedDirection: {x: 0.000006253268, y: -1, z: -0.000006253268}
-    hasEstimationOfPlayerDirection: 0
+    moveToPosition: {x: 22.4, y: 0, z: 5.07}
+    lastPlayerSeenPosition: {x: -6.9434137, y: 1.25, z: -26.241327}
+    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
+    hasEstimationOfPlayerDirection: 1
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: -0.09999462
+    playerDetected: 1
+    jumpBiteAttackCD: -0.0015596614
     clawAttackCD: -447.30417
-    disengageJumpCD: -0.0000018626451
-    pausingAfterAttack: -7963.272
+    disengageJumpCD: 5.418895
+    pausingAfterAttack: -8407.338
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -7516.076
+    lookAtPlayerLock: -7962.8594
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
@@ -2417,6 +2216,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2454,6 +2254,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2500,6 +2301,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2537,6 +2339,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2574,6 +2377,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2591,45 +2395,6 @@ MonoBehaviour:
   children:
   - {fileID: 3685462364639721364}
   - {fileID: -6999952507457081635}
---- !u!114 &995968357222693897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f693f581dd29a51449c724e2dee76718, type: 3}
-  m_Name: RandomWait
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 758b99a89521b2d498025f2ee8ac66e6
-  position: {x: 349.80002, y: 513}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  minDuration: 1
-  maxDuration: 3
 --- !u!114 &1040724163864138646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,6 +2418,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2697,6 +2463,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2741,6 +2508,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2781,6 +2549,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2821,6 +2590,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2862,6 +2632,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2902,6 +2673,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2940,6 +2712,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -2978,6 +2751,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3015,6 +2789,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3046,7 +2821,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3ddec4a45b27a654d8156e7b2a8b6977
-  position: {x: 90.752945, y: 331}
+  position: {x: 90.999985, y: 341}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3054,6 +2829,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3071,8 +2847,7 @@ MonoBehaviour:
   children:
   - {fileID: -6051934264814158079}
   - {fileID: -6141599799120569497}
-  - {fileID: -7130289081076305933}
-  - {fileID: 995968357222693897}
+  - {fileID: -3578355343561870076}
 --- !u!114 &2996546159922678676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3096,6 +2871,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3137,6 +2913,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3177,6 +2954,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3220,6 +2998,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3260,6 +3039,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3300,6 +3080,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3329,7 +3110,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 030fb9fe0d64a07488a94ca1f0e322e4
-  position: {x: -53.599243, y: 2171}
+  position: {x: 84, y: 1947}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3337,6 +3118,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3377,6 +3159,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3393,87 +3176,6 @@ MonoBehaviour:
   drawGizmos: 0
   minDuration: 2
   maxDuration: 5
---- !u!114 &4377768213170142212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
-  m_Name: MoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: af067a4d021ca214f9868769e947f522
-  position: {x: -691.74915, y: 2114}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  speed: 10
-  angularSpeed: 720
-  stoppingDistance: 1
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 2
---- !u!114 &4735631801678934266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0449562d6bd6ee4084aea9bb56a2d54, type: 3}
-  m_Name: HeardSomething
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 3ce359d1ca4e6df43a45f127f8c672d6
-  position: {x: -1058.7493, y: 2114}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &5008649411436408238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3489,7 +3191,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01a4f9fc0dca57d41ad5c8fe9813ff9b
-  position: {x: -109.59921, y: 2306}
+  position: {x: 28.00003, y: 2082}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3497,6 +3199,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3534,6 +3237,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3580,6 +3284,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3618,6 +3323,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3658,6 +3364,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3679,43 +3386,6 @@ MonoBehaviour:
   - {fileID: 164124117158313367}
   - {fileID: -3305295887129564874}
   - {fileID: 2560515697152293227}
---- !u!114 &6061353853174596278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0449562d6bd6ee4084aea9bb56a2d54, type: 3}
-  m_Name: HeardSomething
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: ef5017c3988f589438f465f4b3a2a0b9
-  position: {x: 935.62415, y: 2211}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &6260856320332452458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,6 +3409,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3777,6 +3448,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3794,43 +3466,6 @@ MonoBehaviour:
   children:
   - {fileID: -5070244924388310048}
   - {fileID: 3161866322643349212}
---- !u!114 &6454702238234424826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0449562d6bd6ee4084aea9bb56a2d54, type: 3}
-  m_Name: HeardSomething
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 81a56fb128cda454c8b7ee896c23424f
-  position: {x: 64.40075, y: 2080}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
 --- !u!114 &7127547411736682088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3854,6 +3489,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3869,47 +3505,6 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   duration: 0.5
---- !u!114 &7499111020164595744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 12db9f08282845649b3dbd017eb3ed16
-  position: {x: 247.4008, y: 1947}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 6454702238234424826}
-  - {fileID: -3287458501389485380}
-  - {fileID: 8568898325877656450}
 --- !u!114 &7546904369258015070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,6 +3528,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -3965,7 +3561,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 85938eb627d9b1e48bab3f4558e6fdd6
-  position: {x: -1198.33, y: 2199.6775}
+  position: {x: -1033, y: 1975}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -3973,6 +3569,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -4013,6 +3610,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -4046,7 +3644,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b17f9e96103b4ef4798f58817cf460cf
-  position: {x: 846.62415, y: 2300.0005}
+  position: {x: 1003.65015, y: 2072}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -4054,6 +3652,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0
@@ -4071,50 +3670,6 @@ MonoBehaviour:
   children:
   - {fileID: -8738967557918009035}
   - {fileID: -8489256879152341690}
---- !u!114 &8568898325877656450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
-  m_Name: MoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 6a10f1f442735cd4fb843f704f642565
-  position: {x: 431.40082, y: 2080}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
-    lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 0
-    focusedPlayer: {fileID: 0}
-    nearestPresentPlayer: {fileID: 0}
-    jumpBiteAttackCD: 0
-    clawAttackCD: 0
-    disengageJumpCD: 0
-    pausingAfterAttack: 0
-    GT_heavyClawAttackCD: 0
-    GT_ComboHitAttackCD: 0
-    GT_JumpAttackCD: 0
-    lookAtPlayerLock: 0
-    attackingAracks: []
-    playerIntercepted: 0
-    canAttackPlayer: 1
-    reachedEndgameZone: 0
-  description: 
-  drawGizmos: 0
-  speed: 10
-  angularSpeed: 720
-  stoppingDistance: 1
-  updatePosition: 0
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 2
 --- !u!114 &8821356567426750820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4138,6 +3693,7 @@ MonoBehaviour:
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
+    playerDetected: 0
     jumpBiteAttackCD: 0
     clawAttackCD: 0
     disengageJumpCD: 0

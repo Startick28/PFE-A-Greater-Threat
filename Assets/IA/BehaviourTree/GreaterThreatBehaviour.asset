@@ -297,7 +297,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6d6c59e241c533549b88a4ded47f7d9b
-  position: {x: -184, y: 132}
+  position: {x: -170.99998, y: 131.99995}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -320,14 +320,14 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 60
+  noPlayerSpeed: 40
   yesPlayerSpeed: 20
-  angularSpeed: 720
+  angularSpeed: 2880
   stoppingDistance: 5
   updatePosition: 0
   updateRotation: 1
-  acceleration: 40
-  tolerance: 20
+  acceleration: 500
+  tolerance: 6
 --- !u!114 &-8178292342298655708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,9 +1858,9 @@ MonoBehaviour:
   - {fileID: 768075414706913802}
   - {fileID: -483894174198518539}
   blackboard:
-    moveToPosition: {x: -40.53945, y: 0.4696803, z: 101.20838}
-    lastPlayerSeenPosition: {x: 4.9859548, y: 1.25, z: -14.575661}
-    lastPlayerSeenEstimatedDirection: {x: -0.33833894, y: 0, z: -0.94102436}
+    moveToPosition: {x: 34.68548, y: -0.10266662, z: -15.177417}
+    lastPlayerSeenPosition: {x: 41.19807, y: 1.25, z: -19.328917}
+    lastPlayerSeenEstimatedDirection: {x: 0.8601319, y: 0.000000030783166, z: -0.5100717}
     hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
@@ -1868,11 +1868,11 @@ MonoBehaviour:
     jumpBiteAttackCD: -0.02
     clawAttackCD: -0.02
     disengageJumpCD: -0.02
-    pausingAfterAttack: -388.24533
-    GT_heavyClawAttackCD: -0.0015239746
-    GT_ComboHitAttackCD: -0.004558429
-    GT_JumpAttackCD: -0.008285548
-    lookAtPlayerLock: -408.24527
+    pausingAfterAttack: -16.980785
+    GT_heavyClawAttackCD: -0.0015440523
+    GT_ComboHitAttackCD: -0.0047330456
+    GT_JumpAttackCD: -0.00008741906
+    lookAtPlayerLock: -42.676598
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1
@@ -2010,7 +2010,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c526a65c04d459243814f9e06400aa44
-  position: {x: 1498.0477, y: 633.74884}
+  position: {x: 1500.011, y: 633.9999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     lastPlayerSeenPosition: {x: 0, y: 0, z: 0}
@@ -2033,14 +2033,14 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 60
+  noPlayerSpeed: 40
   yesPlayerSpeed: 20
-  angularSpeed: 720
+  angularSpeed: 2880
   stoppingDistance: 5
   updatePosition: 0
   updateRotation: 1
-  acceleration: 40
-  tolerance: 20
+  acceleration: 500
+  tolerance: 6
 --- !u!114 &829684121147460159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3649,7 +3649,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  range: 5
+  range: 4
 --- !u!114 &7275764150445288422
 MonoBehaviour:
   m_ObjectHideFlags: 0

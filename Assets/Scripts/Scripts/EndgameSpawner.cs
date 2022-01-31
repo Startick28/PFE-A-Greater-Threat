@@ -46,7 +46,7 @@ public class EndgameSpawner : MonoBehaviour
 
     void Spawn()
     {
-        if (numberSpawned < 28)
+        if (numberSpawned < 20)
         {
             if (EnemiesManager.Instance)
             {

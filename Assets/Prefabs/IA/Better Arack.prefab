@@ -800,7 +800,7 @@ MonoBehaviour:
   TestLOSTargetsOnly: 0
   NumberOfRays: 4
   MinimumVisibility: 0.5
-  SensorRange: 12
+  SensorRange: 15
   DetectsOnLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -864,7 +864,7 @@ MonoBehaviour:
   soundSensors:
   - {fileID: 6006811925654220869}
   presenceSensor: {fileID: 6006811925654220865}
-  timeToDetectPlayer: 0.6
+  timeToDetectPlayer: 0.4
   timeToForgetPlayer: 5
 --- !u!114 &6006811925654220878
 MonoBehaviour:
@@ -1528,9 +1528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Length: 30
+  Length: 45
   BaseSize: 0.5
-  FOVAngle: 100
+  FOVAngle: 130
   ElevationAngle: 50
   Resolution: 5
 --- !u!64 &277271156529245862
@@ -1574,8 +1574,8 @@ MonoBehaviour:
   BlocksLineOfSight:
     serializedVersion: 2
     m_Bits: 1025
-  TestLOSTargetsOnly: 0
-  NumberOfRays: 4
-  MinimumVisibility: 0.5
+  TestLOSTargetsOnly: 1
+  NumberOfRays: 3
+  MinimumVisibility: 0.2
   LineOfSightUpdateMode: 0
   CheckLineOfSightInterval: 0.25

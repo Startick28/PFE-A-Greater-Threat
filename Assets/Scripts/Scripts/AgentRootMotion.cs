@@ -17,6 +17,12 @@ public class AgentRootMotion : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         agent.updatePosition = false;
+
+        NavMeshHit myNavHit;
+        if(NavMesh.SamplePosition(transform.position, out myNavHit, 100 , -1))
+        {
+        transform.position = myNavHit.position;
+        }
     }
 
     void Update()
