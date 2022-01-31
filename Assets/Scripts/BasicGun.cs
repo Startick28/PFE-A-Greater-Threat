@@ -108,6 +108,7 @@ public class BasicGun : Interactable
         //fireTime = 1;
         timeSinceFire = fireTime + 1;
         playerController = GetComponentInParent<FPSCharacterController>();
+        particles = GetComponentInChildren<ParticleSystem>();
         resetParticles();
     }
 
