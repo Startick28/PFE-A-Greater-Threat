@@ -13,7 +13,7 @@ public class AgentRootMotion : MonoBehaviour
 
     float epsilon = 5f;
 
-    void Start() {
+    void OnEnable() {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         agent.updatePosition = false;
@@ -21,7 +21,7 @@ public class AgentRootMotion : MonoBehaviour
         NavMeshHit myNavHit;
         if(NavMesh.SamplePosition(transform.position, out myNavHit, 100 , -1))
         {
-        transform.position = myNavHit.position;
+            transform.position = myNavHit.position;
         }
     }
 

@@ -2174,21 +2174,21 @@ MonoBehaviour:
   - {fileID: -8898386214539866314}
   - {fileID: -3578355343561870076}
   blackboard:
-    moveToPosition: {x: 22.4, y: 0, z: 5.07}
+    moveToPosition: {x: 30.455893, y: 0, z: 96.29903}
     lastPlayerSeenPosition: {x: -6.9434137, y: 1.25, z: -26.241327}
     lastPlayerSeenEstimatedDirection: {x: 0, y: 0, z: 0}
-    hasEstimationOfPlayerDirection: 1
+    hasEstimationOfPlayerDirection: 0
     focusedPlayer: {fileID: 0}
     nearestPresentPlayer: {fileID: 0}
-    playerDetected: 1
+    playerDetected: 0
     jumpBiteAttackCD: -0.0015596614
     clawAttackCD: -447.30417
-    disengageJumpCD: 5.418895
-    pausingAfterAttack: -8407.338
+    disengageJumpCD: -0.0049026515
+    pausingAfterAttack: -8419.71
     GT_heavyClawAttackCD: -447.30417
     GT_ComboHitAttackCD: -447.30417
     GT_JumpAttackCD: -447.30417
-    lookAtPlayerLock: -7962.8594
+    lookAtPlayerLock: -7975.2397
     attackingAracks: []
     playerIntercepted: 0
     canAttackPlayer: 1

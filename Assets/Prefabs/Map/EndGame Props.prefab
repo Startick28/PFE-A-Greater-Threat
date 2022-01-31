@@ -114,6 +114,8 @@ MonoBehaviour:
   finalButtons:
   - {fileID: 4561055181192615173}
   - {fileID: 4561055182600700900}
+  timeLeftText: {fileID: 0}
+  timeLeftAfterClicking: 0
 --- !u!114 &70975365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7105466607842326470}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 17.04, y: 7.12, z: 83.51}
+  m_LocalPosition: {x: 17.04, y: 4, z: 83.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 546970667113318861}
@@ -204,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9051488282342830682}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -19.2, y: 7.12, z: -82.12}
+  m_LocalPosition: {x: -19.2, y: 4, z: -82.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1280785543220530372}
@@ -225,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endgameObjective: {fileID: 1280785543220530372}
   ArackPrefab: {fileID: 8017090145799438041, guid: 7ea6936898b617e4ab24900c3591f99b, type: 3}
-  startSpawnFrequency: 6
+  startSpawnFrequency: 4
 --- !u!1001 &1470209180901993221
 PrefabInstance:
   m_ObjectHideFlags: 0

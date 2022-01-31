@@ -10,16 +10,19 @@ public class EndgameArack : MonoBehaviour
 
     private NavMeshAgent agent;
     private BehaviourTreeAI.BehaviourTreeRunner treeRunner;
-    private Rigidbody rb;
+    private Rigidbody rb;  
+    private AgentRootMotion rootMotion;
 
     private bool touchFloor = false;
 
 
     void Start()
     {
+        rootMotion = GetComponent<AgentRootMotion>();
         agent = GetComponent<NavMeshAgent>();
         treeRunner = GetComponent<BehaviourTreeAI.BehaviourTreeRunner>();
         rb = GetComponent<Rigidbody>();
+        rootMotion.enabled = false;
         agent.enabled = false;
         treeRunner.enabled = false;
         rb.useGravity = true;
@@ -46,8 +49,10 @@ public class EndgameArack : MonoBehaviour
         yield return new WaitForSeconds(1f);
         rb.useGravity = false;
         rb.drag = float.PositiveInfinity;
+        rootMotion.enabled = true;
         agent.enabled = true;
         treeRunner.enabled = true;
+        
         Destroy(this);
     }
 }

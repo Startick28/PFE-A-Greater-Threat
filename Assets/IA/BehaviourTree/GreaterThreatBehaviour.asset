@@ -320,7 +320,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 40
+  noPlayerSpeed: 60
   yesPlayerSpeed: 20
   angularSpeed: 2880
   stoppingDistance: 5
@@ -2033,7 +2033,7 @@ MonoBehaviour:
     reachedEndgameZone: 0
   description: 
   drawGizmos: 0
-  noPlayerSpeed: 40
+  noPlayerSpeed: 60
   yesPlayerSpeed: 20
   angularSpeed: 2880
   stoppingDistance: 5
