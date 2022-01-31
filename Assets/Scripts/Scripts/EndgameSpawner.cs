@@ -48,7 +48,7 @@ public class EndgameSpawner : MonoBehaviour
     {
         if (numberSpawned < 20)
         {
-            if (EnemiesManager.Instance)
+            if (EnemiesManager.Instance && PhotonNetwork.LocalPlayer.IsMasterClient)
             {
                 EnemiesManager.Instance.photonView.RPC("InstantiateEndgameEnemy", RpcTarget.All, transform.position, endgameObjective.position);
             }
