@@ -56,7 +56,7 @@ public class FinalButtonManager : MonoBehaviour
             }
             if (clicked && 0 >= (timeLeftAfterClicking - (Time.time - whenClickedTime)))
             {
-                SceneManager.LoadScene("lost");
+                SceneManager.LoadScene("LoseScene");
             }
         }
     }
