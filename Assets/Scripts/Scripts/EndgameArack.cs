@@ -46,13 +46,17 @@ public class EndgameArack : MonoBehaviour
 
     private IEnumerator StartBehavior()
     {
-        yield return new WaitForSeconds(1f);
+        NavMeshHit myNavHit;
+        if(NavMesh.SamplePosition(transform.position, out myNavHit, 100 , -1))
+        {
+            transform.position = myNavHit.position;
+        }
         rb.useGravity = false;
         rb.drag = float.PositiveInfinity;
         rootMotion.enabled = true;
         agent.enabled = true;
+        yield return new WaitForSeconds(0.8f);
         treeRunner.enabled = true;
-        
         Destroy(this);
     }
 }
