@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Rejouer : MonoBehaviour
 {
+    
     public void rejouer()
     {
         SceneManager.LoadScene("Loading");

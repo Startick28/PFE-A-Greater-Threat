@@ -41,11 +41,9 @@ MonoBehaviour:
   canInteract: 1
   iType: 7
   id: 0
-  timeLeftText: {fileID: 0}
   doubleDoor: {fileID: 0}
   endgameSpawnerW: {fileID: 0}
   endgameSpawnerE: {fileID: 0}
-  timeLeftAfterClicking: 180
 --- !u!1 &6762066597765792703
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,11 +105,9 @@ MonoBehaviour:
   canInteract: 1
   iType: 7
   id: 0
-  timeLeftText: {fileID: 0}
   doubleDoor: {fileID: 0}
   endgameSpawnerW: {fileID: 0}
   endgameSpawnerE: {fileID: 0}
-  timeLeftAfterClicking: 180
 --- !u!1001 &3470715500849978167
 PrefabInstance:
   m_ObjectHideFlags: 0

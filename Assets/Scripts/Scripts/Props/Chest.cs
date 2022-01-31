@@ -34,7 +34,7 @@ public class Chest : Interactable
     [PunRPC]
     public override void interact(FPSCharacterController player)
     {
-
+        DisableOutline();
         if (players.Count == 0)
         {
             return;

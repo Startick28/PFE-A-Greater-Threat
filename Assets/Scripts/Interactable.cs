@@ -15,7 +15,6 @@ public abstract class Interactable : MonoBehaviour
     protected Collider collider;
     public InteractionType iType;
     protected List<FPSCharacterController> players = new List<FPSCharacterController>();
-
     public abstract void interact(FPSCharacterController player);
 
     public abstract void finishInteraction();
@@ -23,22 +22,42 @@ public abstract class Interactable : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         FPSCharacterController playerController = other.gameObject.GetComponent<FPSCharacterController>();
-        
         if (playerController != null && canInteract)
         {
-               //Debug.Log("chest is now NearestInteractabe");
-               playerController.nearestInteractable = this;
+            ActivateOutline();
+            //Debug.Log("chest is now NearestInteractabe");
+            playerController.nearestInteractable = this;
                players.Add(playerController);
+        }
+        else
+        {
+            DisableOutline();
         }
     }
 
+    protected void DisableOutline()
+    {
+        if (GetComponent<Outline>())
+            GetComponent<Outline>().enabled = false;
+        else if (GetComponentInChildren<Outline>())
+            GetComponentInChildren<Outline>().enabled = false;
+    }
+
+    protected void ActivateOutline()
+    {
+        if (GetComponent<Outline>())
+            GetComponent<Outline>().enabled = true;
+        else if (GetComponentInChildren<Outline>())
+            GetComponentInChildren<Outline>().enabled = true;
+    }
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log("exited the trigger");
         FPSCharacterController playerController = other.gameObject.GetComponent<FPSCharacterController>();
         if (playerController != null)
         {
-            if(playerController.nearestInteractable == this)
+            DisableOutline();
+            if (playerController.nearestInteractable == this)
             {
                 playerController.nearestInteractable = null;
                 players.Remove(playerController);

@@ -145,6 +145,7 @@ public class LauncherLobby : MonoBehaviourPunCallbacks
     {
         // Permet de charger la scene que l'on veut, le 1 repr�sente l'index de la scene indiqu� dans le build settings d'unity
         StaticClass.CrossSceneMaster = true;
+        startGameButton.GetComponent<Button>().interactable = false;
         PhotonNetwork.LoadLevel("MapForest");
     }
 

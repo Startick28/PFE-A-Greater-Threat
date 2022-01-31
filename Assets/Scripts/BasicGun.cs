@@ -32,6 +32,7 @@ public class BasicGun : Interactable
 
     [SerializeField]
     private GameObject bulletHolePrefab;
+    private Material haloMaterial;
 
     [SerializeField]
     ParticleSystem particles;
@@ -99,7 +100,6 @@ public class BasicGun : Interactable
         {
             view = transform.parent.gameObject.GetComponent<PhotonView>();
         }
-
         iType = InteractionType.gun;
         collider = GetComponent<BoxCollider>();
         setStats();
@@ -212,7 +212,7 @@ public class BasicGun : Interactable
         //Pour l'instant on augmente les stats du premier joueur � s'�tre approch� du coffre
         // Modifier la ligne en dessous par la méthode qui retourne le basic gun utilisé par le joueur
         //BasicGun playerGun = player.GetComponentInChildren<BasicGun>();
-
+        DisableOutline();
         GameObject playerGun = player.getCurrentWeapon(type);
         player.changeGun(this);
         /*if (playerGun == null)//Le joueur n'a pas d'arme de ce type
