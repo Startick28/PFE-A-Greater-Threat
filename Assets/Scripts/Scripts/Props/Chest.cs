@@ -129,17 +129,17 @@ public class Chest : Interactable
 
     private void setRandomRarity()
     {
-        // 33% de chance d'�tre bleu
-        if(Random.Range(0,3) == 1)
-        {
-            rarity = RarityType.bleu;
-        }
-        // 16% de chance d'�tre dor�
-        else if(Random.Range(0,2) == 1)
+        // 10% de chance d'�tre dore
+        if(Random.Range(0,10) == 1)
         {
             rarity = RarityType.dore;
         }
-        // 51% de chance d'�tre blanche
+        // 30% de chance d'�tre bleu�
+        else if (Random.Range(0,4) == 1)
+        {
+            rarity = RarityType.bleu;
+        }
+        // 60% de chance d'�tre blanche
         else
         {
             rarity = RarityType.blanche;
