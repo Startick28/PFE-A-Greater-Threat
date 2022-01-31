@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapForest.unity
     guid: afe3537c0f4bd724f80a5ac2eb7bc715
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Soutenance.unity
     guid: c2d8181489063e244b703ba0819ce071
   - enabled: 0

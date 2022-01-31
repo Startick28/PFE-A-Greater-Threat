@@ -40,7 +40,7 @@ public class Chest : Interactable
             return;
             Debug.Log("Error this function should not be able to be called if no players or entity are around");
         }
-        //Pour l'instant on augmente les stats du premier joueur à s'être approché du coffre
+        //Pour l'instant on augmente les stats du premier joueur ï¿½ s'ï¿½tre approchï¿½ du coffre
         GameObject playerGun = player.getCurrentWeapon();
         if (playerGun == null)
         {
@@ -129,17 +129,17 @@ public class Chest : Interactable
 
     private void setRandomRarity()
     {
-        // 33% de chance d'être bleu
+        // 33% de chance d'ï¿½tre bleu
         if(Random.Range(0,3) == 1)
         {
             rarity = RarityType.bleu;
         }
-        // 16% de chance d'être doré
+        // 16% de chance d'ï¿½tre dorï¿½
         else if(Random.Range(0,2) == 1)
         {
             rarity = RarityType.dore;
         }
-        // 51% de chance d'être blanche
+        // 51% de chance d'ï¿½tre blanche
         else
         {
             rarity = RarityType.blanche;
@@ -159,6 +159,8 @@ public class Chest : Interactable
             zrotation);
             yield return null;
         }
+        crateTop.transform.eulerAngles = new Vector3(crateTop.transform.eulerAngles.x, crateTop.transform.eulerAngles.y, endRotation);
+        crateTop.GetComponent<Collider>().enabled = false;
     }
 
     IEnumerator MoveGun(float duration,Transform transformGun)
