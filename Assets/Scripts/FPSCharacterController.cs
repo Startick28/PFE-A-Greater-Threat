@@ -578,6 +578,7 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 			if (GetComponent<PhotonView>().IsMine)
 			{
 				var cameras = FindObjectsOfType<Camera>();
+				bool alldead = true;
 				if (cameraTargetWhenDead == null)
 				{
 					foreach (var camera in cameras)
@@ -781,11 +782,23 @@ public class FPSCharacterController : AdvancedWalkerController , IPunObservable
 		Debug.Log("Died");
 		Died = true;
 		GetComponentInChildren<Reanimate>().died();
+		var players = FindObjectsOfType<FPSCharacterController>();
+		bool alldied = true;
+		foreach(FPSCharacterController player in players)
+        {
+            if (!player.Died)
+            {
+				alldied = false;
+				break;
+            }
+        }
+        if (alldied)
+        {
+			PhotonNetwork.LoadLevel("LoseScene");
+        }
 	}
-	// Update is called once per frame
 
-
-	public void addWeapon(BasicGun weapon)
+		public void addWeapon(BasicGun weapon)
     {
 		int listSize = weapons.Count;
 		if(listSize == 0)

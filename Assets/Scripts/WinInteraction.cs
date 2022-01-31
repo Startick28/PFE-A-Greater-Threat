@@ -29,11 +29,11 @@ public class WinInteraction : Interactable
     {
         if(isInTheArea)
         {
-            SceneManager.LoadScene("winScene");
+            SceneManager.LoadScene("WinScene");
         }
         else
         {
-            SceneManager.LoadScene("loseScene");
+            SceneManager.LoadScene("LoseScene");
         }
         /*var players = FindObjectsOfType<FPSCharacterController>();
         foreach(var player in players)
@@ -42,11 +42,11 @@ public class WinInteraction : Interactable
             {
                 if (coll.bounds.Contains(player.transform.position))
                 {
-                    PhotonNetwork.LoadLevel("winScene");
+                    PhotonNetwork.LoadLevel("WinScene");
                 }
                 else
                 {
-                    PhotonNetwork.LoadLevel("loseScene");
+                    PhotonNetwork.LoadLevel("LoseScene");
                 }
             }
         }*/
