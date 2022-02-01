@@ -122,7 +122,7 @@ public class Chest : Interactable
         
         iType = InteractionType.chest;
         collider = GetComponent<BoxCollider>();
-        setRandomRarity();
+        //setRandomRarity();
         canInteract = true;
         isOpened = false;
     }
