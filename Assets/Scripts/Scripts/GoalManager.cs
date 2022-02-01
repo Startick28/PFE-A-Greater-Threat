@@ -58,6 +58,10 @@ public class GoalManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentGoalTime -= 1000;
+        }
         updateTimer -= Time.deltaTime;
         if (updateTimer <= 0)
         {

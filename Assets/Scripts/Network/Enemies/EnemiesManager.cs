@@ -15,6 +15,7 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
 
     private int lastId = 0;
     [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject awareEnemy;
     [SerializeField] private GameObject endgameEnemyPrefab;
     
     [SerializeField] public GT_EnemyScript greaterThreat;
@@ -27,6 +28,18 @@ public class EnemiesManager : MonoBehaviourPunCallbacks
     public void InstantiateEnemy(Vector3 position)
     {
         GameObject enemyInstantiate = Instantiate(enemy, position, Quaternion.identity);
+        enemyInstantiate.transform.parent = gameObject.transform;
+        enemyInstantiate.GetComponent<EnemyScript>().ID = lastId;
+        lastId++;
+    }
+
+    // Instantiate an enemy with RPC that has a great awareness of the player.
+    // How to call it : 
+    // EnemiesManager.Instance.photonView.RPC("InstantiateEnemy", RpcTarget.All, position);
+    [PunRPC]
+    public void InstantiateAwareEnemy(Vector3 position)
+    {
+        GameObject enemyInstantiate = Instantiate(awareEnemy, position, Quaternion.identity);
         enemyInstantiate.transform.parent = gameObject.transform;
         enemyInstantiate.GetComponent<EnemyScript>().ID = lastId;
         lastId++;
